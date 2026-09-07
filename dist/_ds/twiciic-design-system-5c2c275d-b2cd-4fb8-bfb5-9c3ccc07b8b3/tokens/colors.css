@@ -1,0 +1,51 @@
+/* TWICIIC color system — "The Twin Pulse"
+   Two accents only: Vienna Red + Bratislava Blue, always used as a pair.
+   City Gray is the default background everywhere. Color is structural, not ornamental. */
+
+:root {
+  /* — Brand pair — */
+  --vienna-red: #DB1F40;
+  --bratislava-blue: #46AFF8;
+
+  /* Deepened variants for text-on-light contexts (AA on City Gray) */
+  --vienna-red-deep: #B5152F;
+  --bratislava-blue-deep: #1272B8;
+
+  /* Tints — backgrounds only, never for text */
+  --vienna-red-tint: #FBE4E8;
+  --bratislava-blue-tint: #E3F2FE;
+
+  /* — Warm neutrals (City Gray family) — */
+  --white: #FFFFFF;
+  --gray-50: #F4F4F2;   /* City Gray — default page background */
+  --gray-100: #EBEBE8;
+  --gray-200: #E0E0DB;
+  --gray-300: #CFCFC8;
+  --gray-400: #ABABA3;
+  --gray-500: #878780;
+  --gray-600: #62625C;
+  --gray-700: #454540;
+  --gray-800: #262624;
+  --black: #000000;
+
+  /* — Semantic aliases — */
+  --surface-page: var(--gray-50);
+  --surface-card: var(--white);
+  --surface-inverse: var(--black);
+
+  --text-primary: var(--black);
+  --text-secondary: var(--gray-600);
+  --text-muted: var(--gray-500);
+  --text-on-inverse: var(--white);
+  --text-on-inverse-secondary: var(--gray-300);
+
+  --border-default: var(--gray-200);
+  --border-strong: var(--black);
+
+  --focus-ring: var(--black);
+
+  /* Data-viz: exactly the pair + grayscale */
+  --chart-1: var(--vienna-red);
+  --chart-2: var(--bratislava-blue);
+  --chart-neutral: var(--gray-300);
+}

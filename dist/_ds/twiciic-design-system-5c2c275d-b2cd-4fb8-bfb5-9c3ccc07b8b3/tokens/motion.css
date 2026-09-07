@@ -1,0 +1,30 @@
+/* TWICIIC motion — "the twin pulse".
+   Restrained: short fades and slides with decisive ease-out. The signature move
+   is the pulse of the twin bars. Respect prefers-reduced-motion. */
+
+:root {
+  --ease-out: cubic-bezier(0.25, 1, 0.5, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* @kind other */
+  --duration-fast: 150ms; /* @kind other */
+  --duration-base: 300ms; /* @kind other */
+  --duration-slow: 600ms; /* @kind other */
+  --duration-pulse: 1800ms; /* @kind other */
+}
+
+/* Signature: alternating heartbeat of the two bars */
+@keyframes twin-pulse-a {
+  0%, 100% { transform: scaleY(1); }
+  30%      { transform: scaleY(0.62); }
+  60%      { transform: scaleY(1); }
+}
+@keyframes twin-pulse-b {
+  0%, 100% { transform: scaleY(1); }
+  45%      { transform: scaleY(0.62); }
+  75%      { transform: scaleY(1); }
+}
+
+/* Portal reveal — content passes through the bars */
+@keyframes portal-in {
+  from { opacity: 0; transform: translateX(var(--portal-from, 16px)); }
+  to   { opacity: 1; transform: translateX(0); }
+}

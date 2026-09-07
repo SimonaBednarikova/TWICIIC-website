@@ -1,0 +1,31 @@
+/* TWICIIC spacing, borders, radii.
+   4px base. Corners are SHARP (0px) — rectangles echo the twin bars.
+   No drop shadows; depth comes from borders and surface contrast. */
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* Radii — sharp by default; 2px only on tiny controls if needed */
+  --radius-none: 0px;
+  --radius-xs: 2px;
+
+  --border-width: 1px;
+  --border-width-strong: 2px;
+
+  /* The twin-bar device: each bar is ~1 : 3.89 (w : h), bars touch with no gap */
+  --bar-aspect: 0.2573; /* @kind other */ /* width / height of one bar */
+  --bar-gap: 0px;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-pad: 24px;
+}
