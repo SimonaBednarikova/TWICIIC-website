@@ -169,9 +169,9 @@
     @media (max-width: 600px) {
       [data-nav] [data-brand-name] { display: none; }
       [data-nav][data-brand-expanded="true"] { height: 68px !important; margin-bottom: -68px !important; }
-      [data-hero-title], [data-hero-description] { text-align: center; }
+      [data-hero-title], [data-hero-description] { text-align: left; }
       [data-hero-details] > div:first-child { min-width: 0; }
-      [data-hero-actions] { justify-content: center; align-items: center; }
+      [data-hero-actions] { justify-content: flex-start; align-items: center; }
     }
     [data-corridor] [data-corridor-line] { transform: scaleX(0); transform-origin: left; transition: transform 1400ms var(--ease-out); }
     [data-corridor].in [data-corridor-line] { transform: scaleX(1); }
