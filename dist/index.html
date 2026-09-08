@@ -165,6 +165,14 @@
       [data-hero-description] { font-size: 16px; line-height: 1.35; }
       [data-hero-funding] { width: 240px; }
     }
+    /* Phone-only refinements; the funding logo keeps its existing alignment. */
+    @media (max-width: 600px) {
+      [data-nav] [data-brand-name] { display: none; }
+      [data-nav][data-brand-expanded="true"] { height: 68px !important; margin-bottom: -68px !important; }
+      [data-hero-title], [data-hero-description] { text-align: center; }
+      [data-hero-details] > div:first-child { min-width: 0; }
+      [data-hero-actions] { justify-content: center; align-items: center; }
+    }
     [data-corridor] [data-corridor-line] { transform: scaleX(0); transform-origin: left; transition: transform 1400ms var(--ease-out); }
     [data-corridor].in [data-corridor-line] { transform: scaleX(1); }
     [data-corridor] [data-corridor-node] { transform: scaleY(0); transform-origin: bottom; transition: transform 500ms var(--ease-out); }
