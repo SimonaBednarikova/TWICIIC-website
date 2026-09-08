@@ -78,8 +78,10 @@
     [data-dd-row]:hover, [data-dd-row]:focus-visible { background: var(--surface-page); outline: none; }
     [data-dd-row] [data-dd-arrow] { transition: transform 200ms var(--ease-out); }
     [data-dd-row]:hover [data-dd-arrow], [data-dd-row]:focus-visible [data-dd-arrow] { transform: translateX(4px); }
-    [data-lang-btn] { color: var(--text-muted); transition: color 150ms var(--ease-out); }
-    [data-lang-btn]:hover, [data-lang-btn][aria-pressed="true"] { color: var(--text-primary); }
+    [data-lang-switch] { border: 1.5px solid var(--black); background: rgba(255,255,255,0.72); }
+    [data-lang-btn] { color: var(--text-primary); transition: color 150ms var(--ease-out), background 150ms var(--ease-out); }
+    [data-lang-btn]:hover { background: var(--gray-100) !important; }
+    [data-lang-btn][aria-pressed="true"] { color: var(--white); background: var(--black) !important; }
     [data-glow]::after { content: ""; position: absolute; left: 10%; right: 10%; bottom: -8px; height: 14px; background: linear-gradient(90deg, rgba(219, 31, 64, 0.45), rgba(70, 175, 248, 0.45)); filter: blur(10px); opacity: 0.35; transition: opacity 300ms var(--ease-out); z-index: -1; pointer-events: none; }
     [data-glow]:hover::after { opacity: 0.9; }
     [data-burger] span { transition: transform 260ms var(--ease-out), opacity 200ms var(--ease-out); }
@@ -92,7 +94,7 @@
     }
     /* Each label owns its indicator; dropdown decoration is not a nav state. */
     [data-nav-item] { position: relative; }
-    [data-nav-item]::after { content: ""; position: absolute; left: 14px; right: 14px; top: calc(50% + 13px); height: 2px; background: linear-gradient(90deg, var(--vienna-red) 50%, var(--bratislava-blue) 50%); transform: scaleX(0); transform-origin: left; transition: transform 220ms var(--ease-out); }
+    [data-nav-item]::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: -1px; height: 4px; background: linear-gradient(90deg, var(--vienna-red) 50%, var(--bratislava-blue) 50%); transform: scaleX(0); transform-origin: left; transition: transform 220ms var(--ease-out); }
     [data-nav-item][data-active="true"]::after, [data-nav-item][aria-expanded="true"]::after, [data-nav-item]:focus-visible::after { transform: scaleX(1); }
     @media (hover: hover) and (pointer: fine) { [data-nav-item]:hover::after { transform: scaleX(1); } }
     [data-logo] { width: 288px; color: var(--text-primary); }
@@ -320,11 +322,10 @@
       </nav>
 
       <div style="display:flex;align-items:center;gap:18px;flex:none">
-        <div data-nav-desktop="" role="group" aria-label="{{ c.nav.langLabel }}" style="position:relative;display:inline-flex;align-items:center;height:32px">
-          <button data-lang-btn="en" type="button" aria-pressed="{{ langOn.en }}" onClick="{{ setEn }}" style="height:32px;padding:0 8px;border:0;background:transparent;font:inherit;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer">EN</button>
-          <button data-lang-btn="de" type="button" aria-pressed="{{ langOn.de }}" onClick="{{ setDe }}" style="height:32px;padding:0 8px;border:0;background:transparent;font:inherit;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer">DE</button>
-          <button data-lang-btn="sk" type="button" aria-pressed="{{ langOn.sk }}" onClick="{{ setSk }}" style="height:32px;padding:0 8px;border:0;background:transparent;font:inherit;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer">SK</button>
-          <span data-lang-marker="" aria-hidden="true" style="position:absolute;bottom:0;left:0;height:2px;width:0;display:flex;opacity:0;transition:transform 220ms var(--ease-out),width 220ms var(--ease-out),opacity 220ms var(--ease-out)"><span style="flex:1;background:var(--vienna-red)"></span><span style="flex:1;background:var(--bratislava-blue)"></span></span>
+        <div data-nav-desktop="" data-lang-switch="" role="group" aria-label="{{ c.nav.langLabel }}" style="position:relative;display:inline-flex;align-items:stretch;height:40px">
+          <button data-lang-btn="en" type="button" aria-pressed="{{ langOn.en }}" onClick="{{ setEn }}" style="width:48px;height:100%;padding:0;border:0;background:transparent;font:inherit;font-size:14px;font-weight:650;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer">EN</button>
+          <button data-lang-btn="de" type="button" aria-pressed="{{ langOn.de }}" onClick="{{ setDe }}" style="width:48px;height:100%;padding:0;border:0;background:transparent;font:inherit;font-size:14px;font-weight:650;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer">DE</button>
+          <button data-lang-btn="sk" type="button" aria-pressed="{{ langOn.sk }}" onClick="{{ setSk }}" style="width:48px;height:100%;padding:0;border:0;background:transparent;font:inherit;font-size:14px;font-weight:650;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer">SK</button>
         </div>
         <span data-nav-cta-desktop="" data-glow="" style="position:relative;display:inline-flex;isolation:isolate">
           <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="sm" on-click="{{ goJoin }}" data-magnet="" hint-size="140px,34px">{{ c.nav.cta }}</x-import>
@@ -2067,18 +2068,7 @@ class Component extends DCLogic {
   }
 
   /* ---------------- nav: FLIP markers, dropdown, keyboard ---------------- */
-  _layoutMarkers() {
-    const place = (marker, target) => {
-      if (!marker) return;
-      if (!target) { marker.style.opacity = 0; return; }
-      const pr = marker.parentElement.getBoundingClientRect(), tr = target.getBoundingClientRect();
-      const inset = target.hasAttribute('data-lang-btn') ? 8 : 14;
-      marker.style.width = Math.max(0, tr.width - inset * 2) + 'px';
-      marker.style.transform = 'translateX(' + (tr.left - pr.left + inset) + 'px)';
-      marker.style.opacity = 1;
-    };
-    place(document.querySelector('[data-lang-marker]'), document.querySelector('[data-nav-desktop] [data-lang-btn][aria-pressed="true"]'));
-  }
+  _layoutMarkers() {}
   _ddOpen(open) {
     clearTimeout(this._ddT);
     if (open === this.state.aboutOpen) return;
