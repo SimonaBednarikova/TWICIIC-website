@@ -58,7 +58,7 @@
           { n: '02', title: 'Cross-border Masterclass', forText: 'For ventures with a serious plan to enter the other city', body: 'Nine weeks, one mixed Vienna–Bratislava cohort, a workshop in each city. The core of the accelerator: you leave with a concrete expansion plan and partners across the border.', cta: 'How the masterclass works', href: '#accelerator' },
           { n: '03', title: 'Scale-up support', forText: 'For selected ventures from the masterclass', body: 'Six months of individual support to execute your first cross-border steps: pilots, partners, customers and financing.', cta: 'How selection works', href: '#support' }
         ],
-        cta1: 'Apply to the Accelerator', cta2: 'Am I ready? 2-minute check'
+        cta1: 'Apply to the Accelerator', cta2: 'Am I ready to scale? 2-minute check'
       },
       events: {
         eyebrow: 'Events', h2: "Discover what's coming up.",
@@ -223,7 +223,7 @@
           { n: '02', title: 'Cross-border Masterclass', forText: 'Für Ventures mit einem ernsthaften Plan für die andere Stadt', body: 'Neun Wochen, eine gemischte Wien–Bratislava-Kohorte, ein Workshop in jeder Stadt. Das Herz des Accelerators: Sie gehen mit einem konkreten Expansionsplan und Partnern jenseits der Grenze nach Hause.', cta: 'So funktioniert die Masterclass', href: '#accelerator' },
           { n: '03', title: 'Scale-up-Support', forText: 'Für ausgewählte Ventures aus der Masterclass', body: 'Sechs Monate individuelle Unterstützung für Ihre ersten grenzüberschreitenden Schritte: Pilotprojekte, Partner, Kund:innen und Finanzierung.', cta: 'So läuft die Auswahl', href: '#support' }
         ],
-        cta1: 'Für den Accelerator bewerben', cta2: 'Bin ich bereit? 2-Minuten-Check'
+        cta1: 'Für den Accelerator bewerben', cta2: 'Bin ich bereit zu skalieren? 2-Minuten-Check'
       },
       events: {
         eyebrow: 'Events', h2: 'Entdecken Sie, was ansteht.',
@@ -388,7 +388,7 @@
           { n: '02', title: 'Cezhraničná masterclass', forText: 'Pre podniky s vážnym plánom vstúpiť do druhého mesta', body: 'Deväť týždňov, jedna zmiešaná kohorta Viedeň–Bratislava, workshop v každom meste. Jadro akcelerátora: odchádzate s konkrétnym plánom expanzie a partnermi za hranicou.', cta: 'Ako funguje masterclass', href: '#accelerator' },
           { n: '03', title: 'Podpora pre scale-upy', forText: 'Pre vybrané podniky z masterclass', body: 'Šesť mesiacov individuálnej podpory pri realizácii prvých cezhraničných krokov: pilotné projekty, partneri, zákazníci a financovanie.', cta: 'Ako prebieha výber', href: '#support' }
         ],
-        cta1: 'Prihláste sa do akcelerátora', cta2: 'Som pripravený? 2-minútový test'
+        cta1: 'Prihláste sa do akcelerátora', cta2: 'Som pripravený škálovať? 2-minútový test'
       },
       events: {
         eyebrow: 'Podujatia', h2: 'Zistite, čo sa chystá.',
@@ -501,7 +501,7 @@
   var acc = {
     en: {
       nav: { home: 'Home', programme: 'Programme', readiness: 'Readiness check', partners: 'Partners', apply: 'Apply', menu: 'Menu', close: 'Close' },
-      hero: { eyebrow: 'TWICIIC · Interreg Slovakia–Austria', title: 'Twin City Accelerator', sub: 'Cross-border growth programme for impact ventures scaling between Slovakia and Austria.', body: 'The Twin City Accelerator helps impact-oriented startups, SMEs, social enterprises and organisations prepare for growth between Bratislava and Vienna through online content, structured acceleration and tailored expert support.', readiness: 'Check your readiness', starts: 'Programme starts', dateTbc: 'Date to be announced', cities: 'Vienna ↔ Bratislava', months: '6–8 months', vienna: 'Vienna' },
+      hero: { eyebrow: 'TWICIIC · Interreg Slovakia–Austria', title: 'Twin City Accelerator', sub: 'Cross-border growth programme for impact ventures scaling between Slovakia and Austria.', body: 'The Twin City Accelerator helps impact-oriented startups, SMEs, social enterprises and organisations prepare for growth between Bratislava and Vienna through online content, structured acceleration and tailored expert support.', readiness: 'Check your readiness to scale', starts: 'Programme starts', dateTbc: 'Date to be announced', cities: 'Vienna ↔ Bratislava', months: '6–8 months', vienna: 'Vienna' },
       fit: {
         yesTitle: 'This programme is for organisations that:',
         yes: [{ text: 'are impact-oriented,' }, { text: 'have traction, customers, users or validated demand,' }, { text: 'want to expand between Slovakia and Austria,' }, { text: 'can work in English,' }, { text: 'are ready to participate actively in the programme,' }, { text: 'look for access to relevant stakeholders and partners.' }],
@@ -510,7 +510,7 @@
       },
       programme: {
         eyebrow: 'Programme overview', title: 'Your path through the programme',
-        c1: { label: 'Stage 1 · Free & online', title: 'Check your readiness', short: 'Free online content, case studies, readiness check', long: 'Introductory content, founder stories and a self-assessment tool to help you understand whether the accelerator is the right fit.', button: 'Am I ready?' },
+        c1: { label: 'Stage 1 · Free & online', title: 'Check your readiness to scale', short: 'Free online content, case studies, readiness check', long: 'Introductory content, founder stories and a self-assessment tool to help you understand whether the accelerator is the right fit.', button: 'Am I ready to scale?' },
         c2: { label: 'Stage 2 · Core programme', title: 'Accelerate', short: '6–8 month cohort programme with workshops, coaching and Demo Day', long: 'A structured cohort programme focused on strategy, finance, impact, go-to-market, investment readiness and cross-border expansion.' },
         c3: { label: 'Stage 3 · Follow-on support', title: 'Receive additional support', short: 'Follow-on support for selected ventures ready for market entry, investment or partnerships', long: 'Bespoke follow-on support for selected ventures, including expert coaching, introductions and individual action plans.', button: 'Get in touch' }
       },
@@ -535,7 +535,7 @@
     },
     de: {
       nav: { home: 'Start', programme: 'Programm', readiness: 'Readiness-Check', partners: 'Partner', apply: 'Bewerben', menu: 'Menü', close: 'Schließen' },
-      hero: { eyebrow: 'TWICIIC · Interreg Slowakei–Österreich', title: 'Twin City Accelerator', sub: 'Grenzüberschreitendes Wachstumsprogramm für Impact-Ventures, die zwischen der Slowakei und Österreich skalieren.', body: 'Der Twin City Accelerator unterstützt wirkungsorientierte Start-ups, KMU, Sozialunternehmen und Organisationen dabei, sich auf Wachstum zwischen Bratislava und Wien vorzubereiten – mit Online-Inhalten, strukturierter Beschleunigung und maßgeschneiderter Expertenunterstützung.', readiness: 'Readiness prüfen', starts: 'Programmstart', dateTbc: 'Termin wird bekannt gegeben', cities: 'Wien ↔ Bratislava', months: '6–8 Monate', vienna: 'Wien' },
+      hero: { eyebrow: 'TWICIIC · Interreg Slowakei–Österreich', title: 'Twin City Accelerator', sub: 'Grenzüberschreitendes Wachstumsprogramm für Impact-Ventures, die zwischen der Slowakei und Österreich skalieren.', body: 'Der Twin City Accelerator unterstützt wirkungsorientierte Start-ups, KMU, Sozialunternehmen und Organisationen dabei, sich auf Wachstum zwischen Bratislava und Wien vorzubereiten – mit Online-Inhalten, strukturierter Beschleunigung und maßgeschneiderter Expertenunterstützung.', readiness: 'Bereitschaft zur Skalierung prüfen', starts: 'Programmstart', dateTbc: 'Termin wird bekannt gegeben', cities: 'Wien ↔ Bratislava', months: '6–8 Monate', vienna: 'Wien' },
       fit: {
         yesTitle: 'Dieses Programm ist für Organisationen, die:',
         yes: [{ text: 'wirkungsorientiert sind,' }, { text: 'Traktion, Kund:innen, Nutzer:innen oder validierte Nachfrage haben,' }, { text: 'zwischen der Slowakei und Österreich expandieren wollen,' }, { text: 'auf Englisch arbeiten können,' }, { text: 'bereit sind, aktiv am Programm teilzunehmen,' }, { text: 'Zugang zu relevanten Stakeholdern und Partnern suchen.' }],
@@ -544,7 +544,7 @@
       },
       programme: {
         eyebrow: 'Programmüberblick', title: 'Ihr Weg durch das Programm',
-        c1: { label: 'Phase 1 · Kostenlos & online', title: 'Readiness prüfen', short: 'Kostenlose Online-Inhalte, Fallstudien, Readiness-Check', long: 'Einführende Inhalte, Gründer:innen-Geschichten und ein Selbsttest, der zeigt, ob der Accelerator zu Ihnen passt.', button: 'Bin ich bereit?' },
+        c1: { label: 'Phase 1 · Kostenlos & online', title: 'Bereitschaft zur Skalierung prüfen', short: 'Kostenlose Online-Inhalte, Fallstudien, Readiness-Check', long: 'Einführende Inhalte, Gründer:innen-Geschichten und ein Selbsttest, der zeigt, ob der Accelerator zu Ihnen passt.', button: 'Bin ich bereit zu skalieren?' },
         c2: { label: 'Phase 2 · Kernprogramm', title: 'Beschleunigen', short: '6–8-monatiges Kohortenprogramm mit Workshops, Coaching und Demo Day', long: 'Ein strukturiertes Kohortenprogramm mit Fokus auf Strategie, Finanzen, Impact, Go-to-Market, Investment Readiness und grenzüberschreitende Expansion.' },
         c3: { label: 'Phase 3 · Anschlussunterstützung', title: 'Zusätzliche Unterstützung erhalten', short: 'Anschlussunterstützung für ausgewählte Ventures, die bereit für Markteintritt, Investment oder Partnerschaften sind', long: 'Maßgeschneiderte Anschlussunterstützung für ausgewählte Ventures – mit Expert:innen-Coaching, Introductions und individuellen Aktionsplänen.', button: 'Kontakt aufnehmen' }
       },
@@ -569,7 +569,7 @@
     },
     sk: {
       nav: { home: 'Domov', programme: 'Program', readiness: 'Test pripravenosti', partners: 'Partneri', apply: 'Prihlásiť sa', menu: 'Menu', close: 'Zavrieť' },
-      hero: { eyebrow: 'TWICIIC · Interreg Slovensko–Rakúsko', title: 'Twin City Accelerator', sub: 'Cezhraničný rastový program pre impaktové podniky, ktoré rastú medzi Slovenskom a Rakúskom.', body: 'Twin City Accelerator pomáha impaktovo orientovaným startupom, MSP, sociálnym podnikom a organizáciám pripraviť sa na rast medzi Bratislavou a Viedňou prostredníctvom online obsahu, štruktúrovanej akcelerácie a expertnej podpory na mieru.', readiness: 'Overte si pripravenosť', starts: 'Začiatok programu', dateTbc: 'Termín bude oznámený', cities: 'Viedeň ↔ Bratislava', months: '6–8 mesiacov', vienna: 'Viedeň' },
+      hero: { eyebrow: 'TWICIIC · Interreg Slovensko–Rakúsko', title: 'Twin City Accelerator', sub: 'Cezhraničný rastový program pre impaktové podniky, ktoré rastú medzi Slovenskom a Rakúskom.', body: 'Twin City Accelerator pomáha impaktovo orientovaným startupom, MSP, sociálnym podnikom a organizáciám pripraviť sa na rast medzi Bratislavou a Viedňou prostredníctvom online obsahu, štruktúrovanej akcelerácie a expertnej podpory na mieru.', readiness: 'Overte si pripravenosť na škálovanie', starts: 'Začiatok programu', dateTbc: 'Termín bude oznámený', cities: 'Viedeň ↔ Bratislava', months: '6–8 mesiacov', vienna: 'Viedeň' },
       fit: {
         yesTitle: 'Tento program je pre organizácie, ktoré:',
         yes: [{ text: 'sú impaktovo orientované,' }, { text: 'majú trakciu, zákazníkov, používateľov alebo overený dopyt,' }, { text: 'chcú expandovať medzi Slovenskom a Rakúskom,' }, { text: 'vedia pracovať v angličtine,' }, { text: 'sú pripravené aktívne sa zapojiť do programu,' }, { text: 'hľadajú prístup k relevantným partnerom a aktérom ekosystému.' }],
@@ -578,7 +578,7 @@
       },
       programme: {
         eyebrow: 'Prehľad programu', title: 'Vaša cesta programom',
-        c1: { label: 'Fáza 1 · Zadarmo & online', title: 'Overte si pripravenosť', short: 'Bezplatný online obsah, prípadové štúdie, test pripravenosti', long: 'Úvodný obsah, príbehy zakladateľov a nástroj sebahodnotenia, ktorý vám pomôže zistiť, či je akcelerátor pre vás to pravé.', button: 'Som pripravený?' },
+        c1: { label: 'Fáza 1 · Zadarmo & online', title: 'Overte si pripravenosť na škálovanie', short: 'Bezplatný online obsah, prípadové štúdie, test pripravenosti', long: 'Úvodný obsah, príbehy zakladateľov a nástroj sebahodnotenia, ktorý vám pomôže zistiť, či je akcelerátor pre vás to pravé.', button: 'Som pripravený škálovať?' },
         c2: { label: 'Fáza 2 · Hlavný program', title: 'Akcelerujte', short: '6–8-mesačný kohortový program s workshopmi, koučingom a Demo Day', long: 'Štruktúrovaný kohortový program zameraný na stratégiu, financie, impakt, go-to-market, investičnú pripravenosť a cezhraničnú expanziu.' },
         c3: { label: 'Fáza 3 · Následná podpora', title: 'Získajte ďalšiu podporu', short: 'Následná podpora pre vybrané podniky pripravené na vstup na trh, investíciu alebo partnerstvá', long: 'Následná podpora na mieru pre vybrané podniky vrátane expertného koučingu, prepojení a individuálnych akčných plánov.', button: 'Kontaktujte nás' }
       },

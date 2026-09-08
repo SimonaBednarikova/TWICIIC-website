@@ -3,7 +3,7 @@
   var yn = function (y, n) { return [{ text: y }, { text: n }]; };
   var en = {
     title: 'Readiness check',
-    hero: { eyebrow: 'Twin City Accelerator · Stage 1 · Free & online', h1: 'Learn & check your readiness.', sub: 'Start here if you want to understand whether cross-border growth between Slovakia and Austria is the right next step for your venture.', cta1: 'Am I ready?', cta2: 'Browse the content', facts: '8 questions · about 2 minutes · no sign-up' },
+    hero: { eyebrow: 'Twin City Accelerator · Stage 1 · Free & online', h1: 'Learn & check your readiness to scale.', sub: 'Start here if you want to understand whether cross-border growth between Slovakia and Austria is the right next step for your venture.', cta1: 'Am I ready to scale?', cta2: 'Browse the content', facts: '8 questions · about 2 minutes · no sign-up' },
     journey: {
       eyebrow: 'How it works', h2: 'Start your Twin City Accelerator journey.',
       body: 'This is the open entry point to the Twin City Accelerator. It gives you access to short learning content and a tool that helps you understand whether you are ready for the next stage of the programme.',
@@ -57,12 +57,12 @@
         email: { label: 'Email me this result and the reading list', placeholder: 'name@company.com', button: 'Send', done: 'Thanks — your result is on its way.', note: 'One email, no newsletter unless you ask for it.' }
       }
     },
-    cta: { h2: 'Ready to scale across the border?', b1: 'Apply', b2: 'Am I ready?' }
+    cta: { h2: 'Ready to scale across the border?', b1: 'Apply', b2: 'Am I ready to scale?' }
   };
 
   var de = {
     title: 'Readiness-Check',
-    hero: { eyebrow: 'Twin City Accelerator · Phase 1 · Kostenlos & online', h1: 'Lernen & Readiness prüfen.', sub: 'Starten Sie hier, wenn Sie verstehen möchten, ob grenzüberschreitendes Wachstum zwischen der Slowakei und Österreich der richtige nächste Schritt für Ihr Venture ist.', cta1: 'Bin ich bereit?', cta2: 'Inhalte ansehen', facts: '8 Fragen · etwa 2 Minuten · keine Anmeldung' },
+    hero: { eyebrow: 'Twin City Accelerator · Phase 1 · Kostenlos & online', h1: 'Lernen & Bereitschaft zur Skalierung prüfen.', sub: 'Starten Sie hier, wenn Sie verstehen möchten, ob grenzüberschreitendes Wachstum zwischen der Slowakei und Österreich der richtige nächste Schritt für Ihr Venture ist.', cta1: 'Bin ich bereit zu skalieren?', cta2: 'Inhalte ansehen', facts: '8 Fragen · etwa 2 Minuten · keine Anmeldung' },
     journey: {
       eyebrow: 'So funktioniert es', h2: 'Starten Sie Ihre Twin City Accelerator Journey.',
       body: 'Das ist der offene Einstieg in den Twin City Accelerator. Sie erhalten Zugang zu kurzen Lerninhalten und einem Tool, das Ihnen zeigt, ob Sie für die nächste Phase des Programms bereit sind.',
@@ -116,12 +116,12 @@
         email: { label: 'Ergebnis und Leseliste per E-Mail erhalten', placeholder: 'name@unternehmen.at', button: 'Senden', done: 'Danke – Ihr Ergebnis ist unterwegs.', note: 'Eine E-Mail, kein Newsletter, außer Sie wünschen ihn.' }
       }
     },
-    cta: { h2: 'Bereit, über die Grenze zu skalieren?', b1: 'Bewerben', b2: 'Bin ich bereit?' }
+    cta: { h2: 'Bereit, über die Grenze zu skalieren?', b1: 'Bewerben', b2: 'Bin ich bereit zu skalieren?' }
   };
 
   var sk = {
     title: 'Test pripravenosti',
-    hero: { eyebrow: 'Twin City Accelerator · Fáza 1 · Zadarmo & online', h1: 'Učte sa & overte si pripravenosť.', sub: 'Začnite tu, ak chcete zistiť, či je cezhraničný rast medzi Slovenskom a Rakúskom správnym ďalším krokom pre váš podnik.', cta1: 'Som pripravený?', cta2: 'Prezrieť obsah', facts: '8 otázok · približne 2 minúty · bez registrácie' },
+    hero: { eyebrow: 'Twin City Accelerator · Fáza 1 · Zadarmo & online', h1: 'Učte sa & overte si pripravenosť na škálovanie.', sub: 'Začnite tu, ak chcete zistiť, či je cezhraničný rast medzi Slovenskom a Rakúskom správnym ďalším krokom pre váš podnik.', cta1: 'Som pripravený škálovať?', cta2: 'Prezrieť obsah', facts: '8 otázok · približne 2 minúty · bez registrácie' },
     journey: {
       eyebrow: 'Ako to funguje', h2: 'Začnite svoju cestu s Twin City Accelerator.',
       body: 'Toto je otvorený vstupný bod do Twin City Accelerator. Získate prístup ku krátkemu vzdelávaciemu obsahu a nástroju, ktorý vám pomôže zistiť, či ste pripravení na ďalšiu fázu programu.',
@@ -175,7 +175,7 @@
         email: { label: 'Pošlite mi výsledok a zoznam na čítanie e-mailom', placeholder: 'meno@firma.sk', button: 'Odoslať', done: 'Ďakujeme – váš výsledok je na ceste.', note: 'Jeden e-mail, žiadny newsletter, pokiaľ si ho nevyžiadate.' }
       }
     },
-    cta: { h2: 'Pripravení rásť cez hranicu?', b1: 'Prihlásiť sa', b2: 'Som pripravený?' }
+    cta: { h2: 'Pripravení rásť cez hranicu?', b1: 'Prihlásiť sa', b2: 'Som pripravený škálovať?' }
   };
 
   window.TWICIIC_READINESS = { en: en, de: de, sk: sk };

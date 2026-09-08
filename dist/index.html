@@ -137,11 +137,22 @@
     [data-btn-ghost-inv]:active { transform: translateY(1px); }
     /* ---- Partners / research / portfolio / events ---- */
     [data-prow] [data-plogo] img { transition: opacity 260ms var(--ease-out); }
-    [data-prow]:hover [data-logo-rest], [data-prow]:focus-within [data-logo-rest] { opacity: 0 !important; }
-    [data-prow]:hover [data-logo-hover], [data-prow]:focus-within [data-logo-hover] { opacity: 1 !important; }
+    [data-prow] [data-plogo] { grid-template-columns: minmax(0, 1fr); }
+    [data-prow] [data-plogo] img { max-width: min(112px, 100%) !important; object-fit: contain; }
+    [data-prow] [data-logo-rest][src="assets/partners/relevant.svg"] { filter: brightness(0); opacity: 1; }
+    @media (hover: hover) and (pointer: fine) {
+      [data-prow]:hover [data-logo-rest], [data-prow]:focus-within [data-logo-rest] { opacity: 0 !important; }
+      [data-prow]:hover [data-logo-hover], [data-prow]:focus-within [data-logo-hover] { opacity: 1 !important; }
+    }
     [data-prole] { transition: opacity 220ms var(--ease-out), transform 220ms var(--ease-out); }
     [data-prow]:hover [data-prole], [data-prow]:focus-within [data-prole] { opacity: 1 !important; transform: none !important; }
-    @media (hover: none) { [data-prole] { opacity: 1 !important; transform: none !important; } [data-logo-rest] { opacity: 0 !important; } [data-logo-hover] { opacity: 1 !important; } }
+    @media (hover: none), (pointer: coarse) {
+      [data-prole] { opacity: 1 !important; transform: none !important; }
+      [data-logo-rest] { opacity: 0 !important; }
+      [data-logo-hover] { opacity: 1 !important; }
+      [data-logo-rest][src="assets/partners/relevant.svg"] { opacity: 1 !important; }
+      [data-logo-hover][src="assets/partners/relevant-red.svg"] { opacity: 0 !important; }
+    }
     [data-plink] { transition: color 150ms var(--ease-out); }
     [data-plink] [data-plink-arrow] { transition: transform 200ms var(--ease-out), color 150ms var(--ease-out); }
     [data-plink]:hover [data-plink-arrow], [data-plink]:focus-visible [data-plink-arrow] { transform: translate(3px, -3px); }
