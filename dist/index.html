@@ -78,7 +78,8 @@
     [data-dd-row]:hover, [data-dd-row]:focus-visible { background: var(--surface-page); outline: none; }
     [data-dd-row] [data-dd-arrow] { transition: transform 200ms var(--ease-out); }
     [data-dd-row]:hover [data-dd-arrow], [data-dd-row]:focus-visible [data-dd-arrow] { transform: translateX(4px); }
-    [data-lang-switch] { border: 1.5px solid var(--black); background: rgba(255,255,255,0.72); }
+    [data-lang-switch] { border: 0; background: transparent; gap: 2px; }
+    [data-lang-switch] [data-lang-btn] { width: 34px !important; font-size: 12px !important; font-weight: 600 !important; }
     [data-lang-btn] { color: var(--text-primary); transition: color 150ms var(--ease-out), background 150ms var(--ease-out); }
     [data-lang-btn]:hover { background: var(--gray-100) !important; }
     [data-lang-btn][aria-pressed="true"] { color: var(--white); background: var(--black) !important; }
@@ -94,7 +95,7 @@
     }
     /* Each label owns its indicator; dropdown decoration is not a nav state. */
     [data-nav-item] { position: relative; }
-    [data-nav-item]::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: -1px; height: 4px; background: linear-gradient(90deg, var(--vienna-red) 50%, var(--bratislava-blue) 50%); transform: scaleX(0); transform-origin: left; transition: transform 220ms var(--ease-out); }
+    [data-nav-item]::after { content: ""; position: absolute; left: 14px; right: 14px; bottom: -1px; height: 2px; background: linear-gradient(90deg, var(--vienna-red) 50%, var(--bratislava-blue) 50%); transform: scaleX(0); transform-origin: left; transition: transform 220ms var(--ease-out); }
     [data-nav-item][data-active="true"]::after, [data-nav-item][aria-expanded="true"]::after, [data-nav-item]:focus-visible::after { transform: scaleX(1); }
     @media (hover: hover) and (pointer: fine) { [data-nav-item]:hover::after { transform: scaleX(1); } }
     [data-logo] { width: 288px; color: var(--text-primary); }
@@ -118,8 +119,8 @@
     @keyframes mesh-a { from { transform: translate(0, 0) scale(1); } to { transform: translate(9vw, 6vh) scale(1.12); } }
     @keyframes mesh-b { from { transform: translate(0, 0) scale(1.08); } to { transform: translate(-8vw, -7vh) scale(1); } }
     [data-grain]::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.07; mix-blend-mode: multiply; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.9 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>"); }
-    [data-hw] { display: inline-block; margin-right: 0.24em; clip-path: inset(0 100% 0 0); transform: translateX(-12px); transition: clip-path 700ms var(--ease-out), transform 700ms var(--ease-out); }
-    [data-hw].in { clip-path: inset(-0.1em -0.12em -0.15em 0); transform: none; }
+    #home-hero [data-reveal] { transform: translateY(12px); transition: opacity 650ms ease-out, transform 650ms cubic-bezier(0.22,1,0.36,1); }
+    #home-hero [data-reveal].in { transform: none; }
     [data-corridor] [data-corridor-line] { transform: scaleX(0); transform-origin: left; transition: transform 1400ms var(--ease-out); }
     [data-corridor].in [data-corridor-line] { transform: scaleX(1); }
     [data-corridor] [data-corridor-node] { transform: scaleY(0); transform-origin: bottom; transition: transform 500ms var(--ease-out); }
@@ -249,7 +250,7 @@
     @media (max-width: 760px) { [data-rdy-hero] { grid-template-columns: 1fr !important; } [data-rdy-pulse] { justify-content: flex-start !important; height: 140px !important; } }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      [data-reveal] { opacity: 1; transform: none; transition: none; }
+      [data-reveal], #home-hero [data-reveal] { opacity: 1; transform: none; transition: none; }
       [data-weave] path { stroke-dashoffset: 0; transition: none; }
       [data-ribbons], [data-bars] > span, [data-track], [data-ghost-mark] > span, [data-mesh] > span { animation: none !important; }
       [data-ghost-card]::after { animation: none !important; display: none; }
@@ -322,7 +323,7 @@
       </nav>
 
       <div style="display:flex;align-items:center;gap:18px;flex:none">
-        <div data-nav-desktop="" data-lang-switch="" role="group" aria-label="{{ c.nav.langLabel }}" style="position:relative;display:inline-flex;align-items:stretch;height:40px">
+        <div data-nav-desktop="" data-lang-switch="" role="group" aria-label="{{ c.nav.langLabel }}" style="position:relative;display:inline-flex;align-items:stretch;height:30px">
           <button data-lang-btn="en" type="button" aria-pressed="{{ langOn.en }}" onClick="{{ setEn }}" style="width:48px;height:100%;padding:0;border:0;background:transparent;font:inherit;font-size:14px;font-weight:650;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer">EN</button>
           <button data-lang-btn="de" type="button" aria-pressed="{{ langOn.de }}" onClick="{{ setDe }}" style="width:48px;height:100%;padding:0;border:0;background:transparent;font:inherit;font-size:14px;font-weight:650;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer">DE</button>
           <button data-lang-btn="sk" type="button" aria-pressed="{{ langOn.sk }}" onClick="{{ setSk }}" style="width:48px;height:100%;padding:0;border:0;background:transparent;font:inherit;font-size:14px;font-weight:650;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer">SK</button>
@@ -366,7 +367,7 @@
   <div data-screen-label="Home">
 
     <!-- HERO -->
-    <section id="home-hero" data-screen-label="Home · Hero" style="position:relative;min-height:100svh;display:flex;align-items:flex-start;overflow:hidden;padding:calc(68px + clamp(48px,8vh,96px)) 0 clamp(150px,20vh,220px)">
+    <section id="home-hero" data-screen-label="Home · Hero" style="position:relative;min-height:100svh;display:flex;align-items:flex-start;overflow:hidden;padding:clamp(144px,22svh,224px) 0 176px">
       <!-- Flagship field: red-to-blue gradient mesh, slow drift, fine grain -->
       <div data-mesh="" aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;overflow:hidden">
         <span style="position:absolute;left:-18%;top:-22%;width:78vw;height:78vw;max-width:980px;max-height:980px;background:radial-gradient(closest-side,rgba(219,31,64,0.26),rgba(219,31,64,0));animation:mesh-a 26s var(--ease-in-out) infinite alternate;will-change:transform"></span>
@@ -376,15 +377,13 @@
 
       <div style="position:relative;width:100%;max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,24px)">
 
-        <h1 ref="{{ heroH1Ref }}" aria-label="{{ c.home.hero.h1 }}" style="margin:0;max-width:19ch;font-size:clamp(42px,5.8vw,84px);line-height:0.98;letter-spacing:-0.03em;font-weight:800;color:var(--text-primary);text-wrap:balance">
-          <sc-for list="{{ heroWords }}" as="w" hint-placeholder-count="7"><span data-hw="" aria-hidden="true">{{ w.text }}</span></sc-for>
-        </h1>
-        <p data-reveal="" style="transition-delay:420ms;margin:28px 0 0;max-width:620px;font-size:clamp(18px,1.7vw,22px);line-height:1.35;letter-spacing:-0.01em;font-weight:500;color:var(--text-primary);text-wrap:balance">{{ c.home.hero.sub }}</p>
-        <div data-reveal="" style="transition-delay:520ms;display:flex;flex-wrap:wrap;gap:12px;margin-top:32px">
+        <h1 data-reveal="" style="margin:0;max-width:1100px;font-size:clamp(44px,6.2vw,84px);line-height:1.04;letter-spacing:-0.035em;font-weight:750;color:var(--text-primary);text-wrap:balance">{{ c.home.hero.h1 }}</h1>
+        <p data-reveal="" style="transition-delay:100ms;margin:28px 0 0;max-width:580px;font-size:clamp(18px,1.55vw,21px);line-height:1.5;letter-spacing:-0.01em;font-weight:400;color:var(--text-secondary);text-wrap:pretty">{{ c.home.hero.sub }}</p>
+        <div data-reveal="" style="transition-delay:180ms;display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
           <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="lg" on-click="{{ navAccelerator }}" data-magnet="" hint-size="220px,50px">{{ c.home.hero.cta1 }}</x-import>
           <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="lg" variant="ghost" on-click="{{ goJoin }}" data-magnet="" hint-size="180px,50px">{{ c.home.hero.cta2 }}</x-import>
         </div>
-        <p data-reveal="" style="transition-delay:640ms;margin:22px 0 0;font-size:13.5px;line-height:1.5;color:var(--text-muted);max-width:520px;text-wrap:pretty">{{ c.home.hero.note }}</p>
+        <p data-reveal="" style="transition-delay:240ms;margin:20px 0 0;font-size:13.5px;line-height:1.5;color:var(--text-muted);max-width:520px;text-wrap:pretty">{{ c.home.hero.note }}</p>
       </div>
 
       <!-- HERO MEDIA SLOT (home.hero.media) — the animated corridor. To swap in a rendered city image later:
