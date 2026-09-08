@@ -383,7 +383,10 @@
           <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="lg" on-click="{{ navAccelerator }}" data-magnet="" hint-size="220px,50px">{{ c.home.hero.cta1 }}</x-import>
           <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="lg" variant="ghost" on-click="{{ goJoin }}" data-magnet="" hint-size="180px,50px">{{ c.home.hero.cta2 }}</x-import>
         </div>
-        <p data-reveal="" style="transition-delay:240ms;margin:20px 0 0;font-size:13.5px;line-height:1.5;color:var(--text-muted);max-width:520px;text-wrap:pretty">{{ c.home.hero.note }}</p>
+        <div data-reveal="" style="transition-delay:240ms;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px 48px;margin-top:32px;max-width:1100px">
+          <p style="margin:0;font-size:13.5px;line-height:1.5;color:var(--text-muted);max-width:440px;text-wrap:pretty">{{ c.home.hero.note }}</p>
+          <img src="{{ heroFundingLogo }}" alt="{{ heroFundingAlt }}" style="display:block;width:340px;max-width:100%;height:auto;flex-shrink:0">
+        </div>
       </div>
 
       <!-- HERO MEDIA SLOT (home.hero.media) — the animated corridor. To swap in a rendered city image later:
@@ -2212,6 +2215,8 @@ class Component extends DCLogic {
       rdyEmailDone: s.rdyEmailDone, rdyEmailOpen: !s.rdyEmailDone, rdyEmailSubmit: (e) => { e.preventDefault(); this.setState({ rdyEmailDone: true }); },
       goCheck: this._act(() => '#rdy-check'), goLearn: goLearnFn,
       c, t, lang: s.lang, langOn,
+      heroFundingLogo: 'assets/logos/interreg-hero-' + s.lang + '.png',
+      heroFundingAlt: { en: 'Interreg Slovakia–Austria — Co-funded by the European Union', de: 'Interreg Slowakei–Österreich — Kofinanziert von der Europäischen Union', sk: 'Interreg Slovensko–Rakúsko — Spolufinancovaný Európskou úniou' }[s.lang],
       setEn: () => this._setLang('en'), setDe: () => this._setLang('de'), setSk: () => this._setLang('sk'), setLang: (l) => this._setLang(l),
       isHome: route === 'home', isAccelerator: route === 'accelerator', isPartners: route === 'partners', isResearch: route === 'research', isPortfolio: route === 'portfolio', isEvents: route === 'events',
       act, cur, heroBrand: s.route === 'home' && s.heroBrand, scrolledAttr: (s.scrolled || s.menuOpen || s.aboutOpen) ? 'on' : 'off',
