@@ -170,6 +170,8 @@
       [data-nav] [data-brand-name] { display: none; }
       [data-nav][data-brand-expanded="true"] { height: 68px !important; margin-bottom: -68px !important; }
       [data-hero-title], [data-hero-description] { text-align: left; }
+      /* Lift only the copy and CTAs; preserve the funding logo and desktop geometry. */
+      [data-hero-title], [data-hero-details] > div:first-child { position: relative; top: calc(clamp(-48px, -5svh, -24px) - 55px); }
       [data-hero-details] > div:first-child { min-width: 0; }
       [data-hero-actions] { justify-content: flex-start; align-items: center; }
     }
