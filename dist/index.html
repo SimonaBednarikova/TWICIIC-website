@@ -1782,12 +1782,14 @@
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;startDate&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Accelerator&quot;},&quot;applyUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#programme&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Links&quot;},&quot;readinessUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#readiness&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Links&quot;},&quot;heroPulse&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;startDate&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Accelerator&quot;},&quot;applyUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://tally.so/r/A76kg0&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Links&quot;},&quot;readinessUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#readiness&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Links&quot;},&quot;heroPulse&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
 class Component extends DCLogic {
   static LANGS = ['en', 'de', 'sk'];
   static ROUTES = ['home', 'accelerator', 'readiness', 'partners', 'research', 'portfolio', 'events'];
   static RDY_KEY = 'twiciic-readiness';
   static STORAGE_KEY = 'twiciic-lang';
+  // Accelerator application form (Tally). Every Apply button opens it in a new tab.
+  static APPLY_URL = 'https://tally.so/r/A76kg0';
   // The people behind TWICIIC, A–Z by first name.
   static TEAM = [
     { name: 'Anna Deutschmann', role: 'Research and Knowledge Manager at Centre for Social Innovation (ZSI)', photo: 'assets/team/portraits/anna-deutschmann.jpg', li: 'https://www.linkedin.com/in/anna-deutschmann-419875217/' },
@@ -2254,7 +2256,7 @@ class Component extends DCLogic {
     let outKey = 'learn'; if (!eligible) outKey = 'no'; else if (score >= 6) outKey = 'apply'; else if (score >= 3) outKey = 'talk';
     const rdyOut = RR[outKey] || {};
     const rdyReasons = outKey === 'no' ? (RR.gates || []).filter((g, i) => gateAns[i] === 1) : [];
-    const goLearnFn = this._act(() => '#rdy-learn'), goContactFn = this._act(() => 'mailto:info@twincityaccelerator.com'), goApplyFn = this._act(() => p.applyUrl || '#programme'), goEventsFn = this._link('#events');
+    const goLearnFn = this._act(() => '#rdy-learn'), goContactFn = this._act(() => 'mailto:info@twincityaccelerator.com'), goApplyFn = this._act(() => p.applyUrl || Component.APPLY_URL), goEventsFn = this._link('#events');
     const rdyPrimary = { apply: goApplyFn, talk: goContactFn, learn: goLearnFn, no: goLearnFn }[outKey];
     const rdySecondary = { apply: goContactFn, talk: goApplyFn, learn: goContactFn, no: goEventsFn }[outKey];
     const mods = (R.learn && R.learn.modules) || [];
@@ -2299,8 +2301,8 @@ class Component extends DCLogic {
       skipToMain: (e) => { e.preventDefault(); if (this.mainRef.current) this.mainRef.current.focus(); },
       noop: (e) => e.preventDefault(), noopBtn: () => {},
       // Accelerator page handlers (unchanged behaviour)
-      navProgramme: this._act(() => '#programme'), navTimeline: this._act(() => '#timeline'), navApply: this._act(() => p.applyUrl || '#programme'),
-      goApply: this._act(() => p.applyUrl || '#programme'), goReadiness: this._act(() => p.readinessUrl || '#readiness'),
+      navProgramme: this._act(() => '#programme'), navTimeline: this._act(() => '#timeline'), navApply: this._act(() => p.applyUrl || Component.APPLY_URL),
+      goApply: this._act(() => p.applyUrl || Component.APPLY_URL), goReadiness: this._act(() => p.readinessUrl || '#readiness'),
       goContact: this._act(() => 'mailto:info@twincityaccelerator.com'), goSkat: this._act(() => 'https://www.sk-at.eu/en/'), goProjects: this._act(() => 'https://www.sk-at.eu/en/projects/'),
       startDate: p.startDate || t.hero.dateTbc,
       pulseAttr: (p.heroPulse ?? true) ? 'on' : 'off', revealMode: (p.scrollReveal ?? true) ? 'on' : 'off',
