@@ -121,22 +121,22 @@
 
   var sk = {
     title: 'Test pripravenosti',
-    hero: { eyebrow: 'Twin City Accelerator · Fáza 1 · Zadarmo & online', h1: 'Učte sa & overte si pripravenosť na škálovanie.', sub: 'Začnite tu, ak chcete zistiť, či je cezhraničný rast medzi Slovenskom a Rakúskom správnym ďalším krokom pre váš podnik.', cta1: 'Som pripravený škálovať?', cta2: 'Prezrieť obsah', facts: '8 otázok · približne 2 minúty · bez registrácie' },
+    hero: { eyebrow: 'Twin City Accelerator · Fáza 1 · Zadarmo a online', h1: 'Učte sa a overte si pripravenosť na škálovanie.', sub: 'Začnite tu, ak chcete zistiť, či je cezhraničný rast medzi Slovenskom a Rakúskom správnym ďalším krokom pre váš podnik.', cta1: 'Sme pripravení škálovať?', cta2: 'Prezrieť obsah', facts: '8 otázok · približne 2 minúty · bez registrácie' },
     journey: {
-      eyebrow: 'Ako to funguje', h2: 'Začnite svoju cestu s Twin City Accelerator.',
-      body: 'Toto je otvorený vstupný bod do Twin City Accelerator. Získate prístup ku krátkemu vzdelávaciemu obsahu a nástroju, ktorý vám pomôže zistiť, či ste pripravení na ďalšiu fázu programu.',
+      eyebrow: 'Ako to funguje', h2: 'Začnite svoju cestu s programom Twin City Accelerator.',
+      body: 'Toto je otvorený vstup do programu Twin City Accelerator. Získate prístup ku krátkemu vzdelávaciemu obsahu a nástroju, ktorý vám pomôže zistiť, či ste pripravení na ďalšiu fázu programu.',
       steps: [
         { n: '01', t: 'Učte sa', d: 'Šesť krátkych modulov o oboch ekosystémoch, o zakladateľoch, ktorí prekročili hranicu, a o tom, čo od vás program vyžaduje.' },
         { n: '02', t: 'Overte si', d: 'Osem otázok, dve minúty. Štyri o oprávnenosti, štyri o pripravenosti – s úprimným odporúčaním na konci.' },
-        { n: '03', t: 'Rozhodnite sa', d: 'Prihláste sa do hlavného programu, dohodnite si s nami desaťminútový hovor alebo sa učte ďalej do ďalšieho kola.' }
+        { n: '03', t: 'Rozhodnite sa', d: 'Prihláste sa do hlavného programu, dohodnite si s nami desaťminútový hovor alebo pokračujte vo vzdelávaní až do ďalšieho kola.' }
       ]
     },
     learn: {
-      eyebrow: 'Vzdelávací obsah', h2: 'Začnite so základmi.', moreEyebrow: 'Choďte hlbšie', moreH2: 'Ako vyzerá hlavný program.', status: 'V príprave',
+      eyebrow: 'Vzdelávací obsah', h2: 'Začnite so základmi.', moreEyebrow: 'Do hĺbky', moreH2: 'Ako vyzerá hlavný program.', status: 'V príprave',
       modules: [
-        { n: '01', fmt: 'Článok', title: 'Prečo Viedeň–Bratislava? Vaša cezhraničná príležitosť na rast', topics: [{ text: 'Čím je región Viedeň–Bratislava jedinečný' }, { text: 'Prečo by impaktové podniky mali myslieť cezhranične skoro' }, { text: 'Príležitosť dvoch prepojených ekosystémov' }, { text: 'Prečo práve teraz' }] },
+        { n: '01', fmt: 'Článok', title: 'Prečo Viedeň–Bratislava? Vaša cezhraničná príležitosť na rast', topics: [{ text: 'Čím je región Viedeň–Bratislava jedinečný' }, { text: 'Prečo by impaktové podniky mali myslieť cezhranične už od začiatku' }, { text: 'Príležitosť dvoch prepojených ekosystémov' }, { text: 'Prečo práve teraz' }] },
         { n: '02', fmt: 'Príbehy zakladateľov', title: 'Príbehy úspechu: ako zakladatelia expandovali cez hranicu', topics: [{ text: 'Slovenský startup expanduje do Rakúska' }, { text: 'Rakúsky startup expanduje na Slovensko' }, { text: 'Výzvy, prínosy a ponaučenia' }, { text: 'Čo fungovalo, čo nie – a urobili by to znova?' }] },
-        { n: '03', fmt: 'Sprievodca', title: 'Je Twin City Accelerator pre vás to pravé?', topics: [{ text: 'Kto by sa mal prihlásiť – a kto ešte nie' }, { text: 'V akej fáze by mali účastníci byť' }, { text: 'Kritériá oprávnenosti a čo tvorí silnú zhodu' }, { text: 'Ako sa sebahodnotenie boduje a kam vedie každý výsledok' }] },
+        { n: '03', fmt: 'Sprievodca', title: 'Je Twin City Accelerator pre vás to pravé?', topics: [{ text: 'Kto by sa mal prihlásiť – a kto ešte nie' }, { text: 'V akej fáze by mali účastníci byť' }, { text: 'Kritériá oprávnenosti a kedy vám program naozaj sedí' }, { text: 'Ako sa sebahodnotenie vyhodnocuje a čo znamená každý výsledok' }] },
         { n: '04', fmt: 'Program', title: 'Čo získate v hlavnom programe', topics: [{ text: 'Celá 6–8-mesačná štruktúra: fázy, workshopy, online obsah, koučing' }, { text: 'Miesta stretnutí striedavo vo Viedni a v Bratislave' }, { text: 'Mentoring, cezhraničná podpora, prístup k ekosystému, investičná pripravenosť' }, { text: 'Časový plán a fázy v prehľade' }] },
         { n: '05', fmt: 'Video · ≤ 10 min', title: 'Expertný obsah: základy škálovania impaktového podniku', topics: [{ text: 'Unit economics pre zakladateľov' }, { text: 'Základy cezhraničného vstupu na trh' }, { text: 'Budovanie partnerstiev cez hranice' }, { text: 'Získavanie financií v Rakúsku a na Slovensku' }, { text: 'Základy merania impaktu' }] },
         { n: '06', fmt: 'Tím', title: 'Zoznámte sa s tímom', topics: [{ text: 'Ľudia za akcelerátorom v CB ESPRI a Relevant Ventures' }, { text: 'Kto sú a čo prinášajú' }, { text: 'Prečo im záleží na cezhraničnom impakte' }] }
@@ -145,7 +145,7 @@
     check: {
       eyebrow: 'Sebahodnotenie · 2 minúty', h2: 'Zmapujte svoju cestu – mali by ste prekročiť Dunaj?',
       lead: 'Osem rýchlych otázok. Prvé štyri ukážu, či je akcelerátor pre vás otvorený, ďalšie štyri, ako ste pripravení. Úprimné odporúčanie dostanete okamžite – nič sa nikam neposiela, pokiaľ sa tak nerozhodnete.',
-      part1: 'Časť 1 · Oprávnenosť', part2: 'Časť 2 · Pripravenosť', back: 'Späť', restart: 'Začať odznova', keys: 'Tip: odpovedajte zobrazenou klávesou',
+      part1: 'Časť 1 · Oprávnenosť', part2: 'Časť 2 · Pripravenosť', back: 'Späť', restart: 'Začať odznova', keys: 'Tip: odpovedať môžete aj stlačením zobrazenej klávesy',
       map: { eyebrow: 'Vaša mapa', from: 'Viedeň', to: 'Bratislava', question: 'Otázka', complete: 'Mapa je kompletná', elig: 'Oprávnenosť', ready: 'Pripravenosť', pending: 'Odpovedajte na otázky – mapa sa vypĺňa priebežne.', done: 'Vaše odporúčanie je vľavo.' },
       gateLabels: [{ text: 'Organizácia' }, { text: 'Impakt' }, { text: 'Región' }, { text: 'Cezhraničnosť' }],
       dims: { stage: 'Fáza', impact: 'Impakt', border: 'Cezhraničné plány', team: 'Záväzok' },
@@ -155,27 +155,27 @@
         { part: 1, q: 'Sídlite alebo aktívne pôsobíte v regióne Viedne alebo Bratislavy?', help: 'Program je spolufinancovaný z Interreg Slovensko–Rakúsko a je otvorený podnikom pôsobiacim v oboch hlavných mestách a ich regiónoch.', opts: yn('Áno', 'Nie') },
         { part: 1, q: 'Chcete v najbližších 12–24 mesiacoch expandovať alebo spolupracovať cez rakúsko-slovenskú hranicu?', help: 'Zákazníci, partneri, pilotné projekty alebo právnická osoba na druhej strane – všetko sa počíta.', opts: yn('Áno', 'Nie') },
         { part: 2, dim: 'stage', q: 'Kde je vaše riešenie dnes?', help: '', opts: [{ text: 'Nápad alebo prototyp – ešte nie na trhu' }, { text: 'Na trhu s prvými zákazníkmi alebo používateľmi' }, { text: 'Rastieme: opakovaní zákazníci, tržby alebo overený dopyt' }] },
-        { part: 2, dim: 'impact', q: 'Ako pracujete so svojím impaktom?', help: '', opts: [{ text: 'Máme ambíciu, ale ešte nie definované ciele' }, { text: 'Máme definované impaktové ciele' }, { text: 'Meriame impakt podľa metrík alebo Theory of Change' }] },
-        { part: 2, dim: 'border', q: 'Aké konkrétne sú vaše cezhraničné plány?', help: '', opts: [{ text: 'Sme zvedaví – zatiaľ nič konkrétne' }, { text: 'Preskúmali sme druhý trh alebo viedli prvé rozhovory' }, { text: 'Máme plán, prvých partnerov alebo zákazníkov za hranicou' }] },
-        { part: 2, dim: 'team', q: 'Dokáže sa váš tím zaviazať k 6–8-mesačnému programu v angličtine s workshopmi v oboch mestách?', help: '', opts: [{ text: 'Momentálne nie' }, { text: 'Pravdepodobne áno, s plánovaním' }, { text: 'Áno – zúčastní sa osoba s rozhodovacou právomocou' }] }
+        { part: 2, dim: 'impact', q: 'Ako pracujete so svojím impaktom?', help: '', opts: [{ text: 'Máme ambíciu, ale ciele ešte nemáme definované' }, { text: 'Máme definované impaktové ciele' }, { text: 'Impakt meriame pomocou metrík alebo Theory of Change' }] },
+        { part: 2, dim: 'border', q: 'Nakoľko konkrétne sú vaše cezhraničné plány?', help: '', opts: [{ text: 'Sme zvedaví – zatiaľ nič konkrétne' }, { text: 'Preskúmali sme druhý trh alebo sme viedli prvé rozhovory' }, { text: 'Máme plán, prvých partnerov alebo zákazníkov za hranicou' }] },
+        { part: 2, dim: 'team', q: 'Dokáže sa váš tím zaviazať k 6–8-mesačnému programu v angličtine s workshopmi v oboch mestách?', help: '', opts: [{ text: 'Momentálne nie' }, { text: 'Pravdepodobne áno, ak si to naplánujeme' }, { text: 'Áno – zúčastní sa osoba s rozhodovacou právomocou' }] }
       ],
       result: {
         eyebrow: 'Váš výsledok', breakdown: 'Vaša pripravenosť v detaile', why: 'Prečo',
-        apply: { t: 'Ste pripravení prekročiť. Prihláste sa do akcelerátora.', b: 'Vaše odpovede zodpovedajú tomu, pre čo je program vytvorený: impaktový podnik na trhu, konkrétna cezhraničná ambícia a tím, ktorý sa dokáže zaviazať.', p: 'Prihlásiť sa', s: 'Dohodnúť 10-minútový hovor' },
-        talk: { t: 'Takmer tam – poďme sa porozprávať.', b: 'Ste oprávnení a niekoľko oblastí by pred štartom kohorty stálo za doladenie. V desaťminútovom hovore vám úprimne povieme, či sa prihlásiť teraz alebo mieriť na ďalšie kolo.', p: 'Dohodnúť 10-minútový hovor', s: 'Prihlásiť sa aj tak' },
+        apply: { t: 'Ste pripravení prekročiť hranicu. Prihláste sa do akcelerátora.', b: 'Vaše odpovede zodpovedajú tomu, pre čo je program vytvorený: impaktový podnik na trhu, konkrétna cezhraničná ambícia a tím, ktorý sa dokáže zaviazať.', p: 'Prihlásiť sa', s: 'Dohodnúť 10-minútový hovor' },
+        talk: { t: 'Už ste takmer tam – poďme sa porozprávať.', b: 'Ste oprávnení a niekoľko oblastí by pred štartom kohorty stálo za doladenie. V desaťminútovom hovore vám úprimne povieme, či sa prihlásiť teraz, alebo počkať na ďalšie kolo.', p: 'Dohodnúť 10-minútový hovor', s: 'Prihlásiť sa aj tak' },
         learn: { t: 'Ešte nie – začnite s obsahom.', b: 'Ste oprávnení, ale akcelerátor funguje najlepšie, keď je podnik na trhu a má konkrétne cezhraničné plány. Bezplatné moduly sú vytvorené presne pre túto fázu – a ďalšie kolo je reálna možnosť.', p: 'Preskúmať obsah', s: 'Dohodnúť 10-minútový hovor' },
-        no: { t: 'Akcelerátor zatiaľ nie je to pravé.', b: 'Bezplatný obsah je otvorený pre všetkých a naše podujatia sú najjednoduchší spôsob, ako spoznať oba ekosystémy.', p: 'Preskúmať obsah', s: 'Pozrieť podujatia' },
+        no: { t: 'Akcelerátor pre vás zatiaľ nie je to pravé.', b: 'Bezplatný obsah je otvorený pre všetkých a naše podujatia sú najjednoduchší spôsob, ako spoznať oba ekosystémy.', p: 'Preskúmať obsah', s: 'Pozrieť podujatia' },
         gates: [
           { text: 'Program je určený organizáciám, ktoré vyvíjajú škálovateľné riešenie.' },
           { text: 'Jasný sociálny alebo environmentálny impakt v jadre činnosti je podmienkou financovania.' },
           { text: 'Program je financovaný pre podniky pôsobiace v regióne Viedne alebo Bratislavy.' },
-          { text: 'Cezhraničný rast je srdcom programu – bez neho sa lepšie hodí iná podpora.' }
+          { text: 'Cezhraničný rast je srdcom programu – bez neho vám lepšie poslúži iná forma podpory.' }
         ],
-        tips: { stage: 'Získajte prvých zákazníkov alebo používateľov pred štartom kohorty – moduly 01 a 04 ukazujú, čo program očakáva.', impact: 'Definujte dve alebo tri impaktové metriky – modul 05 pokrýva základy merania impaktu.', border: 'Najprv zmapujte druhý trh – modul 01 je to správne miesto na začiatok.', team: 'Zablokujte si termíny workshopov včas; kohorta pracuje v angličtine a stretáva sa v oboch mestách.' },
-        email: { label: 'Pošlite mi výsledok a zoznam na čítanie e-mailom', placeholder: 'meno@firma.sk', button: 'Odoslať', done: 'Ďakujeme – váš výsledok je na ceste.', note: 'Jeden e-mail, žiadny newsletter, pokiaľ si ho nevyžiadate.' }
+        tips: { stage: 'Získajte prvých zákazníkov alebo používateľov pred štartom kohorty – moduly 01 a 04 ukazujú, čo program očakáva.', impact: 'Definujte dve alebo tri impaktové metriky – modul 05 pokrýva základy merania impaktu.', border: 'Najprv zmapujte druhý trh – modul 01 je to správne miesto na začiatok.', team: 'Rezervujte si termíny workshopov včas; kohorta pracuje v angličtine a stretáva sa v oboch mestách.' },
+        email: { label: 'Pošlite mi výsledok a odporúčané čítanie e-mailom', placeholder: 'meno@firma.sk', button: 'Odoslať', done: 'Ďakujeme – váš výsledok je na ceste.', note: 'Jeden e-mail, žiadny newsletter, pokiaľ si ho nevyžiadate.' }
       }
     },
-    cta: { h2: 'Pripravení rásť cez hranicu?', b1: 'Prihlásiť sa', b2: 'Som pripravený škálovať?' }
+    cta: { h2: 'Pripravení rásť cez hranicu?', b1: 'Prihlásiť sa', b2: 'Sme pripravení škálovať?' }
   };
 
   window.TWICIIC_READINESS = { en: en, de: de, sk: sk };

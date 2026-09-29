@@ -344,7 +344,7 @@
       hero: {
         eyebrow: 'Twin City Impact Innovation Champion · Viedeň – Bratislava',
         h1: 'Rozvíjajte svoj impaktový podnik v dvoch hlavných mestách.',
-        sub: 'TWICIIC spája Viedeň a Bratislavu do jedného domáceho trhu pre impaktové startupy, MSP a neziskové organizácie.',
+        sub: 'TWICIIC robí z Viedne a Bratislavy jeden domáci trh pre impaktové startupy, MSP a neziskové organizácie.',
         cta1: 'Objavte akcelerátor', cta2: 'Pridajte sa k sieti',
         note: 'Projekt Interreg Slovensko–Rakúsko. Zapojenie je bezplatné a otvorené na oboch stranách hranice.',
         media: 'Hlavný vizuál: dve mestá vzdialené 55 km', km: 'km', vie: 'Viedeň', ba: B
@@ -355,7 +355,7 @@
         lead: 'Viedeň a Bratislava sú si bližšie než ktorékoľvek iné dve hlavné mestá na kontinente. Ich impaktové inovačné scény nie.',
         vie: { title: 'Viedeň', body: 'Vyspelá impaktová scéna so silnými podpornými štruktúrami, ktorá zostáva prevažne vo vlastných komunitách.' },
         ba: { title: B, body: 'Rýchla, podnikavá scéna, ktorá si inštitúcie na svoju podporu ešte len buduje.' },
-        change: { title: 'To sa mení.', body: 'Zakladatelia na oboch stranách narážajú na rovnaké medzery: cezhraničné know-how, investičnú pripravenosť a jednoducho prehľad o tom, kto čo robí hodinu cesty odtiaľto. Keď ich zaplníme, z dvoch polovičných trhov vznikne jeden región s tromi miliónmi ľudí.' },
+        change: { title: 'To sa mení.', body: 'Zakladatelia na oboch stranách narážajú na rovnaké prekážky: chýba im cezhraničné know-how, investičná pripravenosť a jednoducho prehľad o tom, kto čo robí hodinu cesty od nich. Keď ich odstránime, z dvoch polovičných trhov vznikne jeden región s tromi miliónmi ľudí.' },
         stats: [
           { kind: 'num', n: 55, pre: '', post: ' km', display: '55 km', l: 'medzi oboma hlavnými mestami' },
           { kind: 'num', n: 3, pre: '~', post: ' milióny', display: '~3 milióny', l: 'ľudí v jednom regióne' },
@@ -366,11 +366,11 @@
       },
       pulse: {
         eyebrow: 'Twin City Pulse', h2: 'Buďte pulzom Twin City.',
-        body: 'TWICIIC prepája dva ekosystémy: zakladateľov, huby, investorov, univerzity aj samotné mestá. Pridajte sa k sieti a staňte sa súčasťou Twin City Pulse – rastúcej komunity ľudí, ktorí tvoria impakt vo Viedni a v Bratislave.',
+        body: 'TWICIIC prepája dva ekosystémy: zakladateľov, huby, investorov, univerzity aj samotné mestá. Pridajte sa k sieti a staňte sa súčasťou Twin City Pulse – rastúcej komunity ľudí, ktorí vo Viedni a v Bratislave prinášajú pozitívnu zmenu.',
         cta: 'Pridajte sa k sieti', sub: 'Zadarmo. Otvorené pre obe mestá. Pokračuje aj po roku 2028.'
       },
       sw: {
-        h: 'Kam patríte?',
+        h: 'Kde je vaše miesto?',
         items: [
           { n: '01', title: 'Budujem podnik', body: 'Startup, impaktový MSP alebo nezisková organizácia pripravená rásť na druhom trhu.', cta: 'Objavte akcelerátor', href: '#accelerator' },
           { n: '02', title: 'Pracujem v ekosystéme alebo pre mesto', body: 'Hub, univerzita, investor, mestský odbor alebo mestský podnik.', cta: 'Staňte sa partnerom', href: '#partners' },
@@ -378,17 +378,17 @@
         ]
       },
       acc: {
-        eyebrow: 'Twin City Accelerator', h2: 'Jeden program. Dve mestá. Tri cesty dnu.',
+        eyebrow: 'Twin City Accelerator', h2: 'Jeden program. Dve mestá. Tri spôsoby, ako sa zapojiť.',
         what: { title: 'Čo to je', body: 'Bezplatný cezhraničný akcelerátor pre impaktové podniky, ktoré chcú pôsobiť vo Viedni aj v Bratislave – od prvej zvedavosti po prvých zákazníkov na druhej strane.' },
         get: { title: 'Akú podporu získate', body: 'Praktické biznis tréningy, zmiešaná kohorta Viedeň–Bratislava, mentoring od ľudí, ktorí už škálovali, a konkrétna podpora pri prvých krokoch na druhý trh.' },
         who: { title: 'Kto ho realizuje', body: 'Program vedú CB ESPRI, Relevant Ventures a Impact Slovakia s podporou Vienna Business Agency, hlavného mesta Bratislavy a ZSI.' },
         forLabel: 'Pre koho',
         stages: [
-          { n: '01', title: 'Začnite tu', forText: 'Pre každého, kto chce spoznať ekosystém Twin City', body: 'Otvorené online stretnutia o budovaní a raste impaktových podnikov cez hranicu. Bez prihlášky, bez poplatkov. Príďte raz alebo zakaždým.', cta: 'Pozrite si nadchádzajúce stretnutia', href: '#events' },
-          { n: '02', title: 'Cezhraničná masterclass', forText: 'Pre podniky s vážnym plánom vstúpiť do druhého mesta', body: 'Deväť týždňov, jedna zmiešaná kohorta Viedeň–Bratislava, workshop v každom meste. Jadro akcelerátora: odchádzate s konkrétnym plánom expanzie a partnermi za hranicou.', cta: 'Ako funguje masterclass', href: '#accelerator' },
-          { n: '03', title: 'Podpora pre scale-upy', forText: 'Pre vybrané podniky z masterclass', body: 'Šesť mesiacov individuálnej podpory pri realizácii prvých cezhraničných krokov: pilotné projekty, partneri, zákazníci a financovanie.', cta: 'Ako prebieha výber', href: '#support' }
+          { n: '01', title: 'Začnite tu', forText: 'Pre každého, kto chce spoznať ekosystém Twin City', body: 'Otvorené online stretnutia o budovaní a raste impaktových podnikov cez hranicu. Bez prihlášky, bez poplatkov. Príďte raz alebo pravidelne.', cta: 'Pozrite si nadchádzajúce stretnutia', href: '#events' },
+          { n: '02', title: 'Cezhraničný masterclass', forText: 'Pre podniky s vážnym plánom vstúpiť do druhého mesta', body: 'Deväť týždňov, jedna zmiešaná kohorta Viedeň–Bratislava, workshop v každom meste. Jadro akcelerátora: odchádzate s konkrétnym plánom expanzie a partnermi za hranicou.', cta: 'Ako funguje masterclass', href: '#accelerator' },
+          { n: '03', title: 'Podpora pre scale-upy', forText: 'Pre vybrané podniky z masterclassu', body: 'Šesť mesiacov individuálnej podpory pri realizácii prvých cezhraničných krokov: pilotné projekty, partneri, zákazníci a financovanie.', cta: 'Ako prebieha výber', href: '#support' }
         ],
-        cta1: 'Prihláste sa do akcelerátora', cta2: 'Som pripravený škálovať? 2-minútový test'
+        cta1: 'Prihláste sa do akcelerátora', cta2: 'Sme pripravení škálovať? 2-minútový test'
       },
       events: {
         eyebrow: 'Podujatia', h2: 'Zistite, čo sa chystá.',
@@ -396,11 +396,11 @@
         all: 'Všetky podujatia', news: 'Najnovšie správy'
       },
       team: {
-        eyebrow: 'Kto za tým stojí', h2: 'Objavte jedinečné zoskupenie partnerov, ktorí stoja za TWICIIC.',
+        eyebrow: 'Kto za tým stojí', h2: 'Spoznajte jedinečné partnerské konzorcium, ktoré stojí za TWICIIC.',
         body: 'Šesť organizácií, dve mestá, jeden tím: výskumné centrum, dve mestské agentúry, venture štúdio, prevádzkovateľ akcelerátora a impaktová sieť. Zoznámte sa s ľuďmi, ktorí vedú program, výskum a sieť.',
         cta1: 'Spoznajte partnerov', cta2: 'Objavte náš tím', media: 'Partnerské konzorcium TWICIIC na stretnutí v Bratislave, jún 2026.'
       },
-      nl: { h2: 'Zostaňte v obraze.', body: 'Jeden e-mail mesačne: nové stretnutia, otvorené výzvy a to, čo sa učíme. Bez šumu.', ph: 'vas@email.com', cta: 'Odoberať', done: 'Ďakujeme – ste na zozname.', label: 'E-mailová adresa' }
+      nl: { h2: 'Zostaňte v obraze.', body: 'Jeden e-mail mesačne: nové stretnutia, otvorené výzvy a to, čo sa učíme. Bez šumu.', ph: 'vas@email.com', cta: 'Prihlásiť sa na odber', done: 'Ďakujeme – ste prihlásení na odber.', label: 'E-mailová adresa' }
     },
     par: {
       hero: { eyebrow: 'O nás · Partneri', h1: 'Šesť partnerov. Dve mestá. Jeden tím.', sub: 'TWICIIC vedie šesť organizácií z Viedne a Bratislavy – každá prináša to, čo druhej strane chýba.' },
@@ -424,7 +424,7 @@
         ]
       },
       fund: {
-        eyebrow: 'Ako je TWICIIC financovaný', h2: 'Spolufinancovaný Európskou úniou.',
+        eyebrow: 'Ako je TWICIIC financovaný', h2: 'Spolufinancované Európskou úniou.',
         body: 'Tento projekt je spolufinancovaný programom Interreg Slovensko–Rakúsko 2021–2027 z Európskeho fondu regionálneho rozvoja (EFRR).',
         rows: [
           { k: 'Program', v: 'Interreg Slovensko–Rakúsko 2021–2027', sub: '' },
@@ -435,38 +435,38 @@
         ],
         unit: 'Značka programu Interreg Slovensko–Rakúsko'
       },
-      cta: { h2: 'Chcete s nami spolupracovať?', body: 'Spoluorganizujte stretnutie, odporučte podnik, pilotujte s mestom alebo sa pridajte k sieti.', b1: 'Staňte sa partnerom', b2: 'Pridajte sa k sieti' }
+      cta: { h2: 'Chcete s nami spolupracovať?', body: 'Spoluorganizujte stretnutie, odporučte podnik, spustite pilotný projekt s mestom alebo sa pridajte k sieti.', b1: 'Staňte sa partnerom', b2: 'Pridajte sa k sieti' }
     },
     res: {
-      hero: { eyebrow: 'O nás · Výskum', h1: 'Čo sa učíme o Twin City.', sub: 'Skôr než akcelerujeme, mapujeme. Náš výskumný tím dokumentuje oba ekosystémy, aby zakladatelia, mestá a partneri vychádzali z rovnakého obrazu.' },
+      hero: { eyebrow: 'O nás · Výskum', h1: 'Čo zisťujeme o Twin City.', sub: 'Skôr než akcelerujeme, mapujeme. Náš výskumný tím dokumentuje oba ekosystémy, aby zakladatelia, mestá a partneri vychádzali z rovnakých poznatkov.' },
       prog: { eyebrow: 'Vzniká', h2: 'Dve správy, obe v príprave.' },
       lbl: { method: 'Ako postupujeme', when: 'Kedy' },
       reports: [
         { n: '01', side: 'vie', type: 'Správa · v príprave', title: 'Mapovanie impaktového ekosystému Twin City', body: 'Kto podporuje impaktové podniky vo Viedni a v Bratislave a ako dobre sa obe strany poznajú: huby, investori, univerzity, podporné programy, mestskí aktéri.', method: 'Desk research, rozhovory s aktérmi ekosystému na oboch stranách, fokusové skupiny v každom meste.', when: 'Prvé zistenia v roku 2026', cta: 'Upozorniť ma na zverejnenie' },
         { n: '02', side: 'ba', type: 'Správa · v príprave', title: 'Čo impaktoví zakladatelia potrebujú, aby prekročili hranicu', body: 'Analýza potrieb so zakladateľmi, MSP a neziskovými organizáciami: investičná pripravenosť, cezhraničné know-how, právo a vstup na trh, meranie impaktu.', method: 'Rozhovory so zakladateľmi a validačný workshop so zakladateľmi a aktérmi ekosystému. Výsledky priamo formujú, čo akcelerátor učí.', when: 'Zistenia v roku 2026', cta: 'Zapojte sa do výskumu' }
       ],
-      know: { eyebrow: 'Čo už vieme', h2: 'Štyri veci, ktoré prvé rozhovory ukázali jasne.' },
+      know: { eyebrow: 'Čo už vieme', h2: 'Štyri veci, ktoré ukázali už prvé rozhovory.' },
       k: [
         { n: '01', text: 'Viedenská impaktová scéna vyrástla, no hovorí najmä sama so sebou.' },
-        { n: '02', text: 'Bratislavskí zakladatelia pracujú bez podporných štruktúr, ktoré Viedeň považuje za samozrejmé.' },
-        { n: '03', text: 'Ani jedna strana nemá spoľahlivý prehľad o tom, kto čo robí 55 km ďaleko.' },
+        { n: '02', text: 'Bratislavskí zakladatelia pracujú bez podporných štruktúr, ktoré sú vo Viedni samozrejmosťou.' },
+        { n: '03', text: 'Ani jedna strana nemá spoľahlivý prehľad o tom, kto čo robí 55 km od nich.' },
         { n: '04', text: 'Medzery, ktoré zakladatelia menujú ako prvé: investičná pripravenosť a cezhraničné know-how.' }
       ],
       themesH: 'Témy, ktorým sa venujeme',
       themes: [{ text: 'Cezhraničná expanzia' }, { text: 'Meranie impaktu' }, { text: 'Financie a investičná pripravenosť' }, { text: 'Mestá a verejné inovácie' }, { text: 'Mapovanie ekosystému' }],
-      watch: { h2: 'Nahrávky', body: 'Nahrávky stretnutí a záznamy webinárov sa tu budú objavovať počas programu.', ghost: 'Nahrávka · už čoskoro' },
-      cta: { h2: 'Získajte zistenia ako prví.', body: 'Prihláste sa na odber a každú správu vám pošleme v deň jej zverejnenia – spolu s tromi zisteniami, na ktorých záleží najviac.', b1: 'Odoberať', b2: 'Prispejte do výskumu', note: 'Stále vedieme rozhovory so zakladateľmi a aktérmi ekosystému v oboch mestách. Tridsať minút vášho času formuje, čo akcelerátor učí.' }
+      watch: { h2: 'Nahrávky', body: 'Nahrávky stretnutí a záznamy webinárov tu budú počas programu postupne pribúdať.', ghost: 'Nahrávka · už čoskoro' },
+      cta: { h2: 'Získajte zistenia ako prví.', body: 'Prihláste sa na odber a každú správu vám pošleme v deň jej zverejnenia – spolu s tromi zisteniami, na ktorých záleží najviac.', b1: 'Prihlásiť sa na odber', b2: 'Prispejte k výskumu', note: 'Stále vedieme rozhovory so zakladateľmi a aktérmi ekosystému v oboch mestách. Tridsať minút vášho času formuje, čo akcelerátor učí.' }
     },
     por: {
-      hero: { eyebrow: 'O nás · Portfólio', h1: 'Podniky Twin City.', sub: 'Každý podnik, ktorý prejde Twin City Accelerator, tu nájdete: čo robí, odkiaľ je a kam smeruje.' },
-      empty: { label: 'Prvá kohorta sa pripravuje', h2: 'Prvá kohorta sa pripravuje.', body: 'Vyberáme podniky, ktoré vytvoria prvú cezhraničnú kohortu Twin City Accelerator. Portfólio sa otvorí v momente, keď odštartujú.', cta1: 'Ako sa dostať do prvej kohorty', cta2: 'Zostať v kontakte', note: 'Prihlásiť sa môžu startupy, impaktové MSP a neziskové organizácie z Viedne a Bratislavy.' },
+      hero: { eyebrow: 'O nás · Portfólio', h1: 'Podniky Twin City.', sub: 'Nájdete tu každý podnik, ktorý prejde programom Twin City Accelerator: čo robí, odkiaľ je a kam smeruje.' },
+      empty: { label: 'Prvá kohorta sa pripravuje', h2: 'Prvá kohorta sa pripravuje.', body: 'Vyberáme podniky, ktoré vytvoria prvú cezhraničnú kohortu Twin City Accelerator. Portfólio zverejníme hneď, ako odštartujú.', cta1: 'Ako sa dostať do prvej kohorty', cta2: 'Zostať v kontakte', note: 'Prihlásiť sa môžu startupy, impaktové MSP a neziskové organizácie z Viedne a Bratislavy.' },
       soon: 'Čo tu nájdete',
       g: { logo: 'Logo podniku', name: 'Názov podniku', meta: 'Sektor · Mesto · Fáza', body: 'Jedna veta o tom, čo podnik robí – sloveso na začiatku.', example: 'Ukážkový záznam' },
       cta: { h2: 'Chcete byť na tejto stránke?', b1: 'Prihláste sa do akcelerátora' }
     },
     ev: {
       hero: { eyebrow: 'Podujatia a novinky', h1: 'Čo sa deje v Twin City.', sub: 'Stretnutia, meetupy, Demo Days a študijné návštevy vo Viedni, v Bratislave a online. A k tomu novinky z projektu.' },
-      f: { up: 'Nadchádzajúce', past: 'Minulé', vie: 'Viedeň', ba: B, on: 'Online', inPerson: 'Osobne', tags: 'Filtrovať podľa typu', where: 'Filtrovať podľa miesta', clear: 'Zrušiť filtre' },
+      f: { up: 'Nadchádzajúce', past: 'Minulé', vie: 'Viedeň', ba: B, on: 'Online', inPerson: 'Prezenčne', tags: 'Filtrovať podľa typu', where: 'Filtrovať podľa miesta', clear: 'Zrušiť filtre' },
       types: { session: 'Online stretnutie', meetup: 'Meetup', demo: 'Demo Day', visit: 'Študijná návšteva', round: 'Okrúhly stôl' },
       upH: 'Nadchádzajúce',
       items: [
@@ -480,20 +480,20 @@
       newsH: 'Novinky',
       news: [
         { date: 'október 2025', tag: 'Projekt', title: 'TWICIIC štartuje: šesť partnerov, dve mestá, jeden plán', body: 'Konzorcium sa stretlo po prvý raz, aby nastavilo plán na tri roky prepájania Viedne a Bratislavy.' },
-        { date: '2026', tag: 'Akcelerátor', title: 'Twin City Accelerator: ako funguje prvý rok', body: 'Najprv otvorené stretnutia, potom masterclass a podpora pre scale-upy s najsilnejším prípadom.' },
+        { date: '2026', tag: 'Akcelerátor', title: 'Twin City Accelerator: ako funguje prvý rok', body: 'Najprv otvorené stretnutia, potom masterclass a podpora pre scale-upy s najpresvedčivejším plánom.' },
         { date: '2026', tag: 'Výskum', title: 'Mapovanie oboch ekosystémov sa začalo', body: 'Naši výskumníci vedú rozhovory s hubmi, investormi a zakladateľmi na oboch stranách hranice. Toto sa pýtame.' }
       ],
       more: 'Čítať ďalej',
-      nl: { h2: 'Nezmeškajte žiadny termín.', body: 'Jeden e-mail mesačne so všetkými nadchádzajúcimi stretnutiami a najnovšími správami.', cta: 'Odoberať' }
+      nl: { h2: 'Nezmeškajte žiadny termín.', body: 'Jeden e-mail mesačne so všetkými nadchádzajúcimi stretnutiami a najnovšími správami.', cta: 'Prihlásiť sa na odber' }
     },
     ft: {
       about: 'TWICIIC – Twin City Impact Innovation Champion – prepája inovačné ekosystémy Viedne a Bratislavy. Prostredníctvom cezhraničného akcelerátora, ekosystémových podujatí a partnerstiev miest pomáha impaktovým startupom, MSP a neziskovým organizáciám rásť na oboch trhoch.',
-      navH: 'Navigácia', touchH: 'Zostaňme v kontakte', touchBody: 'Newsletter, raz mesačne.', touchCta: 'Odoberať', li: 'LinkedIn', contact: 'Kontaktujte nás',
-      liEyebrow: 'Sledujte nás na LinkedIn', liText: 'Sledujte naše najnovšie informácie – otvorené výzvy, workshopy a novinky z kohorty, ktoré pravidelne zverejňujeme.',
-      partners: 'Partneri', fundH: 'Financovanie', fundLine: 'Spolufinancovaný Európskou úniou', fundProg: 'Interreg Slovensko–Rakúsko 2021–2027', fundRegion: 'Slovensko – Rakúsko',
+      navH: 'Navigácia', touchH: 'Zostaňme v kontakte', touchBody: 'Newsletter, raz mesačne.', touchCta: 'Prihlásiť sa na odber', li: 'LinkedIn', contact: 'Kontaktujte nás',
+      liEyebrow: 'Sledujte nás na LinkedIn', liText: 'Otvorené výzvy, workshopy a novinky z kohorty pravidelne zverejňujeme na LinkedIn.',
+      partners: 'Partneri', fundH: 'Financovanie', fundLine: 'Spolufinancované Európskou úniou', fundProg: 'Interreg Slovensko–Rakúsko 2021–2027', fundRegion: 'Slovensko – Rakúsko',
       fundLong: 'Tento projekt je spolufinancovaný programom Interreg Slovensko–Rakúsko 2021–2027 z Európskeho fondu regionálneho rozvoja (EFRR).',
       copyright: '© 2026 TWICIIC. Všetky práva vyhradené.',
-      legal: [{ text: 'Ochrana osobných údajov' }, { text: 'Tiráž' }, { text: 'Prístupnosť' }, { text: 'Cookies' }]
+      legal: [{ text: 'Ochrana osobných údajov' }, { text: 'Impresum' }, { text: 'Prístupnosť' }, { text: 'Cookies' }]
     }
   };
 
@@ -578,12 +578,12 @@
       },
       programme: {
         eyebrow: 'Prehľad programu', title: 'Vaša cesta programom',
-        c1: { label: 'Fáza 1 · Zadarmo & online', title: 'Overte si pripravenosť na škálovanie', short: 'Bezplatný online obsah, prípadové štúdie, test pripravenosti', long: 'Úvodný obsah, príbehy zakladateľov a nástroj sebahodnotenia, ktorý vám pomôže zistiť, či je akcelerátor pre vás to pravé.', button: 'Som pripravený škálovať?' },
+        c1: { label: 'Fáza 1 · Zadarmo a online', title: 'Overte si pripravenosť na škálovanie', short: 'Bezplatný online obsah, prípadové štúdie, test pripravenosti', long: 'Úvodný obsah, príbehy zakladateľov a nástroj sebahodnotenia, ktorý vám pomôže zistiť, či je akcelerátor pre vás to pravé.', button: 'Sme pripravení škálovať?' },
         c2: { label: 'Fáza 2 · Hlavný program', title: 'Akcelerujte', short: '6–8-mesačný kohortový program s workshopmi, koučingom a Demo Day', long: 'Štruktúrovaný kohortový program zameraný na stratégiu, financie, impakt, go-to-market, investičnú pripravenosť a cezhraničnú expanziu.' },
         c3: { label: 'Fáza 3 · Následná podpora', title: 'Získajte ďalšiu podporu', short: 'Následná podpora pre vybrané podniky pripravené na vstup na trh, investíciu alebo partnerstvá', long: 'Následná podpora na mieru pre vybrané podniky vrátane expertného koučingu, prepojení a individuálnych akčných plánov.', button: 'Kontaktujte nás' }
       },
       benefits: {
-        eyebrow: 'Čo získate', title: 'Čo získate prihlásením', lead: 'V akcelerátore môžete pracovať na:',
+        eyebrow: 'Čo získate', title: 'Čo vám účasť prinesie', lead: 'V akcelerátore môžete pracovať na:',
         items: [{ n: '01', text: 'Cezhraničná rastová stratégia' }, { n: '02', text: 'Go-to-market plán pre Slovensko alebo Rakúsko' }, { n: '03', text: 'Finančný plán a potreba financovania' }, { n: '04', text: 'Metriky impaktu a Theory of Change' }, { n: '05', text: 'Pitch deck pripravený pre investorov' }, { n: '06', text: 'Prístup k mentorom, expertom, mestám a partnerom ekosystému' }, { n: '07', text: 'Demo Day s investormi, partnermi a zástupcami verejného sektora' }, { n: '08', text: 'Študijné návštevy a expertné stretnutia' }],
         caption: 'Workshopy kohorty sa konajú v oboch mestách.'
       },
