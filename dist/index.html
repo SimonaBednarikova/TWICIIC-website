@@ -352,7 +352,22 @@
 
       <nav data-nav-desktop="" aria-label="Main" onKeyDown="{{ navKey }}" style="position:relative;display:flex;align-items:center;height:68px;flex:1;justify-content:center;min-width:0">
         <a data-nav-item="home" data-active="{{ act.home }}" aria-current="{{ cur.home }}" href="#home" onClick="{{ navHome }}" style="display:inline-flex;align-items:center;height:68px;padding:0 14px;font-size:14.5px;font-weight:500;text-decoration:none;white-space:nowrap">{{ c.nav.programme }}</a>
-        <a data-nav-item="accelerator" data-active="{{ act.accelerator }}" aria-current="{{ cur.accelerator }}" href="#accelerator" onClick="{{ navAccelerator }}" style="display:inline-flex;align-items:center;height:68px;padding:0 14px;font-size:14.5px;font-weight:500;text-decoration:none;white-space:nowrap">{{ c.nav.accelerator }}</a>
+        <div ref="{{ accDdRef }}" onMouseEnter="{{ accDdEnter }}" onMouseLeave="{{ accDdLeave }}" onBlur="{{ accDdBlur }}" style="position:relative;height:68px;display:flex;align-items:center">
+          <button data-nav-item="accelerator" data-active="{{ act.accelerator }}" type="button" aria-haspopup="true" aria-expanded="{{ accOpen }}" aria-controls="accelerator-menu" onClick="{{ accDdToggle }}" onFocus="{{ accDdFocus }}" style="display:inline-flex;align-items:center;gap:7px;height:68px;padding:0 14px;border:0;background:transparent;font:inherit;font-size:14.5px;font-weight:500;cursor:pointer;white-space:nowrap">
+            {{ c.nav.accelerator }}
+            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" style="display:block;transition:transform 220ms var(--ease-out);transform:{{ accDdChevron }}"><path d="M1 1l4 4 4-4" style="stroke:currentColor;stroke-width:1.5;stroke-linecap:square"></path></svg>
+          </button>
+          <div id="accelerator-menu" data-dd-panel="" data-open="{{ accOpen }}" role="menu" aria-label="{{ c.nav.accLabel }}" style="position:absolute;top:100%;left:-6px;min-width:392px;padding:10px 0;background:rgba(255,255,255,0.92);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid var(--border-default);z-index:5">
+            <a data-dd-row="" role="menuitem" href="#accelerator" onClick="{{ navAccelerator }}" tabindex="{{ accDdTab }}" style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:13px 22px;text-decoration:none;color:inherit;transition-delay:60ms">
+              <span style="display:grid;gap:3px"><span style="font-size:15px;font-weight:600;letter-spacing:-0.005em">{{ c.nav.accOverview }}</span><span style="font-size:13px;color:var(--gray-500)">{{ c.nav.accDesc.overview }}</span></span>
+              <span data-dd-arrow="" aria-hidden="true" style="font-size:16px;line-height:1">→</span>
+            </a>
+            <a data-dd-row="" role="menuitem" href="#readiness" onClick="{{ navReadiness }}" tabindex="{{ accDdTab }}" style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:13px 22px;text-decoration:none;color:inherit;transition-delay:100ms">
+              <span style="display:grid;gap:3px"><span style="font-size:15px;font-weight:600;letter-spacing:-0.005em">{{ c.nav.readiness }}</span><span style="font-size:13px;color:var(--gray-500)">{{ c.nav.accDesc.readiness }}</span></span>
+              <span data-dd-arrow="" aria-hidden="true" style="font-size:16px;line-height:1">→</span>
+            </a>
+          </div>
+        </div>
         <div ref="{{ ddRef }}" onMouseEnter="{{ ddEnter }}" onMouseLeave="{{ ddLeave }}" onBlur="{{ ddBlur }}" style="position:relative;height:68px;display:flex;align-items:center">
           <button data-nav-item="about" data-active="{{ act.about }}" type="button" aria-haspopup="true" aria-expanded="{{ aboutOpen }}" aria-controls="about-menu" onClick="{{ ddToggle }}" onFocus="{{ ddFocus }}" style="display:inline-flex;align-items:center;gap:7px;height:68px;padding:0 14px;border:0;background:transparent;font:inherit;font-size:14.5px;font-weight:500;cursor:pointer;white-space:nowrap">
             {{ c.nav.about }}
@@ -396,7 +411,9 @@
     <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="{{ c.nav.menu }}" style="position:fixed;inset:0;z-index:49;background:var(--surface-page);display:flex;flex-direction:column;padding:92px clamp(20px,6vw,40px) 32px;overflow:auto">
       <nav aria-label="Main" style="display:grid;gap:0;border-top:1px solid var(--border-default)">
         <a href="#home" onClick="{{ navHome }}" style="padding:18px 0;border-bottom:1px solid var(--border-default);font-size:28px;font-weight:700;letter-spacing:-0.02em;text-decoration:none;color:var(--text-primary);animation:portal-in 500ms var(--ease-out) both;animation-delay:40ms;--portal-from:-20px">{{ c.nav.programme }}</a>
-        <a href="#accelerator" onClick="{{ navAccelerator }}" style="padding:18px 0;border-bottom:1px solid var(--border-default);font-size:28px;font-weight:700;letter-spacing:-0.02em;text-decoration:none;color:var(--text-primary);animation:portal-in 500ms var(--ease-out) both;animation-delay:90ms;--portal-from:-20px">{{ c.nav.accelerator }}</a>
+        <p style="margin:0;padding:18px 0 8px;font-size:13px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-secondary);animation:portal-in 500ms var(--ease-out) both;animation-delay:90ms;--portal-from:-20px">{{ c.nav.accelerator }}</p>
+        <a href="#accelerator" onClick="{{ navAccelerator }}" style="padding:12px 0;font-size:22px;font-weight:600;letter-spacing:-0.01em;text-decoration:none;color:var(--text-primary);animation:portal-in 500ms var(--ease-out) both;animation-delay:110ms;--portal-from:-20px">{{ c.nav.accOverview }}</a>
+        <a href="#readiness" onClick="{{ navReadiness }}" style="padding:12px 0 18px;border-bottom:1px solid var(--border-default);font-size:22px;font-weight:600;letter-spacing:-0.01em;text-decoration:none;color:var(--text-primary);animation:portal-in 500ms var(--ease-out) both;animation-delay:130ms;--portal-from:-20px">{{ c.nav.readiness }}</a>
         <p style="margin:0;padding:18px 0 8px;font-size:13px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-secondary);animation:portal-in 500ms var(--ease-out) both;animation-delay:140ms;--portal-from:-20px">{{ c.nav.about }}</p>
         <a href="#partners" onClick="{{ navPartners }}" style="padding:12px 0;font-size:22px;font-weight:600;letter-spacing:-0.01em;text-decoration:none;color:var(--text-primary);animation:portal-in 500ms var(--ease-out) both;animation-delay:190ms;--portal-from:-20px">{{ c.nav.partners }}</a>
         <a href="#research" onClick="{{ navResearch }}" style="padding:12px 0;font-size:22px;font-weight:600;letter-spacing:-0.01em;text-decoration:none;color:var(--text-primary);animation:portal-in 500ms var(--ease-out) both;animation-delay:240ms;--portal-from:-20px">{{ c.nav.research }}</a>
@@ -1833,7 +1850,7 @@ class Component extends DCLogic {
   static RAIL_LABELS = { en: ['Who it’s for', 'Programme', 'Benefits', 'Timeline', 'Support', 'Partners'], de: ['Für wen', 'Programm', 'Vorteile', 'Zeitplan', 'Support', 'Partner'], sk: ['Pre koho', 'Program', 'Výhody', 'Časový plán', 'Podpora', 'Partneri'] };
 
   state = {
-    route: Component._routeFromHash().route, lang: Component._storedLang(), menuOpen: false, aboutOpen: false,
+    route: Component._routeFromHash().route, lang: Component._storedLang(), menuOpen: false, dd: null,
     heroBrand: Component._routeFromHash().route === 'home', scrolled: false, transit: null, accSection: 'fit', evTime: 'up', evLoc: [], evFmt: [],
     nlDone: {}, contentReady: !!window.TWICIIC_CONTENT,
     rdyStep: Component._storedRdy().step, rdyAns: Component._storedRdy().ans, rdyAnim: 'in', rdyEmailDone: false
@@ -1856,7 +1873,7 @@ class Component extends DCLogic {
 
   constructor(props) {
     super(props);
-    this.ddRef = React.createRef(); this.mainRef = React.createRef(); this.heroH1Ref = React.createRef(); this.mapRef = React.createRef();
+    this.ddRef = React.createRef(); this.accDdRef = React.createRef(); this.mainRef = React.createRef(); this.heroH1Ref = React.createRef(); this.mapRef = React.createRef();
     this._reduced = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
     this._fine = !!(window.matchMedia && window.matchMedia('(pointer: fine)').matches);
   }
@@ -1903,7 +1920,7 @@ class Component extends DCLogic {
       setTimeout(() => { this._layoutMarkers(); this._heroIn(); this._sync(); }, 30);
     }
     if (prevState.menuOpen !== s.menuOpen) document.body.style.overflow = s.menuOpen ? 'hidden' : '';
-    if (prevState.aboutOpen !== s.aboutOpen || prevState.scrolled !== s.scrolled) setTimeout(() => this._layoutMarkers(), 30);
+    if (prevState.dd !== s.dd || prevState.scrolled !== s.scrolled) setTimeout(() => this._layoutMarkers(), 30);
     if (this._flipFirst) { const f = this._flipFirst; this._flipFirst = null; this._flipPlay(f); }
   }
 
@@ -1960,7 +1977,7 @@ class Component extends DCLogic {
     else if (document.getElementById(raw)) { route = this.state.route; anchor = raw; }
     else route = 'home';
     if (window.location.hash !== hash) { this._suppressHash = true; try { history.pushState(null, '', hash); } catch (err) { window.location.hash = hash; } this._suppressHash = false; }
-    if (this.state.menuOpen || this.state.aboutOpen) this.setState({ menuOpen: false, aboutOpen: false });
+    if (this.state.menuOpen || this.state.dd) this.setState({ menuOpen: false, dd: null });
     if (route !== this.state.route) this._transitionTo(route, anchor);
     else if (anchor) this._scrollTo('#' + anchor);
     else window.scrollTo({ top: 0, behavior: this._reduced ? 'auto' : 'smooth' });
@@ -2130,15 +2147,28 @@ class Component extends DCLogic {
 
   /* ---------------- nav: FLIP markers, dropdown, keyboard ---------------- */
   _layoutMarkers() {}
-  _ddOpen(open) {
+  // Desktop dropdowns ('about', 'acc'): at most one is open at a time.
+  _ddRef(which) { return which === 'acc' ? this.accDdRef : this.ddRef; }
+  _ddOpen(which, open) {
     clearTimeout(this._ddT);
-    if (open === this.state.aboutOpen) return;
-    this.setState({ aboutOpen: open });
+    const next = open ? which : (this.state.dd === which ? null : this.state.dd);
+    if (next === this.state.dd) return;
+    this.setState({ dd: next });
   }
-  _ddItems() { const dd = this.ddRef.current; return dd ? Array.from(dd.querySelectorAll('[data-dd-row]')) : []; }
+  _ddItems(which) { const dd = this._ddRef(which).current; return dd ? Array.from(dd.querySelectorAll('[data-dd-row]')) : []; }
+  _ddHandlers(which) {
+    const ref = this._ddRef(which);
+    return {
+      enter: () => { clearTimeout(this._ddT); this._ddT = setTimeout(() => this._ddOpen(which, true), 60); },
+      leave: () => { clearTimeout(this._ddT); this._ddT = setTimeout(() => this._ddOpen(which, false), 180); },
+      toggle: () => { clearTimeout(this._ddT); this.setState((st2) => ({ dd: st2.dd === which ? null : which })); },
+      focus: () => this._ddOpen(which, true),
+      blur: (e) => { const dd = ref.current; if (dd && e.relatedTarget && !dd.contains(e.relatedTarget)) this._ddOpen(which, false); }
+    };
+  }
   _onKey(e) {
     if (e.key === 'Escape') {
-      if (this.state.aboutOpen) { this._ddOpen(false); const b = this.ddRef.current && this.ddRef.current.querySelector('button'); if (b) b.focus(); }
+      if (this.state.dd) { const r = this._ddRef(this.state.dd).current; this._ddOpen(this.state.dd, false); const b = r && r.querySelector('button'); if (b) b.focus(); }
       if (this.state.menuOpen) this.setState({ menuOpen: false });
     }
     if (this.state.route === 'readiness') this._rdyKey(e);
@@ -2238,6 +2268,7 @@ class Component extends DCLogic {
       ['loc:ba', f.ba, 'var(--bratislava-blue)', 'block', s.evLoc.indexOf('ba') >= 0]
     ].map(([key, label, bar, barDisplay, on]) => ({ f: key, label, bar, barDisplay, on }));
     const cp = c.par || {};
+    const ddAbout = this._ddHandlers('about'), ddAcc = this._ddHandlers('acc');
     // Readiness check
     const R = c.rdy || Component.EMPTY.rdy; const RC = R.check || {}; const RR = RC.result || {}; const qs = RC.questions || []; const n = qs.length;
     const step = Math.min(s.rdyStep, n); const done = n > 0 && step >= n; const q = qs[Math.min(step, Math.max(0, n - 1))] || { opts: [] };
@@ -2278,24 +2309,24 @@ class Component extends DCLogic {
       heroFundingAlt: { en: 'Interreg Slovakia–Austria — Co-funded by the European Union', de: 'Interreg Slowakei–Österreich — Kofinanziert von der Europäischen Union', sk: 'Interreg Slovensko–Rakúsko — Spolufinancovaný Európskou úniou' }[s.lang],
       setEn: () => this._setLang('en'), setDe: () => this._setLang('de'), setSk: () => this._setLang('sk'), setLang: (l) => this._setLang(l),
       isHome: route === 'home', isAccelerator: route === 'accelerator', isPartners: route === 'partners', isResearch: route === 'research', isPortfolio: route === 'portfolio', isEvents: route === 'events',
-      act, cur, heroBrand: s.route === 'home' && s.heroBrand, scrolledAttr: (s.scrolled || s.menuOpen || s.aboutOpen) ? 'on' : 'off',
+      act, cur, heroBrand: s.route === 'home' && s.heroBrand, scrolledAttr: (s.scrolled || s.menuOpen || s.dd) ? 'on' : 'off',
       menuOpen: s.menuOpen, menuLabel: s.menuOpen ? c.nav.close : c.nav.menu, toggleMenu: () => this.setState((st2) => ({ menuOpen: !st2.menuOpen })),
-      aboutOpen: s.aboutOpen, ddTab: s.aboutOpen ? 0 : -1, ddChevron: s.aboutOpen ? 'rotate(180deg)' : 'none',
-      ddRef: this.ddRef, mainRef: this.mainRef, heroH1Ref: this.heroH1Ref, mapRef: this.mapRef,
-      ddEnter: () => { clearTimeout(this._ddT); this._ddT = setTimeout(() => this._ddOpen(true), 60); },
-      ddLeave: () => { clearTimeout(this._ddT); this._ddT = setTimeout(() => this._ddOpen(false), 180); },
-      ddToggle: () => { clearTimeout(this._ddT); this.setState((st2) => ({ aboutOpen: !st2.aboutOpen })); },
-      ddFocus: () => this._ddOpen(true),
-      ddBlur: (e) => { const dd = this.ddRef.current; if (dd && e.relatedTarget && !dd.contains(e.relatedTarget)) this._ddOpen(false); },
+      aboutOpen: s.dd === 'about', ddTab: s.dd === 'about' ? 0 : -1, ddChevron: s.dd === 'about' ? 'rotate(180deg)' : 'none',
+      accOpen: s.dd === 'acc', accDdTab: s.dd === 'acc' ? 0 : -1, accDdChevron: s.dd === 'acc' ? 'rotate(180deg)' : 'none',
+      ddRef: this.ddRef, accDdRef: this.accDdRef, mainRef: this.mainRef, heroH1Ref: this.heroH1Ref, mapRef: this.mapRef,
+      ddEnter: ddAbout.enter, ddLeave: ddAbout.leave, ddToggle: ddAbout.toggle, ddFocus: ddAbout.focus, ddBlur: ddAbout.blur,
+      accDdEnter: ddAcc.enter, accDdLeave: ddAcc.leave, accDdToggle: ddAcc.toggle, accDdFocus: ddAcc.focus, accDdBlur: ddAcc.blur,
       navKey: (e) => {
-        if (!this.ddRef.current) return;
-        const items = this._ddItems(); const idx = items.indexOf(document.activeElement);
-        const onTrigger = document.activeElement === this.ddRef.current.querySelector('button');
-        if ((e.key === 'ArrowDown' || e.key === 'Down') && (onTrigger || idx >= 0)) { e.preventDefault(); if (!s.aboutOpen) this._ddOpen(true); setTimeout(() => { const it = this._ddItems(); (it[Math.min(it.length - 1, idx + 1)] || it[0]).focus(); }, s.aboutOpen ? 0 : 40); }
-        if ((e.key === 'ArrowUp' || e.key === 'Up') && idx >= 0) { e.preventDefault(); if (idx === 0) this.ddRef.current.querySelector('button').focus(); else items[idx - 1].focus(); }
+        const which = ['about', 'acc'].find((w) => { const r = this._ddRef(w).current; return r && r.contains(document.activeElement); });
+        if (!which) return;
+        const ref = this._ddRef(which).current; const open = s.dd === which;
+        const items = this._ddItems(which); const idx = items.indexOf(document.activeElement);
+        const onTrigger = document.activeElement === ref.querySelector('button');
+        if ((e.key === 'ArrowDown' || e.key === 'Down') && (onTrigger || idx >= 0)) { e.preventDefault(); if (!open) this._ddOpen(which, true); setTimeout(() => { const it = this._ddItems(which); (it[Math.min(it.length - 1, idx + 1)] || it[0]).focus(); }, open ? 0 : 40); }
+        if ((e.key === 'ArrowUp' || e.key === 'Up') && idx >= 0) { e.preventDefault(); if (idx === 0) ref.querySelector('button').focus(); else items[idx - 1].focus(); }
       },
       navHome: this._link('#home'), navHomeTop: this._link('#home'), navAccelerator: this._link('#accelerator'), navPartners: this._link('#partners'),
-      navResearch: this._link('#research'), navPortfolio: this._link('#portfolio'), navEvents: this._link('#events'),
+      navResearch: this._link('#research'), navPortfolio: this._link('#portfolio'), navEvents: this._link('#events'), navReadiness: this._link('#readiness'),
       navTo: (e) => { const a = e.currentTarget.getAttribute('href'); this._nav(a, e); },
       goJoin: this._act(() => '#home-pulse'), goTeam: this._act(() => '#partners-team'), goResearchCta: this._act(() => '#research-cta'), goPortfolioCta: this._act(() => '#portfolio-cta'),
       skipToMain: (e) => { e.preventDefault(); if (this.mainRef.current) this.mainRef.current.focus(); },
@@ -2304,7 +2335,7 @@ class Component extends DCLogic {
       navProgramme: this._act(() => '#programme'), navTimeline: this._act(() => '#timeline'), navApply: this._act(() => p.applyUrl || Component.APPLY_URL),
       goApply: this._act(() => p.applyUrl || Component.APPLY_URL), goReadiness: this._act(() => p.readinessUrl || '#readiness'),
       goContact: this._act(() => 'mailto:info@twincityaccelerator.com'), goSkat: this._act(() => 'https://www.sk-at.eu/en/'), goProjects: this._act(() => 'https://www.sk-at.eu/en/projects/'),
-      startDate: p.startDate || t.hero.dateTbc,
+      startDate: p.startDate || t.hero.startDate || t.hero.dateTbc,
       pulseAttr: (p.heroPulse ?? true) ? 'on' : 'off', revealMode: (p.scrollReveal ?? true) ? 'on' : 'off',
       // Home
       heroWords, st0: st[0] || {}, st1: st[1] || {}, st2: st[2] || {}, st3: st[3] || {}, stg0: stages[0] || {}, stg1: stages[1] || {}, stg2: stages[2] || {},
@@ -2323,7 +2354,7 @@ class Component extends DCLogic {
     };
   }
 }
-Component.EMPTY = { meta: {}, nav: { aboutDesc: {} }, home: { hero: {}, cities: { vie: {}, ba: {}, change: {}, stats: [] }, pulse: {}, sw: { items: [] }, acc: { what: {}, get: {}, who: {}, stages: [] }, events: {}, team: {}, nl: {} }, par: { hero: {}, list: [], link: {}, team: { groups: [] }, fund: { rows: [] }, cta: {} }, res: { hero: {}, prog: {}, lbl: {}, reports: [], know: {}, k: [], themes: [], watch: {}, cta: {} }, por: { hero: {}, empty: {}, g: {}, cta: {} }, ev: { hero: {}, f: {}, types: {}, items: [], past: {}, news: [], nl: {} }, ft: { legal: [] }, rdy: { title: '', hero: {}, journey: { steps: [] }, learn: { modules: [] }, check: { map: {}, gateLabels: [], dims: {}, questions: [], result: { apply: {}, talk: {}, learn: {}, no: {}, gates: [], tips: {}, email: {} } }, cta: {} }, acc: { nav: {}, hero: {}, fit: { yes: [], no: [] }, programme: { c1: {}, c2: {}, c3: {} }, benefits: { items: [] }, timeline: { i1: {}, i2: {}, i3: {}, i4: {}, i5: {}, i6: {} }, support: {}, partners: { list: [] }, cta: {}, interreg: {}, footer: { legal: [] } } };
+Component.EMPTY = { meta: {}, nav: { aboutDesc: {}, accDesc: {} }, home: { hero: {}, cities: { vie: {}, ba: {}, change: {}, stats: [] }, pulse: {}, sw: { items: [] }, acc: { what: {}, get: {}, who: {}, stages: [] }, events: {}, team: {}, nl: {} }, par: { hero: {}, list: [], link: {}, team: { groups: [] }, fund: { rows: [] }, cta: {} }, res: { hero: {}, prog: {}, lbl: {}, reports: [], know: {}, k: [], themes: [], watch: {}, cta: {} }, por: { hero: {}, empty: {}, g: {}, cta: {} }, ev: { hero: {}, f: {}, types: {}, items: [], past: {}, news: [], nl: {} }, ft: { legal: [] }, rdy: { title: '', hero: {}, journey: { steps: [] }, learn: { modules: [] }, check: { map: {}, gateLabels: [], dims: {}, questions: [], result: { apply: {}, talk: {}, learn: {}, no: {}, gates: [], tips: {}, email: {} } }, cta: {} }, acc: { nav: {}, hero: {}, fit: { yes: [], no: [] }, programme: { c1: {}, c2: {}, c3: {} }, benefits: { items: [] }, timeline: { i1: {}, i2: {}, i3: {}, i4: {}, i5: {}, i6: {} }, support: {}, partners: { list: [] }, cta: {}, interreg: {}, footer: { legal: [] } } };
 
 </script>
 </body>
