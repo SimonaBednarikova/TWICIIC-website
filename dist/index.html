@@ -964,9 +964,6 @@
     </div>
   </section>
 
-  <!-- ============ CTA ============ -->
-  
-
   <!-- ============ INTERREG ============ -->
   <section id="interreg" data-screen-label="Funded by Interreg" style="background:var(--surface-card);border-top:1px solid var(--border-default)">
     <div style="max-width:1200px;margin:0 auto;padding:clamp(64px,9vw,104px) clamp(20px,4vw,24px)">
@@ -978,7 +975,7 @@
           </p>
           <h2 style="margin:0;font-size:clamp(30px,3.6vw,44px);line-height:1.08;letter-spacing:-0.025em;font-weight:750;color:var(--text-primary);text-wrap:balance">{{ t.interreg.title }}</h2>
         </header>
-        <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.LogoLockup" lang="{{ lang }}" variant="regular" height="{{ 64 }}" asset-base="assets/logos" hint-size="400px,64px"></x-import>
+        <img src="{{ lockupSrc }}" alt="{{ lockupAlt }}" style="display:block;width:100%;max-width:{{ lockupMax64 }};height:auto">
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:clamp(40px,5vw,72px);margin-top:48px;align-items:start">
         <div data-reveal="" style="transition-delay:80ms">
@@ -999,6 +996,19 @@
             {{ t.interreg.caption }}
           </figcaption>
         </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA: apply ============ -->
+  <section id="acc-cta" data-screen-label="Accelerator · Apply" style="background:var(--surface-inverse);color:var(--white)">
+    <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,120px) clamp(20px,4vw,24px);display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:32px 48px">
+      <h2 data-reveal="vie" style="margin:0;max-width:16ch;font-size:clamp(32px,4.4vw,60px);line-height:1.02;letter-spacing:-0.03em;font-weight:800;color:var(--white);text-wrap:balance">{{ t.cta.title }}</h2>
+      <div data-reveal="ba" style="display:flex;flex-wrap:wrap;gap:12px">
+        <a data-btn-inv="" data-magnet="" href="{{ applyUrl }}" target="_blank" rel="noopener noreferrer" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;height:50px;padding:0 24px;background:var(--white);color:var(--black);font-size:16px;font-weight:600;letter-spacing:0.01em;text-decoration:none;white-space:nowrap">
+            <span data-btn-bars="" aria-hidden="true" style="position:absolute;left:0;top:0;bottom:0;width:10px;display:flex;transform:translateX(-10px);transition:transform 300ms var(--ease-out)"><span style="flex:1;background:var(--vienna-red)"></span><span style="flex:1;background:var(--bratislava-blue)"></span></span>
+            {{ t.nav.apply }}
+          </a>
       </div>
     </div>
   </section>
@@ -1394,7 +1404,7 @@
             </sc-for>
           </dl>
           <div style="margin-top:40px;padding:clamp(24px,3vw,36px);background:var(--surface-card);border:1px solid var(--border-default);display:flex;justify-content:center;overflow:hidden">
-            <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.LogoLockup" lang="{{ lang }}" variant="regular" height="{{ 88 }}" asset-base="assets/logos" style="{{ lockupStyle }}" hint-size="100%,88px"></x-import>
+            <img src="{{ lockupSrc }}" alt="{{ lockupAlt }}" style="display:block;width:100%;max-width:{{ lockupMax88 }};height:auto">
           </div>
         </div>
       </div>
@@ -2287,6 +2297,9 @@ class Component extends DCLogic {
     const accPartners = ((t.partners && t.partners.list) || []).map((x) => { const u = Component.PARTNER_LINKS[x.logo] || {}; return Object.assign({}, x, { hpx: Math.round((u.h || 44) * 0.6) + 'px', logoHover: u.hover || x.logo }); });
     // Research report buttons: 01 "get notified" → LinkedIn updates, 02 "take part" → email the team.
     const resReports = ((c.res && c.res.reports) || []).map((r, i) => Object.assign({}, r, { go: this._act(() => (i === 0 ? Component.LINKEDIN_URL : 'mailto:info@twincityaccelerator.com')) }));
+    // Interreg/TWICIIC lockup as a plain <img> (the DS LogoLockup forces width:auto, which overflows on phones):
+    // it fills the available width and never grows past its design height (88px on Partners, 64px on the Accelerator).
+    const lockupRatio = { en: 2242 / 384, de: 1146 / 223, sk: 1162 / 225 }[s.lang] || 5.84;
     const parVie = parList.filter((x) => x.side === 'vie'), parBa = parList.filter((x) => x.side === 'ba');
     const parVieCity = parVie.length ? parVie[0].city : '', parBaCity = parBa.length ? parBa[0].city : '';
     const team = Component.TEAM;
@@ -2378,7 +2391,8 @@ class Component extends DCLogic {
       nlSubmitPor: (e) => { e.preventDefault(); this.setState({ nlDone: Object.assign({}, s.nlDone, { por: true }) }); },
       nlSubmitEv: (e) => { e.preventDefault(); this.setState({ nlDone: Object.assign({}, s.nlDone, { ev: true }) }); },
       // Partners
-      parList, parVie, parBa, accPartners, resReports, parVieCity, parBaCity, team, fundRows, lockupStyle: { maxWidth: '100%', height: 'auto', maxHeight: '88px' },
+      parList, parVie, parBa, accPartners, resReports, parVieCity, parBaCity, team, fundRows, lockupSrc: 'assets/logos/' + s.lang + '/twiciic-regular.png', lockupMax88: Math.round(88 * lockupRatio) + 'px', lockupMax64: Math.round(64 * lockupRatio) + 'px',
+      lockupAlt: { en: 'TWICIIC — Interreg Slovakia–Austria, co-funded by the European Union', de: 'TWICIIC — Interreg Slowakei–Österreich, kofinanziert von der Europäischen Union', sk: 'TWICIIC — Interreg Slovensko–Rakúsko, spolufinancovaný Európskou úniou' }[s.lang], applyUrl: p.applyUrl || Component.APPLY_URL,
       // Events
       evTimeUp: s.evTime === 'up', evTimePast: s.evTime === 'past', evVisible, evEmpty: evVisible.length === 0, evFiltered: s.evLoc.length + s.evFmt.length > 0,
       locChips, evFilter: (e) => this._evFilter(e), evClear: () => this.setState({ evLoc: [], evFmt: [] }),
