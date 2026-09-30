@@ -44,7 +44,7 @@
         items: [
           { n: '01', title: "I'm building a venture", body: 'A startup, impact SME or NGO ready to grow into a second market.', cta: 'Explore the Accelerator', href: '#accelerator' },
           { n: '02', title: 'I work in the ecosystem or for a city', body: 'A hub, university, investor, city department or municipal company.', cta: 'Partner with us', href: '#partners' },
-          { n: '03', title: 'I want to understand both markets', body: 'Research, findings and recordings from both sides of the border.', cta: 'Read the research', href: '#research' }
+          { n: '03', title: 'I want to understand both markets', body: 'Research and findings from both sides of the border.', cta: 'Read the research', href: '#research' }
         ]
       },
       acc: {
@@ -209,7 +209,7 @@
         items: [
           { n: '01', title: 'Ich baue ein Venture auf', body: 'Ein Start-up, Impact-KMU oder eine NGO, bereit für den zweiten Markt.', cta: 'Zum Accelerator', href: '#accelerator' },
           { n: '02', title: 'Ich arbeite im Ökosystem oder für eine Stadt', body: 'Ein Hub, eine Universität, Investor:in, Stadtabteilung oder ein kommunales Unternehmen.', cta: 'Partner werden', href: '#partners' },
-          { n: '03', title: 'Ich will beide Märkte verstehen', body: 'Forschung, Erkenntnisse und Aufzeichnungen von beiden Seiten der Grenze.', cta: 'Zur Forschung', href: '#research' }
+          { n: '03', title: 'Ich will beide Märkte verstehen', body: 'Forschung und Erkenntnisse von beiden Seiten der Grenze.', cta: 'Zur Forschung', href: '#research' }
         ]
       },
       acc: {
@@ -365,16 +365,16 @@
         media: 'Mapa: koridor Viedeň – Bratislava', danube: 'Dunaj', km: '55 km'
       },
       pulse: {
-        eyebrow: 'Twin City Pulse', h2: 'Buďte pulzom Twin City.',
+        eyebrow: 'Twin City Pulse', h2: 'Buďte v centre diania.',
         body: 'TWICIIC prepája dva ekosystémy: zakladateľov, huby, investorov, univerzity aj samotné mestá. Pridajte sa k sieti a staňte sa súčasťou Twin City Pulse – rastúcej komunity ľudí, ktorí vo Viedni a v Bratislave prinášajú pozitívnu zmenu.',
         cta: 'Pridajte sa k sieti', sub: 'Zadarmo. Otvorené pre obe mestá. Pokračuje aj po roku 2028.'
       },
       sw: {
-        h: 'Kde je vaše miesto?',
+        h: 'V akom ste štádiu?',
         items: [
           { n: '01', title: 'Budujem podnik', body: 'Startup, impaktový MSP alebo nezisková organizácia pripravená rásť na druhom trhu.', cta: 'Objavte akcelerátor', href: '#accelerator' },
           { n: '02', title: 'Pracujem v ekosystéme alebo pre mesto', body: 'Hub, univerzita, investor, mestský odbor alebo mestský podnik.', cta: 'Staňte sa partnerom', href: '#partners' },
-          { n: '03', title: 'Chcem porozumieť obom trhom', body: 'Výskum, zistenia a nahrávky z oboch strán hranice.', cta: 'Prečítajte si výskum', href: '#research' }
+          { n: '03', title: 'Chcem porozumieť obom trhom', body: 'Výskum a zistenia z oboch strán hranice.', cta: 'Prečítajte si výskum', href: '#research' }
         ]
       },
       acc: {
