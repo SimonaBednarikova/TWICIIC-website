@@ -75,7 +75,7 @@
       nl: { h2: 'Stay in the loop.', body: "One email a month: new sessions, open calls and what we're learning. No noise.", ph: 'your@email.com', cta: 'Subscribe', done: 'Thanks — you’re on the list.', label: 'Email address' }
     },
     par: {
-      hero: { eyebrow: 'About · Partners', h1: 'Six partners. Two cities. One team.', sub: 'TWICIIC is run by six organisations from Vienna and Bratislava, each bringing what the other side lacks.' },
+      hero: { eyebrow: 'About · Partners', h1: 'Six partners. Two cities. One team.', sub: 'TWICIIC is run by six organisations from Vienna and Bratislava, combining complementary strengths from both sides of the border.' },
       list: [
         { name: 'ZSI – Centre for Social Innovation', city: W, side: 'vie', alt: 'l', role: 'Lead partner', body: 'Coordinates the project and leads the research that maps both ecosystems.', logo: 'assets/partners/zsi-c.png' },
         { name: 'Capital City of Bratislava', city: B, side: 'ba', alt: 'r', role: 'Municipal anchor, Slovakia', body: 'Opens the city and its municipal companies to pilots, peer learning and the network.', logo: 'assets/partners/bratislava-c.png' },
@@ -242,7 +242,7 @@
       nl: { h2: 'Bleiben Sie auf dem Laufenden.', body: 'Eine E-Mail pro Monat: neue Sessions, offene Calls und was wir lernen. Kein Rauschen.', ph: 'ihre@email.com', cta: 'Abonnieren', done: 'Danke – Sie sind dabei.', label: 'E-Mail-Adresse' }
     },
     par: {
-      hero: { eyebrow: 'Über uns · Partner', h1: 'Sechs Partner. Zwei Städte. Ein Team.', sub: 'TWICIIC wird von sechs Organisationen aus Wien und Bratislava getragen – jede bringt ein, was der anderen Seite fehlt.' },
+      hero: { eyebrow: 'Über uns · Partner', h1: 'Sechs Partner. Zwei Städte. Ein Team.', sub: 'TWICIIC wird von sechs Organisationen aus Wien und Bratislava getragen, die ihre sich ergänzenden Stärken von beiden Seiten der Grenze bündeln.' },
       list: [
         { name: 'ZSI – Zentrum für Soziale Innovation', city: 'Wien', side: 'vie', alt: 'l', role: 'Lead-Partner', body: 'Koordiniert das Projekt und leitet die Forschung, die beide Ökosysteme kartiert.', logo: 'assets/partners/zsi-c.png' },
         { name: 'Hauptstadt Bratislava', city: B, side: 'ba', alt: 'r', role: 'Kommunaler Anker, Slowakei', body: 'Öffnet die Stadt und ihre kommunalen Unternehmen für Pilotprojekte, Peer-Learning und das Netzwerk.', logo: 'assets/partners/bratislava-c.png' },
@@ -409,7 +409,7 @@
       nl: { h2: 'Zostaňte v obraze.', body: 'Jeden e-mail mesačne: nové stretnutia, otvorené výzvy a to, čo sa učíme. Bez šumu.', ph: 'vas@email.com', cta: 'Prihlásiť sa na odber', done: 'Ďakujeme – ste prihlásení na odber.', label: 'E-mailová adresa' }
     },
     par: {
-      hero: { eyebrow: 'O nás · Partneri', h1: 'Šesť partnerov. Dve mestá. Jeden tím.', sub: 'TWICIIC vedie šesť organizácií z Viedne a Bratislavy – každá prináša to, čo druhej strane chýba.' },
+      hero: { eyebrow: 'O nás · Partneri', h1: 'Šesť partnerov. Dve mestá. Jeden tím.', sub: 'TWICIIC vedie šesť organizácií z Viedne a Bratislavy, ktoré spájajú svoje vzájomne sa dopĺňajúce silné stránky z oboch strán hranice.' },
       list: [
         { name: 'ZSI – Centrum pre sociálne inovácie', city: 'Viedeň', side: 'vie', alt: 'l', role: 'Vedúci partner', body: 'Koordinuje projekt a vedie výskum, ktorý mapuje oba ekosystémy.', logo: 'assets/partners/zsi-c.png' },
         { name: 'Hlavné mesto SR Bratislava', city: B, side: 'ba', alt: 'r', role: 'Mestský partner, Slovensko', body: 'Otvára mesto a jeho mestské podniky pilotným projektom, vzájomnému učeniu a sieti.', logo: 'assets/partners/bratislava-c.png' },
