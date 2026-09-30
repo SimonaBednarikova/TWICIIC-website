@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="_ds/twiciic-design-system-5c2c275d-b2cd-4fb8-bfb5-9c3ccc07b8b3/styles.css">
   <script src="_ds/twiciic-design-system-5c2c275d-b2cd-4fb8-bfb5-9c3ccc07b8b3/_ds_bundle.js"></script>
   <script src="./content-readiness.js"></script>
+  <script src="./content-legal.js"></script>
   <script src="./content.js"></script>
   <script src="./image-slot.js"></script>
   <style>
@@ -635,7 +636,7 @@
               <p style="margin:14px 0 0;font-size:13.5px;color:var(--text-muted)">{{ c.home.pulse.sub }}</p>
               <div style="margin-top:auto;padding-top:32px">
                 <span data-pcard-line="" aria-hidden="true" style="display:flex;height:3px;margin-bottom:22px;transform:scaleX(0);transform-origin:left;transition:transform 450ms var(--ease-out)"><span style="flex:1;background:var(--vienna-red)"></span><span style="flex:1;background:var(--bratislava-blue)"></span></span>
-                <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="md" on-click="{{ navPartners }}" data-magnet="" hint-size="160px,42px">{{ c.home.pulse.cta }}</x-import>
+                <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="md" on-click="{{ goJoin }}" data-magnet="" hint-size="160px,42px">{{ c.home.pulse.cta }}</x-import>
               </div>
             </div>
           </div>
@@ -1404,7 +1405,7 @@
             <span data-btn-bars="" aria-hidden="true" style="position:absolute;left:0;top:0;bottom:0;width:10px;display:flex;transform:translateX(-10px);transition:transform 300ms var(--ease-out)"><span style="flex:1;background:var(--vienna-red)"></span><span style="flex:1;background:var(--bratislava-blue)"></span></span>
             {{ c.par.cta.b1 }}
           </a>
-          <a data-btn-ghost-inv="" data-magnet="" href="#home-pulse" onClick="{{ navTo }}" style="display:inline-flex;align-items:center;justify-content:center;height:50px;padding:0 24px;border:1px solid var(--white);color:var(--white);font-size:16px;font-weight:600;letter-spacing:0.01em;text-decoration:none;white-space:nowrap">{{ c.par.cta.b2 }}</a>
+          <a data-btn-ghost-inv="" data-magnet="" href="{{ linkedinUrl }}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;height:50px;padding:0 24px;border:1px solid var(--white);color:var(--white);font-size:16px;font-weight:600;letter-spacing:0.01em;text-decoration:none;white-space:nowrap">{{ c.par.cta.b2 }}</a>
         </div>
       </div>
     </section>
@@ -1734,6 +1735,36 @@
     </section>
   </div>
   </sc-if>
+  <!-- ================================================================ LEGAL: Privacy · Imprint · Accessibility ================================================================ -->
+  <sc-if value="{{ isLegal }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Legal">
+    <section data-screen-label="Legal · Hero" style="padding:calc(68px + clamp(56px,8vw,104px)) 0 clamp(40px,5vw,64px)">
+      <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,24px)">
+        <p data-reveal="" style="display:flex;align-items:center;gap:10px;margin:0 0 20px;font-size:13px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-secondary)">
+          <span aria-hidden="true" style="display:inline-flex;height:13px;flex:none"><span style="width:3.5px;background:var(--vienna-red)"></span><span style="width:3.5px;background:var(--bratislava-blue)"></span></span>
+          {{ c.legal.eyebrow }}
+        </p>
+        <h1 data-reveal="" style="transition-delay:60ms;margin:0;max-width:18ch;font-size:clamp(40px,5.6vw,72px);line-height:1;letter-spacing:-0.03em;font-weight:800;color:var(--text-primary);text-wrap:balance">{{ lg.title }}</h1>
+        <p data-reveal="" style="transition-delay:120ms;margin:24px 0 0;max-width:680px;font-size:clamp(18px,1.6vw,22px);line-height:1.4;color:var(--text-secondary);text-wrap:pretty">{{ lg.intro }}</p>
+      </div>
+    </section>
+    <section data-screen-label="Legal · Text" style="padding:0 0 clamp(72px,9vw,120px)">
+      <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,24px)">
+        <div style="max-width:760px;border-top:1px solid var(--border-default)">
+          <sc-for list="{{ lg.sections }}" as="sec" hint-placeholder-count="5">
+            <article style="padding:28px 0;border-bottom:1px solid var(--border-default)">
+              <h2 style="margin:0;font-size:clamp(20px,2vw,24px);line-height:1.25;letter-spacing:-0.015em;font-weight:700;color:var(--text-primary);text-wrap:balance">{{ sec.h }}</h2>
+              <sc-for list="{{ sec.p }}" as="para" hint-placeholder-count="2">
+                <p style="margin:10px 0 0;max-width:68ch;font-size:16.5px;line-height:1.65;color:var(--text-secondary);text-wrap:pretty">{{ para.text }}</p>
+              </sc-for>
+            </article>
+          </sc-for>
+          <p style="margin:28px 0 0;font-size:13px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-muted)">{{ c.legal.updated }}</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  </sc-if>
   </main>
 
   <!-- ============ FOOTER ============ -->
@@ -1756,7 +1787,7 @@
             <a href="#events" onClick="{{ navEvents }}" style="font-size:14.5px;font-weight:500;color:var(--white);text-decoration:none;padding:4px 0;border-bottom:1px solid var(--gray-800);transition:border-color 150ms var(--ease-out)" style-hover="border-bottom-color:var(--white)">{{ c.nav.events }}</a>
           </nav>
         </div>
-        <a href="https://www.linkedin.com/company/twiciic-interreg/posts/?feedView=all" target="_blank" rel="noopener" aria-label="TWICIIC on LinkedIn" style="display:flex;align-items:center;gap:22px;padding:clamp(22px,3vw,30px);border:1px solid var(--gray-700);text-decoration:none;color:var(--white);background:var(--gray-800);transition:border-color 200ms var(--ease-out),background 200ms var(--ease-out)" style-hover="border-color:var(--white);background:var(--black)">
+        <a href="{{ linkedinUrl }}" target="_blank" rel="noopener noreferrer" aria-label="TWICIIC on LinkedIn" style="display:flex;align-items:center;gap:22px;padding:clamp(22px,3vw,30px);border:1px solid var(--gray-700);text-decoration:none;color:var(--white);background:var(--gray-800);transition:border-color 200ms var(--ease-out),background 200ms var(--ease-out)" style-hover="border-color:var(--white);background:var(--black)">
           <svg width="52" height="52" viewBox="0 0 24 24" aria-hidden="true" style="flex:none;display:block">
             <rect x="1.5" y="1.5" width="21" height="21" fill="#FFFFFF"></rect>
             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="#0A66C2"></path>
@@ -1793,7 +1824,7 @@
         <p style="margin:0;font-size:13px;color:var(--gray-400)">{{ c.ft.copyright }}</p>
         <nav aria-label="Legal" style="display:flex;flex-wrap:wrap;gap:8px 24px">
           <sc-for list="{{ c.ft.legal }}" as="item" hint-placeholder-count="4">
-            <a href="#footer" onClick="{{ noop }}" style="font-size:13px;color:var(--gray-400);text-decoration:none;transition:color 150ms var(--ease-out)" style-hover="color:#FFFFFF">{{ item.text }}</a>
+            <a href="{{ item.href }}" onClick="{{ navTo }}" style="font-size:13px;color:var(--gray-400);text-decoration:none;transition:color 150ms var(--ease-out)" style-hover="color:#FFFFFF">{{ item.text }}</a>
           </sc-for>
         </nav>
       </div>
@@ -1805,7 +1836,10 @@
 <script type="text/x-dc" data-dc-script data-props="{&quot;startDate&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Accelerator&quot;},&quot;applyUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://tally.so/r/A76kg0&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Links&quot;},&quot;readinessUrl&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;#readiness&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Links&quot;},&quot;heroPulse&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;scrollReveal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;}}">
 class Component extends DCLogic {
   static LANGS = ['en', 'de', 'sk'];
-  static ROUTES = ['home', 'accelerator', 'readiness', 'partners', 'research', 'portfolio', 'events'];
+  static ROUTES = ['home', 'accelerator', 'readiness', 'partners', 'research', 'portfolio', 'events', 'privacy', 'imprint', 'accessibility'];
+  static LEGAL = ['privacy', 'imprint', 'accessibility'];
+  // TWICIIC on LinkedIn. "Join our network" points here until the network itself opens.
+  static LINKEDIN_URL = 'https://www.linkedin.com/company/twiciic-interreg/posts/?feedView=all';
   static RDY_KEY = 'twiciic-readiness';
   static STORAGE_KEY = 'twiciic-lang';
   // "Twin City" is not a known term, so the two city names render bold in every text binding.
@@ -1972,7 +2006,8 @@ class Component extends DCLogic {
   _title() {
     const c = this._C(); if (!c) return;
     const map = { home: c.nav.programme, accelerator: c.acc.hero.title, readiness: (c.rdy && c.rdy.title) || 'Readiness check', partners: c.nav.partners, research: c.nav.research, portfolio: c.nav.portfolio, events: c.nav.events };
-    document.title = (map[this.state.route] || 'TWICIIC') + ' · TWICIIC';
+    const lgPage = c.legal && c.legal[this.state.route];
+    document.title = (map[this.state.route] || (lgPage && lgPage.title) || 'TWICIIC') + ' · TWICIIC';
   }
   _setLang(l) {
     if (Component.LANGS.indexOf(l) < 0 || l === this.state.lang) return;
@@ -2335,6 +2370,7 @@ class Component extends DCLogic {
       heroFundingAlt: { en: 'Interreg Slovakia–Austria — Co-funded by the European Union', de: 'Interreg Slowakei–Österreich — Kofinanziert von der Europäischen Union', sk: 'Interreg Slovensko–Rakúsko — Spolufinancovaný Európskou úniou' }[s.lang],
       setEn: () => this._setLang('en'), setDe: () => this._setLang('de'), setSk: () => this._setLang('sk'), setLang: (l) => this._setLang(l),
       isHome: route === 'home', isAccelerator: route === 'accelerator', isPartners: route === 'partners', isResearch: route === 'research', isPortfolio: route === 'portfolio', isEvents: route === 'events',
+      isLegal: Component.LEGAL.indexOf(route) >= 0, lg: (c.legal && c.legal[route]) || { sections: [] }, linkedinUrl: Component.LINKEDIN_URL,
       act, cur, heroBrand: s.route === 'home' && s.heroBrand, scrolledAttr: (s.scrolled || s.menuOpen || s.dd) ? 'on' : 'off',
       menuOpen: s.menuOpen, menuLabel: s.menuOpen ? c.nav.close : c.nav.menu, toggleMenu: () => this.setState((st2) => ({ menuOpen: !st2.menuOpen })),
       aboutOpen: s.dd === 'about', ddTab: s.dd === 'about' ? 0 : -1, ddChevron: s.dd === 'about' ? 'rotate(180deg)' : 'none',
@@ -2354,7 +2390,7 @@ class Component extends DCLogic {
       navHome: this._link('#home'), navHomeTop: this._link('#home'), navAccelerator: this._link('#accelerator'), navPartners: this._link('#partners'),
       navResearch: this._link('#research'), navPortfolio: this._link('#portfolio'), navEvents: this._link('#events'), navReadiness: this._link('#readiness'),
       navTo: (e) => { const a = e.currentTarget.getAttribute('href'); this._nav(a, e); },
-      goJoin: this._act(() => '#home-pulse'), goTeam: this._act(() => '#partners-team'), goResearchCta: this._act(() => '#research-cta'), goPortfolioCta: this._act(() => '#portfolio-cta'),
+      goJoin: this._act(() => Component.LINKEDIN_URL), goTeam: this._act(() => '#partners-team'), goResearchCta: this._act(() => '#research-cta'), goPortfolioCta: this._act(() => '#portfolio-cta'),
       skipToMain: (e) => { e.preventDefault(); if (this.mainRef.current) this.mainRef.current.focus(); },
       noop: (e) => e.preventDefault(), noopBtn: () => {},
       // Accelerator page handlers (unchanged behaviour)
@@ -2380,7 +2416,7 @@ class Component extends DCLogic {
     };
   }
 }
-Component.EMPTY = { meta: {}, nav: { aboutDesc: {}, accDesc: {} }, home: { hero: {}, cities: { vie: {}, ba: {}, change: {}, stats: [] }, pulse: {}, sw: { items: [] }, acc: { what: {}, get: {}, who: {}, stages: [] }, events: {}, team: {}, nl: {} }, par: { hero: {}, list: [], link: {}, team: { groups: [] }, fund: { rows: [] }, cta: {} }, res: { hero: {}, prog: {}, lbl: {}, reports: [], know: {}, k: [], themes: [], watch: {}, cta: {} }, por: { hero: {}, empty: {}, g: {}, cta: {} }, ev: { hero: {}, f: {}, types: {}, items: [], past: {}, news: [], nl: {} }, ft: { legal: [] }, rdy: { title: '', hero: {}, journey: { steps: [] }, learn: { modules: [] }, check: { map: {}, gateLabels: [], dims: {}, questions: [], result: { apply: {}, talk: {}, learn: {}, no: {}, gates: [], tips: {}, email: {} } }, cta: {} }, acc: { nav: {}, hero: {}, fit: { yes: [], no: [] }, programme: { c1: {}, c2: {}, c3: {} }, benefits: { items: [] }, timeline: { i1: {}, i2: {}, i3: {}, i4: {}, i5: {}, i6: {} }, support: {}, partners: { list: [] }, cta: {}, interreg: {}, footer: { legal: [] } } };
+Component.EMPTY = { meta: {}, nav: { aboutDesc: {}, accDesc: {} }, home: { hero: {}, cities: { vie: {}, ba: {}, change: {}, stats: [] }, pulse: {}, sw: { items: [] }, acc: { what: {}, get: {}, who: {}, stages: [] }, events: {}, team: {}, nl: {} }, par: { hero: {}, list: [], link: {}, team: { groups: [] }, fund: { rows: [] }, cta: {} }, res: { hero: {}, prog: {}, lbl: {}, reports: [], know: {}, k: [], themes: [], watch: {}, cta: {} }, por: { hero: {}, empty: {}, g: {}, cta: {} }, ev: { hero: {}, f: {}, types: {}, items: [], past: {}, news: [], nl: {} }, ft: { legal: [] }, legal: {}, rdy: { title: '', hero: {}, journey: { steps: [] }, learn: { modules: [] }, check: { map: {}, gateLabels: [], dims: {}, questions: [], result: { apply: {}, talk: {}, learn: {}, no: {}, gates: [], tips: {}, email: {} } }, cta: {} }, acc: { nav: {}, hero: {}, fit: { yes: [], no: [] }, programme: { c1: {}, c2: {}, c3: {} }, benefits: { items: [] }, timeline: { i1: {}, i2: {}, i3: {}, i4: {}, i5: {}, i6: {} }, support: {}, partners: { list: [] }, cta: {}, interreg: {}, footer: { legal: [] } } };
 
 </script>
 </body>

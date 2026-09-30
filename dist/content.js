@@ -165,7 +165,7 @@
       partners: 'Partners', fundH: 'Funding', fundLine: 'Co-funded by the European Union', fundProg: 'Interreg Slovakia–Austria 2021–2027', fundRegion: 'Slovakia – Austria',
       fundLong: 'This project is co-financed by the Interreg Slovakia–Austria 2021–2027 Programme from the European Regional Development Fund (ERDF).',
       copyright: '© 2026 TWICIIC. All rights reserved.',
-      legal: [{ text: 'Privacy' }, { text: 'Imprint' }, { text: 'Accessibility' }, { text: 'Cookies' }]
+      legal: [{ text: 'Privacy', href: '#privacy' }, { text: 'Imprint', href: '#imprint' }, { text: 'Accessibility', href: '#accessibility' }]
     }
   };
 
@@ -332,7 +332,7 @@
       partners: 'Partner', fundH: 'Förderung', fundLine: 'Kofinanziert von der Europäischen Union', fundProg: 'Interreg Slowakei–Österreich 2021–2027', fundRegion: 'Slowakei – Österreich',
       fundLong: 'Dieses Projekt wird vom Programm Interreg Slowakei–Österreich 2021–2027 aus dem Europäischen Fonds für regionale Entwicklung (EFRE) kofinanziert.',
       copyright: '© 2026 TWICIIC. Alle Rechte vorbehalten.',
-      legal: [{ text: 'Datenschutz' }, { text: 'Impressum' }, { text: 'Barrierefreiheit' }, { text: 'Cookies' }]
+      legal: [{ text: 'Datenschutz', href: '#privacy' }, { text: 'Impressum', href: '#imprint' }, { text: 'Barrierefreiheit', href: '#accessibility' }]
     }
   };
 
@@ -499,7 +499,7 @@
       partners: 'Partneri', fundH: 'Financovanie', fundLine: 'Spolufinancované Európskou úniou', fundProg: 'Interreg Slovensko–Rakúsko 2021–2027', fundRegion: 'Slovensko – Rakúsko',
       fundLong: 'Tento projekt je spolufinancovaný programom Interreg Slovensko–Rakúsko 2021–2027 z Európskeho fondu regionálneho rozvoja (EFRR).',
       copyright: '© 2026 TWICIIC. Všetky práva vyhradené.',
-      legal: [{ text: 'Ochrana osobných údajov' }, { text: 'Impresum' }, { text: 'Prístupnosť' }, { text: 'Cookies' }]
+      legal: [{ text: 'Ochrana osobných údajov', href: '#privacy' }, { text: 'Impresum', href: '#imprint' }, { text: 'Prístupnosť', href: '#accessibility' }]
     }
   };
 
@@ -612,6 +612,8 @@
   en.acc = acc.en; de.acc = acc.de; sk.acc = acc.sk;
   var rdy = window.TWICIIC_READINESS || {};
   en.rdy = rdy.en; de.rdy = rdy.de; sk.rdy = rdy.sk;
+  var lg = window.TWICIIC_LEGAL || {};
+  en.legal = lg.en; de.legal = lg.de; sk.legal = lg.sk;
   window.TWICIIC_CONTENT = { en: en, de: de, sk: sk };
   try { window.dispatchEvent(new CustomEvent('twiciic-content')); } catch (e) { /* no-op */ }
 })();
