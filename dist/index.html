@@ -219,13 +219,16 @@
     [data-btn-ghost-inv]:hover { background: var(--white) !important; color: var(--black) !important; }
     [data-btn-ghost-inv]:active { transform: translateY(1px); }
     /* ---- Partners / research / portfolio / events ---- */
-    [data-prow] [data-plogo] img { transition: opacity 260ms var(--ease-out); }
+    [data-prow] [data-plogo] img, [data-acc-card] [data-plogo] img { transition: opacity 260ms var(--ease-out); }
+    [data-acc-card] [data-logo-rest][src="assets/partners/relevant.svg"] { filter: brightness(0); opacity: 1; }
     [data-prow] [data-plogo] { grid-template-columns: minmax(0, 1fr); }
     [data-prow] [data-plogo] img { max-width: min(112px, 100%) !important; object-fit: contain; }
     [data-prow] [data-logo-rest][src="assets/partners/relevant.svg"] { filter: brightness(0); opacity: 1; }
     @media (hover: hover) and (pointer: fine) {
       [data-prow]:hover [data-logo-rest], [data-prow]:focus-within [data-logo-rest] { opacity: 0 !important; }
       [data-prow]:hover [data-logo-hover], [data-prow]:focus-within [data-logo-hover] { opacity: 1 !important; }
+      [data-acc-card]:hover [data-logo-rest] { opacity: 0 !important; }
+      [data-acc-card]:hover [data-logo-hover] { opacity: 1 !important; }
     }
     [data-prole] { transition: opacity 220ms var(--ease-out), transform 220ms var(--ease-out); }
     [data-prow]:hover [data-prole], [data-prow]:focus-within [data-prole] { opacity: 1 !important; transform: none !important; }
@@ -831,7 +834,7 @@
       </div>
       <figure data-reveal="" style="transition-delay:160ms;margin:0;display:grid;gap:14px;min-width:0">
         <div style="position:relative;width:100%;aspect-ratio:4 / 5;border:1px solid var(--border-default);background:var(--surface-page);overflow:hidden">
-          <image-slot id="benefits-photo" shape="rect" placeholder="Drop a documentary photo — founders at a workshop in Vienna or Bratislava" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+          <img src="assets/photos/benefits.jpg" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 80%;display:block">
         </div>
         <figcaption style="display:flex;align-items:center;gap:10px;font-size:13px;line-height:1.5;color:var(--text-muted)">
           <span aria-hidden="true" style="display:inline-flex;height:13px;flex:none"><span style="width:3.5px;background:var(--vienna-red)"></span><span style="width:3.5px;background:var(--bratislava-blue)"></span></span>
@@ -947,8 +950,12 @@
         <p style="margin:16px 0 0;font-size:clamp(17px,1.5vw,20px);line-height:1.5;color:var(--text-secondary);text-wrap:pretty">{{ t.partners.lead }}</p>
       </header>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1px;background:var(--border-default);border:1px solid var(--border-default);margin-top:48px">
-        <sc-for list="{{ t.partners.list }}" as="p" hint-placeholder-count="6">
-          <div data-reveal="" style="position:relative;background:var(--surface-card);padding:28px 28px 32px;display:flex;flex-direction:column;gap:20px;min-height:150px" style-hover="outline:1px solid var(--border-strong);outline-offset:-1px;z-index:1">
+        <sc-for list="{{ accPartners }}" as="p" hint-placeholder-count="6">
+          <div data-reveal="" data-acc-card="" style="position:relative;background:var(--surface-card);padding:28px 28px 32px;display:flex;flex-direction:column;gap:20px;min-height:150px" style-hover="outline:1px solid var(--border-strong);outline-offset:-1px;z-index:1">
+            <div data-plogo="" aria-hidden="true" style="position:absolute;top:22px;right:24px;display:grid;place-items:center end;width:88px;height:36px">
+              <img data-logo-rest="" src="{{ p.logo }}" alt="" style="grid-area:1/1;display:block;width:auto;height:auto;max-width:88px;max-height:{{ p.hpx }};mix-blend-mode:multiply;filter:grayscale(1);opacity:0.72">
+              <img data-logo-hover="" src="{{ p.logoHover }}" alt="" style="grid-area:1/1;display:block;width:auto;height:auto;max-width:88px;max-height:{{ p.hpx }};mix-blend-mode:multiply;opacity:0">
+            </div>
             <span><x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Badge" variant="{{ p.variant }}" hint-size="90px,24px">{{ p.city }}</x-import></span>
             <div><p style="margin:0;font-size:18px;line-height:1.3;font-weight:650;letter-spacing:-0.01em;color:var(--text-primary)">{{ p.name }}</p><p style="margin:6px 0 0;font-size:14px;line-height:1.5;color:var(--text-muted)">{{ p.role }}</p></div>
           </div>
@@ -2316,6 +2323,8 @@ class Component extends DCLogic {
       size: i === 4 ? 'clamp(28px,3vw,40px)' : '18px', weight: i === 4 ? 800 : 500
     }));
     const parList = ((c.par && c.par.list) || []).map((x) => { const u = Component.PARTNER_LINKS[x.logo] || {}; return Object.assign({}, x, { hpx: (u.h || 44) + 'px', logoHover: u.hover || x.logo, web: u.web, li: u.li, hasLi: !!u.li }); });
+    // Accelerator page partner cards: same logo treatment as About · Partners, at ~60% size.
+    const accPartners = ((t.partners && t.partners.list) || []).map((x) => { const u = Component.PARTNER_LINKS[x.logo] || {}; return Object.assign({}, x, { hpx: Math.round((u.h || 44) * 0.6) + 'px', logoHover: u.hover || x.logo }); });
     const parVie = parList.filter((x) => x.side === 'vie'), parBa = parList.filter((x) => x.side === 'ba');
     const parVieCity = parVie.length ? parVie[0].city : '', parBaCity = parBa.length ? parBa[0].city : '';
     const team = Component.TEAM;
@@ -2407,7 +2416,7 @@ class Component extends DCLogic {
       nlSubmitPor: (e) => { e.preventDefault(); this.setState({ nlDone: Object.assign({}, s.nlDone, { por: true }) }); },
       nlSubmitEv: (e) => { e.preventDefault(); this.setState({ nlDone: Object.assign({}, s.nlDone, { ev: true }) }); },
       // Partners
-      parList, parVie, parBa, parVieCity, parBaCity, team, fundRows, lockupStyle: { maxWidth: '100%', height: 'auto', maxHeight: '88px' },
+      parList, parVie, parBa, accPartners, parVieCity, parBaCity, team, fundRows, lockupStyle: { maxWidth: '100%', height: 'auto', maxHeight: '88px' },
       // Events
       evTimeUp: s.evTime === 'up', evTimePast: s.evTime === 'past', evVisible, evEmpty: evVisible.length === 0, evFiltered: s.evLoc.length + s.evFmt.length > 0,
       locChips, evFilter: (e) => this._evFilter(e), evClear: () => this.setState({ evLoc: [], evFmt: [] }),
