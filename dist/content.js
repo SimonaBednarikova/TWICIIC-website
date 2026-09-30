@@ -349,7 +349,7 @@
     home: {
       hero: {
         eyebrow: 'Twin City Impact Innovation Champion · Viedeň – Bratislava',
-        h1: 'Rozvíjajte svoj impaktový podnik v dvoch hlavných mestách.',
+        h1: 'Posuňte svoj impaktový biznis za hranice jedného mesta.',
         sub: 'TWICIIC robí z Viedne a Bratislavy jeden domáci trh pre impaktové startupy, MSP a neziskové organizácie.',
         cta1: 'Objavte akcelerátor', cta2: 'Pridajte sa k sieti',
         note: 'Projekt Interreg Slovensko–Rakúsko. Zapojenie je bezplatné a otvorené na oboch stranách hranice.',
