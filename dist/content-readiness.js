@@ -28,7 +28,7 @@
       eyebrow: 'Self-assessment · 2 minutes', h2: 'Map your journey — should you cross the Danube?',
       lead: 'Eight quick questions. The first four tell us whether the accelerator is open to you, the next four how ready you are. You get an honest recommendation instantly — nothing is sent anywhere unless you choose to.',
       part1: 'Part 1 · Eligibility', part2: 'Part 2 · Readiness', back: 'Back', restart: 'Start over', keys: 'Tip: press the key shown to answer',
-      map: { eyebrow: 'Your map', from: 'Vienna', to: 'Bratislava', question: 'Question', complete: 'Map complete', elig: 'Eligibility', ready: 'Readiness', pending: 'Answer the questions and your map fills in as you go.', done: 'Your recommendation is on the left.' },
+      map: { eyebrow: 'Your map', question: 'Question', complete: 'Map complete', elig: 'Eligibility', ready: 'Readiness', pending: 'Answer the questions and your map fills in as you go.', done: 'Your recommendation is on the left.' },
       gateLabels: [{ text: 'Organisation' }, { text: 'Impact' }, { text: 'Region' }, { text: 'Cross-border' }],
       dims: { stage: 'Stage', impact: 'Impact', border: 'Cross-border plans', team: 'Commitment' },
       questions: [
@@ -87,7 +87,7 @@
       eyebrow: 'Selbsteinschätzung · 2 Minuten', h2: 'Zeichnen Sie Ihre Route – sollten Sie die Donau überqueren?',
       lead: 'Acht kurze Fragen. Die ersten vier zeigen, ob der Accelerator für Sie offen ist, die nächsten vier, wie bereit Sie sind. Sie erhalten sofort eine ehrliche Empfehlung – nichts wird verschickt, außer Sie möchten es.',
       part1: 'Teil 1 · Förderfähigkeit', part2: 'Teil 2 · Readiness', back: 'Zurück', restart: 'Neu starten', keys: 'Tipp: Antworten Sie mit der angezeigten Taste',
-      map: { eyebrow: 'Ihre Karte', from: 'Wien', to: 'Bratislava', question: 'Frage', complete: 'Karte vollständig', elig: 'Förderfähigkeit', ready: 'Readiness', pending: 'Beantworten Sie die Fragen – Ihre Karte füllt sich Schritt für Schritt.', done: 'Ihre Empfehlung steht links.' },
+      map: { eyebrow: 'Ihre Karte', question: 'Frage', complete: 'Karte vollständig', elig: 'Förderfähigkeit', ready: 'Readiness', pending: 'Beantworten Sie die Fragen – Ihre Karte füllt sich Schritt für Schritt.', done: 'Ihre Empfehlung steht links.' },
       gateLabels: [{ text: 'Organisation' }, { text: 'Impact' }, { text: 'Region' }, { text: 'Grenzüberschreitend' }],
       dims: { stage: 'Phase', impact: 'Impact', border: 'Grenzüberschreitende Pläne', team: 'Commitment' },
       questions: [
@@ -146,7 +146,7 @@
       eyebrow: 'Sebahodnotenie · 2 minúty', h2: 'Zmapujte svoju cestu – mali by ste prekročiť Dunaj?',
       lead: 'Osem rýchlych otázok. Prvé štyri ukážu, či je akcelerátor pre vás otvorený, ďalšie štyri, ako ste pripravení. Úprimné odporúčanie dostanete okamžite – nič sa nikam neposiela, pokiaľ sa tak nerozhodnete.',
       part1: 'Časť 1 · Oprávnenosť', part2: 'Časť 2 · Pripravenosť', back: 'Späť', restart: 'Začať odznova', keys: 'Tip: odpovedať môžete aj stlačením zobrazenej klávesy',
-      map: { eyebrow: 'Vaša mapa', from: 'Viedeň', to: 'Bratislava', question: 'Otázka', complete: 'Mapa je kompletná', elig: 'Oprávnenosť', ready: 'Pripravenosť', pending: 'Odpovedajte na otázky – mapa sa vypĺňa priebežne.', done: 'Vaše odporúčanie je vľavo.' },
+      map: { eyebrow: 'Vaša mapa', question: 'Otázka', complete: 'Mapa je kompletná', elig: 'Oprávnenosť', ready: 'Pripravenosť', pending: 'Odpovedajte na otázky – mapa sa vypĺňa priebežne.', done: 'Vaše odporúčanie je vľavo.' },
       gateLabels: [{ text: 'Organizácia' }, { text: 'Impakt' }, { text: 'Región' }, { text: 'Cezhraničnosť' }],
       dims: { stage: 'Fáza', impact: 'Impakt', border: 'Cezhraničné plány', team: 'Záväzok' },
       questions: [
