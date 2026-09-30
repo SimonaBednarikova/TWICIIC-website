@@ -1444,7 +1444,7 @@
           <h2 style="margin:0;font-size:clamp(30px,3.6vw,44px);line-height:1.08;letter-spacing:-0.025em;font-weight:750;color:var(--text-primary);text-wrap:balance">{{ c.res.prog.h2 }}</h2>
         </header>
         <div style="margin-top:48px;border-top:1px solid var(--border-default)">
-          <sc-for list="{{ c.res.reports }}" as="r" hint-placeholder-count="2">
+          <sc-for list="{{ resReports }}" as="r" hint-placeholder-count="2">
             <article data-reveal="{{ r.side }}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(24px,4vw,64px);padding:clamp(36px,5vw,64px) 0;border-bottom:1px solid var(--border-default)">
               <div style="min-width:0">
                 <div style="display:flex;align-items:center;gap:14px">
@@ -1459,7 +1459,7 @@
                   <div style="padding:16px 0"><dt style="margin:0 0 6px;font-size:13px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-muted)">{{ c.res.lbl.method }}</dt><dd style="margin:0;font-size:15px;line-height:1.55;color:var(--text-primary);text-wrap:pretty">{{ r.method }}</dd></div>
                   <div style="padding:16px 0"><dt style="margin:0 0 6px;font-size:13px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-muted)">{{ c.res.lbl.when }}</dt><dd style="margin:0;font-size:15px;line-height:1.55;color:var(--text-primary);font-variant-numeric:tabular-nums">{{ r.when }}</dd></div>
                 </dl>
-                <span><x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="md" variant="secondary" on-click="{{ goResearchCta }}" data-magnet="" hint-size="200px,42px">{{ r.cta }}</x-import></span>
+                <span><x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="md" variant="secondary" on-click="{{ r.go }}" data-magnet="" hint-size="200px,42px">{{ r.cta }}</x-import></span>
               </div>
             </article>
           </sc-for>
@@ -1503,46 +1503,6 @@
             </li>
           </sc-for>
         </ul>
-      </div>
-    </section>
-
-    <!-- Recordings: an intentional empty state -->
-    <section data-screen-label="Research · Recordings" style="padding:0 0 clamp(72px,9vw,120px)">
-      <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,24px)">
-        <div data-reveal="ba" style="border:1px dashed var(--gray-400);padding:clamp(28px,4vw,48px)">
-          <div style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 40px">
-            <div style="max-width:560px">
-              <p style="display:flex;align-items:center;gap:10px;margin:0 0 12px;font-size:13px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--gray-500)">
-                <span data-ghost-mark="" aria-hidden="true" style="display:inline-flex;height:13px;flex:none"><span style="width:3.5px;background:var(--vienna-red)"></span><span style="width:3.5px;background:var(--bratislava-blue)"></span></span>
-                {{ c.res.watch.h2 }}
-              </p>
-              <p style="margin:0;font-size:17px;line-height:1.55;color:var(--gray-500);text-wrap:pretty">{{ c.res.watch.body }}</p>
-            </div>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px;margin-top:28px">
-            <div style="aspect-ratio:16 / 9;border:1px dashed var(--gray-300);display:flex;align-items:flex-end;padding:16px;font-size:13px;color:var(--gray-400)">{{ c.res.watch.ghost }}</div>
-            <div style="aspect-ratio:16 / 9;border:1px dashed var(--gray-300);display:flex;align-items:flex-end;padding:16px;font-size:13px;color:var(--gray-400)">{{ c.res.watch.ghost }}</div>
-            <div style="aspect-ratio:16 / 9;border:1px dashed var(--gray-300);display:flex;align-items:flex-end;padding:16px;font-size:13px;color:var(--gray-400)">{{ c.res.watch.ghost }}</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA breaker -->
-    <section id="research-cta" data-screen-label="Research · CTA" style="background:var(--surface-inverse);color:var(--white);scroll-margin-top:68px">
-      <div style="max-width:1200px;margin:0 auto;padding:clamp(72px,9vw,120px) clamp(20px,4vw,24px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(32px,5vw,72px);align-items:start">
-        <div data-reveal="vie">
-          <h2 style="margin:0;font-size:clamp(32px,4.4vw,60px);line-height:1.02;letter-spacing:-0.03em;font-weight:800;color:var(--white);text-wrap:balance">{{ c.res.cta.h2 }}</h2>
-          <p style="margin:18px 0 0;max-width:560px;font-size:clamp(16px,1.4vw,19px);line-height:1.55;color:var(--gray-300);text-wrap:pretty">{{ c.res.cta.body }}</p>
-          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:32px">
-            <a data-btn-inv="" data-magnet="" href="#home-newsletter" onClick="{{ navTo }}" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;height:50px;padding:0 24px;background:var(--white);color:var(--black);font-size:16px;font-weight:600;letter-spacing:0.01em;text-decoration:none;white-space:nowrap">
-              <span data-btn-bars="" aria-hidden="true" style="position:absolute;left:0;top:0;bottom:0;width:10px;display:flex;transform:translateX(-10px);transition:transform 300ms var(--ease-out)"><span style="flex:1;background:var(--vienna-red)"></span><span style="flex:1;background:var(--bratislava-blue)"></span></span>
-              {{ c.res.cta.b1 }}
-            </a>
-            <a data-btn-ghost-inv="" data-magnet="" href="mailto:info@twincityaccelerator.com" style="display:inline-flex;align-items:center;justify-content:center;height:50px;padding:0 24px;border:1px solid var(--white);color:var(--white);font-size:16px;font-weight:600;letter-spacing:0.01em;text-decoration:none;white-space:nowrap">{{ c.res.cta.b2 }}</a>
-          </div>
-        </div>
-        <p data-reveal="ba" style="margin:0;padding:clamp(20px,3vw,28px);border:1px solid var(--gray-700);font-size:15.5px;line-height:1.6;color:var(--gray-300);text-wrap:pretty;align-self:end">{{ c.res.cta.note }}</p>
       </div>
     </section>
   </div>
@@ -1891,7 +1851,7 @@ class Component extends DCLogic {
     'top': 'accelerator', 'fit': 'accelerator', 'programme': 'accelerator', 'benefits': 'accelerator', 'timeline': 'accelerator', 'support': 'accelerator', 'interreg': 'accelerator', 'acc-apply': 'accelerator', 'acc-ready': 'accelerator', 'acc-partners': 'accelerator',
     'rdy-top': 'readiness', 'rdy-journey': 'readiness', 'rdy-learn': 'readiness', 'rdy-check': 'readiness', 'rdy-more': 'readiness', 'rdy-cta': 'readiness',
     'partners-list': 'partners', 'partners-team': 'partners', 'partners-funding': 'partners',
-    'research-cta': 'research', 'portfolio-cta': 'portfolio',
+    'portfolio-cta': 'portfolio',
     'events-list': 'events', 'events-news': 'events', 'events-newsletter': 'events'
   };
   static ANCHOR_ALIAS = { 'acc-apply': 'programme', 'acc-ready': 'programme', 'acc-partners': 'partners' };
@@ -2325,6 +2285,8 @@ class Component extends DCLogic {
     const parList = ((c.par && c.par.list) || []).map((x) => { const u = Component.PARTNER_LINKS[x.logo] || {}; return Object.assign({}, x, { hpx: (u.h || 44) + 'px', logoHover: u.hover || x.logo, web: u.web, li: u.li, hasLi: !!u.li }); });
     // Accelerator page partner cards: same logo treatment as About · Partners, at ~60% size.
     const accPartners = ((t.partners && t.partners.list) || []).map((x) => { const u = Component.PARTNER_LINKS[x.logo] || {}; return Object.assign({}, x, { hpx: Math.round((u.h || 44) * 0.6) + 'px', logoHover: u.hover || x.logo }); });
+    // Research report buttons: 01 "get notified" → LinkedIn updates, 02 "take part" → email the team.
+    const resReports = ((c.res && c.res.reports) || []).map((r, i) => Object.assign({}, r, { go: this._act(() => (i === 0 ? Component.LINKEDIN_URL : 'mailto:info@twincityaccelerator.com')) }));
     const parVie = parList.filter((x) => x.side === 'vie'), parBa = parList.filter((x) => x.side === 'ba');
     const parVieCity = parVie.length ? parVie[0].city : '', parBaCity = parBa.length ? parBa[0].city : '';
     const team = Component.TEAM;
@@ -2399,7 +2361,7 @@ class Component extends DCLogic {
       navHome: this._link('#home'), navHomeTop: this._link('#home'), navAccelerator: this._link('#accelerator'), navPartners: this._link('#partners'),
       navResearch: this._link('#research'), navPortfolio: this._link('#portfolio'), navEvents: this._link('#events'), navReadiness: this._link('#readiness'),
       navTo: (e) => { const a = e.currentTarget.getAttribute('href'); this._nav(a, e); },
-      goJoin: this._act(() => Component.LINKEDIN_URL), goTeam: this._act(() => '#partners-team'), goResearchCta: this._act(() => '#research-cta'), goPortfolioCta: this._act(() => '#portfolio-cta'),
+      goJoin: this._act(() => Component.LINKEDIN_URL), goTeam: this._act(() => '#partners-team'), goPortfolioCta: this._act(() => '#portfolio-cta'),
       skipToMain: (e) => { e.preventDefault(); if (this.mainRef.current) this.mainRef.current.focus(); },
       noop: (e) => e.preventDefault(), noopBtn: () => {},
       // Accelerator page handlers (unchanged behaviour)
@@ -2416,7 +2378,7 @@ class Component extends DCLogic {
       nlSubmitPor: (e) => { e.preventDefault(); this.setState({ nlDone: Object.assign({}, s.nlDone, { por: true }) }); },
       nlSubmitEv: (e) => { e.preventDefault(); this.setState({ nlDone: Object.assign({}, s.nlDone, { ev: true }) }); },
       // Partners
-      parList, parVie, parBa, accPartners, parVieCity, parBaCity, team, fundRows, lockupStyle: { maxWidth: '100%', height: 'auto', maxHeight: '88px' },
+      parList, parVie, parBa, accPartners, resReports, parVieCity, parBaCity, team, fundRows, lockupStyle: { maxWidth: '100%', height: 'auto', maxHeight: '88px' },
       // Events
       evTimeUp: s.evTime === 'up', evTimePast: s.evTime === 'past', evVisible, evEmpty: evVisible.length === 0, evFiltered: s.evLoc.length + s.evFmt.length > 0,
       locChips, evFilter: (e) => this._evFilter(e), evClear: () => this.setState({ evLoc: [], evFmt: [] }),
@@ -2425,7 +2387,7 @@ class Component extends DCLogic {
     };
   }
 }
-Component.EMPTY = { meta: {}, nav: { aboutDesc: {}, accDesc: {} }, home: { hero: {}, cities: { vie: {}, ba: {}, change: {}, stats: [] }, pulse: {}, sw: { items: [] }, acc: { what: {}, get: {}, who: {}, stages: [] }, events: {}, team: {}, nl: {} }, par: { hero: {}, list: [], link: {}, team: { groups: [] }, fund: { rows: [] }, cta: {} }, res: { hero: {}, prog: {}, lbl: {}, reports: [], know: {}, k: [], themes: [], watch: {}, cta: {} }, por: { hero: {}, empty: {}, g: {}, cta: {} }, ev: { hero: {}, f: {}, types: {}, items: [], past: {}, news: [], nl: {} }, ft: { legal: [] }, legal: {}, rdy: { title: '', hero: {}, journey: { steps: [] }, learn: { modules: [] }, check: { map: {}, gateLabels: [], dims: {}, questions: [], result: { apply: {}, talk: {}, learn: {}, no: {}, gates: [], tips: {}, email: {} } }, cta: {} }, acc: { nav: {}, hero: {}, fit: { yes: [], no: [] }, programme: { c1: {}, c2: {}, c3: {} }, benefits: { items: [] }, timeline: { i1: {}, i2: {}, i3: {}, i4: {}, i5: {}, i6: {} }, support: {}, partners: { list: [] }, cta: {}, interreg: {}, footer: { legal: [] } } };
+Component.EMPTY = { meta: {}, nav: { aboutDesc: {}, accDesc: {} }, home: { hero: {}, cities: { vie: {}, ba: {}, change: {}, stats: [] }, pulse: {}, sw: { items: [] }, acc: { what: {}, get: {}, who: {}, stages: [] }, events: {}, team: {}, nl: {} }, par: { hero: {}, list: [], link: {}, team: { groups: [] }, fund: { rows: [] }, cta: {} }, res: { hero: {}, prog: {}, lbl: {}, reports: [], know: {}, k: [], themes: [] }, por: { hero: {}, empty: {}, g: {}, cta: {} }, ev: { hero: {}, f: {}, types: {}, items: [], past: {}, news: [], nl: {} }, ft: { legal: [] }, legal: {}, rdy: { title: '', hero: {}, journey: { steps: [] }, learn: { modules: [] }, check: { map: {}, gateLabels: [], dims: {}, questions: [], result: { apply: {}, talk: {}, learn: {}, no: {}, gates: [], tips: {}, email: {} } }, cta: {} }, acc: { nav: {}, hero: {}, fit: { yes: [], no: [] }, programme: { c1: {}, c2: {}, c3: {} }, benefits: { items: [] }, timeline: { i1: {}, i2: {}, i3: {}, i4: {}, i5: {}, i6: {} }, support: {}, partners: { list: [] }, cta: {}, interreg: {}, footer: { legal: [] } } };
 
 </script>
 </body>

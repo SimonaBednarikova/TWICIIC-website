@@ -125,9 +125,7 @@
         { n: '04', text: 'The gaps founders name first are investment readiness and cross-border know-how.' }
       ],
       themesH: 'Themes we cover',
-      themes: [{ text: 'Cross-border expansion' }, { text: 'Impact measurement' }, { text: 'Finance & investment readiness' }, { text: 'Cities & public innovation' }, { text: 'Ecosystem mapping' }],
-      watch: { h2: 'Recordings', body: 'Session recordings and webinar replays appear here as the programme runs.', ghost: 'Recording · coming soon' },
-      cta: { h2: 'Get the findings first.', body: "Subscribe and we'll send you each report the day it's published, with the three findings that matter most.", b1: 'Subscribe', b2: 'Contribute to the research', note: "We're still interviewing founders and ecosystem players in both cities. Thirty minutes of your time shapes what the accelerator teaches." }
+      themes: [{ text: 'Cross-border expansion' }, { text: 'Impact measurement' }, { text: 'Finance & investment readiness' }, { text: 'Cities & public innovation' }, { text: 'Ecosystem mapping' }]
     },
     por: {
       hero: { eyebrow: 'About · Portfolio', h1: 'The ventures of the Twin City.', sub: "Every venture that goes through the Twin City Accelerator will be here: what they do, where they're from, and where they're going." },
@@ -292,9 +290,7 @@
         { n: '04', text: 'Die Lücken, die Gründer:innen zuerst nennen: Investment Readiness und grenzüberschreitendes Know-how.' }
       ],
       themesH: 'Unsere Themen',
-      themes: [{ text: 'Grenzüberschreitende Expansion' }, { text: 'Wirkungsmessung' }, { text: 'Finanzierung & Investment Readiness' }, { text: 'Städte & öffentliche Innovation' }, { text: 'Ökosystem-Mapping' }],
-      watch: { h2: 'Aufzeichnungen', body: 'Session-Aufzeichnungen und Webinar-Replays erscheinen hier, sobald das Programm läuft.', ghost: 'Aufzeichnung · demnächst' },
-      cta: { h2: 'Die Ergebnisse zuerst bekommen.', body: 'Abonnieren Sie und wir schicken Ihnen jeden Bericht am Tag seiner Veröffentlichung – mit den drei Erkenntnissen, die am meisten zählen.', b1: 'Abonnieren', b2: 'Zur Forschung beitragen', note: 'Wir interviewen noch Gründer:innen und Ökosystem-Akteur:innen in beiden Städten. Dreißig Minuten Ihrer Zeit prägen, was der Accelerator lehrt.' }
+      themes: [{ text: 'Grenzüberschreitende Expansion' }, { text: 'Wirkungsmessung' }, { text: 'Finanzierung & Investment Readiness' }, { text: 'Städte & öffentliche Innovation' }, { text: 'Ökosystem-Mapping' }]
     },
     por: {
       hero: { eyebrow: 'Über uns · Portfolio', h1: 'Die Ventures der Twin City.', sub: 'Jedes Venture, das den Twin City Accelerator durchläuft, wird hier stehen: was es tut, woher es kommt und wohin es will.' },
@@ -459,9 +455,7 @@
         { n: '04', text: 'Medzery, ktoré zakladatelia menujú ako prvé: investičná pripravenosť a cezhraničné know-how.' }
       ],
       themesH: 'Témy, ktorým sa venujeme',
-      themes: [{ text: 'Cezhraničná expanzia' }, { text: 'Meranie impaktu' }, { text: 'Financie a investičná pripravenosť' }, { text: 'Mestá a verejné inovácie' }, { text: 'Mapovanie ekosystému' }],
-      watch: { h2: 'Nahrávky', body: 'Nahrávky stretnutí a záznamy webinárov tu budú počas programu postupne pribúdať.', ghost: 'Nahrávka · už čoskoro' },
-      cta: { h2: 'Získajte zistenia ako prví.', body: 'Prihláste sa na odber a každú správu vám pošleme v deň jej zverejnenia – spolu s tromi zisteniami, na ktorých záleží najviac.', b1: 'Prihlásiť sa na odber', b2: 'Prispejte k výskumu', note: 'Stále vedieme rozhovory so zakladateľmi a aktérmi ekosystému v oboch mestách. Tridsať minút vášho času formuje, čo akcelerátor učí.' }
+      themes: [{ text: 'Cezhraničná expanzia' }, { text: 'Meranie impaktu' }, { text: 'Financie a investičná pripravenosť' }, { text: 'Mestá a verejné inovácie' }, { text: 'Mapovanie ekosystému' }]
     },
     por: {
       hero: { eyebrow: 'O nás · Portfólio', h1: 'Podniky Twin City.', sub: 'Nájdete tu každý podnik, ktorý prejde programom Twin City Accelerator: čo robí, odkiaľ je a kam smeruje.' },
