@@ -32,7 +32,7 @@
       gateLabels: [{ text: 'Organisation' }, { text: 'Impact' }, { text: 'Region' }, { text: 'Cross-border' }],
       dims: { stage: 'Stage', impact: 'Impact', border: 'Cross-border plans', team: 'Commitment' },
       questions: [
-        { part: 1, q: 'Is your organisation a startup, SME, NGO, social enterprise or another organisation developing a scalable solution?', help: 'Any legal form works — what matters is a solution that can grow.', opts: yn('Yes', 'No') },
+        { part: 1, q: 'Is your organisation a startup or scale-up, SME, NGO, social enterprise or another organisation developing a scalable solution?', help: 'Any legal form works — what matters is a solution that can grow.', opts: yn('Yes', 'No') },
         { part: 1, q: 'Is a clear social or environmental impact part of your core activities?', help: 'Not a side project — the impact sits in what you sell or deliver.', opts: yn('Yes', 'No') },
         { part: 1, q: 'Are you based in, or actively operating in, the Vienna or Bratislava region?', help: 'The programme is co-funded by Interreg Slovakia–Austria and open to ventures active in the two capital regions.', opts: yn('Yes', 'No') },
         { part: 1, q: 'Do you want to expand or collaborate across the Austria–Slovakia border in the next 12–24 months?', help: 'Customers, partners, pilots or a legal entity on the other side all count.', opts: yn('Yes', 'No') },
@@ -91,7 +91,7 @@
       gateLabels: [{ text: 'Organisation' }, { text: 'Impact' }, { text: 'Region' }, { text: 'Grenzüberschreitend' }],
       dims: { stage: 'Phase', impact: 'Impact', border: 'Grenzüberschreitende Pläne', team: 'Commitment' },
       questions: [
-        { part: 1, q: 'Ist Ihre Organisation ein Start-up, KMU, eine NGO, ein Sozialunternehmen oder eine andere Organisation, die eine skalierbare Lösung entwickelt?', help: 'Die Rechtsform ist zweitrangig – entscheidend ist eine Lösung, die wachsen kann.', opts: yn('Ja', 'Nein') },
+        { part: 1, q: 'Ist Ihre Organisation ein Start-up oder Scale-up, KMU, eine NGO, ein Sozialunternehmen oder eine andere Organisation, die eine skalierbare Lösung entwickelt?', help: 'Die Rechtsform ist zweitrangig – entscheidend ist eine Lösung, die wachsen kann.', opts: yn('Ja', 'Nein') },
         { part: 1, q: 'Ist eine klare soziale oder ökologische Wirkung Teil Ihrer Kerntätigkeit?', help: 'Kein Nebenprojekt – die Wirkung steckt in dem, was Sie verkaufen oder leisten.', opts: yn('Ja', 'Nein') },
         { part: 1, q: 'Sind Sie in der Region Wien oder Bratislava ansässig oder dort aktiv tätig?', help: 'Das Programm wird von Interreg Slowakei–Österreich kofinanziert und steht Ventures offen, die in den beiden Hauptstadtregionen aktiv sind.', opts: yn('Ja', 'Nein') },
         { part: 1, q: 'Möchten Sie in den nächsten 12–24 Monaten über die österreichisch-slowakische Grenze expandieren oder kooperieren?', help: 'Kund:innen, Partner, Pilotprojekte oder eine Gesellschaft auf der anderen Seite zählen alle.', opts: yn('Ja', 'Nein') },
@@ -150,7 +150,7 @@
       gateLabels: [{ text: 'Organizácia' }, { text: 'Impakt' }, { text: 'Región' }, { text: 'Cezhraničnosť' }],
       dims: { stage: 'Fáza', impact: 'Impakt', border: 'Cezhraničné plány', team: 'Záväzok' },
       questions: [
-        { part: 1, q: 'Je vaša organizácia startup, MSP, nezisková organizácia, sociálny podnik alebo iná organizácia, ktorá vyvíja škálovateľné riešenie?', help: 'Právna forma nerozhoduje – dôležité je riešenie, ktoré môže rásť.', opts: yn('Áno', 'Nie') },
+        { part: 1, q: 'Je vaša organizácia startup alebo scale-up, MSP, nezisková organizácia, sociálny podnik alebo iná organizácia, ktorá vyvíja škálovateľné riešenie?', help: 'Právna forma nerozhoduje – dôležité je riešenie, ktoré môže rásť.', opts: yn('Áno', 'Nie') },
         { part: 1, q: 'Je jasný sociálny alebo environmentálny impakt súčasťou vašich hlavných aktivít?', help: 'Nie vedľajší projekt – impakt je v tom, čo predávate alebo poskytujete.', opts: yn('Áno', 'Nie') },
         { part: 1, q: 'Sídlite alebo aktívne pôsobíte v regióne Viedne alebo Bratislavy?', help: 'Program je spolufinancovaný z Interreg Slovensko–Rakúsko a je otvorený podnikom pôsobiacim v oboch hlavných mestách a ich regiónoch.', opts: yn('Áno', 'Nie') },
         { part: 1, q: 'Chcete v najbližších 12–24 mesiacoch expandovať alebo spolupracovať cez rakúsko-slovenskú hranicu?', help: 'Zákazníci, partneri, pilotné projekty alebo právnická osoba na druhej strane – všetko sa počíta.', opts: yn('Áno', 'Nie') },

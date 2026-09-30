@@ -16,18 +16,18 @@
       hero: {
         eyebrow: 'Twin City Impact Innovation Champion · Vienna – Bratislava',
         h1: 'Grow your impact venture across two capitals.',
-        sub: 'TWICIIC turns Vienna and Bratislava into one home market for impact-driven startups, SMEs and NGOs.',
+        sub: 'TWICIIC turns Vienna and Bratislava into one home market for impact-driven startups and scale-ups, SMEs and NGOs.',
         cta1: 'Explore the Accelerator', cta2: 'Join our network',
         note: 'An Interreg Slovakia–Austria project. Free to join, open on both sides of the border.',
         media: 'Hero visual: the two cities, 55 km apart', km: 'km', vie: W, ba: B
       },
       cities: {
         eyebrow: 'Two capitals · 55 kilometres',
-        h2: 'The closest capitals in Europe. Two ecosystems that barely touch.',
-        lead: 'Vienna and Bratislava are closer to each other than any other two capitals on the continent. Their impact-innovation scenes are not.',
-        vie: { title: W, body: 'A mature impact scene with strong support structures that mostly stays inside its own communities.' },
-        ba: { title: B, body: 'A fast-moving, entrepreneurial scene that is still building the institutions to support it.' },
-        change: { title: 'That is changing.', body: 'Founders on both sides face the same gaps: cross-border know-how, investment readiness and simple visibility of who is doing what an hour away. Close those gaps and two half-sized markets become one region of three million people.' },
+        h2: 'The closest capitals in Europe. Two ecosystems with a lot to gain from each other.',
+        lead: 'Vienna and Bratislava are closer to each other than any other two capitals on the continent – and their impact-innovation scenes are ready to grow closer too.',
+        vie: { title: W, body: 'An established impact scene with strong support structures, investors and international networks.' },
+        ba: { title: B, body: 'A dynamic, entrepreneurial scene with fast-growing ventures, strong talent and a drive to build.' },
+        change: { title: 'Stronger together.', body: 'Founders on both sides share the same needs: cross-border know-how, investment readiness and simply knowing who is doing what an hour away. Meet them together and two neighbouring markets become one region of three million people.' },
         stats: [
           { kind: 'num', n: 55, pre: '', post: ' km', display: '55 km', l: 'between the two capitals' },
           { kind: 'num', n: 3, pre: '~', post: ' million', display: '~3 million', l: 'people in one region' },
@@ -44,7 +44,7 @@
       sw: {
         h: 'Where do you fit in?',
         items: [
-          { n: '01', title: "I'm building a venture", body: 'A startup, impact SME or NGO ready to grow into a second market.', cta: 'Explore the Accelerator', href: '#accelerator' },
+          { n: '01', title: "I'm building a venture", body: 'A startup or scale-up, impact SME or NGO ready to grow into a second market.', cta: 'Explore the Accelerator', href: '#accelerator' },
           { n: '02', title: 'I work in the ecosystem or for a city', body: 'A hub, university, investor, city department or municipal company.', cta: 'Partner with us', href: '#partners' },
           { n: '03', title: 'I want to understand both markets', body: 'Research and findings from both sides of the border.', cta: 'Read the research', href: '#research' }
         ]
@@ -79,7 +79,7 @@
       list: [
         { name: 'ZSI – Centre for Social Innovation', city: W, side: 'vie', alt: 'l', role: 'Lead partner', body: 'Coordinates the project and leads the research that maps both ecosystems.', logo: 'assets/partners/zsi-c.png' },
         { name: 'Capital City of Bratislava', city: B, side: 'ba', alt: 'r', role: 'Municipal anchor, Slovakia', body: 'Opens the city and its municipal companies to pilots, peer learning and the network.', logo: 'assets/partners/bratislava-c.png' },
-        { name: 'Vienna Business Agency', city: W, side: 'vie', alt: 'l', role: 'Ecosystem networks lead', body: 'Leads the ecosystem networks: meetups, study visits and the cooperation between the two cities.', logo: 'assets/partners/vienna-business-agency-c.png' },
+        { name: 'Vienna Business Agency', city: W, side: 'vie', alt: 'l', role: 'Ecosystem networks lead', body: 'Strengthens and promotes Vienna as a business location and leads the ecosystem networks: meetups, study visits and the cooperation between the two cities.', logo: 'assets/partners/vienna-business-agency-c.png' },
         { name: 'Relevant Ventures', city: W, side: 'vie', alt: 'r', role: 'Communication & entrepreneurial support', body: "Delivers entrepreneurial support in the accelerator and runs the project's communication.", logo: 'assets/partners/relevant.svg' },
         { name: 'CB ESPRI', city: B, side: 'ba', alt: 'l', role: 'Twin City Accelerator lead', body: 'Designs and runs the Twin City Accelerator across all three stages.', logo: 'assets/partners/cb-espri.svg' },
         { name: 'Impact Slovakia', city: B, side: 'ba', alt: 'r', role: 'Venture scouting & support, Slovakia', body: 'Finds and supports the Slovak ventures and connects the programme to the Slovak impact scene.', logo: 'assets/partners/impact-slovakia-c.png' }
@@ -119,8 +119,8 @@
       ],
       know: { eyebrow: 'What we already know', h2: 'Four things the first conversations made clear.' },
       k: [
-        { n: '01', text: "Vienna's impact scene has grown, but it mostly talks to itself." },
-        { n: '02', text: "Bratislava's founders work without the support structures Vienna takes for granted." },
+        { n: '01', text: 'Both cities have active impact scenes that are only starting to connect across the border.' },
+        { n: '02', text: 'Each side brings its own strengths: Vienna its established support structures, Bratislava its entrepreneurial speed.' },
         { n: '03', text: 'Neither side has a reliable picture of who does what 55 km away.' },
         { n: '04', text: 'The gaps founders name first are investment readiness and cross-border know-how.' }
       ],
@@ -131,7 +131,7 @@
     },
     por: {
       hero: { eyebrow: 'About · Portfolio', h1: 'The ventures of the Twin City.', sub: "Every venture that goes through the Twin City Accelerator will be here: what they do, where they're from, and where they're going." },
-      empty: { label: 'First cohort in preparation', h2: 'The first cohort is in preparation.', body: "We're selecting the ventures that will form the first cross-border cohort of the Twin City Accelerator. The portfolio opens the moment they do.", cta1: 'Find out how to join the first cohort', cta2: 'Stay tuned', note: 'Applications are open to startups, impact SMEs and NGOs from Vienna and Bratislava.' },
+      empty: { label: 'First cohort in preparation', h2: 'The first cohort is in preparation.', body: "We're selecting the ventures that will form the first cross-border cohort of the Twin City Accelerator. The portfolio opens the moment they do.", cta1: 'Find out how to join the first cohort', cta2: 'Stay tuned', note: 'Applications are open to startups and scale-ups, impact SMEs and NGOs from Vienna and Bratislava.' },
       soon: "What you'll find here",
       g: { logo: 'Venture logo', name: 'Venture name', meta: 'Sector · City · Stage', body: 'One line on what the venture does, verb first.', example: 'Example entry' },
       cta: { h2: 'Want to be on this page?', b1: 'Apply to the Accelerator' }
@@ -159,7 +159,7 @@
       nl: { h2: 'Never miss a date.', body: 'One email a month with every upcoming session and the latest news.', cta: 'Subscribe' }
     },
     ft: {
-      about: 'TWICIIC – Twin City Impact Innovation Champion – connects the innovation ecosystems of Vienna and Bratislava. Through a cross-border accelerator, ecosystem events and city partnerships, it helps impact-driven startups, SMEs and NGOs grow in both markets.',
+      about: 'TWICIIC – Twin City Impact Innovation Champion – connects the innovation ecosystems of Vienna and Bratislava. Through a cross-border accelerator, ecosystem events and city partnerships, it helps impact-driven startups and scale-ups, SMEs and NGOs grow in both markets.',
       navH: 'Navigate', touchH: 'Stay in touch', touchBody: 'Newsletter, once a month.', touchCta: 'Subscribe', li: 'LinkedIn', contact: 'Contact us',
       liEyebrow: 'Follow us on LinkedIn', liText: 'Track our latest updates — open calls, workshops and cohort news, posted regularly.',
       partners: 'Partners', fundH: 'Funding', fundLine: 'Co-funded by the European Union', fundProg: 'Interreg Slovakia–Austria 2021–2027', fundRegion: 'Slovakia – Austria',
@@ -183,18 +183,18 @@
       hero: {
         eyebrow: 'Twin City Impact Innovation Champion · Wien – Bratislava',
         h1: 'Lassen Sie Ihr Impact-Venture in zwei Hauptstädten wachsen.',
-        sub: 'TWICIIC macht Wien und Bratislava zu einem Heimmarkt für wirkungsorientierte Start-ups, KMU und NGOs.',
+        sub: 'TWICIIC macht Wien und Bratislava zu einem Heimmarkt für wirkungsorientierte Start-ups und Scale-ups, KMU und NGOs.',
         cta1: 'Zum Accelerator', cta2: 'Netzwerk beitreten',
         note: 'Ein Projekt von Interreg Slowakei–Österreich. Kostenlos, offen auf beiden Seiten der Grenze.',
         media: 'Hero-Visual: die zwei Städte, 55 km voneinander entfernt', km: 'km', vie: 'Wien', ba: B
       },
       cities: {
         eyebrow: 'Zwei Hauptstädte · 55 Kilometer',
-        h2: 'Die nächsten Hauptstädte Europas. Zwei Ökosysteme, die sich kaum berühren.',
-        lead: 'Wien und Bratislava liegen näher beieinander als jedes andere Hauptstadtpaar auf dem Kontinent. Ihre Impact-Innovationsszenen nicht.',
-        vie: { title: 'Wien', body: 'Eine reife Impact-Szene mit starken Unterstützungsstrukturen, die meist unter sich bleibt.' },
-        ba: { title: B, body: 'Eine schnelle, unternehmerische Szene, die ihre unterstützenden Institutionen noch aufbaut.' },
-        change: { title: 'Das ändert sich.', body: 'Gründer:innen auf beiden Seiten stehen vor denselben Lücken: grenzüberschreitendes Know-how, Investment Readiness und schlicht die Sichtbarkeit, wer eine Stunde entfernt was tut. Schließen wir diese Lücken, werden aus zwei halben Märkten eine Region mit drei Millionen Menschen.' },
+        h2: 'Die nächsten Hauptstädte Europas. Zwei Ökosysteme, die viel voneinander gewinnen können.',
+        lead: 'Wien und Bratislava liegen näher beieinander als jedes andere Hauptstadtpaar auf dem Kontinent – und ihre Impact-Innovationsszenen sind bereit, enger zusammenzuwachsen.',
+        vie: { title: 'Wien', body: 'Eine etablierte Impact-Szene mit starken Unterstützungsstrukturen, Investor:innen und internationalen Netzwerken.' },
+        ba: { title: B, body: 'Eine dynamische, unternehmerische Szene mit schnell wachsenden Ventures, starken Talenten und viel Gestaltungswillen.' },
+        change: { title: 'Gemeinsam stärker.', body: 'Gründer:innen auf beiden Seiten haben dieselben Bedürfnisse: grenzüberschreitendes Know-how, Investment Readiness und schlicht zu wissen, wer eine Stunde entfernt was tut. Gehen wir sie gemeinsam an, werden aus zwei Nachbarmärkten eine Region mit drei Millionen Menschen.' },
         stats: [
           { kind: 'num', n: 55, pre: '', post: ' km', display: '55 km', l: 'zwischen den beiden Hauptstädten' },
           { kind: 'num', n: 3, pre: '~', post: ' Millionen', display: '~3 Millionen', l: 'Menschen in einer Region' },
@@ -211,7 +211,7 @@
       sw: {
         h: 'Wo passen Sie hin?',
         items: [
-          { n: '01', title: 'Ich baue ein Venture auf', body: 'Ein Start-up, Impact-KMU oder eine NGO, bereit für den zweiten Markt.', cta: 'Zum Accelerator', href: '#accelerator' },
+          { n: '01', title: 'Ich baue ein Venture auf', body: 'Ein Start-up oder Scale-up, Impact-KMU oder eine NGO, bereit für den zweiten Markt.', cta: 'Zum Accelerator', href: '#accelerator' },
           { n: '02', title: 'Ich arbeite im Ökosystem oder für eine Stadt', body: 'Ein Hub, eine Universität, Investor:in, Stadtabteilung oder ein kommunales Unternehmen.', cta: 'Partner werden', href: '#partners' },
           { n: '03', title: 'Ich will beide Märkte verstehen', body: 'Forschung und Erkenntnisse von beiden Seiten der Grenze.', cta: 'Zur Forschung', href: '#research' }
         ]
@@ -246,7 +246,7 @@
       list: [
         { name: 'ZSI – Zentrum für Soziale Innovation', city: 'Wien', side: 'vie', alt: 'l', role: 'Lead-Partner', body: 'Koordiniert das Projekt und leitet die Forschung, die beide Ökosysteme kartiert.', logo: 'assets/partners/zsi-c.png' },
         { name: 'Hauptstadt Bratislava', city: B, side: 'ba', alt: 'r', role: 'Kommunaler Anker, Slowakei', body: 'Öffnet die Stadt und ihre kommunalen Unternehmen für Pilotprojekte, Peer-Learning und das Netzwerk.', logo: 'assets/partners/bratislava-c.png' },
-        { name: 'Wirtschaftsagentur Wien', city: 'Wien', side: 'vie', alt: 'l', role: 'Leitung Ökosystem-Netzwerke', body: 'Leitet die Ökosystem-Netzwerke: Meetups, Studienbesuche und die Kooperation der beiden Städte.', logo: 'assets/partners/vienna-business-agency-c.png' },
+        { name: 'Wirtschaftsagentur Wien', city: 'Wien', side: 'vie', alt: 'l', role: 'Leitung Ökosystem-Netzwerke', body: 'Stärkt und bewirbt Wien als Wirtschaftsstandort und leitet die Ökosystem-Netzwerke: Meetups, Studienbesuche und die Kooperation der beiden Städte.', logo: 'assets/partners/vienna-business-agency-c.png' },
         { name: 'Relevant Ventures', city: 'Wien', side: 'vie', alt: 'r', role: 'Kommunikation & Gründungsunterstützung', body: 'Liefert die unternehmerische Unterstützung im Accelerator und verantwortet die Projektkommunikation.', logo: 'assets/partners/relevant.svg' },
         { name: 'CB ESPRI', city: B, side: 'ba', alt: 'l', role: 'Leitung Twin City Accelerator', body: 'Konzipiert und führt den Twin City Accelerator über alle drei Stufen.', logo: 'assets/partners/cb-espri.svg' },
         { name: 'Impact Slovakia', city: B, side: 'ba', alt: 'r', role: 'Venture-Scouting & Support, Slowakei', body: 'Findet und begleitet die slowakischen Ventures und verbindet das Programm mit der slowakischen Impact-Szene.', logo: 'assets/partners/impact-slovakia-c.png' }
@@ -286,8 +286,8 @@
       ],
       know: { eyebrow: 'Was wir schon wissen', h2: 'Vier Dinge, die die ersten Gespräche klar gemacht haben.' },
       k: [
-        { n: '01', text: 'Wiens Impact-Szene ist gewachsen, spricht aber vor allem mit sich selbst.' },
-        { n: '02', text: 'Bratislavas Gründer:innen arbeiten ohne die Unterstützungsstrukturen, die Wien für selbstverständlich hält.' },
+        { n: '01', text: 'Beide Städte haben aktive Impact-Szenen, die sich über die Grenze hinweg erst zu vernetzen beginnen.' },
+        { n: '02', text: 'Jede Seite bringt eigene Stärken mit: Wien seine etablierten Unterstützungsstrukturen, Bratislava seine unternehmerische Dynamik.' },
         { n: '03', text: 'Keine Seite hat ein verlässliches Bild davon, wer 55 km entfernt was tut.' },
         { n: '04', text: 'Die Lücken, die Gründer:innen zuerst nennen: Investment Readiness und grenzüberschreitendes Know-how.' }
       ],
@@ -298,7 +298,7 @@
     },
     por: {
       hero: { eyebrow: 'Über uns · Portfolio', h1: 'Die Ventures der Twin City.', sub: 'Jedes Venture, das den Twin City Accelerator durchläuft, wird hier stehen: was es tut, woher es kommt und wohin es will.' },
-      empty: { label: 'Erste Kohorte in Vorbereitung', h2: 'Die erste Kohorte ist in Vorbereitung.', body: 'Wir wählen gerade die Ventures aus, die die erste grenzüberschreitende Kohorte des Twin City Accelerators bilden. Das Portfolio öffnet in dem Moment, in dem sie starten.', cta1: 'So kommen Sie in die erste Kohorte', cta2: 'Dranbleiben', note: 'Bewerben können sich Start-ups, Impact-KMU und NGOs aus Wien und Bratislava.' },
+      empty: { label: 'Erste Kohorte in Vorbereitung', h2: 'Die erste Kohorte ist in Vorbereitung.', body: 'Wir wählen gerade die Ventures aus, die die erste grenzüberschreitende Kohorte des Twin City Accelerators bilden. Das Portfolio öffnet in dem Moment, in dem sie starten.', cta1: 'So kommen Sie in die erste Kohorte', cta2: 'Dranbleiben', note: 'Bewerben können sich Start-ups und Scale-ups, Impact-KMU und NGOs aus Wien und Bratislava.' },
       soon: 'Was Sie hier finden werden',
       g: { logo: 'Venture-Logo', name: 'Name des Ventures', meta: 'Sektor · Stadt · Phase', body: 'Eine Zeile dazu, was das Venture tut – Verb zuerst.', example: 'Beispieleintrag' },
       cta: { h2: 'Wollen Sie auf diese Seite?', b1: 'Für den Accelerator bewerben' }
@@ -326,7 +326,7 @@
       nl: { h2: 'Keinen Termin verpassen.', body: 'Eine E-Mail pro Monat mit allen kommenden Sessions und den neuesten News.', cta: 'Abonnieren' }
     },
     ft: {
-      about: 'TWICIIC – Twin City Impact Innovation Champion – verbindet die Innovationsökosysteme von Wien und Bratislava. Mit einem grenzüberschreitenden Accelerator, Ökosystem-Events und Städtepartnerschaften hilft es wirkungsorientierten Start-ups, KMU und NGOs, in beiden Märkten zu wachsen.',
+      about: 'TWICIIC – Twin City Impact Innovation Champion – verbindet die Innovationsökosysteme von Wien und Bratislava. Mit einem grenzüberschreitenden Accelerator, Ökosystem-Events und Städtepartnerschaften hilft es wirkungsorientierten Start-ups und Scale-ups, KMU und NGOs, in beiden Märkten zu wachsen.',
       navH: 'Navigation', touchH: 'In Kontakt bleiben', touchBody: 'Newsletter, einmal im Monat.', touchCta: 'Abonnieren', li: 'LinkedIn', contact: 'Kontakt',
       liEyebrow: 'Folgen Sie uns auf LinkedIn', liText: 'Bleiben Sie auf dem Laufenden – offene Calls, Workshops und Neuigkeiten aus der Kohorte, regelmäßig gepostet.',
       partners: 'Partner', fundH: 'Förderung', fundLine: 'Kofinanziert von der Europäischen Union', fundProg: 'Interreg Slowakei–Österreich 2021–2027', fundRegion: 'Slowakei – Österreich',
@@ -350,18 +350,18 @@
       hero: {
         eyebrow: 'Twin City Impact Innovation Champion · Viedeň – Bratislava',
         h1: 'Posuňte svoj impaktový biznis za hranice jedného mesta.',
-        sub: 'TWICIIC robí z Viedne a Bratislavy jeden domáci trh pre impaktové startupy, MSP a neziskové organizácie.',
+        sub: 'TWICIIC robí z Viedne a Bratislavy jeden domáci trh pre impaktové startupy a scale-upy, MSP a neziskové organizácie.',
         cta1: 'Objavte akcelerátor', cta2: 'Pridajte sa k sieti',
         note: 'Projekt Interreg Slovensko–Rakúsko. Zapojenie je bezplatné a otvorené na oboch stranách hranice.',
         media: 'Hlavný vizuál: dve mestá vzdialené 55 km', km: 'km', vie: 'Viedeň', ba: B
       },
       cities: {
         eyebrow: 'Dve hlavné mestá · 55 kilometrov',
-        h2: 'Najbližšie hlavné mestá v Európe. Dva ekosystémy, ktoré sa sotva dotýkajú.',
-        lead: 'Viedeň a Bratislava sú si bližšie než ktorékoľvek iné dve hlavné mestá na kontinente. Ich impaktové inovačné scény nie.',
-        vie: { title: 'Viedeň', body: 'Vyspelá impaktová scéna so silnými podpornými štruktúrami, ktorá zostáva prevažne vo vlastných komunitách.' },
-        ba: { title: B, body: 'Rýchla, podnikavá scéna, ktorá si inštitúcie na svoju podporu ešte len buduje.' },
-        change: { title: 'To sa mení.', body: 'Zakladatelia na oboch stranách narážajú na rovnaké prekážky: chýba im cezhraničné know-how, investičná pripravenosť a jednoducho prehľad o tom, kto čo robí hodinu cesty od nich. Keď ich odstránime, z dvoch polovičných trhov vznikne jeden región s tromi miliónmi ľudí.' },
+        h2: 'Najbližšie hlavné mestá v Európe. Dva ekosystémy, ktoré si navzájom môžu veľa dať.',
+        lead: 'Viedeň a Bratislava sú si bližšie než ktorékoľvek iné dve hlavné mestá na kontinente – a ich impaktové inovačné scény sú pripravené zblížiť sa tiež.',
+        vie: { title: 'Viedeň', body: 'Etablovaná impaktová scéna so silnými podpornými štruktúrami, investormi a medzinárodnými sieťami.' },
+        ba: { title: B, body: 'Dynamická, podnikavá scéna s rýchlo rastúcimi podnikmi, silnými talentmi a chuťou tvoriť.' },
+        change: { title: 'Spolu sme silnejší.', body: 'Zakladatelia na oboch stranách majú rovnaké potreby: cezhraničné know-how, investičnú pripravenosť a jednoducho prehľad o tom, kto čo robí hodinu cesty od nich. Keď ich riešime spoločne, z dvoch susedných trhov vznikne jeden región s tromi miliónmi ľudí.' },
         stats: [
           { kind: 'num', n: 55, pre: '', post: ' km', display: '55 km', l: 'medzi oboma hlavnými mestami' },
           { kind: 'num', n: 3, pre: '~', post: ' milióny', display: '~3 milióny', l: 'ľudí v jednom regióne' },
@@ -378,7 +378,7 @@
       sw: {
         h: 'V akom ste štádiu?',
         items: [
-          { n: '01', title: 'Budujem podnik', body: 'Startup, impaktový MSP alebo nezisková organizácia pripravená rásť na druhom trhu.', cta: 'Objavte akcelerátor', href: '#accelerator' },
+          { n: '01', title: 'Budujem podnik', body: 'Startup alebo scale-up, impaktový MSP alebo nezisková organizácia pripravená rásť na druhom trhu.', cta: 'Objavte akcelerátor', href: '#accelerator' },
           { n: '02', title: 'Pracujem v ekosystéme alebo pre mesto', body: 'Hub, univerzita, investor, mestský odbor alebo mestský podnik.', cta: 'Staňte sa partnerom', href: '#partners' },
           { n: '03', title: 'Chcem porozumieť obom trhom', body: 'Výskum a zistenia z oboch strán hranice.', cta: 'Prečítajte si výskum', href: '#research' }
         ]
@@ -413,7 +413,7 @@
       list: [
         { name: 'ZSI – Centrum pre sociálne inovácie', city: 'Viedeň', side: 'vie', alt: 'l', role: 'Vedúci partner', body: 'Koordinuje projekt a vedie výskum, ktorý mapuje oba ekosystémy.', logo: 'assets/partners/zsi-c.png' },
         { name: 'Hlavné mesto SR Bratislava', city: B, side: 'ba', alt: 'r', role: 'Mestský partner, Slovensko', body: 'Otvára mesto a jeho mestské podniky pilotným projektom, vzájomnému učeniu a sieti.', logo: 'assets/partners/bratislava-c.png' },
-        { name: 'Vienna Business Agency', city: 'Viedeň', side: 'vie', alt: 'l', role: 'Vedenie ekosystémových sietí', body: 'Vedie ekosystémové siete: meetupy, študijné návštevy a spoluprácu oboch miest.', logo: 'assets/partners/vienna-business-agency-c.png' },
+        { name: 'Vienna Business Agency', city: 'Viedeň', side: 'vie', alt: 'l', role: 'Vedenie ekosystémových sietí', body: 'Posilňuje a propaguje Viedeň ako podnikateľskú lokalitu a vedie ekosystémové siete: meetupy, študijné návštevy a spoluprácu oboch miest.', logo: 'assets/partners/vienna-business-agency-c.png' },
         { name: 'Relevant Ventures', city: 'Viedeň', side: 'vie', alt: 'r', role: 'Komunikácia a podnikateľská podpora', body: 'Poskytuje podnikateľskú podporu v akcelerátore a vedie komunikáciu projektu.', logo: 'assets/partners/relevant.svg' },
         { name: 'CB ESPRI', city: B, side: 'ba', alt: 'l', role: 'Vedenie Twin City Accelerator', body: 'Navrhuje a vedie Twin City Accelerator vo všetkých troch fázach.', logo: 'assets/partners/cb-espri.svg' },
         { name: 'Impact Slovakia', city: B, side: 'ba', alt: 'r', role: 'Vyhľadávanie a podpora podnikov, Slovensko', body: 'Vyhľadáva a podporuje slovenské podniky a prepája program so slovenskou impaktovou scénou.', logo: 'assets/partners/impact-slovakia-c.png' }
@@ -453,8 +453,8 @@
       ],
       know: { eyebrow: 'Čo už vieme', h2: 'Štyri veci, ktoré ukázali už prvé rozhovory.' },
       k: [
-        { n: '01', text: 'Viedenská impaktová scéna vyrástla, no hovorí najmä sama so sebou.' },
-        { n: '02', text: 'Bratislavskí zakladatelia pracujú bez podporných štruktúr, ktoré sú vo Viedni samozrejmosťou.' },
+        { n: '01', text: 'Obe mestá majú aktívne impaktové scény, ktoré sa cez hranicu ešte len začínajú prepájať.' },
+        { n: '02', text: 'Každá strana prináša vlastné silné stránky: Viedeň etablované podporné štruktúry, Bratislava podnikateľskú dynamiku.' },
         { n: '03', text: 'Ani jedna strana nemá spoľahlivý prehľad o tom, kto čo robí 55 km od nich.' },
         { n: '04', text: 'Medzery, ktoré zakladatelia menujú ako prvé: investičná pripravenosť a cezhraničné know-how.' }
       ],
@@ -465,7 +465,7 @@
     },
     por: {
       hero: { eyebrow: 'O nás · Portfólio', h1: 'Podniky Twin City.', sub: 'Nájdete tu každý podnik, ktorý prejde programom Twin City Accelerator: čo robí, odkiaľ je a kam smeruje.' },
-      empty: { label: 'Prvá kohorta sa pripravuje', h2: 'Prvá kohorta sa pripravuje.', body: 'Vyberáme podniky, ktoré vytvoria prvú cezhraničnú kohortu Twin City Accelerator. Portfólio zverejníme hneď, ako odštartujú.', cta1: 'Ako sa dostať do prvej kohorty', cta2: 'Zostať v kontakte', note: 'Prihlásiť sa môžu startupy, impaktové MSP a neziskové organizácie z Viedne a Bratislavy.' },
+      empty: { label: 'Prvá kohorta sa pripravuje', h2: 'Prvá kohorta sa pripravuje.', body: 'Vyberáme podniky, ktoré vytvoria prvú cezhraničnú kohortu Twin City Accelerator. Portfólio zverejníme hneď, ako odštartujú.', cta1: 'Ako sa dostať do prvej kohorty', cta2: 'Zostať v kontakte', note: 'Prihlásiť sa môžu startupy a scale-upy, impaktové MSP a neziskové organizácie z Viedne a Bratislavy.' },
       soon: 'Čo tu nájdete',
       g: { logo: 'Logo podniku', name: 'Názov podniku', meta: 'Sektor · Mesto · Fáza', body: 'Jedna veta o tom, čo podnik robí – sloveso na začiatku.', example: 'Ukážkový záznam' },
       cta: { h2: 'Chcete byť na tejto stránke?', b1: 'Prihláste sa do akcelerátora' }
@@ -493,7 +493,7 @@
       nl: { h2: 'Nezmeškajte žiadny termín.', body: 'Jeden e-mail mesačne so všetkými nadchádzajúcimi stretnutiami a najnovšími správami.', cta: 'Prihlásiť sa na odber' }
     },
     ft: {
-      about: 'TWICIIC – Twin City Impact Innovation Champion – prepája inovačné ekosystémy Viedne a Bratislavy. Prostredníctvom cezhraničného akcelerátora, ekosystémových podujatí a partnerstiev miest pomáha impaktovým startupom, MSP a neziskovým organizáciám rásť na oboch trhoch.',
+      about: 'TWICIIC – Twin City Impact Innovation Champion – prepája inovačné ekosystémy Viedne a Bratislavy. Prostredníctvom cezhraničného akcelerátora, ekosystémových podujatí a partnerstiev miest pomáha impaktovým startupom a scale-upom, MSP a neziskovým organizáciám rásť na oboch trhoch.',
       navH: 'Navigácia', touchH: 'Zostaňme v kontakte', touchBody: 'Newsletter, raz mesačne.', touchCta: 'Prihlásiť sa na odber', li: 'LinkedIn', contact: 'Kontaktujte nás',
       liEyebrow: 'Sledujte nás na LinkedIn', liText: 'Otvorené výzvy, workshopy a novinky z kohorty pravidelne zverejňujeme na LinkedIn.',
       partners: 'Partneri', fundH: 'Financovanie', fundLine: 'Spolufinancované Európskou úniou', fundProg: 'Interreg Slovensko–Rakúsko 2021–2027', fundRegion: 'Slovensko – Rakúsko',
@@ -507,7 +507,7 @@
   var acc = {
     en: {
       nav: { home: 'Home', programme: 'Programme', readiness: 'Readiness check', partners: 'Partners', apply: 'Apply', menu: 'Menu', close: 'Close' },
-      hero: { eyebrow: 'TWICIIC · Interreg Slovakia–Austria', title: 'Twin City Accelerator', sub: 'Cross-border growth programme for impact ventures scaling between Slovakia and Austria.', body: 'The Twin City Accelerator helps impact-oriented startups, SMEs, social enterprises and organisations prepare for growth between Bratislava and Vienna through online content, structured acceleration and tailored expert support.', readiness: 'Check your readiness to scale', starts: 'Programme starts', dateTbc: 'Date to be announced', startDate: '12 April 2027', cities: 'Vienna ↔ Bratislava', months: '6–8 months', vienna: 'Vienna' },
+      hero: { eyebrow: 'TWICIIC · Interreg Slovakia–Austria', title: 'Twin City Accelerator', sub: 'Cross-border growth programme for impact ventures scaling between Slovakia and Austria.', body: 'The Twin City Accelerator helps impact-oriented startups and scale-ups, SMEs, social enterprises and organisations prepare for growth between Bratislava and Vienna through online content, structured acceleration and tailored expert support.', readiness: 'Check your readiness to scale', starts: 'Programme starts', dateTbc: 'Date to be announced', startDate: '12 April 2027', cities: 'Vienna ↔ Bratislava', months: '6–8 months', vienna: 'Vienna' },
       fit: {
         yesTitle: 'This programme is for organisations that:',
         yes: [{ text: 'are impact-oriented,' }, { text: 'have traction, customers, users or validated demand,' }, { text: 'want to expand between Slovakia and Austria,' }, { text: 'can work in English,' }, { text: 'are ready to participate actively in the programme,' }, { text: 'look for access to relevant stakeholders and partners.' }],
@@ -537,11 +537,11 @@
         ]
       },
       cta: { title: 'Ready to scale across the border?' },
-      interreg: { eyebrow: 'Funded by', title: 'Funded by Interreg Slovakia–Austria', p1: 'TWICIIC — Twin City Impact Innovation Champion is a cross-border project co-financed by the Interreg Slovakia–Austria 2021–2027 Programme from the European Regional Development Fund (ERDF), running from November 2025 to September 2028.', p2: 'The main goal of TWICIIC is to strengthen impact innovation capacities in the region and between the cities of public and private innovation drivers. The project accelerates purpose-driven scale-ups in the Vienna–Bratislava region — enterprises with an impact mission that have moved beyond the prototype stage, are already on the market and are actively pursuing cross-border growth. TWICIIC provides structured peer learning, access to cross-border investor networks, and a joint Accelerator programme connecting the impact innovation ecosystems of both cities.', projects: 'Interreg projects', caption: 'Interreg Slovakia–Austria 2021–2027 · ERDF' }
+      interreg: { eyebrow: 'Funding', title: 'Co-funded by the European Union through Interreg Slovakia–Austria', p1: 'TWICIIC — Twin City Impact Innovation Champion is a cross-border project co-financed by the Interreg Slovakia–Austria 2021–2027 Programme from the European Regional Development Fund (ERDF), running from November 2025 to September 2028.', p2: 'The main goal of TWICIIC is to strengthen impact innovation capacities in the region and between the cities of public and private innovation drivers. The project accelerates purpose-driven scale-ups in the Vienna–Bratislava region — enterprises with an impact mission that have moved beyond the prototype stage, are already on the market and are actively pursuing cross-border growth. TWICIIC provides structured peer learning, access to cross-border investor networks, and a joint Accelerator programme connecting the impact innovation ecosystems of both cities.', projects: 'Interreg projects', caption: 'Interreg Slovakia–Austria 2021–2027 · ERDF' }
     },
     de: {
       nav: { home: 'Start', programme: 'Programm', readiness: 'Readiness-Check', partners: 'Partner', apply: 'Bewerben', menu: 'Menü', close: 'Schließen' },
-      hero: { eyebrow: 'TWICIIC · Interreg Slowakei–Österreich', title: 'Twin City Accelerator', sub: 'Grenzüberschreitendes Wachstumsprogramm für Impact-Ventures, die zwischen der Slowakei und Österreich skalieren.', body: 'Der Twin City Accelerator unterstützt wirkungsorientierte Start-ups, KMU, Sozialunternehmen und Organisationen dabei, sich auf Wachstum zwischen Bratislava und Wien vorzubereiten – mit Online-Inhalten, strukturierter Beschleunigung und maßgeschneiderter Expertenunterstützung.', readiness: 'Bereitschaft zur Skalierung prüfen', starts: 'Programmstart', dateTbc: 'Termin wird bekannt gegeben', startDate: '12. April 2027', cities: 'Wien ↔ Bratislava', months: '6–8 Monate', vienna: 'Wien' },
+      hero: { eyebrow: 'TWICIIC · Interreg Slowakei–Österreich', title: 'Twin City Accelerator', sub: 'Grenzüberschreitendes Wachstumsprogramm für Impact-Ventures, die zwischen der Slowakei und Österreich skalieren.', body: 'Der Twin City Accelerator unterstützt wirkungsorientierte Start-ups und Scale-ups, KMU, Sozialunternehmen und Organisationen dabei, sich auf Wachstum zwischen Bratislava und Wien vorzubereiten – mit Online-Inhalten, strukturierter Beschleunigung und maßgeschneiderter Expertenunterstützung.', readiness: 'Bereitschaft zur Skalierung prüfen', starts: 'Programmstart', dateTbc: 'Termin wird bekannt gegeben', startDate: '12. April 2027', cities: 'Wien ↔ Bratislava', months: '6–8 Monate', vienna: 'Wien' },
       fit: {
         yesTitle: 'Dieses Programm ist für Organisationen, die:',
         yes: [{ text: 'wirkungsorientiert sind,' }, { text: 'Traktion, Kund:innen, Nutzer:innen oder validierte Nachfrage haben,' }, { text: 'zwischen der Slowakei und Österreich expandieren wollen,' }, { text: 'auf Englisch arbeiten können,' }, { text: 'bereit sind, aktiv am Programm teilzunehmen,' }, { text: 'Zugang zu relevanten Stakeholdern und Partnern suchen.' }],
@@ -571,11 +571,11 @@
         ]
       },
       cta: { title: 'Bereit, über die Grenze zu skalieren?' },
-      interreg: { eyebrow: 'Gefördert durch', title: 'Gefördert durch Interreg Slowakei–Österreich', p1: 'TWICIIC — Twin City Impact Innovation Champion ist ein grenzüberschreitendes Projekt, kofinanziert vom Programm Interreg Slowakei–Österreich 2021–2027 aus dem Europäischen Fonds für regionale Entwicklung (EFRE), mit einer Laufzeit von November 2025 bis September 2028.', p2: 'Hauptziel von TWICIIC ist es, die Impact-Innovationskapazitäten in der Region und zwischen den Städten – bei öffentlichen wie privaten Innovationsakteuren – zu stärken. Das Projekt beschleunigt zweckorientierte Scale-ups in der Region Wien–Bratislava: Unternehmen mit einer Impact-Mission, die die Prototypphase hinter sich haben, bereits am Markt sind und aktiv grenzüberschreitendes Wachstum verfolgen. TWICIIC bietet strukturiertes Peer-Learning, Zugang zu grenzüberschreitenden Investorennetzwerken und ein gemeinsames Accelerator-Programm, das die Impact-Innovationsökosysteme beider Städte verbindet.', projects: 'Interreg-Projekte', caption: 'Interreg Slowakei–Österreich 2021–2027 · EFRE' }
+      interreg: { eyebrow: 'Förderung', title: 'Kofinanziert von der Europäischen Union über Interreg Slowakei–Österreich', p1: 'TWICIIC — Twin City Impact Innovation Champion ist ein grenzüberschreitendes Projekt, kofinanziert vom Programm Interreg Slowakei–Österreich 2021–2027 aus dem Europäischen Fonds für regionale Entwicklung (EFRE), mit einer Laufzeit von November 2025 bis September 2028.', p2: 'Hauptziel von TWICIIC ist es, die Impact-Innovationskapazitäten in der Region und zwischen den Städten – bei öffentlichen wie privaten Innovationsakteuren – zu stärken. Das Projekt beschleunigt zweckorientierte Scale-ups in der Region Wien–Bratislava: Unternehmen mit einer Impact-Mission, die die Prototypphase hinter sich haben, bereits am Markt sind und aktiv grenzüberschreitendes Wachstum verfolgen. TWICIIC bietet strukturiertes Peer-Learning, Zugang zu grenzüberschreitenden Investorennetzwerken und ein gemeinsames Accelerator-Programm, das die Impact-Innovationsökosysteme beider Städte verbindet.', projects: 'Interreg-Projekte', caption: 'Interreg Slowakei–Österreich 2021–2027 · EFRE' }
     },
     sk: {
       nav: { home: 'Domov', programme: 'Program', readiness: 'Test pripravenosti', partners: 'Partneri', apply: 'Prihlásiť sa', menu: 'Menu', close: 'Zavrieť' },
-      hero: { eyebrow: 'TWICIIC · Interreg Slovensko–Rakúsko', title: 'Twin City Accelerator', sub: 'Cezhraničný rastový program pre impaktové podniky, ktoré rastú medzi Slovenskom a Rakúskom.', body: 'Twin City Accelerator pomáha impaktovo orientovaným startupom, MSP, sociálnym podnikom a organizáciám pripraviť sa na rast medzi Bratislavou a Viedňou prostredníctvom online obsahu, štruktúrovanej akcelerácie a expertnej podpory na mieru.', readiness: 'Overte si pripravenosť na škálovanie', starts: 'Začiatok programu', dateTbc: 'Termín bude oznámený', startDate: '12. apríla 2027', cities: 'Viedeň ↔ Bratislava', months: '6–8 mesiacov', vienna: 'Viedeň' },
+      hero: { eyebrow: 'TWICIIC · Interreg Slovensko–Rakúsko', title: 'Twin City Accelerator', sub: 'Cezhraničný rastový program pre impaktové podniky, ktoré rastú medzi Slovenskom a Rakúskom.', body: 'Twin City Accelerator pomáha impaktovo orientovaným startupom a scale-upom, MSP, sociálnym podnikom a organizáciám pripraviť sa na rast medzi Bratislavou a Viedňou prostredníctvom online obsahu, štruktúrovanej akcelerácie a expertnej podpory na mieru.', readiness: 'Overte si pripravenosť na škálovanie', starts: 'Začiatok programu', dateTbc: 'Termín bude oznámený', startDate: '12. apríla 2027', cities: 'Viedeň ↔ Bratislava', months: '6–8 mesiacov', vienna: 'Viedeň' },
       fit: {
         yesTitle: 'Tento program je pre organizácie, ktoré:',
         yes: [{ text: 'sú impaktovo orientované,' }, { text: 'majú trakciu, zákazníkov, používateľov alebo overený dopyt,' }, { text: 'chcú expandovať medzi Slovenskom a Rakúskom,' }, { text: 'vedia pracovať v angličtine,' }, { text: 'sú pripravené aktívne sa zapojiť do programu,' }, { text: 'hľadajú prístup k relevantným partnerom a aktérom ekosystému.' }],
@@ -605,7 +605,7 @@
         ]
       },
       cta: { title: 'Pripravení rásť cez hranicu?' },
-      interreg: { eyebrow: 'Financované z', title: 'Financované programom Interreg Slovensko–Rakúsko', p1: 'TWICIIC — Twin City Impact Innovation Champion je cezhraničný projekt spolufinancovaný programom Interreg Slovensko–Rakúsko 2021–2027 z Európskeho fondu regionálneho rozvoja (EFRR), ktorý prebieha od novembra 2025 do septembra 2028.', p2: 'Hlavným cieľom TWICIIC je posilniť kapacity impaktových inovácií v regióne a medzi mestami – u verejných aj súkromných aktérov inovácií. Projekt akceleruje scale-upy s pozitívnym dopadom v regióne Viedeň–Bratislava: podniky s impaktovou misiou, ktoré prekonali fázu prototypu, sú už na trhu a aktívne sa usilujú o cezhraničný rast. TWICIIC poskytuje štruktúrované vzájomné učenie, prístup k cezhraničným investorským sieťam a spoločný akceleračný program prepájajúci ekosystémy impaktových inovácií oboch miest.', projects: 'Projekty Interreg', caption: 'Interreg Slovensko–Rakúsko 2021–2027 · EFRR' }
+      interreg: { eyebrow: 'Financovanie', title: 'Spolufinancované Európskou úniou prostredníctvom programu Interreg Slovensko–Rakúsko', p1: 'TWICIIC — Twin City Impact Innovation Champion je cezhraničný projekt spolufinancovaný programom Interreg Slovensko–Rakúsko 2021–2027 z Európskeho fondu regionálneho rozvoja (EFRR), ktorý prebieha od novembra 2025 do septembra 2028.', p2: 'Hlavným cieľom TWICIIC je posilniť kapacity impaktových inovácií v regióne a medzi mestami – u verejných aj súkromných aktérov inovácií. Projekt akceleruje scale-upy s pozitívnym dopadom v regióne Viedeň–Bratislava: podniky s impaktovou misiou, ktoré prekonali fázu prototypu, sú už na trhu a aktívne sa usilujú o cezhraničný rast. TWICIIC poskytuje štruktúrované vzájomné učenie, prístup k cezhraničným investorským sieťam a spoločný akceleračný program prepájajúci ekosystémy impaktových inovácií oboch miest.', projects: 'Projekty Interreg', caption: 'Interreg Slovensko–Rakúsko 2021–2027 · EFRR' }
     }
   };
 
