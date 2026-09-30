@@ -9,7 +9,7 @@
     privacy: {
       title: 'Privacy', intro: 'How we handle your personal data on this website. In short: no cookies, no tracking, and only the data you choose to give us.',
       sections: [
-        S('Who is responsible', 'The controller for this website is CB ESPRI [legal form], [registered address], company ID [IČO]. You can reach us at [contact email].', 'We run this website on behalf of the TWICIIC project partnership.'),
+        S('Who is responsible', 'The controller for this website is CB ESPRI s. r. o., Staromestská 3, 811 03 Bratislava, Slovakia, company ID (IČO) 54486343. You can reach us at [contact email].', 'We run this website on behalf of the TWICIIC project partnership.'),
         S('Visiting the website', 'The website is hosted by Websupport s.r.o. in Slovakia. When you open a page, the server automatically records technical data such as your IP address, the date and time, the page requested and your browser type. We need this to deliver the site and keep it secure (Art. 6(1)(f) GDPR). The logs are deleted automatically by the host.', 'When a page loads, your browser also fetches the website’s JavaScript framework from the content delivery network unpkg.com, which receives your IP address for that purpose.'),
         S('Cookies and local storage', 'This website does not use cookies, analytics or tracking tools.', 'It saves two things in your own browser (local storage): your language choice and your answers in the readiness check, so they are still there on your next visit. This data never leaves your device. You can delete it at any time by clearing your browser data.'),
         S('Newsletter', 'If you subscribe, we use your email address to send you the TWICIIC newsletter, based on your consent (Art. 6(1)(a) GDPR). We send it with MailerLite, which processes the data on our behalf. You can unsubscribe at any time with the link in every email.'),
@@ -23,7 +23,7 @@
     imprint: {
       title: 'Imprint', intro: 'Who runs this website.',
       sections: [
-        S('Website operator', 'CB ESPRI [legal form]', '[Registered address]', 'Company ID (IČO): [●] · VAT ID: [●]', 'Registered in [commercial register, section, file number]', 'Represented by [name, position]', 'Email: [contact email]'),
+        S('Website operator', 'CB ESPRI s. r. o.', 'Staromestská 3, 811 03 Bratislava, Slovakia', 'Company ID (IČO): 54486343 · Tax ID (DIČ): 2121705388 · VAT ID: SK2121705388', 'Registered in the Commercial Register of the Municipal Court Bratislava III, section Sro, file no. [●]', 'Represented by [name, position]', 'Email: [contact email]'),
         S('The project', 'TWICIIC – Twin City Impact Innovation Champion (project ID NFP404101C337) is a joint project of ZSI – Centre for Social Innovation (lead partner), the Capital City of Bratislava, Vienna Business Agency, Relevant Ventures, CB ESPRI and Impact Slovakia.', 'The project is co-funded by the European Union through the Interreg Slovakia–Austria 2021–2027 programme from the European Regional Development Fund (ERDF).'),
         S('Responsibility for content', 'The project partners are solely responsible for the content of this website. It does not necessarily reflect the views of the European Union or the Interreg Slovakia–Austria programme.', 'We are not responsible for the content of external websites we link to.'),
         S('Photos and design', '© TWICIIC project partners, unless stated otherwise.')
@@ -45,7 +45,7 @@
     privacy: {
       title: 'Datenschutz', intro: 'Wie wir auf dieser Website mit Ihren personenbezogenen Daten umgehen. Kurz gesagt: keine Cookies, kein Tracking und nur die Daten, die Sie uns selbst geben.',
       sections: [
-        S('Verantwortliche Stelle', 'Verantwortlich für diese Website ist CB ESPRI [Rechtsform], [Anschrift], Firmennummer [IČO]. Sie erreichen uns unter [Kontakt-E-Mail].', 'Wir betreiben diese Website im Auftrag der TWICIIC-Projektpartnerschaft.'),
+        S('Verantwortliche Stelle', 'Verantwortlich für diese Website ist CB ESPRI s. r. o., Staromestská 3, 811 03 Bratislava, Slowakei, Firmennummer (IČO) 54486343. Sie erreichen uns unter [Kontakt-E-Mail].', 'Wir betreiben diese Website im Auftrag der TWICIIC-Projektpartnerschaft.'),
         S('Besuch der Website', 'Die Website wird von Websupport s.r.o. in der Slowakei gehostet. Beim Aufruf einer Seite speichert der Server automatisch technische Daten wie IP-Adresse, Datum und Uhrzeit, die aufgerufene Seite und den Browsertyp. Das ist nötig, um die Website bereitzustellen und sicher zu betreiben (Art. 6 Abs. 1 lit. f DSGVO). Die Logs werden vom Hoster automatisch gelöscht.', 'Beim Laden einer Seite lädt Ihr Browser außerdem das JavaScript-Framework der Website vom Content Delivery Network unpkg.com, das dafür Ihre IP-Adresse erhält.'),
         S('Cookies und lokaler Speicher', 'Diese Website verwendet keine Cookies, keine Analyse- und keine Tracking-Tools.', 'Sie speichert zwei Dinge in Ihrem eigenen Browser (Local Storage): Ihre Sprachwahl und Ihre Antworten im Readiness-Check, damit sie beim nächsten Besuch noch da sind. Diese Daten verlassen Ihr Gerät nie. Sie können sie jederzeit löschen, indem Sie Ihre Browserdaten löschen.'),
         S('Newsletter', 'Wenn Sie den Newsletter abonnieren, verwenden wir Ihre E-Mail-Adresse, um Ihnen den TWICIIC-Newsletter zu senden – auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Der Versand erfolgt über MailerLite, das die Daten in unserem Auftrag verarbeitet. Sie können sich jederzeit über den Link in jeder E-Mail abmelden.'),
@@ -59,7 +59,7 @@
     imprint: {
       title: 'Impressum', intro: 'Wer diese Website betreibt.',
       sections: [
-        S('Betreiber der Website', 'CB ESPRI [Rechtsform]', '[Anschrift]', 'Firmennummer (IČO): [●] · UID: [●]', 'Eingetragen im [Handelsregister, Abteilung, Nummer]', 'Vertreten durch [Name, Funktion]', 'E-Mail: [Kontakt-E-Mail]'),
+        S('Betreiber der Website', 'CB ESPRI s. r. o.', 'Staromestská 3, 811 03 Bratislava, Slowakei', 'Firmennummer (IČO): 54486343 · Steuernummer (DIČ): 2121705388 · UID: SK2121705388', 'Eingetragen im Handelsregister des Stadtgerichts Bratislava III, Abteilung Sro, Einlage Nr. [●]', 'Vertreten durch [Name, Funktion]', 'E-Mail: [Kontakt-E-Mail]'),
         S('Das Projekt', 'TWICIIC – Twin City Impact Innovation Champion (Projekt-ID NFP404101C337) ist ein gemeinsames Projekt von ZSI – Zentrum für Soziale Innovation (Lead-Partner), der Hauptstadt Bratislava, der Wirtschaftsagentur Wien, Relevant Ventures, CB ESPRI und Impact Slovakia.', 'Das Projekt wird von der Europäischen Union über das Programm Interreg Slowakei–Österreich 2021–2027 aus dem Europäischen Fonds für regionale Entwicklung (EFRE) kofinanziert.'),
         S('Verantwortung für Inhalte', 'Für den Inhalt dieser Website sind ausschließlich die Projektpartner verantwortlich. Er gibt nicht notwendigerweise die Meinung der Europäischen Union oder des Programms Interreg Slowakei–Österreich wieder.', 'Für die Inhalte externer Websites, auf die wir verlinken, übernehmen wir keine Verantwortung.'),
         S('Fotos und Gestaltung', '© TWICIIC-Projektpartner, sofern nicht anders angegeben.')
@@ -81,7 +81,7 @@
     privacy: {
       title: 'Ochrana osobných údajov', intro: 'Ako na tejto stránke zaobchádzame s vašimi osobnými údajmi. Stručne: žiadne cookies, žiadne sledovanie a len údaje, ktoré nám sami poskytnete.',
       sections: [
-        S('Kto zodpovedá', 'Prevádzkovateľom tejto stránky je CB ESPRI [právna forma], [sídlo], IČO [●]. Kontaktovať nás môžete na [kontaktný e-mail].', 'Stránku prevádzkujeme v mene partnerstva projektu TWICIIC.'),
+        S('Kto zodpovedá', 'Prevádzkovateľom tejto stránky je CB ESPRI s. r. o., Staromestská 3, 811 03 Bratislava – mestská časť Staré Mesto, IČO 54486343. Kontaktovať nás môžete na [kontaktný e-mail].', 'Stránku prevádzkujeme v mene partnerstva projektu TWICIIC.'),
         S('Návšteva stránky', 'Stránka je hostovaná u spoločnosti Websupport s.r.o. na Slovensku. Pri otvorení stránky server automaticky zaznamená technické údaje, napríklad IP adresu, dátum a čas, požadovanú stránku a typ prehliadača. Potrebujeme ich na prevádzku a zabezpečenie stránky (čl. 6 ods. 1 písm. f) GDPR). Záznamy hosting automaticky maže.', 'Pri načítaní stránky si váš prehliadač stiahne aj JavaScriptový framework stránky zo siete unpkg.com, ktorá na tento účel dostane vašu IP adresu.'),
         S('Cookies a lokálne úložisko', 'Táto stránka nepoužíva cookies, analytické ani sledovacie nástroje.', 'Vo vašom prehliadači (local storage) si ukladá dve veci: zvolený jazyk a vaše odpovede v teste pripravenosti, aby ste ich mali k dispozícii aj pri ďalšej návšteve. Tieto údaje nikdy neopustia vaše zariadenie. Kedykoľvek ich môžete vymazať vymazaním údajov prehliadača.'),
         S('Newsletter', 'Ak sa prihlásite na odber, použijeme vašu e-mailovú adresu na zasielanie newslettera TWICIIC na základe vášho súhlasu (čl. 6 ods. 1 písm. a) GDPR). Newsletter posielame cez službu MailerLite, ktorá údaje spracúva v našom mene. Z odberu sa môžete kedykoľvek odhlásiť cez odkaz v každom e-maile.'),
@@ -95,7 +95,7 @@
     imprint: {
       title: 'Impresum', intro: 'Kto prevádzkuje túto stránku.',
       sections: [
-        S('Prevádzkovateľ stránky', 'CB ESPRI [právna forma]', '[Sídlo]', 'IČO: [●] · IČ DPH: [●]', 'Zapísaná v [Obchodný register, oddiel, vložka]', 'Zastúpená: [meno, funkcia]', 'E-mail: [kontaktný e-mail]'),
+        S('Prevádzkovateľ stránky', 'CB ESPRI s. r. o.', 'Staromestská 3, 811 03 Bratislava – mestská časť Staré Mesto', 'IČO: 54486343 · DIČ: 2121705388 · IČ DPH: SK2121705388', 'Zapísaná v Obchodnom registri Mestského súdu Bratislava III, oddiel Sro, vložka č. [●]', 'Zastúpená: [meno, funkcia]', 'E-mail: [kontaktný e-mail]'),
         S('Projekt', 'TWICIIC – Twin City Impact Innovation Champion (ID projektu NFP404101C337) je spoločný projekt ZSI – Centra pre sociálne inovácie (vedúci partner), Hlavného mesta SR Bratislavy, Vienna Business Agency, Relevant Ventures, CB ESPRI a Impact Slovakia.', 'Projekt je spolufinancovaný Európskou úniou prostredníctvom programu Interreg Slovensko–Rakúsko 2021–2027 z Európskeho fondu regionálneho rozvoja (EFRR).'),
         S('Zodpovednosť za obsah', 'Za obsah tejto stránky zodpovedajú výlučne partneri projektu. Nemusí nevyhnutne vyjadrovať názory Európskej únie ani programu Interreg Slovensko–Rakúsko.', 'Nezodpovedáme za obsah externých stránok, na ktoré odkazujeme.'),
         S('Fotografie a dizajn', '© partneri projektu TWICIIC, ak nie je uvedené inak.')
