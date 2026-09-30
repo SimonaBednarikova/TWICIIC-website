@@ -5,8 +5,8 @@
   var en = {
     meta: { locale: 'en-GB', code: 'en', langName: 'English', skip: 'Skip to content', months: 'months' },
     nav: {
-      programme: 'About TWICIIC', accelerator: 'Accelerator', about: 'About', partners: 'Partners', research: 'Research', portfolio: 'Participants', events: 'Events & News',
-      cta: 'Join our network', menu: 'Menu', close: 'Close', langLabel: 'Language', aboutLabel: 'About TWICIIC',
+      programme: 'About TWICIIC', accelerator: 'Accelerator', about: 'Team & Research', partners: 'Partners', research: 'Research', portfolio: 'Participants', events: 'Events & News',
+      cta: 'Join our network', menu: 'Menu', close: 'Close', langLabel: 'Language', aboutLabel: 'Team & Research',
       accLabel: 'Twin City Accelerator', accOverview: 'Twin City Accelerator', readiness: 'Learn & check your readiness to scale',
       accDesc: { overview: 'Programme, timeline and how to apply', readiness: 'Free content and a 2-minute self-check' },
       aboutDesc: { partners: 'Six organisations, two cities', research: 'What we are learning', portfolio: 'Ventures we support' },
@@ -75,7 +75,7 @@
       nl: { h2: 'Stay in the loop.', body: "One email a month: new sessions, open calls and what we're learning. No noise.", ph: 'your@email.com', cta: 'Subscribe', done: 'Thanks — you’re on the list.', label: 'Email address' }
     },
     par: {
-      hero: { eyebrow: 'About · Partners', h1: 'Six partners. Two cities. One team.', sub: 'TWICIIC is run by six organisations from Vienna and Bratislava, combining complementary strengths from both sides of the border.' },
+      hero: { eyebrow: 'Team & Research · Partners', h1: 'Six partners. Two cities. One team.', sub: 'TWICIIC is run by six organisations from Vienna and Bratislava, combining complementary strengths from both sides of the border.' },
       list: [
         { name: 'ZSI – Centre for Social Innovation', city: W, side: 'vie', alt: 'l', role: 'Lead partner', body: 'Coordinates the project and leads the research that maps both ecosystems.', logo: 'assets/partners/zsi-c.png' },
         { name: 'Capital City of Bratislava', city: B, side: 'ba', alt: 'r', role: 'Municipal anchor, Slovakia', body: 'Opens the city and its municipal companies to pilots, peer learning and the network.', logo: 'assets/partners/bratislava-c.png' },
@@ -110,7 +110,7 @@
       cta: { h2: 'Want to work with us?', body: 'Co-host a session, refer a venture, pilot with a city or join the network.', b1: 'Partner with us', b2: 'Join our network' }
     },
     res: {
-      hero: { eyebrow: 'About · Research', h1: "What we're learning about the Twin City.", sub: 'Before we accelerate, we map. Our research team is documenting both ecosystems so that founders, cities and partners work from the same picture.' },
+      hero: { eyebrow: 'Research', h1: "What we're learning about the Twin City.", sub: 'Before we accelerate, we map. Our research team is documenting both ecosystems so that founders, cities and partners work from the same picture.' },
       prog: { eyebrow: 'In the making', h2: 'Two reports, both in progress.' },
       lbl: { method: "How we're doing it", when: 'When' },
       reports: [
@@ -128,7 +128,7 @@
       themes: [{ text: 'Cross-border expansion' }, { text: 'Impact measurement' }, { text: 'Finance & investment readiness' }, { text: 'Cities & public innovation' }, { text: 'Ecosystem mapping' }]
     },
     por: {
-      hero: { eyebrow: 'About · Participants', h1: 'The ventures of the Twin City.', sub: "Every venture that goes through the Twin City Accelerator will be here: what they do, where they're from, and where they're going." },
+      hero: { eyebrow: 'Team & Research · Participants', h1: 'The ventures of the Twin City.', sub: "Every venture that goes through the Twin City Accelerator will be here: what they do, where they're from, and where they're going." },
       empty: { label: 'First cohort in preparation', h2: 'The first cohort is in preparation.', body: "We're selecting the ventures that will form the first cross-border cohort of the Twin City Accelerator. Their profiles appear here the moment they start.", cta1: 'Find out how to join the first cohort', cta2: 'Stay tuned', note: 'Applications are open to impact-oriented scale-ups, SMEs and NGOs from Vienna and Bratislava.' },
       soon: "What you'll find here",
       g: { logo: 'Venture logo', name: 'Venture name', meta: 'Sector · City · Stage', body: 'One line on what the venture does, verb first.', example: 'Example entry' },
@@ -170,8 +170,8 @@
   var de = {
     meta: { locale: 'de-AT', code: 'de', langName: 'Deutsch', skip: 'Zum Inhalt springen', months: 'Monate' },
     nav: {
-      programme: 'Über TWICIIC', accelerator: 'Accelerator', about: 'Über uns', partners: 'Partner', research: 'Forschung', portfolio: 'Teilnehmende', events: 'Events & News',
-      cta: 'Netzwerk beitreten', menu: 'Menü', close: 'Schließen', langLabel: 'Sprache', aboutLabel: 'Über TWICIIC',
+      programme: 'Über TWICIIC', accelerator: 'Accelerator', about: 'Team & Forschung', partners: 'Partner', research: 'Forschung', portfolio: 'Teilnehmende', events: 'Events & News',
+      cta: 'Netzwerk beitreten', menu: 'Menü', close: 'Schließen', langLabel: 'Sprache', aboutLabel: 'Team & Forschung',
       accLabel: 'Twin City Accelerator', accOverview: 'Twin City Accelerator', readiness: 'Lernen & Bereitschaft zur Skalierung prüfen',
       accDesc: { overview: 'Programm, Zeitplan und Bewerbung', readiness: 'Kostenlose Inhalte und 2-Minuten-Check' },
       aboutDesc: { partners: 'Sechs Organisationen, zwei Städte', research: 'Was wir lernen', portfolio: 'Ventures, die wir begleiten' },
@@ -240,7 +240,7 @@
       nl: { h2: 'Bleiben Sie auf dem Laufenden.', body: 'Eine E-Mail pro Monat: neue Sessions, offene Calls und was wir lernen. Kein Rauschen.', ph: 'ihre@email.com', cta: 'Abonnieren', done: 'Danke – Sie sind dabei.', label: 'E-Mail-Adresse' }
     },
     par: {
-      hero: { eyebrow: 'Über uns · Partner', h1: 'Sechs Partner. Zwei Städte. Ein Team.', sub: 'TWICIIC wird von sechs Organisationen aus Wien und Bratislava getragen, die ihre sich ergänzenden Stärken von beiden Seiten der Grenze bündeln.' },
+      hero: { eyebrow: 'Team & Forschung · Partner', h1: 'Sechs Partner. Zwei Städte. Ein Team.', sub: 'TWICIIC wird von sechs Organisationen aus Wien und Bratislava getragen, die ihre sich ergänzenden Stärken von beiden Seiten der Grenze bündeln.' },
       list: [
         { name: 'ZSI – Zentrum für Soziale Innovation', city: 'Wien', side: 'vie', alt: 'l', role: 'Lead-Partner', body: 'Koordiniert das Projekt und leitet die Forschung, die beide Ökosysteme kartiert.', logo: 'assets/partners/zsi-c.png' },
         { name: 'Hauptstadt Bratislava', city: B, side: 'ba', alt: 'r', role: 'Kommunaler Anker, Slowakei', body: 'Öffnet die Stadt und ihre kommunalen Unternehmen für Pilotprojekte, Peer-Learning und das Netzwerk.', logo: 'assets/partners/bratislava-c.png' },
@@ -275,7 +275,7 @@
       cta: { h2: 'Wollen Sie mit uns arbeiten?', body: 'Eine Session co-hosten, ein Venture empfehlen, mit einer Stadt pilotieren oder dem Netzwerk beitreten.', b1: 'Partner werden', b2: 'Netzwerk beitreten' }
     },
     res: {
-      hero: { eyebrow: 'Über uns · Forschung', h1: 'Was wir über die Twin City lernen.', sub: 'Bevor wir beschleunigen, kartieren wir. Unser Forschungsteam dokumentiert beide Ökosysteme, damit Gründer:innen, Städte und Partner vom selben Bild ausgehen.' },
+      hero: { eyebrow: 'Forschung', h1: 'Was wir über die Twin City lernen.', sub: 'Bevor wir beschleunigen, kartieren wir. Unser Forschungsteam dokumentiert beide Ökosysteme, damit Gründer:innen, Städte und Partner vom selben Bild ausgehen.' },
       prog: { eyebrow: 'In Arbeit', h2: 'Zwei Berichte, beide in Arbeit.' },
       lbl: { method: 'So gehen wir vor', when: 'Wann' },
       reports: [
@@ -293,7 +293,7 @@
       themes: [{ text: 'Grenzüberschreitende Expansion' }, { text: 'Wirkungsmessung' }, { text: 'Finanzierung & Investment Readiness' }, { text: 'Städte & öffentliche Innovation' }, { text: 'Ökosystem-Mapping' }]
     },
     por: {
-      hero: { eyebrow: 'Über uns · Teilnehmende', h1: 'Die Ventures der Twin City.', sub: 'Jedes Venture, das den Twin City Accelerator durchläuft, wird hier stehen: was es tut, woher es kommt und wohin es will.' },
+      hero: { eyebrow: 'Team & Forschung · Teilnehmende', h1: 'Die Ventures der Twin City.', sub: 'Jedes Venture, das den Twin City Accelerator durchläuft, wird hier stehen: was es tut, woher es kommt und wohin es will.' },
       empty: { label: 'Erste Kohorte in Vorbereitung', h2: 'Die erste Kohorte ist in Vorbereitung.', body: 'Wir wählen gerade die Ventures aus, die die erste grenzüberschreitende Kohorte des Twin City Accelerators bilden. Ihre Profile erscheinen hier, sobald sie starten.', cta1: 'So kommen Sie in die erste Kohorte', cta2: 'Dranbleiben', note: 'Bewerben können sich wirkungsorientierte Scale-ups, KMU und NGOs aus Wien und Bratislava.' },
       soon: 'Was Sie hier finden werden',
       g: { logo: 'Venture-Logo', name: 'Name des Ventures', meta: 'Sektor · Stadt · Phase', body: 'Eine Zeile dazu, was das Venture tut – Verb zuerst.', example: 'Beispieleintrag' },
@@ -335,8 +335,8 @@
   var sk = {
     meta: { locale: 'sk-SK', code: 'sk', langName: 'Slovenčina', skip: 'Preskočiť na obsah', months: 'mesiacov' },
     nav: {
-      programme: 'O TWICIIC', accelerator: 'Akcelerátor', about: 'O nás', partners: 'Partneri', research: 'Výskum', portfolio: 'Účastníci', events: 'Podujatia a novinky',
-      cta: 'Pridajte sa k sieti', menu: 'Menu', close: 'Zavrieť', langLabel: 'Jazyk', aboutLabel: 'O TWICIIC',
+      programme: 'O TWICIIC', accelerator: 'Akcelerátor', about: 'Tím a výskum', partners: 'Partneri', research: 'Výskum', portfolio: 'Účastníci', events: 'Podujatia a novinky',
+      cta: 'Pridajte sa k sieti', menu: 'Menu', close: 'Zavrieť', langLabel: 'Jazyk', aboutLabel: 'Tím a výskum',
       accLabel: 'Twin City Accelerator', accOverview: 'Twin City Accelerator', readiness: 'Učte sa a overte si pripravenosť na škálovanie',
       accDesc: { overview: 'Program, časový plán a prihlásenie', readiness: 'Bezplatný obsah a 2-minútový test' },
       aboutDesc: { partners: 'Šesť organizácií, dve mestá', research: 'Čo sa učíme', portfolio: 'Podniky, ktoré podporujeme' },
@@ -405,7 +405,7 @@
       nl: { h2: 'Zostaňte v obraze.', body: 'Jeden e-mail mesačne: nové stretnutia, otvorené výzvy a to, čo sa učíme. Bez šumu.', ph: 'vas@email.com', cta: 'Prihlásiť sa na odber', done: 'Ďakujeme – ste prihlásení na odber.', label: 'E-mailová adresa' }
     },
     par: {
-      hero: { eyebrow: 'O nás · Partneri', h1: 'Šesť partnerov. Dve mestá. Jeden tím.', sub: 'TWICIIC vedie šesť organizácií z Viedne a Bratislavy, ktoré spájajú svoje vzájomne sa dopĺňajúce silné stránky z oboch strán hranice.' },
+      hero: { eyebrow: 'Tím a výskum · Partneri', h1: 'Šesť partnerov. Dve mestá. Jeden tím.', sub: 'TWICIIC vedie šesť organizácií z Viedne a Bratislavy, ktoré spájajú svoje vzájomne sa dopĺňajúce silné stránky z oboch strán hranice.' },
       list: [
         { name: 'ZSI – Centrum pre sociálne inovácie', city: 'Viedeň', side: 'vie', alt: 'l', role: 'Vedúci partner', body: 'Koordinuje projekt a vedie výskum, ktorý mapuje oba ekosystémy.', logo: 'assets/partners/zsi-c.png' },
         { name: 'Hlavné mesto SR Bratislava', city: B, side: 'ba', alt: 'r', role: 'Mestský partner, Slovensko', body: 'Otvára mesto a jeho mestské podniky pilotným projektom, vzájomnému učeniu a sieti.', logo: 'assets/partners/bratislava-c.png' },
@@ -440,7 +440,7 @@
       cta: { h2: 'Chcete s nami spolupracovať?', body: 'Spoluorganizujte stretnutie, odporučte podnik, spustite pilotný projekt s mestom alebo sa pridajte k sieti.', b1: 'Staňte sa partnerom', b2: 'Pridajte sa k sieti' }
     },
     res: {
-      hero: { eyebrow: 'O nás · Výskum', h1: 'Čo zisťujeme o Twin City.', sub: 'Skôr než akcelerujeme, mapujeme. Náš výskumný tím dokumentuje oba ekosystémy, aby zakladatelia, mestá a partneri vychádzali z rovnakých poznatkov.' },
+      hero: { eyebrow: 'Výskum', h1: 'Čo zisťujeme o Twin City.', sub: 'Skôr než akcelerujeme, mapujeme. Náš výskumný tím dokumentuje oba ekosystémy, aby zakladatelia, mestá a partneri vychádzali z rovnakých poznatkov.' },
       prog: { eyebrow: 'Vzniká', h2: 'Dve správy, obe v príprave.' },
       lbl: { method: 'Ako postupujeme', when: 'Kedy' },
       reports: [
@@ -458,7 +458,7 @@
       themes: [{ text: 'Cezhraničná expanzia' }, { text: 'Meranie impaktu' }, { text: 'Financie a investičná pripravenosť' }, { text: 'Mestá a verejné inovácie' }, { text: 'Mapovanie ekosystému' }]
     },
     por: {
-      hero: { eyebrow: 'O nás · Účastníci', h1: 'Podniky Twin City.', sub: 'Nájdete tu každý podnik, ktorý prejde programom Twin City Accelerator: čo robí, odkiaľ je a kam smeruje.' },
+      hero: { eyebrow: 'Tím a výskum · Účastníci', h1: 'Podniky Twin City.', sub: 'Nájdete tu každý podnik, ktorý prejde programom Twin City Accelerator: čo robí, odkiaľ je a kam smeruje.' },
       empty: { label: 'Prvá kohorta sa pripravuje', h2: 'Prvá kohorta sa pripravuje.', body: 'Vyberáme podniky, ktoré vytvoria prvú cezhraničnú kohortu Twin City Accelerator. Ich profily tu zverejníme hneď, ako odštartujú.', cta1: 'Ako sa dostať do prvej kohorty', cta2: 'Zostať v kontakte', note: 'Prihlásiť sa môžu impaktovo orientované scale-upy, MSP a neziskové organizácie z Viedne a Bratislavy.' },
       soon: 'Čo tu nájdete',
       g: { logo: 'Logo podniku', name: 'Názov podniku', meta: 'Sektor · Mesto · Fáza', body: 'Jedna veta o tom, čo podnik robí – sloveso na začiatku.', example: 'Ukážkový záznam' },
