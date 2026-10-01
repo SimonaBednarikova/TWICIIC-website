@@ -72,7 +72,7 @@
         body: 'Six organisations, two cities, one team: a research centre, two city agencies, a venture studio, an accelerator operator and an impact network. Meet the people who run the programme, the research and the network.',
         cta1: 'Meet the partners', cta2: 'Discover our team', media: 'The TWICIIC partner consortium at its meeting in Bratislava, June 2026.'
       },
-      nl: { h2: 'Stay in the loop.', body: "One email a month: new sessions, open calls and what we're learning. No noise.", ph: 'your@email.com', cta: 'Subscribe', done: 'Thanks — you’re on the list.', label: 'Email address' }
+      nl: { h2: 'Stay in the loop.', body: "One email a month: new sessions, open calls and what we're learning. No noise.", ph: 'your@email.com', cta: 'Subscribe', done: 'Almost there – please check your inbox and confirm your subscription.', err: 'Something went wrong. Please try again in a moment.', sending: 'Sending…', consent: 'By subscribing, you agree to receive the TWICIIC newsletter. You can unsubscribe at any time.', privacy: 'Privacy policy', label: 'Email address' }
     },
     par: {
       hero: { eyebrow: 'Team & Research · Partners', h1: 'Six partners. Two cities. One team.', sub: 'TWICIIC is run by six organisations from Vienna and Bratislava, combining complementary strengths from both sides of the border.' },
@@ -237,7 +237,7 @@
         body: 'Sechs Organisationen, zwei Städte, ein Team: ein Forschungszentrum, zwei Stadtagenturen, ein Venture Studio, ein Accelerator-Betreiber und ein Impact-Netzwerk. Lernen Sie die Menschen kennen, die Programm, Forschung und Netzwerk tragen.',
         cta1: 'Partner kennenlernen', cta2: 'Unser Team entdecken', media: 'Das TWICIIC-Partnerkonsortium beim Treffen in Bratislava, Juni 2026.'
       },
-      nl: { h2: 'Bleiben Sie auf dem Laufenden.', body: 'Eine E-Mail pro Monat: neue Sessions, offene Calls und was wir lernen. Kein Rauschen.', ph: 'ihre@email.com', cta: 'Abonnieren', done: 'Danke – Sie sind dabei.', label: 'E-Mail-Adresse' }
+      nl: { h2: 'Bleiben Sie auf dem Laufenden.', body: 'Eine E-Mail pro Monat: neue Sessions, offene Calls und was wir lernen. Kein Rauschen.', ph: 'ihre@email.com', cta: 'Abonnieren', done: 'Fast geschafft – bitte bestätigen Sie die Anmeldung in Ihrem Postfach.', err: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es gleich noch einmal.', sending: 'Wird gesendet…', consent: 'Mit der Anmeldung stimmen Sie zu, den TWICIIC-Newsletter zu erhalten. Sie können sich jederzeit abmelden.', privacy: 'Datenschutz', label: 'E-Mail-Adresse' }
     },
     par: {
       hero: { eyebrow: 'Team & Forschung · Partner', h1: 'Sechs Partner. Zwei Städte. Ein Team.', sub: 'TWICIIC wird von sechs Organisationen aus Wien und Bratislava getragen, die ihre sich ergänzenden Stärken von beiden Seiten der Grenze bündeln.' },
@@ -402,7 +402,7 @@
         body: 'Šesť organizácií, dve mestá, jeden tím: výskumné centrum, dve mestské agentúry, venture štúdio, prevádzkovateľ akcelerátora a impaktová sieť. Zoznámte sa s ľuďmi, ktorí vedú program, výskum a sieť.',
         cta1: 'Spoznajte partnerov', cta2: 'Objavte náš tím', media: 'Partnerské konzorcium TWICIIC na stretnutí v Bratislave, jún 2026.'
       },
-      nl: { h2: 'Zostaňte v obraze.', body: 'Jeden e-mail mesačne: nové stretnutia, otvorené výzvy a to, čo sa učíme. Bez šumu.', ph: 'vas@email.com', cta: 'Prihlásiť sa na odber', done: 'Ďakujeme – ste prihlásení na odber.', label: 'E-mailová adresa' }
+      nl: { h2: 'Zostaňte v obraze.', body: 'Jeden e-mail mesačne: nové stretnutia, otvorené výzvy a to, čo sa učíme. Bez šumu.', ph: 'vas@email.com', cta: 'Prihlásiť sa na odber', done: 'Už len krok – potvrďte, prosím, odber vo svojej e-mailovej schránke.', err: 'Niečo sa pokazilo. Skúste to, prosím, o chvíľu znova.', sending: 'Odosielam…', consent: 'Prihlásením súhlasíte so zasielaním newslettera TWICIIC. Odhlásiť sa môžete kedykoľvek.', privacy: 'Ochrana osobných údajov', label: 'E-mailová adresa' }
     },
     par: {
       hero: { eyebrow: 'Tím a výskum · Partneri', h1: 'Šesť partnerov. Dve mestá. Jeden tím.', sub: 'TWICIIC vedie šesť organizácií z Viedne a Bratislavy, ktoré spájajú svoje vzájomne sa dopĺňajúce silné stránky z oboch strán hranice.' },

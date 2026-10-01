@@ -656,10 +656,10 @@
               <p style="margin:14px 0 0;font-size:16px;line-height:1.6;color:var(--text-secondary);text-wrap:pretty">{{ c.home.nl.body }}</p>
               <div style="margin-top:auto;padding-top:32px">
                 <span data-pcard-line="" aria-hidden="true" style="display:flex;height:3px;margin-bottom:22px;transform:scaleX(0);transform-origin:left;transition:transform 450ms var(--ease-out)"><span style="flex:1;background:var(--vienna-red)"></span><span style="flex:1;background:var(--bratislava-blue)"></span></span>
-                <form data-nl-form="" onSubmit="{{ nlSubmitHome }}" style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start">
+                <form data-nl-form="" novalidate="" onSubmit="{{ nlSubmitHome }}" style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start">
                   <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Input" type="email" name="email" required="{{ true }}" placeholder="{{ c.home.nl.ph }}" aria-label="{{ c.home.nl.label }}" hint-size="100%,44px"></x-import>
-                  <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="md" type="submit" data-magnet="" hint-size="120px,42px">{{ c.home.nl.cta }}</x-import>
-                  <sc-if value="{{ nlDoneHome }}" hint-placeholder-val="{{ false }}"><p role="status" style="grid-column:1 / -1;margin:0;display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--text-primary)"><span aria-hidden="true" style="display:inline-flex;height:13px"><span style="width:3.5px;background:var(--vienna-red)"></span><span style="width:3.5px;background:var(--bratislava-blue)"></span></span>{{ c.home.nl.done }}</p></sc-if>
+                  <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="md" type="submit" data-magnet="" hint-size="120px,42px">{{ nlBtnHome }}</x-import>
+                  <input type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"><sc-if value="{{ nlDoneHome }}" hint-placeholder-val="{{ false }}"><p role="status" style="grid-column:1 / -1;margin:0;display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--text-primary)"><span aria-hidden="true" style="display:inline-flex;height:13px"><span style="width:3.5px;background:var(--vienna-red)"></span><span style="width:3.5px;background:var(--bratislava-blue)"></span></span>{{ c.home.nl.done }}</p></sc-if><sc-if value="{{ nlErrHome }}" hint-placeholder-val="{{ false }}"><p role="alert" style="grid-column:1 / -1;margin:0;font-size:14px;font-weight:500;color:var(--vienna-red-deep)">{{ c.home.nl.err }}</p></sc-if><p style="grid-column:1 / -1;margin:0;font-size:13px;line-height:1.5;color:var(--text-muted);text-wrap:pretty">{{ c.home.nl.consent }} <a href="#privacy" onClick="{{ navTo }}" style="color:inherit;text-decoration:underline;text-underline-offset:2px">{{ c.home.nl.privacy }}</a></p>
                 </form>
               </div>
             </div>
@@ -1588,10 +1588,10 @@
           <h2 style="margin:0;font-size:clamp(28px,3.4vw,44px);line-height:1.08;letter-spacing:-0.025em;font-weight:750;color:var(--text-primary)">{{ c.por.cta.h2 }}</h2>
           <div style="margin-top:24px"><x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="lg" on-click="{{ goApply }}" data-magnet="" hint-size="220px,50px">{{ c.por.cta.b1 }}</x-import></div>
         </div>
-        <form data-nl-form="" onSubmit="{{ nlSubmitPor }}" style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start">
+        <form data-nl-form="" novalidate="" onSubmit="{{ nlSubmitPor }}" style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start">
           <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Input" type="email" name="email" required="{{ true }}" placeholder="{{ c.home.nl.ph }}" aria-label="{{ c.home.nl.label }}" hint-size="100%,44px"></x-import>
-          <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="md" variant="secondary" type="submit" data-magnet="" hint-size="130px,42px">{{ c.por.empty.cta2 }}</x-import>
-          <sc-if value="{{ nlDonePor }}" hint-placeholder-val="{{ false }}"><p role="status" style="grid-column:1 / -1;margin:0;display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--text-primary)"><span aria-hidden="true" style="display:inline-flex;height:13px"><span style="width:3.5px;background:var(--vienna-red)"></span><span style="width:3.5px;background:var(--bratislava-blue)"></span></span>{{ c.home.nl.done }}</p></sc-if>
+          <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="md" variant="secondary" type="submit" data-magnet="" hint-size="130px,42px">{{ nlBtnPor }}</x-import>
+          <input type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"><sc-if value="{{ nlDonePor }}" hint-placeholder-val="{{ false }}"><p role="status" style="grid-column:1 / -1;margin:0;display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--text-primary)"><span aria-hidden="true" style="display:inline-flex;height:13px"><span style="width:3.5px;background:var(--vienna-red)"></span><span style="width:3.5px;background:var(--bratislava-blue)"></span></span>{{ c.home.nl.done }}</p></sc-if><sc-if value="{{ nlErrPor }}" hint-placeholder-val="{{ false }}"><p role="alert" style="grid-column:1 / -1;margin:0;font-size:14px;font-weight:500;color:var(--vienna-red-deep)">{{ c.home.nl.err }}</p></sc-if><p style="grid-column:1 / -1;margin:0;font-size:13px;line-height:1.5;color:var(--text-muted);text-wrap:pretty">{{ c.home.nl.consent }} <a href="#privacy" onClick="{{ navTo }}" style="color:inherit;text-decoration:underline;text-underline-offset:2px">{{ c.home.nl.privacy }}</a></p>
         </form>
       </div>
     </section>
@@ -1690,10 +1690,10 @@
           <h2 style="margin:0;font-size:clamp(28px,3.4vw,44px);line-height:1.08;letter-spacing:-0.025em;font-weight:750;color:var(--text-primary)">{{ c.ev.nl.h2 }}</h2>
           <p style="margin:14px 0 0;font-size:16.5px;line-height:1.6;color:var(--text-secondary);text-wrap:pretty">{{ c.ev.nl.body }}</p>
         </div>
-        <form data-nl-form="" onSubmit="{{ nlSubmitEv }}" style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start">
+        <form data-nl-form="" novalidate="" onSubmit="{{ nlSubmitEv }}" style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start">
           <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Input" type="email" name="email" required="{{ true }}" placeholder="{{ c.home.nl.ph }}" aria-label="{{ c.home.nl.label }}" hint-size="100%,44px"></x-import>
-          <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="md" type="submit" data-magnet="" hint-size="120px,42px">{{ c.ev.nl.cta }}</x-import>
-          <sc-if value="{{ nlDoneEv }}" hint-placeholder-val="{{ false }}"><p role="status" style="grid-column:1 / -1;margin:0;display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--text-primary)"><span aria-hidden="true" style="display:inline-flex;height:13px"><span style="width:3.5px;background:var(--vienna-red)"></span><span style="width:3.5px;background:var(--bratislava-blue)"></span></span>{{ c.home.nl.done }}</p></sc-if>
+          <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="md" type="submit" data-magnet="" hint-size="120px,42px">{{ nlBtnEv }}</x-import>
+          <input type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0"><sc-if value="{{ nlDoneEv }}" hint-placeholder-val="{{ false }}"><p role="status" style="grid-column:1 / -1;margin:0;display:flex;align-items:center;gap:10px;font-size:14px;font-weight:500;color:var(--text-primary)"><span aria-hidden="true" style="display:inline-flex;height:13px"><span style="width:3.5px;background:var(--vienna-red)"></span><span style="width:3.5px;background:var(--bratislava-blue)"></span></span>{{ c.home.nl.done }}</p></sc-if><sc-if value="{{ nlErrEv }}" hint-placeholder-val="{{ false }}"><p role="alert" style="grid-column:1 / -1;margin:0;font-size:14px;font-weight:500;color:var(--vienna-red-deep)">{{ c.home.nl.err }}</p></sc-if><p style="grid-column:1 / -1;margin:0;font-size:13px;line-height:1.5;color:var(--text-muted);text-wrap:pretty">{{ c.home.nl.consent }} <a href="#privacy" onClick="{{ navTo }}" style="color:inherit;text-decoration:underline;text-underline-offset:2px">{{ c.home.nl.privacy }}</a></p>
         </form>
       </div>
     </section>
@@ -1806,6 +1806,9 @@ class Component extends DCLogic {
   static LINKEDIN_URL = 'https://www.linkedin.com/company/twiciic-interreg/posts/?feedView=all';
   static RDY_KEY = 'twiciic-readiness';
   static STORAGE_KEY = 'twiciic-lang';
+  // Newsletter: MailerLite embedded form "Website newsletter" (group TWICIIC newsletter, double opt-in).
+  // The endpoint is public and CORS-enabled, so no MailerLite script, iframe or cookie is loaded.
+  static NEWSLETTER_URL = 'https://assets.mailerlite.com/jsonp/2676035/forms/200130147948431030/subscribe';
   // "Twin City" is not a known term, so the two city names render bold in every text binding.
   // Organisation names (Vienna Business Agency, City of Bratislava, …) are left as they are.
   static CITY_RE = /(?<!\p{L})(?<!\d )(?<!(?:City of|[Ss]tadt|mesto SR|mesto|Wirtschaftsagentur) )(Vienna|Wiens?|Viede[ňn]|Viedne|Viedni|Viedňou|Bratislav(?:a|y|e|u|ou|as))(?!\p{L})(?! Business| III)/gu;
@@ -1858,7 +1861,7 @@ class Component extends DCLogic {
   state = {
     route: Component._routeFromHash().route, lang: Component._storedLang(), menuOpen: false, dd: null,
     heroBrand: Component._routeFromHash().route === 'home', scrolled: false, transit: null, accSection: 'fit', evTime: 'up', evLoc: [], evFmt: [],
-    nlDone: {}, contentReady: !!window.TWICIIC_CONTENT,
+    nl: {}, contentReady: !!window.TWICIIC_CONTENT,
     rdyStep: Component._storedRdy().step, rdyAns: Component._storedRdy().ans, rdyAnim: 'in', rdyEmailDone: false
   };
 
@@ -2240,6 +2243,25 @@ class Component extends DCLogic {
     }, dir > 0 ? 240 : 0);
   }
 
+  /* ---------------- newsletter ---------------- */
+  _nlSet(key, v) { this.setState((st) => ({ nl: Object.assign({}, st.nl, { [key]: v }) })); }
+  _nlSubmit(key, e) {
+    e.preventDefault();
+    const form = e.currentTarget; if (this.state.nl[key] === 'sending') return;
+    const input = form.querySelector('input[type="email"]'); const email = ((input && input.value) || '').trim();
+    const trap = form.querySelector('input[name="company"]');
+    if (trap && trap.value) { this._nlSet(key, 'done'); return; } // only bots fill the hidden field
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { if (input) { input.focus(); if (input.reportValidity) input.reportValidity(); } return; }
+    this._nlSet(key, 'sending');
+    const body = new FormData();
+    body.append('fields[email]', email); body.append('fields[language]', this.state.lang);
+    body.append('ml-submit', '1'); body.append('anticsrf', 'true');
+    fetch(Component.NEWSLETTER_URL, { method: 'POST', body, headers: { Accept: 'application/json' } })
+      .then((res) => res.json())
+      .then((data) => { const ok = !!(data && data.success); this._nlSet(key, ok ? 'done' : 'error'); if (ok && input) input.value = ''; })
+      .catch(() => this._nlSet(key, 'error'));
+  }
+
   /* ---------------- events: filters with FLIP ---------------- */
   _evFilter(e) {
     const f = e.currentTarget.getAttribute('data-f') || ''; const [kind, key] = f.split(':');
@@ -2373,10 +2395,10 @@ class Component extends DCLogic {
       // Home
       heroWords, st0: st[0] || {}, st1: st[1] || {}, st2: st[2] || {}, st3: st[3] || {}, stg0: stages[0] || {}, stg1: stages[1] || {}, stg2: stages[2] || {},
       homeEvents: items.slice(0, 3),
-      nlDoneHome: !!s.nlDone.home, nlDonePor: !!s.nlDone.por, nlDoneEv: !!s.nlDone.ev,
-      nlSubmitHome: (e) => { e.preventDefault(); this.setState({ nlDone: Object.assign({}, s.nlDone, { home: true }) }); },
-      nlSubmitPor: (e) => { e.preventDefault(); this.setState({ nlDone: Object.assign({}, s.nlDone, { por: true }) }); },
-      nlSubmitEv: (e) => { e.preventDefault(); this.setState({ nlDone: Object.assign({}, s.nlDone, { ev: true }) }); },
+      nlDoneHome: s.nl.home === 'done', nlDonePor: s.nl.por === 'done', nlDoneEv: s.nl.ev === 'done',
+      nlErrHome: s.nl.home === 'error', nlErrPor: s.nl.por === 'error', nlErrEv: s.nl.ev === 'error',
+      nlBtnHome: s.nl.home === 'sending' ? c.home.nl.sending : c.home.nl.cta, nlBtnPor: s.nl.por === 'sending' ? c.home.nl.sending : (c.por.empty || {}).cta2, nlBtnEv: s.nl.ev === 'sending' ? c.home.nl.sending : (c.ev.nl || {}).cta,
+      nlSubmitHome: (e) => this._nlSubmit('home', e), nlSubmitPor: (e) => this._nlSubmit('por', e), nlSubmitEv: (e) => this._nlSubmit('ev', e),
       // Partners
       parList, parVie, parBa, accPartners, resReports, parVieCity, parBaCity, team, fundRows, lockupSrc: 'assets/logos/' + s.lang + '/twiciic-regular.png', lockupMax88: Math.round(88 * lockupRatio) + 'px', lockupMax64: Math.round(64 * lockupRatio) + 'px',
       lockupAlt: { en: 'TWICIIC — Interreg Slovakia–Austria, co-funded by the European Union', de: 'TWICIIC — Interreg Slowakei–Österreich, kofinanziert von der Europäischen Union', sk: 'TWICIIC — Interreg Slovensko–Rakúsko, spolufinancovaný Európskou úniou' }[s.lang], applyUrl: p.applyUrl || Component.APPLY_URL,
