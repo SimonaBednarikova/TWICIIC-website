@@ -1664,21 +1664,6 @@
       </div>
     </section>
 
-    <!-- Past events (ghost family) -->
-    <sc-if value="{{ evTimeUp }}" hint-placeholder-val="{{ true }}">
-    <section data-screen-label="Events · Past" style="padding:0 0 clamp(72px,9vw,120px)">
-      <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,24px)">
-        <div data-reveal="" style="border:1px dashed var(--gray-400);padding:clamp(28px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:24px 48px;align-items:center">
-          <div>
-            <p style="display:flex;align-items:center;gap:10px;margin:0 0 12px;font-size:13px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--gray-500)"><span data-ghost-mark="" aria-hidden="true" style="display:inline-flex;height:13px;flex:none"><span style="width:3.5px;background:var(--vienna-red)"></span><span style="width:3.5px;background:var(--bratislava-blue)"></span></span>{{ c.ev.past.h2 }}</p>
-            <p style="margin:0;max-width:520px;font-size:17px;line-height:1.55;color:var(--gray-500);text-wrap:pretty">{{ c.ev.past.body }}</p>
-          </div>
-          <div style="aspect-ratio:16 / 7;border:1px dashed var(--gray-300);display:flex;align-items:flex-end;padding:16px;font-size:13px;color:var(--gray-400)">{{ c.ev.past.ghost }}</div>
-        </div>
-      </div>
-    </section>
-    </sc-if>
-
     <!-- News: editorial list -->
     <section id="events-news" data-screen-label="Events · News" style="position:relative;padding:clamp(72px,9vw,120px) 0;background:var(--surface-card);border-top:1px solid var(--border-default);scroll-margin-top:68px">
       <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,24px)">
