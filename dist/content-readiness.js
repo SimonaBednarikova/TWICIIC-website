@@ -14,9 +14,9 @@
       ]
     },
     learn: {
-      eyebrow: 'Learning content', h2: 'Start with the basics.', moreEyebrow: 'Go deeper', moreH2: 'What the core programme looks like.', status: 'In preparation',
+      eyebrow: 'Learning content', h2: 'Start with the basics.', moreEyebrow: 'Go deeper', moreH2: 'What the core programme looks like.', status: 'In preparation', available: 'Available now', play: 'Play video',
       modules: [
-        { n: '01', fmt: 'Article', title: 'Why Vienna–Bratislava? Your cross-border growth opportunity', topics: [{ text: 'Why the Vienna–Bratislava region is unique' }, { text: 'Why impact ventures should think cross-border early' }, { text: 'The opportunity of two connected ecosystems' }, { text: 'Why now' }] },
+        { n: '01', fmt: 'Video', video: 'QHxf4kSyO10', title: 'Why Vienna–Bratislava? Your cross-border growth opportunity', topics: [{ text: 'Why the Vienna–Bratislava region is unique' }, { text: 'Why impact ventures should think cross-border early' }, { text: 'The opportunity of two connected ecosystems' }, { text: 'Why now' }] },
         { n: '02', fmt: 'Founder stories', title: 'Success stories: how founders expanded across the border', topics: [{ text: 'A Slovak scale-up expanding to Austria' }, { text: 'An Austrian scale-up expanding to Slovakia' }, { text: 'Challenges, benefits and lessons learned' }, { text: 'What worked, what did not — and would they do it again?' }] },
         { n: '03', fmt: 'Guide', title: 'Is the Twin City Accelerator the right fit for you?', topics: [{ text: 'Who should apply — and who should not, yet' }, { text: 'What stage participants should be at' }, { text: 'Eligibility criteria and what makes a strong fit' }, { text: 'How the self-assessment scores and where each result leads' }] },
         { n: '04', fmt: 'Programme', title: 'What you get in the core programme', topics: [{ text: 'The full 6–8 month structure: phases, workshops, online content, coaching' }, { text: 'Meeting locations, alternating between Vienna and Bratislava' }, { text: 'Mentoring, cross-border support, ecosystem access, investment readiness' }, { text: 'Timeline and phases at a glance' }] },
@@ -73,9 +73,9 @@
       ]
     },
     learn: {
-      eyebrow: 'Lerninhalte', h2: 'Beginnen Sie mit den Grundlagen.', moreEyebrow: 'Tiefer einsteigen', moreH2: 'So sieht das Kernprogramm aus.', status: 'In Vorbereitung',
+      eyebrow: 'Lerninhalte', h2: 'Beginnen Sie mit den Grundlagen.', moreEyebrow: 'Tiefer einsteigen', moreH2: 'So sieht das Kernprogramm aus.', status: 'In Vorbereitung', available: 'Jetzt verfügbar', play: 'Video abspielen',
       modules: [
-        { n: '01', fmt: 'Artikel', title: 'Warum Wien–Bratislava? Ihre grenzüberschreitende Wachstumschance', topics: [{ text: 'Was die Region Wien–Bratislava einzigartig macht' }, { text: 'Warum Impact-Ventures früh grenzüberschreitend denken sollten' }, { text: 'Die Chance zweier verbundener Ökosysteme' }, { text: 'Warum jetzt' }] },
+        { n: '01', fmt: 'Video', video: 'QHxf4kSyO10', title: 'Warum Wien–Bratislava? Ihre grenzüberschreitende Wachstumschance', topics: [{ text: 'Was die Region Wien–Bratislava einzigartig macht' }, { text: 'Warum Impact-Ventures früh grenzüberschreitend denken sollten' }, { text: 'Die Chance zweier verbundener Ökosysteme' }, { text: 'Warum jetzt' }] },
         { n: '02', fmt: 'Gründer:innen-Geschichten', title: 'Erfolgsgeschichten: Wie Gründer:innen über die Grenze expandiert sind', topics: [{ text: 'Ein slowakisches Scale-up expandiert nach Österreich' }, { text: 'Ein österreichisches Scale-up expandiert in die Slowakei' }, { text: 'Herausforderungen, Nutzen und Learnings' }, { text: 'Was funktioniert hat, was nicht – und würden sie es wieder tun?' }] },
         { n: '03', fmt: 'Leitfaden', title: 'Ist der Twin City Accelerator das Richtige für Sie?', topics: [{ text: 'Wer sich bewerben sollte – und wer noch nicht' }, { text: 'In welcher Phase Teilnehmende sein sollten' }, { text: 'Förderkriterien und was einen starken Fit ausmacht' }, { text: 'Wie die Selbsteinschätzung bewertet und wohin jedes Ergebnis führt' }] },
         { n: '04', fmt: 'Programm', title: 'Was Sie im Kernprogramm bekommen', topics: [{ text: 'Die gesamte 6–8-monatige Struktur: Phasen, Workshops, Online-Inhalte, Coaching' }, { text: 'Veranstaltungsorte im Wechsel zwischen Wien und Bratislava' }, { text: 'Mentoring, grenzüberschreitende Unterstützung, Zugang zum Ökosystem, Investment Readiness' }, { text: 'Zeitplan und Phasen auf einen Blick' }] },
@@ -132,9 +132,9 @@
       ]
     },
     learn: {
-      eyebrow: 'Vzdelávací obsah', h2: 'Začnite so základmi.', moreEyebrow: 'Do hĺbky', moreH2: 'Ako vyzerá hlavný program.', status: 'V príprave',
+      eyebrow: 'Vzdelávací obsah', h2: 'Začnite so základmi.', moreEyebrow: 'Do hĺbky', moreH2: 'Ako vyzerá hlavný program.', status: 'V príprave', available: 'K dispozícii', play: 'Prehrať video',
       modules: [
-        { n: '01', fmt: 'Článok', title: 'Prečo Viedeň–Bratislava? Vaša cezhraničná príležitosť na rast', topics: [{ text: 'Čím je región Viedeň–Bratislava jedinečný' }, { text: 'Prečo by impaktové podniky mali myslieť cezhranične už od začiatku' }, { text: 'Príležitosť dvoch prepojených ekosystémov' }, { text: 'Prečo práve teraz' }] },
+        { n: '01', fmt: 'Video', video: 'QHxf4kSyO10', title: 'Prečo Viedeň–Bratislava? Vaša cezhraničná príležitosť na rast', topics: [{ text: 'Čím je región Viedeň–Bratislava jedinečný' }, { text: 'Prečo by impaktové podniky mali myslieť cezhranične už od začiatku' }, { text: 'Príležitosť dvoch prepojených ekosystémov' }, { text: 'Prečo práve teraz' }] },
         { n: '02', fmt: 'Príbehy zakladateľov', title: 'Príbehy úspechu: ako zakladatelia expandovali cez hranicu', topics: [{ text: 'Slovenský scale-up expanduje do Rakúska' }, { text: 'Rakúsky scale-up expanduje na Slovensko' }, { text: 'Výzvy, prínosy a ponaučenia' }, { text: 'Čo fungovalo, čo nie – a urobili by to znova?' }] },
         { n: '03', fmt: 'Sprievodca', title: 'Je Twin City Accelerator pre vás to pravé?', topics: [{ text: 'Kto by sa mal prihlásiť – a kto ešte nie' }, { text: 'V akej fáze by mali účastníci byť' }, { text: 'Kritériá oprávnenosti a kedy vám program naozaj sedí' }, { text: 'Ako sa sebahodnotenie vyhodnocuje a čo znamená každý výsledok' }] },
         { n: '04', fmt: 'Program', title: 'Čo získate v hlavnom programe', topics: [{ text: 'Celá 6–8-mesačná štruktúra: fázy, workshopy, online obsah, koučing' }, { text: 'Miesta stretnutí striedavo vo Viedni a v Bratislave' }, { text: 'Mentoring, cezhraničná podpora, prístup k ekosystému, investičná pripravenosť' }, { text: 'Časový plán a fázy v prehľade' }] },

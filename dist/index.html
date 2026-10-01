@@ -299,6 +299,11 @@
     [data-rdy-card] { transition: border-color 200ms var(--ease-out); }
     [data-rdy-card]:hover { border-color: var(--border-strong) !important; }
     [data-rdy-card]:hover [data-rdy-num] { color: var(--bratislava-blue-deep) !important; }
+    [data-video-play] img { transition: transform 500ms var(--ease-out); }
+    [data-video-play] [data-video-icon] { transition: background 200ms var(--ease-out), transform 200ms var(--ease-out); }
+    [data-video-play]:hover img, [data-video-play]:focus-visible img { transform: scale(1.03); }
+    [data-video-play]:hover [data-video-icon], [data-video-play]:focus-visible [data-video-icon] { background: var(--vienna-red) !important; transform: scale(1.06); }
+    [data-video-play]:focus-visible { outline: 3px solid var(--bratislava-blue); outline-offset: -3px; }
     [data-rdy-opt] { transition: border-color 150ms var(--ease-out), background 150ms var(--ease-out), color 150ms var(--ease-out); }
     [data-rdy-opt]:hover { border-color: var(--border-strong) !important; }
     [data-rdy-opt]:active { transform: translateY(1px); }
@@ -1078,6 +1083,17 @@
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px;margin-top:48px;align-items:stretch">
           <sc-for list="{{ rdyModulesA }}" as="m" hint-placeholder-count="3">
             <article data-rdy-card="" data-reveal="" style="display:flex;flex-direction:column;background:var(--surface-card);border:1px solid var(--border-default);padding:28px">
+              <!-- Video module: local thumbnail first; YouTube (nocookie) loads only after a click and plays inline -->
+              <sc-if value="{{ m.hasVideo }}" hint-placeholder-val="{{ false }}">
+                <div style="position:relative;aspect-ratio:16 / 9;margin:-28px -28px 28px;background:var(--black);overflow:hidden">
+                  <sc-if value="{{ m.playing }}" hint-placeholder-val="{{ false }}"><iframe src="{{ m.embed }}" title="{{ m.playLabel }}" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen="" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></sc-if>
+                  <sc-if value="{{ m.idle }}" hint-placeholder-val="{{ true }}"><button type="button" data-video-play="" onClick="{{ m.play }}" aria-label="{{ m.playLabel }}" style="position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:var(--black);cursor:pointer;display:block;overflow:hidden">
+                    <img src="{{ m.thumb }}" alt="" loading="lazy" style="width:100%;height:100%;object-fit:cover;display:block">
+                    <span data-video-icon="" aria-hidden="true" style="position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;display:flex;align-items:center;justify-content:center;background:var(--black)"><svg width="18" height="20" viewBox="0 0 18 20" style="display:block;margin-left:4px"><path d="M0 0l18 10L0 20z" fill="#FFFFFF"></path></svg></span>
+                    <span aria-hidden="true" style="position:absolute;left:0;right:0;bottom:0;height:4px;display:flex"><span style="flex:1;background:var(--vienna-red)"></span><span style="flex:1;background:var(--bratislava-blue)"></span></span>
+                  </button></sc-if>
+                </div>
+              </sc-if>
               <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px">
                 <span data-rdy-num="" style="font-size:clamp(30px,3vw,40px);line-height:1;font-weight:300;letter-spacing:-0.02em;color:var(--gray-400);font-variant-numeric:tabular-nums;transition:color 200ms var(--ease-out)">{{ m.n }}</span>
                 <span style="padding-top:4px;font-size:12.5px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-secondary);text-align:right">{{ m.fmt }}</span>
@@ -1088,7 +1104,7 @@
                   <li style="padding:10px 0;border-top:1px solid var(--border-default);font-size:14.5px;line-height:1.5;color:var(--text-secondary);text-wrap:pretty">{{ tp.text }}</li>
                 </sc-for>
               </ul>
-              <p style="margin:auto 0 0;padding-top:24px;display:flex;align-items:center;gap:10px;font-size:12.5px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-muted)"><span aria-hidden="true" style="display:inline-flex;height:13px;flex:none"><span style="width:3.5px;background:var(--vienna-red)"></span><span style="width:3.5px;background:var(--bratislava-blue)"></span></span>{{ R.learn.status }}</p>
+              <p style="margin:auto 0 0;padding-top:24px;display:flex;align-items:center;gap:10px;font-size:12.5px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-muted)"><span aria-hidden="true" style="display:inline-flex;height:13px;flex:none"><span style="width:3.5px;background:var(--vienna-red)"></span><span style="width:3.5px;background:var(--bratislava-blue)"></span></span>{{ m.statusText }}</p>
             </article>
           </sc-for>
         </div>
@@ -1866,7 +1882,7 @@ class Component extends DCLogic {
     route: Component._routeFromHash().route, lang: Component._storedLang(), menuOpen: false, dd: null,
     heroBrand: Component._routeFromHash().route === 'home', scrolled: false, transit: null, accSection: 'fit', evTime: 'up', evLoc: [], evFmt: [],
     nl: {}, contentReady: !!window.TWICIIC_CONTENT,
-    rdyStep: Component._storedRdy().step, rdyAns: Component._storedRdy().ans, rdyAnim: 'in', rdyEmailDone: false
+    rdyStep: Component._storedRdy().step, rdyAns: Component._storedRdy().ans, rdyAnim: 'in', rdyEmailDone: false, rdyVideo: null
   };
 
   static _storedLang() {
@@ -2356,10 +2372,19 @@ class Component extends DCLogic {
     const rdyPrimary = { apply: goApplyFn, talk: goContactFn, learn: goLearnFn, no: goLearnFn }[outKey];
     const rdySecondary = { apply: goContactFn, talk: goApplyFn, learn: goContactFn, no: goEventsFn }[outKey];
     const mods = (R.learn && R.learn.modules) || [];
+    // Learning modules with a `video` id get an inline YouTube player (privacy-enhanced domain, loaded on click).
+    const rawMods = (rawC.rdy && rawC.rdy.learn && rawC.rdy.learn.modules) || []; const RL = R.learn || {};
+    const withVideo = (m, i) => {
+      if (!m.video) return Object.assign({}, m, { hasVideo: false, statusText: RL.status });
+      const playing = s.rdyVideo === m.video;
+      return Object.assign({}, m, { hasVideo: true, playing, idle: !playing, thumb: 'assets/video/' + m.video + '.jpg',
+        embed: 'https://www.youtube-nocookie.com/embed/' + m.video + '?autoplay=1&rel=0&playsinline=1', play: () => this.setState({ rdyVideo: m.video }),
+        playLabel: (RL.play || 'Play video') + ': ' + ((rawMods[i] || {}).title || ''), statusText: RL.available });
+    };
     const rdyMap = RC.map || {};
     return {
       // Readiness check
-      R, isReadiness: route === 'readiness', rdyModulesA: mods.slice(0, 3), rdyModulesB: mods.slice(3),
+      R, isReadiness: route === 'readiness', rdyModulesA: mods.slice(0, 3).map(withVideo), rdyModulesB: mods.slice(3),
       rdyPartLabel: done ? RR.eyebrow : (q.part === 2 ? RC.part2 : RC.part1), rdyCounter: (done ? n : step + 1) + ' / ' + n, rdySegs,
       rdyQOpacity: anim[0], rdyQTransform: anim[1], rdyQTransition: anim[2],
       rdyActive: !done && n > 0, rdyDone: done, rdyQ: q, rdyHasHelp: !!q.help, rdyOptCols: q.part === 1 ? 'repeat(2,minmax(0,1fr))' : '1fr', rdyOpts,
