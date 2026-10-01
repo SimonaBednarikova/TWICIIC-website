@@ -163,6 +163,7 @@
       partners: 'Partners', fundH: 'Funding', fundLine: 'Co-funded by the European Union', fundProg: 'Interreg Slovakia–Austria 2021–2027', fundRegion: 'Slovakia – Austria',
       fundLong: 'This project is co-financed by the Interreg Slovakia–Austria 2021–2027 Programme from the European Regional Development Fund (ERDF).',
       copyright: '© 2026 TWICIIC. All rights reserved.',
+      cookie: { label: 'Cookie consent', text: 'We’d like to use Google Analytics cookies to understand how this website is used. They are only set if you agree, and you can change your choice at any time under “Cookie settings”.', more: 'Privacy policy', accept: 'Accept', reject: 'Reject', settings: 'Cookie settings' },
       legal: [{ text: 'Privacy', href: '#privacy' }, { text: 'Imprint', href: '#imprint' }, { text: 'Accessibility', href: '#accessibility' }]
     }
   };
@@ -328,6 +329,7 @@
       partners: 'Partner', fundH: 'Förderung', fundLine: 'Kofinanziert von der Europäischen Union', fundProg: 'Interreg Slowakei–Österreich 2021–2027', fundRegion: 'Slowakei – Österreich',
       fundLong: 'Dieses Projekt wird vom Programm Interreg Slowakei–Österreich 2021–2027 aus dem Europäischen Fonds für regionale Entwicklung (EFRE) kofinanziert.',
       copyright: '© 2026 TWICIIC. Alle Rechte vorbehalten.',
+      cookie: { label: 'Cookie-Einwilligung', text: 'Wir möchten Cookies von Google Analytics verwenden, um zu verstehen, wie diese Website genutzt wird. Sie werden nur mit Ihrer Zustimmung gesetzt, und Sie können Ihre Wahl jederzeit unter „Cookie-Einstellungen“ ändern.', more: 'Datenschutz', accept: 'Akzeptieren', reject: 'Ablehnen', settings: 'Cookie-Einstellungen' },
       legal: [{ text: 'Datenschutz', href: '#privacy' }, { text: 'Impressum', href: '#imprint' }, { text: 'Barrierefreiheit', href: '#accessibility' }]
     }
   };
@@ -493,6 +495,7 @@
       partners: 'Partneri', fundH: 'Financovanie', fundLine: 'Spolufinancované Európskou úniou', fundProg: 'Interreg Slovensko–Rakúsko 2021–2027', fundRegion: 'Slovensko – Rakúsko',
       fundLong: 'Tento projekt je spolufinancovaný programom Interreg Slovensko–Rakúsko 2021–2027 z Európskeho fondu regionálneho rozvoja (EFRR).',
       copyright: '© 2026 TWICIIC. Všetky práva vyhradené.',
+      cookie: { label: 'Súhlas s cookies', text: 'Radi by sme používali cookies služby Google Analytics, aby sme pochopili, ako sa stránka používa. Uložia sa len s vaším súhlasom a voľbu môžete kedykoľvek zmeniť v „Nastavenia cookies“.', more: 'Ochrana osobných údajov', accept: 'Prijať', reject: 'Odmietnuť', settings: 'Nastavenia cookies' },
       legal: [{ text: 'Ochrana osobných údajov', href: '#privacy' }, { text: 'Impresum', href: '#imprint' }, { text: 'Prístupnosť', href: '#accessibility' }]
     }
   };

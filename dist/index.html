@@ -7,6 +7,23 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>
+  // Google Analytics (G-PCZP872Q0X) with Consent Mode v2: everything starts as "denied" and gtag.js is
+  // only fetched after the visitor accepts in the cookie banner (choice kept in localStorage "twiciic-consent").
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied' });
+  window.TWICIIC_GA_ID = 'G-PCZP872Q0X';
+  window.twiciicLoadGA = function () {
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+    if (window.__gaLoaded) return; window.__gaLoaded = true;
+    var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.TWICIIC_GA_ID;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', window.TWICIIC_GA_ID, { send_page_view: false }); // page views are sent per route by the site
+  };
+  try { if (window.localStorage.getItem('twiciic-consent') === 'granted') window.twiciicLoadGA(); } catch (e) { /* storage unavailable */ }
+</script>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -304,6 +321,9 @@
     [data-video-play]:hover img, [data-video-play]:focus-visible img { transform: scale(1.03); }
     [data-video-play]:hover [data-video-icon], [data-video-play]:focus-visible [data-video-icon] { background: var(--vienna-red) !important; transform: scale(1.06); }
     [data-video-play]:focus-visible { outline: 3px solid var(--bratislava-blue); outline-offset: -3px; }
+    [data-consent-btn] { transition: background 150ms var(--ease-out), color 150ms var(--ease-out); }
+    [data-consent-btn]:hover, [data-consent-btn]:focus-visible { background: var(--white) !important; color: var(--black) !important; }
+    [data-consent-btn]:focus-visible { outline: 2px solid var(--bratislava-blue); outline-offset: 2px; }
     [data-rdy-opt] { transition: border-color 150ms var(--ease-out), background 150ms var(--ease-out), color 150ms var(--ease-out); }
     [data-rdy-opt]:hover { border-color: var(--border-strong) !important; }
     [data-rdy-opt]:active { transform: translateY(1px); }
@@ -1809,10 +1829,23 @@
           <sc-for list="{{ c.ft.legal }}" as="item" hint-placeholder-count="4">
             <a href="{{ item.href }}" onClick="{{ navTo }}" style="font-size:13px;color:var(--gray-400);text-decoration:none;transition:color 150ms var(--ease-out)" style-hover="color:#FFFFFF">{{ item.text }}</a>
           </sc-for>
+          <button type="button" onClick="{{ consentOpenFn }}" style="padding:0;border:0;background:none;font:inherit;font-size:13px;color:var(--gray-400);cursor:pointer;transition:color 150ms var(--ease-out)" style-hover="color:#FFFFFF">{{ c.ft.cookie.settings }}</button>
         </nav>
       </div>
     </div>
   </footer>
+
+  <!-- ============ COOKIE CONSENT — Google Analytics loads only after "Accept" ============ -->
+  <sc-if value="{{ consentOpen }}" hint-placeholder-val="{{ false }}">
+    <div data-consent="" role="dialog" aria-label="{{ c.ft.cookie.label }}" style="position:fixed;left:16px;right:16px;bottom:16px;z-index:70;max-width:440px;background:var(--surface-inverse);color:var(--white);padding:28px 24px 24px;box-shadow:0 16px 48px rgba(0,0,0,0.28)">
+      <div aria-hidden="true" style="position:absolute;left:0;right:0;top:0;height:4px;display:flex"><span style="flex:1;background:var(--vienna-red)"></span><span style="flex:1;background:var(--bratislava-blue)"></span></div>
+      <p style="margin:0;font-size:14.5px;line-height:1.55;color:var(--gray-300);text-wrap:pretty">{{ c.ft.cookie.text }} <a href="#privacy" onClick="{{ navTo }}" style="color:var(--white);text-decoration:underline;text-underline-offset:2px">{{ c.ft.cookie.more }}</a></p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px">
+        <button type="button" data-consent-btn="" onClick="{{ consentReject }}" style="height:44px;border:1px solid var(--white);background:transparent;color:var(--white);font:inherit;font-size:15px;font-weight:600;cursor:pointer">{{ c.ft.cookie.reject }}</button>
+        <button type="button" data-consent-btn="" onClick="{{ consentAccept }}" style="height:44px;border:1px solid var(--white);background:transparent;color:var(--white);font:inherit;font-size:15px;font-weight:600;cursor:pointer">{{ c.ft.cookie.accept }}</button>
+      </div>
+    </div>
+  </sc-if>
 </div>
 
 </x-dc>
@@ -1824,6 +1857,7 @@ class Component extends DCLogic {
   // TWICIIC on LinkedIn. "Join our network" points here until the network itself opens.
   static LINKEDIN_URL = 'https://www.linkedin.com/company/twiciic-interreg/posts/?feedView=all';
   static RDY_KEY = 'twiciic-readiness';
+  static CONSENT_KEY = 'twiciic-consent';
   static STORAGE_KEY = 'twiciic-lang';
   // Newsletter: MailerLite embedded form "Website newsletter" (group TWICIIC newsletter, double opt-in).
   // The endpoint is public and CORS-enabled, so no MailerLite script, iframe or cookie is loaded.
@@ -1882,7 +1916,8 @@ class Component extends DCLogic {
     route: Component._routeFromHash().route, lang: Component._storedLang(), menuOpen: false, dd: null,
     heroBrand: Component._routeFromHash().route === 'home', scrolled: false, transit: null, accSection: 'fit', evTime: 'up', evLoc: [], evFmt: [],
     nl: {}, contentReady: !!window.TWICIIC_CONTENT,
-    rdyStep: Component._storedRdy().step, rdyAns: Component._storedRdy().ans, rdyAnim: 'in', rdyEmailDone: false, rdyVideo: null
+    rdyStep: Component._storedRdy().step, rdyAns: Component._storedRdy().ans, rdyAnim: 'in', rdyEmailDone: false, rdyVideo: null,
+    consentOpen: Component._storedConsent() === null
   };
 
   static _storedLang() {
@@ -1892,6 +1927,9 @@ class Component extends DCLogic {
     const blank = { ans: [null, null, null, null, null, null, null, null], step: 0 };
     try { const v = JSON.parse(window.localStorage.getItem(Component.RDY_KEY) || 'null'); if (v && Array.isArray(v.ans) && v.ans.length === 8) return { ans: v.ans, step: Math.min(8, Math.max(0, v.step | 0)) }; } catch (e) { /* storage unavailable */ }
     return blank;
+  }
+  static _storedConsent() {
+    try { const v = window.localStorage.getItem(Component.CONSENT_KEY); return v === 'granted' || v === 'denied' ? v : null; } catch (e) { return null; }
   }
   static _routeFromHash() {
     const h = (window.location.hash || '#home').slice(1).split('?')[0];
@@ -1937,6 +1975,7 @@ class Component extends DCLogic {
     this._sync();
     this._applyLang();
     this._title();
+    this._pageChanged();
     const start = Component._routeFromHash();
     if (start.anchor) setTimeout(() => this._scrollTo('#' + start.anchor, 'auto'), 250);
     setTimeout(() => this._heroIn(), 60);
@@ -1948,6 +1987,7 @@ class Component extends DCLogic {
       this._applyLang(); this._title();
       setTimeout(() => { this._layoutMarkers(); this._heroIn(); this._sync(); }, 30);
     }
+    this._pageChanged();
     if (prevState.menuOpen !== s.menuOpen) document.body.style.overflow = s.menuOpen ? 'hidden' : '';
     if (prevState.dd !== s.dd || prevState.scrolled !== s.scrolled) setTimeout(() => this._layoutMarkers(), 30);
     if (this._flipFirst) { const f = this._flipFirst; this._flipFirst = null; this._flipPlay(f); }
@@ -2263,6 +2303,30 @@ class Component extends DCLogic {
     }, dir > 0 ? 240 : 0);
   }
 
+  /* ---------------- analytics consent ---------------- */
+  // Counts a page once its content is ready and whenever the route changes (prevState from the runtime is not reliable).
+  _pageChanged() {
+    const key = this.state.contentReady ? this.state.route : null;
+    if (key && key !== this._pvRoute) { this._pvRoute = key; this._trackPage(); }
+  }
+  // One page_view per route, with a clean virtual path (/accelerator, /partners, …) instead of the #hash.
+  _trackPage() {
+    if (!window.__gaLoaded || typeof window.gtag !== 'function') return;
+    const r = this.state.route;
+    window.gtag('event', 'page_view', { page_title: document.title, page_location: window.location.origin + '/' + (r === 'home' ? '' : r), language: this.state.lang });
+  }
+  _setConsent(v) {
+    try { window.localStorage.setItem(Component.CONSENT_KEY, v); } catch (e) { /* storage unavailable */ }
+    this.setState({ consentOpen: false });
+    if (v === 'granted') { if (window.twiciicLoadGA) window.twiciicLoadGA(); this._trackPage(); return; }
+    if (typeof window.gtag === 'function') window.gtag('consent', 'update', { analytics_storage: 'denied' });
+    // Withdrawing consent removes the Google Analytics cookies that were already set.
+    const host = window.location.hostname; const parts = host.split('.'); const domains = ['', host, '.' + host, '.' + parts.slice(-2).join('.')];
+    document.cookie.split(';').map((x) => x.split('=')[0].trim()).filter((n) => /^_ga/.test(n)).forEach((n) => {
+      domains.forEach((d) => { document.cookie = n + '=; Max-Age=0; path=/' + (d ? '; domain=' + d : ''); });
+    });
+  }
+
   /* ---------------- newsletter ---------------- */
   _nlSet(key, v) { this.setState((st) => ({ nl: Object.assign({}, st.nl, { [key]: v }) })); }
   _nlSubmit(key, e) {
@@ -2434,6 +2498,7 @@ class Component extends DCLogic {
       nlDoneHome: s.nl.home === 'done', nlDonePor: s.nl.por === 'done', nlDoneEv: s.nl.ev === 'done',
       nlErrHome: s.nl.home === 'error', nlErrPor: s.nl.por === 'error', nlErrEv: s.nl.ev === 'error',
       nlBtnHome: s.nl.home === 'sending' ? c.home.nl.sending : c.home.nl.cta, nlBtnPor: s.nl.por === 'sending' ? c.home.nl.sending : (c.por.empty || {}).cta2, nlBtnEv: s.nl.ev === 'sending' ? c.home.nl.sending : (c.ev.nl || {}).cta,
+      consentOpen: s.consentOpen, consentAccept: () => this._setConsent('granted'), consentReject: () => this._setConsent('denied'), consentOpenFn: () => this.setState({ consentOpen: true }),
       nlSubmitHome: (e) => this._nlSubmit('home', e), nlSubmitPor: (e) => this._nlSubmit('por', e), nlSubmitEv: (e) => this._nlSubmit('ev', e),
       // Partners
       parList, parVie, parBa, accPartners, resReports, parVieCity, parBaCity, team, fundRows, lockupSrc: 'assets/logos/' + s.lang + '/twiciic-regular.png', lockupMax88: Math.round(88 * lockupRatio) + 'px', lockupMax64: Math.round(64 * lockupRatio) + 'px',
@@ -2446,7 +2511,7 @@ class Component extends DCLogic {
     };
   }
 }
-Component.EMPTY = { meta: {}, nav: { aboutDesc: {}, accDesc: {} }, home: { hero: {}, cities: { vie: {}, ba: {}, change: {}, stats: [] }, pulse: {}, sw: { items: [] }, acc: { what: {}, get: {}, who: {}, stages: [] }, events: {}, team: {}, nl: {} }, par: { hero: {}, list: [], link: {}, team: { groups: [] }, fund: { rows: [] }, cta: {} }, res: { hero: {}, prog: {}, lbl: {}, reports: [], know: {}, k: [], themes: [] }, por: { hero: {}, empty: {}, g: {}, cta: {} }, ev: { hero: {}, f: {}, types: {}, items: [], past: {}, news: [], nl: {} }, ft: { legal: [] }, legal: {}, rdy: { title: '', hero: {}, journey: { steps: [] }, learn: { modules: [] }, check: { map: {}, gateLabels: [], dims: {}, questions: [], result: { apply: {}, talk: {}, learn: {}, no: {}, gates: [], tips: {}, email: {} } }, cta: {} }, acc: { nav: {}, hero: {}, fit: { yes: [], no: [] }, programme: { c1: {}, c2: {}, c3: {} }, benefits: { items: [] }, timeline: { i1: {}, i2: {}, i3: {}, i4: {}, i5: {}, i6: {} }, support: {}, partners: { list: [] }, cta: {}, interreg: {}, footer: { legal: [] } } };
+Component.EMPTY = { meta: {}, nav: { aboutDesc: {}, accDesc: {} }, home: { hero: {}, cities: { vie: {}, ba: {}, change: {}, stats: [] }, pulse: {}, sw: { items: [] }, acc: { what: {}, get: {}, who: {}, stages: [] }, events: {}, team: {}, nl: {} }, par: { hero: {}, list: [], link: {}, team: { groups: [] }, fund: { rows: [] }, cta: {} }, res: { hero: {}, prog: {}, lbl: {}, reports: [], know: {}, k: [], themes: [] }, por: { hero: {}, empty: {}, g: {}, cta: {} }, ev: { hero: {}, f: {}, types: {}, items: [], past: {}, news: [], nl: {} }, ft: { legal: [], cookie: {} }, legal: {}, rdy: { title: '', hero: {}, journey: { steps: [] }, learn: { modules: [] }, check: { map: {}, gateLabels: [], dims: {}, questions: [], result: { apply: {}, talk: {}, learn: {}, no: {}, gates: [], tips: {}, email: {} } }, cta: {} }, acc: { nav: {}, hero: {}, fit: { yes: [], no: [] }, programme: { c1: {}, c2: {}, c3: {} }, benefits: { items: [] }, timeline: { i1: {}, i2: {}, i3: {}, i4: {}, i5: {}, i6: {} }, support: {}, partners: { list: [] }, cta: {}, interreg: {}, footer: { legal: [] } } };
 
 </script>
 </body>
