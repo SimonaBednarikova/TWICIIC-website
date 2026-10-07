@@ -45,7 +45,7 @@
         h: 'Where do you fit in?',
         items: [
           { n: '01', title: "I'm building a venture", body: 'An impact-oriented scale-up, SME or NGO ready to grow into a second market.', cta: 'Explore the Accelerator', href: '#accelerator' },
-          { n: '02', title: 'I work in the ecosystem or for a city', body: 'A hub, university, investor, city department or municipal company.', cta: 'Partner with us', href: '#partners' },
+          { n: '02', title: 'I work in the ecosystem or for a city', body: 'A hub, university, investor, city department or municipal company.', cta: 'Meet our partners', href: '#partners' },
           { n: '03', title: 'I want to understand both markets', body: 'Research and findings from both sides of the border.', cta: 'Read the research', href: '#research' }
         ]
       },
@@ -107,7 +107,7 @@
         ],
         unit: 'Interreg Slovakia–Austria brand unit'
       },
-      cta: { h2: 'Want to work with us?', body: 'Co-host a session, refer a venture, pilot with a city or join the network.', b1: 'Partner with us', b2: 'Join our network' }
+      cta: { h2: 'Want to work with us?', body: 'Co-host a session, refer a venture, pilot with a city or join the network.', b2: 'Join our network' }
     },
     res: {
       hero: { eyebrow: 'Research', h1: "What we're learning about the Twin City.", sub: 'Before we accelerate, we map. Our research team is documenting both ecosystems so that founders, cities and partners work from the same picture.' },
@@ -212,7 +212,7 @@
         h: 'Wo passen Sie hin?',
         items: [
           { n: '01', title: 'Ich baue ein Venture auf', body: 'Ein wirkungsorientiertes Scale-up, KMU oder eine NGO, bereit für den zweiten Markt.', cta: 'Zum Accelerator', href: '#accelerator' },
-          { n: '02', title: 'Ich arbeite im Ökosystem oder für eine Stadt', body: 'Ein Hub, eine Universität, Investor:in, Stadtabteilung oder ein kommunales Unternehmen.', cta: 'Partner werden', href: '#partners' },
+          { n: '02', title: 'Ich arbeite im Ökosystem oder für eine Stadt', body: 'Ein Hub, eine Universität, Investor:in, Stadtabteilung oder ein kommunales Unternehmen.', cta: 'Unsere Partner', href: '#partners' },
           { n: '03', title: 'Ich will beide Märkte verstehen', body: 'Forschung und Erkenntnisse von beiden Seiten der Grenze.', cta: 'Zur Forschung', href: '#research' }
         ]
       },
@@ -274,7 +274,7 @@
         ],
         unit: 'Interreg Slowakei–Österreich Markenelement'
       },
-      cta: { h2: 'Wollen Sie mit uns arbeiten?', body: 'Eine Session co-hosten, ein Venture empfehlen, mit einer Stadt pilotieren oder dem Netzwerk beitreten.', b1: 'Partner werden', b2: 'Netzwerk beitreten' }
+      cta: { h2: 'Wollen Sie mit uns arbeiten?', body: 'Eine Session co-hosten, ein Venture empfehlen, mit einer Stadt pilotieren oder dem Netzwerk beitreten.', b2: 'Netzwerk beitreten' }
     },
     res: {
       hero: { eyebrow: 'Forschung', h1: 'Was wir über die Twin City lernen.', sub: 'Bevor wir beschleunigen, kartieren wir. Unser Forschungsteam dokumentiert beide Ökosysteme, damit Gründer:innen, Städte und Partner vom selben Bild ausgehen.' },
@@ -379,7 +379,7 @@
         h: 'V akom ste štádiu?',
         items: [
           { n: '01', title: 'Budujem podnik', body: 'Impaktovo orientovaný scale-up, MSP alebo nezisková organizácia pripravená rásť na druhom trhu.', cta: 'Objavte akcelerátor', href: '#accelerator' },
-          { n: '02', title: 'Pracujem v ekosystéme alebo pre mesto', body: 'Hub, univerzita, investor, mestský odbor alebo mestský podnik.', cta: 'Staňte sa partnerom', href: '#partners' },
+          { n: '02', title: 'Pracujem v ekosystéme alebo pre mesto', body: 'Hub, univerzita, investor, mestský odbor alebo mestský podnik.', cta: 'Naši partneri', href: '#partners' },
           { n: '03', title: 'Chcem porozumieť obom trhom', body: 'Výskum a zistenia z oboch strán hranice.', cta: 'Prečítajte si výskum', href: '#research' }
         ]
       },
@@ -441,7 +441,7 @@
         ],
         unit: 'Značka programu Interreg Slovensko–Rakúsko'
       },
-      cta: { h2: 'Chcete s nami spolupracovať?', body: 'Spoluorganizujte stretnutie, odporučte podnik, spustite pilotný projekt s mestom alebo sa pridajte k sieti.', b1: 'Staňte sa partnerom', b2: 'Pridajte sa k sieti' }
+      cta: { h2: 'Chcete s nami spolupracovať?', body: 'Spoluorganizujte stretnutie, odporučte podnik, spustite pilotný projekt s mestom alebo sa pridajte k sieti.', b2: 'Pridajte sa k sieti' }
     },
     res: {
       hero: { eyebrow: 'Výskum', h1: 'Čo zisťujeme o Twin City.', sub: 'Skôr než akcelerujeme, mapujeme. Náš výskumný tím dokumentuje oba ekosystémy, aby zakladatelia, mestá a partneri vychádzali z rovnakých poznatkov.' },
@@ -541,7 +541,7 @@
         ]
       },
       cta: { title: 'Ready to scale across the border?' },
-      interreg: { eyebrow: 'Funding', title: 'Co-funded by the European Union through Interreg Slovakia–Austria', p1: 'TWICIIC — Twin City Impact Innovation Champion is a cross-border project co-financed by the Interreg Slovakia–Austria 2021–2027 Programme from the European Regional Development Fund (ERDF), running from November 2025 to September 2028.', p2: 'The main goal of TWICIIC is to strengthen impact innovation capacities in the region and between the cities of public and private innovation drivers. The project accelerates purpose-driven scale-ups in the Vienna–Bratislava region — enterprises with an impact mission that have moved beyond the prototype stage, are already on the market and are actively pursuing cross-border growth. TWICIIC provides structured peer learning, access to cross-border investor networks, and a joint Accelerator programme connecting the impact innovation ecosystems of both cities.', projects: 'Interreg projects', caption: 'Interreg Slovakia–Austria 2021–2027 · ERDF' }
+      interreg: { eyebrow: 'Funding', title: 'Co-funded by the European Union through Interreg Slovakia–Austria', p1: 'TWICIIC — Twin City Impact Innovation Champion is a cross-border project co-financed by the Interreg Slovakia–Austria 2021–2027 Programme from the European Regional Development Fund (ERDF), running from November 2025 to September 2028.', p2: 'The main goal of TWICIIC is to strengthen impact innovation capacities in the region and between the cities of public and private innovation drivers. The project accelerates purpose-driven scale-ups in the Vienna–Bratislava region — enterprises with an impact mission that have moved beyond the prototype stage, are already on the market and are actively pursuing cross-border growth. TWICIIC provides structured peer learning, access to cross-border investor networks, and a joint Accelerator programme connecting the impact innovation ecosystems of both cities.', projects: 'Interreg projects', photoAlt: 'European Parliament in Brussels with the flags of the EU member states', caption: 'Interreg Slovakia–Austria 2021–2027 · ERDF' }
     },
     de: {
       nav: { home: 'Start', programme: 'Programm', readiness: 'Readiness-Check', partners: 'Partner', apply: 'Bewerben', menu: 'Menü', close: 'Schließen' },
@@ -579,7 +579,7 @@
         ]
       },
       cta: { title: 'Bereit, über die Grenze zu skalieren?' },
-      interreg: { eyebrow: 'Förderung', title: 'Kofinanziert von der Europäischen Union über Interreg Slowakei–Österreich', p1: 'TWICIIC — Twin City Impact Innovation Champion ist ein grenzüberschreitendes Projekt, kofinanziert vom Programm Interreg Slowakei–Österreich 2021–2027 aus dem Europäischen Fonds für regionale Entwicklung (EFRE), mit einer Laufzeit von November 2025 bis September 2028.', p2: 'Hauptziel von TWICIIC ist es, die Impact-Innovationskapazitäten in der Region und zwischen den Städten – bei öffentlichen wie privaten Innovationsakteuren – zu stärken. Das Projekt beschleunigt zweckorientierte Scale-ups in der Region Wien–Bratislava: Unternehmen mit einer Impact-Mission, die die Prototypphase hinter sich haben, bereits am Markt sind und aktiv grenzüberschreitendes Wachstum verfolgen. TWICIIC bietet strukturiertes Peer-Learning, Zugang zu grenzüberschreitenden Investorennetzwerken und ein gemeinsames Accelerator-Programm, das die Impact-Innovationsökosysteme beider Städte verbindet.', projects: 'Interreg-Projekte', caption: 'Interreg Slowakei–Österreich 2021–2027 · EFRE' }
+      interreg: { eyebrow: 'Förderung', title: 'Kofinanziert von der Europäischen Union über Interreg Slowakei–Österreich', p1: 'TWICIIC — Twin City Impact Innovation Champion ist ein grenzüberschreitendes Projekt, kofinanziert vom Programm Interreg Slowakei–Österreich 2021–2027 aus dem Europäischen Fonds für regionale Entwicklung (EFRE), mit einer Laufzeit von November 2025 bis September 2028.', p2: 'Hauptziel von TWICIIC ist es, die Impact-Innovationskapazitäten in der Region und zwischen den Städten – bei öffentlichen wie privaten Innovationsakteuren – zu stärken. Das Projekt beschleunigt zweckorientierte Scale-ups in der Region Wien–Bratislava: Unternehmen mit einer Impact-Mission, die die Prototypphase hinter sich haben, bereits am Markt sind und aktiv grenzüberschreitendes Wachstum verfolgen. TWICIIC bietet strukturiertes Peer-Learning, Zugang zu grenzüberschreitenden Investorennetzwerken und ein gemeinsames Accelerator-Programm, das die Impact-Innovationsökosysteme beider Städte verbindet.', projects: 'Interreg-Projekte', photoAlt: 'Das Europäische Parlament in Brüssel mit den Flaggen der EU-Mitgliedstaaten', caption: 'Interreg Slowakei–Österreich 2021–2027 · EFRE' }
     },
     sk: {
       nav: { home: 'Domov', programme: 'Program', readiness: 'Test pripravenosti', partners: 'Partneri', apply: 'Prihlásiť sa', menu: 'Menu', close: 'Zavrieť' },
@@ -617,7 +617,7 @@
         ]
       },
       cta: { title: 'Pripravení rásť cez hranicu?' },
-      interreg: { eyebrow: 'Financovanie', title: 'Spolufinancované Európskou úniou prostredníctvom programu Interreg Slovensko–Rakúsko', p1: 'TWICIIC — Twin City Impact Innovation Champion je cezhraničný projekt spolufinancovaný programom Interreg Slovensko–Rakúsko 2021–2027 z Európskeho fondu regionálneho rozvoja (EFRR), ktorý prebieha od novembra 2025 do septembra 2028.', p2: 'Hlavným cieľom TWICIIC je posilniť kapacity impaktových inovácií v regióne a medzi mestami – u verejných aj súkromných aktérov inovácií. Projekt akceleruje scale-upy s pozitívnym dopadom v regióne Viedeň–Bratislava: podniky s impaktovou misiou, ktoré prekonali fázu prototypu, sú už na trhu a aktívne sa usilujú o cezhraničný rast. TWICIIC poskytuje štruktúrované vzájomné učenie, prístup k cezhraničným investorským sieťam a spoločný akceleračný program prepájajúci ekosystémy impaktových inovácií oboch miest.', projects: 'Projekty Interreg', caption: 'Interreg Slovensko–Rakúsko 2021–2027 · EFRR' }
+      interreg: { eyebrow: 'Financovanie', title: 'Spolufinancované Európskou úniou prostredníctvom programu Interreg Slovensko–Rakúsko', p1: 'TWICIIC — Twin City Impact Innovation Champion je cezhraničný projekt spolufinancovaný programom Interreg Slovensko–Rakúsko 2021–2027 z Európskeho fondu regionálneho rozvoja (EFRR), ktorý prebieha od novembra 2025 do septembra 2028.', p2: 'Hlavným cieľom TWICIIC je posilniť kapacity impaktových inovácií v regióne a medzi mestami – u verejných aj súkromných aktérov inovácií. Projekt akceleruje scale-upy s pozitívnym dopadom v regióne Viedeň–Bratislava: podniky s impaktovou misiou, ktoré prekonali fázu prototypu, sú už na trhu a aktívne sa usilujú o cezhraničný rast. TWICIIC poskytuje štruktúrované vzájomné učenie, prístup k cezhraničným investorským sieťam a spoločný akceleračný program prepájajúci ekosystémy impaktových inovácií oboch miest.', projects: 'Projekty Interreg', photoAlt: 'Európsky parlament v Bruseli s vlajkami členských štátov EÚ', caption: 'Interreg Slovensko–Rakúsko 2021–2027 · EFRR' }
     }
   };
 

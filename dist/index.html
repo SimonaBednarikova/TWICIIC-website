@@ -1077,7 +1077,7 @@
         </div>
         <figure data-reveal="" style="transition-delay:160ms;margin:0;display:grid;gap:14px;min-width:0">
           <div style="position:relative;width:100%;aspect-ratio:4 / 3;border:1px solid var(--border-default);background:var(--surface-page);overflow:hidden">
-            <image-slot id="interreg-photo" shape="rect" placeholder="Drop a project photo — the Vienna–Bratislava region" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+            <img src="assets/photos/european-parliament-brussels.jpg" alt="{{ t.interreg.photoAlt }}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block">
           </div>
           <figcaption style="display:flex;align-items:center;gap:10px;font-size:13px;line-height:1.5;color:var(--text-muted)">
             <span aria-hidden="true" style="display:inline-flex;height:13px;flex:none"><span style="width:3.5px;background:var(--vienna-red)"></span><span style="width:3.5px;background:var(--bratislava-blue)"></span></span>
@@ -1542,10 +1542,6 @@
           <p style="margin:18px 0 0;max-width:520px;font-size:clamp(16px,1.4vw,19px);line-height:1.55;color:var(--gray-300);text-wrap:pretty">{{ c.par.cta.body }}</p>
         </div>
         <div data-reveal="ba" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-start">
-          <a data-btn-inv="" data-magnet="" href="mailto:info@twincityaccelerator.com" style="position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;height:50px;padding:0 24px;background:var(--white);color:var(--black);font-size:16px;font-weight:600;letter-spacing:0.01em;text-decoration:none;white-space:nowrap">
-            <span data-btn-bars="" aria-hidden="true" style="position:absolute;left:0;top:0;bottom:0;width:10px;display:flex;transform:translateX(-10px);transition:transform 300ms var(--ease-out)"><span style="flex:1;background:var(--vienna-red)"></span><span style="flex:1;background:var(--bratislava-blue)"></span></span>
-            {{ c.par.cta.b1 }}
-          </a>
           <a data-btn-ghost-inv="" data-magnet="" href="{{ linkedinUrl }}" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;justify-content:center;height:50px;padding:0 24px;border:1px solid var(--white);color:var(--white);font-size:16px;font-weight:600;letter-spacing:0.01em;text-decoration:none;white-space:nowrap">{{ c.par.cta.b2 }}</a>
         </div>
       </div>
