@@ -5,7 +5,7 @@
   var en = {
     meta: { locale: 'en-GB', code: 'en', langName: 'English', skip: 'Skip to content', months: 'months' },
     nav: {
-      programme: 'About', accelerator: 'Accelerator', about: 'Team & Research', partners: 'Partners', research: 'Research', portfolio: 'Participants', events: 'Events & News',
+      programme: 'About', accelerator: 'Accelerator', about: 'Team & Research', partners: 'Partners', research: 'Research', portfolio: 'Participants', events: 'Events',
       cta: 'Join our network', menu: 'Menu', close: 'Close', langLabel: 'Language', aboutLabel: 'Team & Research',
       accLabel: 'Twin City Accelerator', accOverview: 'Twin City Accelerator', readiness: 'Learn & check your readiness to scale',
       accDesc: { overview: 'Programme, timeline and how to apply', readiness: 'Free content and a 2-minute self-check' },
@@ -65,7 +65,7 @@
       events: {
         eyebrow: 'Events', h2: "Discover what's coming up.",
         lead: "Online sessions, meetups, Demo Days and study visits in both cities. Most are free. Come and meet the people you'll be working with.",
-        all: 'See all events', news: 'Read the latest news'
+        all: 'See all events'
       },
       team: {
         eyebrow: "Who's behind it", h2: 'Discover the unique cohort of partners working behind TWICIIC.',
@@ -135,7 +135,7 @@
       cta: { h2: 'Want to be on this page?', b1: 'Apply to the Accelerator' }
     },
     ev: {
-      hero: { eyebrow: 'Events & News', h1: "What's on in the Twin City.", sub: "Sessions, meetups, Demo Days and study visits in Vienna, Bratislava and online. Plus what's new in the project." },
+      hero: { eyebrow: 'Events', h1: "What's on in the Twin City.", sub: 'Sessions, meetups, Demo Days and study visits in Vienna, Bratislava and online.' },
       f: { up: 'Upcoming', past: 'Past', vie: W, ba: B, on: 'Online', inPerson: 'In person', tags: 'Filter by type', where: 'Filter by place', clear: 'Clear filters' },
       types: { launch: 'Launch event', session: 'Online session', meetup: 'Meetup', demo: 'Demo Day', visit: 'Study visit', round: 'Roundtable' },
       upH: 'Upcoming',
@@ -155,16 +155,16 @@
         { date: '2026', tag: 'Research', title: 'Mapping both ecosystems has begun', body: "Our researchers are interviewing hubs, investors and founders on both sides of the border. Here's what we're asking." }
       ],
       more: 'Read more',
-      nl: { h2: 'Never miss a date.', body: 'One email a month with every upcoming session and the latest news.', cta: 'Subscribe' }
+      nl: { h2: 'Never miss a date.', body: 'One email a month with every upcoming session and project updates.', cta: 'Subscribe' }
     },
     ft: {
       about: 'TWICIIC – Twin City Impact Innovation Champion – connects the innovation ecosystems of Vienna and Bratislava. Through a cross-border accelerator, ecosystem events and city partnerships, it helps impact-oriented scale-ups, SMEs and NGOs grow in both markets.',
       navH: 'Navigate', touchH: 'Stay in touch', touchBody: 'Newsletter, once a month.', touchCta: 'Subscribe', li: 'LinkedIn', contact: 'Contact us',
-      liEyebrow: 'Follow us on LinkedIn', liText: 'Track our latest updates — open calls, workshops and cohort news, posted regularly.',
+      liEyebrow: 'Follow us on LinkedIn', liText: 'Track our latest updates — open calls, workshops and cohort updates, posted regularly.',
       partners: 'Partners', fundH: 'Funding', fundLine: 'Co-funded by the European Union', fundProg: 'Interreg Slovakia–Austria 2021–2027', fundRegion: 'Slovakia – Austria',
       fundLong: 'This project is co-financed by the Interreg Slovakia–Austria 2021–2027 Programme from the European Regional Development Fund (ERDF).',
       copyright: '© 2026 TWICIIC. All rights reserved.',
-      cookie: { label: 'Cookie consent', text: 'We’d like to use Google Analytics cookies to understand how this website is used. They are only set if you agree, and you can change your choice at any time under “Cookie settings”.', more: 'Privacy policy', accept: 'Accept', reject: 'Reject', settings: 'Cookie settings' },
+      cookie: { label: 'Cookie consent', text: 'With your consent, we use Google Analytics cookies to understand how the website is used, and share this data with Google, including for advertising. You can change your choice at any time under “Cookie settings”.', more: 'Privacy policy', accept: 'Accept all', reject: 'Necessary only', settings: 'Cookie settings' },
       legal: [{ text: 'Privacy', href: '#privacy' }, { text: 'Imprint', href: '#imprint' }, { text: 'Accessibility', href: '#accessibility' }]
     }
   };
@@ -172,7 +172,7 @@
   var de = {
     meta: { locale: 'de-AT', code: 'de', langName: 'Deutsch', skip: 'Zum Inhalt springen', months: 'Monate' },
     nav: {
-      programme: 'Über uns', accelerator: 'Accelerator', about: 'Team & Forschung', partners: 'Partner', research: 'Forschung', portfolio: 'Teilnehmende', events: 'Events & News',
+      programme: 'Über uns', accelerator: 'Accelerator', about: 'Team & Forschung', partners: 'Partner', research: 'Forschung', portfolio: 'Teilnehmende', events: 'Events',
       cta: 'Netzwerk beitreten', menu: 'Menü', close: 'Schließen', langLabel: 'Sprache', aboutLabel: 'Team & Forschung',
       accLabel: 'Twin City Accelerator', accOverview: 'Twin City Accelerator', readiness: 'Lernen & Bereitschaft zur Skalierung prüfen',
       accDesc: { overview: 'Programm, Zeitplan und Bewerbung', readiness: 'Kostenlose Inhalte und 2-Minuten-Check' },
@@ -232,7 +232,7 @@
       events: {
         eyebrow: 'Events', h2: 'Entdecken Sie, was ansteht.',
         lead: 'Online-Sessions, Meetups, Demo Days und Studienbesuche in beiden Städten. Die meisten kostenlos. Kommen Sie vorbei und lernen Sie die Menschen kennen, mit denen Sie arbeiten werden.',
-        all: 'Alle Events', news: 'Aktuelle News lesen'
+        all: 'Alle Events'
       },
       team: {
         eyebrow: 'Wer dahintersteht', h2: 'Entdecken Sie das einzigartige Partnerteam hinter TWICIIC.',
@@ -302,7 +302,7 @@
       cta: { h2: 'Wollen Sie auf diese Seite?', b1: 'Für den Accelerator bewerben' }
     },
     ev: {
-      hero: { eyebrow: 'Events & News', h1: 'Was in der Twin City läuft.', sub: 'Sessions, Meetups, Demo Days und Studienbesuche in Wien, Bratislava und online. Plus Neues aus dem Projekt.' },
+      hero: { eyebrow: 'Events', h1: 'Was in der Twin City läuft.', sub: 'Sessions, Meetups, Demo Days und Studienbesuche in Wien, Bratislava und online.' },
       f: { up: 'Kommend', past: 'Vergangen', vie: 'Wien', ba: B, on: 'Online', inPerson: 'Vor Ort', tags: 'Nach Format filtern', where: 'Nach Ort filtern', clear: 'Filter zurücksetzen' },
       types: { launch: 'Launch-Event', session: 'Online-Session', meetup: 'Meetup', demo: 'Demo Day', visit: 'Studienbesuch', round: 'Roundtable' },
       upH: 'Kommende Events',
@@ -322,7 +322,7 @@
         { date: '2026', tag: 'Forschung', title: 'Die Kartierung beider Ökosysteme hat begonnen', body: 'Unsere Forscher:innen interviewen Hubs, Investor:innen und Gründer:innen auf beiden Seiten der Grenze. Das fragen wir.' }
       ],
       more: 'Weiterlesen',
-      nl: { h2: 'Keinen Termin verpassen.', body: 'Eine E-Mail pro Monat mit allen kommenden Sessions und den neuesten News.', cta: 'Abonnieren' }
+      nl: { h2: 'Keinen Termin verpassen.', body: 'Eine E-Mail pro Monat mit allen kommenden Sessions und Neuigkeiten aus dem Projekt.', cta: 'Abonnieren' }
     },
     ft: {
       about: 'TWICIIC – Twin City Impact Innovation Champion – verbindet die Innovationsökosysteme von Wien und Bratislava. Mit einem grenzüberschreitenden Accelerator, Ökosystem-Events und Städtepartnerschaften hilft es wirkungsorientierten Scale-ups, KMU und NGOs, in beiden Märkten zu wachsen.',
@@ -331,7 +331,7 @@
       partners: 'Partner', fundH: 'Förderung', fundLine: 'Kofinanziert von der Europäischen Union', fundProg: 'Interreg Slowakei–Österreich 2021–2027', fundRegion: 'Slowakei – Österreich',
       fundLong: 'Dieses Projekt wird vom Programm Interreg Slowakei–Österreich 2021–2027 aus dem Europäischen Fonds für regionale Entwicklung (EFRE) kofinanziert.',
       copyright: '© 2026 TWICIIC. Alle Rechte vorbehalten.',
-      cookie: { label: 'Cookie-Einwilligung', text: 'Wir möchten Cookies von Google Analytics verwenden, um zu verstehen, wie diese Website genutzt wird. Sie werden nur mit Ihrer Zustimmung gesetzt, und Sie können Ihre Wahl jederzeit unter „Cookie-Einstellungen“ ändern.', more: 'Datenschutz', accept: 'Akzeptieren', reject: 'Ablehnen', settings: 'Cookie-Einstellungen' },
+      cookie: { label: 'Cookie-Einwilligung', text: 'Mit Ihrer Zustimmung verwenden wir Cookies von Google Analytics, um zu verstehen, wie die Website genutzt wird, und teilen diese Daten mit Google, auch für Werbezwecke. Sie können Ihre Wahl jederzeit unter „Cookie-Einstellungen“ ändern.', more: 'Datenschutz', accept: 'Alle akzeptieren', reject: 'Nur notwendige', settings: 'Cookie-Einstellungen' },
       legal: [{ text: 'Datenschutz', href: '#privacy' }, { text: 'Impressum', href: '#imprint' }, { text: 'Barrierefreiheit', href: '#accessibility' }]
     }
   };
@@ -339,7 +339,7 @@
   var sk = {
     meta: { locale: 'sk-SK', code: 'sk', langName: 'Slovenčina', skip: 'Preskočiť na obsah', months: 'mesiacov' },
     nav: {
-      programme: 'O nás', accelerator: 'Akcelerátor', about: 'Tím a výskum', partners: 'Partneri', research: 'Výskum', portfolio: 'Účastníci', events: 'Podujatia a novinky',
+      programme: 'O nás', accelerator: 'Akcelerátor', about: 'Tím a výskum', partners: 'Partneri', research: 'Výskum', portfolio: 'Účastníci', events: 'Podujatia',
       cta: 'Pridajte sa k sieti', menu: 'Menu', close: 'Zavrieť', langLabel: 'Jazyk', aboutLabel: 'Tím a výskum',
       accLabel: 'Twin City Accelerator', accOverview: 'Twin City Accelerator', readiness: 'Učte sa a overte si pripravenosť na škálovanie',
       accDesc: { overview: 'Program, časový plán a prihlásenie', readiness: 'Bezplatný obsah a 2-minútový test' },
@@ -399,7 +399,7 @@
       events: {
         eyebrow: 'Podujatia', h2: 'Zistite, čo sa chystá.',
         lead: 'Online stretnutia, meetupy, Demo Days a študijné návštevy v oboch mestách. Väčšina je zadarmo. Príďte a zoznámte sa s ľuďmi, s ktorými budete spolupracovať.',
-        all: 'Všetky podujatia', news: 'Najnovšie správy'
+        all: 'Všetky podujatia'
       },
       team: {
         eyebrow: 'Kto za tým stojí', h2: 'Spoznajte jedinečné partnerské konzorcium, ktoré stojí za TWICIIC.',
@@ -469,7 +469,7 @@
       cta: { h2: 'Chcete byť na tejto stránke?', b1: 'Prihláste sa do akcelerátora' }
     },
     ev: {
-      hero: { eyebrow: 'Podujatia a novinky', h1: 'Čo sa deje v Twin City.', sub: 'Stretnutia, meetupy, Demo Days a študijné návštevy vo Viedni, v Bratislave a online. A k tomu novinky z projektu.' },
+      hero: { eyebrow: 'Podujatia', h1: 'Čo sa deje v Twin City.', sub: 'Stretnutia, meetupy, Demo Days a študijné návštevy vo Viedni, v Bratislave a online.' },
       f: { up: 'Nadchádzajúce', past: 'Minulé', vie: 'Viedeň', ba: B, on: 'Online', inPerson: 'Prezenčne', tags: 'Filtrovať podľa typu', where: 'Filtrovať podľa miesta', clear: 'Zrušiť filtre' },
       types: { launch: 'Launch event', session: 'Online stretnutie', meetup: 'Meetup', demo: 'Demo Day', visit: 'Študijná návšteva', round: 'Okrúhly stôl' },
       upH: 'Nadchádzajúce',
@@ -498,7 +498,7 @@
       partners: 'Partneri', fundH: 'Financovanie', fundLine: 'Spolufinancované Európskou úniou', fundProg: 'Interreg Slovensko–Rakúsko 2021–2027', fundRegion: 'Slovensko – Rakúsko',
       fundLong: 'Tento projekt je spolufinancovaný programom Interreg Slovensko–Rakúsko 2021–2027 z Európskeho fondu regionálneho rozvoja (EFRR).',
       copyright: '© 2026 TWICIIC. Všetky práva vyhradené.',
-      cookie: { label: 'Súhlas s cookies', text: 'Radi by sme používali cookies služby Google Analytics, aby sme pochopili, ako sa stránka používa. Uložia sa len s vaším súhlasom a voľbu môžete kedykoľvek zmeniť v „Nastavenia cookies“.', more: 'Ochrana osobných údajov', accept: 'Prijať', reject: 'Odmietnuť', settings: 'Nastavenia cookies' },
+      cookie: { label: 'Súhlas s cookies', text: 'S vaším súhlasom používame cookies služby Google Analytics, aby sme pochopili, ako sa stránka používa, a tieto údaje zdieľame so spoločnosťou Google, a to aj na reklamné účely. Voľbu môžete kedykoľvek zmeniť v „Nastavenia cookies“.', more: 'Ochrana osobných údajov', accept: 'Prijať všetky', reject: 'Len nevyhnutné', settings: 'Nastavenia cookies' },
       legal: [{ text: 'Ochrana osobných údajov', href: '#privacy' }, { text: 'Impresum', href: '#imprint' }, { text: 'Prístupnosť', href: '#accessibility' }]
     }
   };

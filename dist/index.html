@@ -9,20 +9,21 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script>
   // Google Analytics (G-PCZP872Q0X) with Consent Mode v2: everything starts as "denied" and gtag.js is
-  // only fetched after the visitor accepts in the cookie banner (choice kept in localStorage "twiciic-consent").
+  // only fetched after the visitor clicks "Accept all" (choice kept in localStorage "twiciic-consent-v2").
+  // Accept all grants analytics and advertising storage, Google signals and ad personalisation signals.
   window.dataLayer = window.dataLayer || [];
   function gtag(){ dataLayer.push(arguments); }
   gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied' });
   window.TWICIIC_GA_ID = 'G-PCZP872Q0X';
   window.twiciicLoadGA = function () {
-    gtag('consent', 'update', { analytics_storage: 'granted' });
+    gtag('consent', 'update', { analytics_storage: 'granted', ad_storage: 'granted', ad_user_data: 'granted', ad_personalization: 'granted' });
     if (window.__gaLoaded) return; window.__gaLoaded = true;
     var s = document.createElement('script'); s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.TWICIIC_GA_ID;
     document.head.appendChild(s);
     gtag('js', new Date());
-    gtag('config', window.TWICIIC_GA_ID, { send_page_view: false }); // page views are sent per route by the site
+    gtag('config', window.TWICIIC_GA_ID, { send_page_view: false, allow_google_signals: true, allow_ad_personalization_signals: true }); // page views are sent per route by the site
   };
-  try { if (window.localStorage.getItem('twiciic-consent') === 'granted') window.twiciicLoadGA(); } catch (e) { /* storage unavailable */ }
+  try { if (window.localStorage.getItem('twiciic-consent-v2') === 'granted') window.twiciicLoadGA(); } catch (e) { /* storage unavailable */ }
 </script>
 <script src="./support.js"></script>
 </head>
@@ -585,7 +586,6 @@
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:8px 28px;padding-bottom:6px">
             <a href="#events" onClick="{{ navEvents }}" style="display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ c.home.events.all }}<span aria-hidden="true">→</span></a>
-            <a href="#events-news" onClick="{{ navTo }}" style="display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ c.home.events.news }}<span aria-hidden="true">→</span></a>
           </div>
         </header>
       </div>
@@ -1254,7 +1254,7 @@
                 </sc-if>
                 <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
                   <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="md" on-click="{{ rdyPrimary }}" data-magnet="" hint-size="160px,42px">{{ rdyOut.p }}</x-import>
-                  <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="md" variant="secondary" on-click="{{ rdySecondary }}" data-magnet="" hint-size="190px,42px">{{ rdyOut.s }}</x-import>
+                  <sc-if value="{{ rdyHasSecondary }}" hint-placeholder-val="{{ true }}"><x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="md" variant="secondary" on-click="{{ rdySecondary }}" data-magnet="" hint-size="190px,42px">{{ rdyOut.s }}</x-import></sc-if>
                 </div>
                 <div style="margin-top:36px;padding-top:24px;border-top:1px solid var(--border-default)">
                   <p style="margin:0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;font-size:13px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-secondary)"><span>{{ R.check.result.breakdown }}</span><span style="font-variant-numeric:tabular-nums;color:var(--text-primary)">{{ rdySummary }}</span></p>
@@ -1269,15 +1269,14 @@
                   </ul>
                 </div>
                 <div style="margin-top:28px">
-                  <sc-if value="{{ rdyEmailDone }}" hint-placeholder-val="{{ false }}"><p role="status" style="margin:0;display:flex;align-items:center;gap:10px;font-size:15px;font-weight:500;color:var(--text-primary)"><span aria-hidden="true" style="display:inline-flex;height:13px;flex:none"><span style="width:3.5px;background:var(--vienna-red)"></span><span style="width:3.5px;background:var(--bratislava-blue)"></span></span>{{ R.check.result.email.done }}</p></sc-if>
-                  <sc-if value="{{ rdyEmailOpen }}" hint-placeholder-val="{{ true }}">
-                    <form data-nl-form="" onSubmit="{{ rdyEmailSubmit }}" style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start">
-                      <label for="rdy-email" style="grid-column:1 / -1;font-size:15px;font-weight:600;color:var(--text-primary)">{{ R.check.result.email.label }}</label>
-                      <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Input" id="rdy-email" type="email" name="email" required="{{ true }}" placeholder="{{ R.check.result.email.placeholder }}" aria-label="{{ R.check.result.email.label }}" hint-size="100%,44px"></x-import>
-                      <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="md" type="submit" data-magnet="" hint-size="110px,42px">{{ R.check.result.email.button }}</x-import>
-                      <p style="grid-column:1 / -1;margin:0;font-size:12.5px;color:var(--text-muted)">{{ R.check.result.email.note }}</p>
-                    </form>
+                  <!-- No results are emailed. Options under the buttons: Apply anyway (not eligible) and a consultation -->
+                  <sc-if value="{{ rdyApplyAnyway }}" hint-placeholder-val="{{ false }}">
+                    <p style="margin:0 0 12px;font-size:15px"><a href="{{ applyUrl }}" onClick="{{ goApply }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ R.check.result.applyAnyway }}<span aria-hidden="true">→</span></a></p>
                   </sc-if>
+                  <p data-consult="" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;margin:0;font-size:15px;color:var(--text-secondary)">
+                    <span>{{ R.check.result.consult.label }}</span>
+                    <a href="mailto:info@twincityaccelerator.com" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ R.check.result.consult.cta }}<span aria-hidden="true">→</span></a>
+                  </p>
                 </div>
               </sc-if>
             </div>
@@ -1728,9 +1727,9 @@
   </div>
   </sc-if>
 
-  <!-- ================================================================ EVENTS & NEWS ================================================================ -->
+  <!-- ================================================================ EVENTS ================================================================ -->
   <sc-if value="{{ isEvents }}" hint-placeholder-val="{{ false }}">
-  <div data-screen-label="Events &amp; News">
+  <div data-screen-label="Events">
     <section data-screen-label="Events · Hero" style="padding:calc(68px + clamp(56px,8vw,104px)) 0 clamp(40px,5vw,56px)">
       <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,24px)">
         <p data-reveal="" style="display:flex;align-items:center;gap:10px;margin:0 0 20px;font-size:13px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-secondary)">
@@ -1804,7 +1803,8 @@
       </div>
     </section>
 
-    <!-- News: editorial list -->
+    <!-- News: editorial list. Hidden for now; set static NEWS_SECTION to true in the logic class to show it. -->
+    <sc-if value="{{ newsSection }}" hint-placeholder-val="{{ false }}">
     <section id="events-news" data-screen-label="Events · News" style="position:relative;padding:clamp(72px,9vw,120px) 0;background:var(--surface-card);border-top:1px solid var(--border-default);scroll-margin-top:68px">
       <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,24px)">
         <h2 data-reveal="vie" style="margin:0 0 24px;font-size:clamp(30px,3.6vw,44px);line-height:1.08;letter-spacing:-0.025em;font-weight:750">{{ c.ev.newsH }}</h2>
@@ -1819,6 +1819,7 @@
         </div>
       </div>
     </section>
+    </sc-if>
 
     <!-- Newsletter (same treatment as home) -->
     <section id="events-newsletter" data-screen-label="Events · Newsletter" style="position:relative;padding:clamp(64px,8vw,104px) 0;border-top:1px solid var(--border-default)">
@@ -1964,9 +1965,11 @@ class Component extends DCLogic {
   static PAST_PREVIEW = false;
   // Accelerator page: "How to apply · Key dates for the 2027 cohort" section.
   static HOWTO_SECTION = false;
+  // Events page: News list. Hidden; nothing else on the site links to it.
+  static NEWS_SECTION = false;
   // Footer contact address. Placeholder until the real inbox exists.
   static CONTACT_EMAIL = 'contact@example.com';
-  static CONSENT_KEY = 'twiciic-consent';
+  static CONSENT_KEY = 'twiciic-consent-v2';
   static STORAGE_KEY = 'twiciic-lang';
   // Newsletter: MailerLite embedded form "Website newsletter" (group TWICIIC newsletter, double opt-in).
   // The endpoint is public and CORS-enabled, so no MailerLite script, iframe or cookie is loaded.
@@ -2025,7 +2028,7 @@ class Component extends DCLogic {
     route: Component._routeFromHash().route, lang: Component._storedLang(), menuOpen: false, dd: null,
     heroBrand: Component._routeFromHash().route === 'home', scrolled: false, transit: null, accSection: 'fit', evTime: 'up', evLoc: [], evFmt: [],
     nl: {}, contentReady: !!window.TWICIIC_CONTENT,
-    rdyStep: Component._storedRdy().step, rdyAns: Component._storedRdy().ans, rdyAnim: 'in', rdyEmailDone: false, rdyVideo: null,
+    rdyStep: Component._storedRdy().step, rdyAns: Component._storedRdy().ans, rdyAnim: 'in', rdyVideo: null,
     consentOpen: Component._storedConsent() === null
   };
 
@@ -2394,7 +2397,7 @@ class Component extends DCLogic {
   _rdyBack() { const s = this.state; if (s.rdyStep === 0 || this._rdyBusy) return; this._rdyPersist(s.rdyAns, s.rdyStep - 1); this._rdyAdvance(s.rdyStep - 1, -1); }
   _rdyRestart() {
     if (this._rdyBusy) return; const ans = [null, null, null, null, null, null, null, null];
-    this.setState({ rdyAns: ans, rdyEmailDone: false }); this._rdyPersist(ans, 0); this._rdyAdvance(0, -1);
+    this.setState({ rdyAns: ans }); this._rdyPersist(ans, 0); this._rdyAdvance(0, -1);
   }
   // Question swap: current content slides out (180ms), the next one slides in from the other side (260ms).
   _rdyAdvance(to, dir) {
@@ -2428,7 +2431,7 @@ class Component extends DCLogic {
     try { window.localStorage.setItem(Component.CONSENT_KEY, v); } catch (e) { /* storage unavailable */ }
     this.setState({ consentOpen: false });
     if (v === 'granted') { if (window.twiciicLoadGA) window.twiciicLoadGA(); this._trackPage(); return; }
-    if (typeof window.gtag === 'function') window.gtag('consent', 'update', { analytics_storage: 'denied' });
+    if (typeof window.gtag === 'function') window.gtag('consent', 'update', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
     // Withdrawing consent removes the Google Analytics cookies that were already set.
     const host = window.location.hostname; const parts = host.split('.'); const domains = ['', host, '.' + host, '.' + parts.slice(-2).join('.')];
     document.cookie.split(';').map((x) => x.split('=')[0].trim()).filter((n) => /^_ga/.test(n)).forEach((n) => {
@@ -2543,8 +2546,9 @@ class Component extends DCLogic {
     const rdyOut = RR[outKey] || {};
     const rdyReasons = outKey === 'no' ? (RR.gates || []).filter((g, i) => gateAns[i] === 1) : [];
     const goLearnFn = this._act(() => '#rdy-learn'), goContactFn = this._act(() => 'mailto:info@twincityaccelerator.com'), goApplyFn = this._act(() => p.applyUrl || Component.APPLY_URL), goEventsFn = this._link('#events');
-    const rdyPrimary = { apply: goApplyFn, talk: goContactFn, learn: goLearnFn, no: goLearnFn }[outKey];
-    const rdySecondary = { apply: goContactFn, talk: goApplyFn, learn: goContactFn, no: goEventsFn }[outKey];
+    // Eligible results put Apply first; the consultation is an option below the buttons.
+    const rdyPrimary = { apply: goApplyFn, talk: goApplyFn, learn: goApplyFn, no: goLearnFn }[outKey];
+    const rdySecondary = { apply: null, talk: null, learn: goLearnFn, no: goEventsFn }[outKey];
     const mods = (R.learn && R.learn.modules) || [];
     // Learning modules with a `video` id get an inline YouTube player (privacy-enhanced domain, loaded on click).
     const rawMods = (rawC.rdy && rawC.rdy.learn && rawC.rdy.learn.modules) || []; const RL = R.learn || {};
@@ -2565,8 +2569,7 @@ class Component extends DCLogic {
       rdyBack: () => this._rdyBack(), rdyBackDisabled: step === 0, rdyRestart: () => this._rdyRestart(), rdyCanRestart: step > 0,
       rdyMapCounter: done ? rdyMap.complete : (rdyMap.question + ' ' + (step + 1) + ' / ' + n), rdyPct: n ? (step / n * 100) + '%' : '0%', rdyTicks: [0, 1, 2, 3, 4, 5, 6, 7, 8].map((i) => ({ i })),
       rdyGates, rdyEligText: eligCount + ' / 4', rdyDims, rdyScoreShort: score + ' / 8', rdySummary: (rdyMap.elig || '') + ' ' + eligCount + ' / 4 · ' + (rdyMap.ready || '') + ' ' + score + ' / 8',
-      rdyMapNote: done ? rdyMap.done : rdyMap.pending, rdyOut, rdyHasReasons: rdyReasons.length > 0, rdyReasons, rdyPrimary, rdySecondary,
-      rdyEmailDone: s.rdyEmailDone, rdyEmailOpen: !s.rdyEmailDone, rdyEmailSubmit: (e) => { e.preventDefault(); this.setState({ rdyEmailDone: true }); },
+      rdyMapNote: done ? rdyMap.done : rdyMap.pending, rdyOut, rdyHasSecondary: !!rdyOut.s, rdyApplyAnyway: outKey === 'no', rdyHasReasons: rdyReasons.length > 0, rdyReasons, rdyPrimary, rdySecondary,
       goCheck: this._act(() => '#rdy-check'), goLearn: goLearnFn,
       c, t, lang: s.lang, langOn,
       heroFundingLogo: 'assets/logos/interreg-hero-' + s.lang + '.png',
@@ -2605,7 +2608,7 @@ class Component extends DCLogic {
       // Home
       heroWords, st0: st[0] || {}, st1: st[1] || {}, st2: st[2] || {}, st3: st[3] || {}, stg0: stages[0] || {}, stg1: stages[1] || {}, stg2: stages[2] || {},
       homeEvents: items.slice(0, 3),
-      porPreview: false, howtoSection: Component.HOWTO_SECTION,
+      porPreview: false, howtoSection: Component.HOWTO_SECTION, newsSection: Component.NEWS_SECTION,
       contactEmail: Component.CONTACT_EMAIL, contactMailto: 'mailto:' + Component.CONTACT_EMAIL,
       nlDoneHome: s.nl.home === 'done', nlDonePor: s.nl.por === 'done', nlDoneEv: s.nl.ev === 'done',
       nlErrHome: s.nl.home === 'error', nlErrPor: s.nl.por === 'error', nlErrEv: s.nl.ev === 'error',

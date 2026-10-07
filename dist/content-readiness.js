@@ -43,9 +43,9 @@
       ],
       result: {
         eyebrow: 'Your result', breakdown: 'Your readiness in detail', why: 'Why',
-        apply: { t: 'You are ready to cross. Apply to the accelerator.', b: 'Your answers match what the programme is built for: an impact venture on the market, concrete cross-border ambition and a team that can commit.', p: 'Apply', s: 'Book a 10-minute call' },
-        talk: { t: 'Almost there — let’s talk.', b: 'You are eligible, and a few areas would benefit from sharpening before the cohort starts. In a ten-minute call we will tell you honestly whether to apply now or aim for the next round.', p: 'Book a 10-minute call', s: 'Apply anyway' },
-        learn: { t: 'Not yet — start with the content.', b: 'You are eligible, but the accelerator works best once a venture is on the market with concrete cross-border plans. The free modules are built for exactly this stage, and the next round is a real option.', p: 'Explore the content', s: 'Book a 10-minute call' },
+        apply: { t: 'You are ready to cross. Apply to the accelerator.', b: 'Your answers match what the programme is built for: an impact venture on the market, concrete cross-border ambition and a team that can commit.', p: 'Apply', s: '' },
+        talk: { t: 'Almost there. You can apply now.', b: 'You are eligible, and a few areas would benefit from sharpening before the cohort starts. Apply now: the short intake call after your application is the place to work through them.', p: 'Apply', s: '' },
+        learn: { t: 'You are eligible. Apply, and prepare with the content.', b: 'You are eligible. The accelerator works best once a venture is on the market with concrete cross-border plans, so use the free modules to strengthen your case alongside your application.', p: 'Apply', s: 'Explore the content' },
         no: { t: 'The accelerator is not the right fit yet.', b: 'The free content is open to everyone, and our events are the easiest way to get to know both ecosystems.', p: 'Explore the content', s: 'See events' },
         gates: [
           { text: 'The programme is designed for organisations developing a scalable solution.' },
@@ -54,7 +54,8 @@
           { text: 'Cross-border growth is the heart of the programme — without it, other support fits better.' }
         ],
         tips: { stage: 'Get to first customers or users before the cohort starts — modules 01 and 04 show what the programme expects.', impact: 'Define two or three impact metrics — module 05 covers the basics of impact measurement.', border: 'Map the other market first — module 01 is the place to start.', team: 'Block the workshop dates early; the cohort works in English and meets in both cities.' },
-        email: { label: 'Email me this result and the reading list', placeholder: 'name@company.com', button: 'Send', done: 'Thanks — your result is on its way.', note: 'One email, no newsletter unless you ask for it.' }
+        applyAnyway: 'Apply anyway',
+        consult: { label: 'Want to talk your result through?', cta: 'Book a free consultation' }
       }
     },
     cta: { h2: 'Ready to scale across the border?', b1: 'Apply', b2: 'Am I ready to scale?' }
@@ -102,9 +103,9 @@
       ],
       result: {
         eyebrow: 'Ihr Ergebnis', breakdown: 'Ihre Readiness im Detail', why: 'Warum',
-        apply: { t: 'Sie sind bereit für die Überquerung. Bewerben Sie sich für den Accelerator.', b: 'Ihre Antworten passen zu dem, wofür das Programm gebaut ist: ein Impact-Venture am Markt, konkrete grenzüberschreitende Ambition und ein Team, das sich einlassen kann.', p: 'Bewerben', s: '10-Minuten-Gespräch buchen' },
-        talk: { t: 'Fast geschafft – lassen Sie uns sprechen.', b: 'Sie sind förderfähig, und einige Bereiche würden vor Kohortenstart von einer Schärfung profitieren. In einem zehnminütigen Gespräch sagen wir Ihnen ehrlich, ob Sie sich jetzt bewerben oder die nächste Runde anpeilen sollten.', p: '10-Minuten-Gespräch buchen', s: 'Trotzdem bewerben' },
-        learn: { t: 'Noch nicht – starten Sie mit den Inhalten.', b: 'Sie sind förderfähig, aber der Accelerator wirkt am besten, wenn ein Venture am Markt ist und konkrete grenzüberschreitende Pläne hat. Die kostenlosen Module sind genau für diese Phase gemacht – und die nächste Runde ist eine echte Option.', p: 'Inhalte entdecken', s: '10-Minuten-Gespräch buchen' },
+        apply: { t: 'Sie sind bereit für die Überquerung. Bewerben Sie sich für den Accelerator.', b: 'Ihre Antworten passen zu dem, wofür das Programm gebaut ist: ein Impact-Venture am Markt, konkrete grenzüberschreitende Ambition und ein Team, das sich einlassen kann.', p: 'Bewerben', s: '' },
+        talk: { t: 'Fast geschafft. Sie können sich jetzt bewerben.', b: 'Sie sind förderfähig, und einige Bereiche würden vor Kohortenstart von einer Schärfung profitieren. Bewerben Sie sich jetzt – im kurzen Intake-Gespräch nach Ihrer Bewerbung gehen wir sie gemeinsam durch.', p: 'Bewerben', s: '' },
+        learn: { t: 'Sie sind förderfähig. Bewerben Sie sich und bereiten Sie sich mit den Inhalten vor.', b: 'Sie sind förderfähig. Der Accelerator wirkt am besten, wenn ein Venture am Markt ist und konkrete grenzüberschreitende Pläne hat – nutzen Sie die kostenlosen Module, um Ihren Case parallel zur Bewerbung zu stärken.', p: 'Bewerben', s: 'Inhalte entdecken' },
         no: { t: 'Der Accelerator ist noch nicht das Richtige.', b: 'Die kostenlosen Inhalte stehen allen offen, und unsere Events sind der einfachste Weg, beide Ökosysteme kennenzulernen.', p: 'Inhalte entdecken', s: 'Events ansehen' },
         gates: [
           { text: 'Das Programm richtet sich an Organisationen, die eine skalierbare Lösung entwickeln.' },
@@ -113,7 +114,8 @@
           { text: 'Grenzüberschreitendes Wachstum ist das Herz des Programms – ohne dieses passt andere Unterstützung besser.' }
         ],
         tips: { stage: 'Gewinnen Sie erste Kund:innen oder Nutzer:innen vor Kohortenstart – Module 01 und 04 zeigen, was das Programm erwartet.', impact: 'Definieren Sie zwei oder drei Wirkungskennzahlen – Modul 05 behandelt die Grundlagen der Wirkungsmessung.', border: 'Kartieren Sie zuerst den anderen Markt – Modul 01 ist der richtige Einstieg.', team: 'Blocken Sie die Workshop-Termine früh; die Kohorte arbeitet auf Englisch und trifft sich in beiden Städten.' },
-        email: { label: 'Ergebnis und Leseliste per E-Mail erhalten', placeholder: 'name@unternehmen.at', button: 'Senden', done: 'Danke – Ihr Ergebnis ist unterwegs.', note: 'Eine E-Mail, kein Newsletter, außer Sie wünschen ihn.' }
+        applyAnyway: 'Trotzdem bewerben',
+        consult: { label: 'Möchten Sie Ihr Ergebnis besprechen?', cta: 'Kostenlose Beratung buchen' }
       }
     },
     cta: { h2: 'Bereit, über die Grenze zu skalieren?', b1: 'Bewerben', b2: 'Bin ich bereit zu skalieren?' }
@@ -161,9 +163,9 @@
       ],
       result: {
         eyebrow: 'Váš výsledok', breakdown: 'Vaša pripravenosť v detaile', why: 'Prečo',
-        apply: { t: 'Ste pripravení prekročiť hranicu. Prihláste sa do akcelerátora.', b: 'Vaše odpovede zodpovedajú tomu, pre čo je program vytvorený: impaktový podnik na trhu, konkrétna cezhraničná ambícia a tím, ktorý sa dokáže zaviazať.', p: 'Prihlásiť sa', s: 'Dohodnúť 10-minútový hovor' },
-        talk: { t: 'Už ste takmer tam – poďme sa porozprávať.', b: 'Ste oprávnení a niekoľko oblastí by pred štartom kohorty stálo za doladenie. V desaťminútovom hovore vám úprimne povieme, či sa prihlásiť teraz, alebo počkať na ďalšie kolo.', p: 'Dohodnúť 10-minútový hovor', s: 'Prihlásiť sa aj tak' },
-        learn: { t: 'Ešte nie – začnite s obsahom.', b: 'Ste oprávnení, ale akcelerátor funguje najlepšie, keď je podnik na trhu a má konkrétne cezhraničné plány. Bezplatné moduly sú vytvorené presne pre túto fázu – a ďalšie kolo je reálna možnosť.', p: 'Preskúmať obsah', s: 'Dohodnúť 10-minútový hovor' },
+        apply: { t: 'Ste pripravení prekročiť hranicu. Prihláste sa do akcelerátora.', b: 'Vaše odpovede zodpovedajú tomu, pre čo je program vytvorený: impaktový podnik na trhu, konkrétna cezhraničná ambícia a tím, ktorý sa dokáže zaviazať.', p: 'Prihlásiť sa', s: '' },
+        talk: { t: 'Už ste takmer tam. Môžete sa prihlásiť.', b: 'Ste oprávnení a niekoľko oblastí by pred štartom kohorty stálo za doladenie. Prihláste sa teraz – v krátkom úvodnom rozhovore po prihláške ich spolu prejdeme.', p: 'Prihlásiť sa', s: '' },
+        learn: { t: 'Ste oprávnení. Prihláste sa a pripravte sa s obsahom.', b: 'Ste oprávnení. Akcelerátor funguje najlepšie, keď je podnik na trhu a má konkrétne cezhraničné plány – bezplatné moduly vám pomôžu posilniť vašu prihlášku.', p: 'Prihlásiť sa', s: 'Preskúmať obsah' },
         no: { t: 'Akcelerátor pre vás zatiaľ nie je to pravé.', b: 'Bezplatný obsah je otvorený pre všetkých a naše podujatia sú najjednoduchší spôsob, ako spoznať oba ekosystémy.', p: 'Preskúmať obsah', s: 'Pozrieť podujatia' },
         gates: [
           { text: 'Program je určený organizáciám, ktoré vyvíjajú škálovateľné riešenie.' },
@@ -172,7 +174,8 @@
           { text: 'Cezhraničný rast je srdcom programu – bez neho vám lepšie poslúži iná forma podpory.' }
         ],
         tips: { stage: 'Získajte prvých zákazníkov alebo používateľov pred štartom kohorty – moduly 01 a 04 ukazujú, čo program očakáva.', impact: 'Definujte dve alebo tri impaktové metriky – modul 05 pokrýva základy merania impaktu.', border: 'Najprv zmapujte druhý trh – modul 01 je to správne miesto na začiatok.', team: 'Rezervujte si termíny workshopov včas; kohorta pracuje v angličtine a stretáva sa v oboch mestách.' },
-        email: { label: 'Pošlite mi výsledok a odporúčané čítanie e-mailom', placeholder: 'meno@firma.sk', button: 'Odoslať', done: 'Ďakujeme – váš výsledok je na ceste.', note: 'Jeden e-mail, žiadny newsletter, pokiaľ si ho nevyžiadate.' }
+        applyAnyway: 'Prihlásiť sa aj tak',
+        consult: { label: 'Chcete svoj výsledok prebrať s nami?', cta: 'Rezervujte si bezplatnú konzultáciu' }
       }
     },
     cta: { h2: 'Pripravení rásť cez hranicu?', b1: 'Prihlásiť sa', b2: 'Sme pripravení škálovať?' }
