@@ -682,12 +682,8 @@ try { (() => {
 // ui_kits/posts/ds-base.js — loads the TWICIIC design system tokens + font. Edit `base` if you move this file.
 (() => {
   const base = '../..';
-  for (const p of ['styles.css']) {
-    const l = document.createElement('link');
-    l.rel = 'stylesheet';
-    l.href = base + '/' + p;
-    document.head.appendChild(l);
-  }
+  // Disabled on the website: index.html already loads styles.css, and '../..' resolves outside the site (404).
+  void base;
 })();
 })(); } catch (e) { __ds_ns.__errors.push({ path: "ui_kits/posts/ds-base.js", error: String((e && e.message) || e) }); }
 
