@@ -5,7 +5,7 @@
   var en = {
     meta: { locale: 'en-GB', code: 'en', langName: 'English', skip: 'Skip to content', months: 'months' },
     nav: {
-      programme: 'About', accelerator: 'Accelerator', about: 'Team & Research', partners: 'Partners', research: 'Research', portfolio: 'Participants', events: 'Events',
+      programme: 'Home', accelerator: 'Accelerator', about: 'Team & Research', partners: 'Partners', research: 'Research', portfolio: 'Participants', events: 'Events',
       cta: 'Join our network', menu: 'Menu', close: 'Close', langLabel: 'Language', aboutLabel: 'Team & Research',
       accLabel: 'Twin City Accelerator', accOverview: 'Twin City Accelerator', readiness: 'Learn & check your readiness to scale',
       accDesc: { overview: 'Programme, timeline and how to apply', readiness: 'Free content and a 2-minute self-check' },
@@ -172,7 +172,7 @@
   var de = {
     meta: { locale: 'de-AT', code: 'de', langName: 'Deutsch', skip: 'Zum Inhalt springen', months: 'Monate' },
     nav: {
-      programme: 'Über uns', accelerator: 'Accelerator', about: 'Team & Forschung', partners: 'Partner', research: 'Forschung', portfolio: 'Teilnehmende', events: 'Events',
+      programme: 'Start', accelerator: 'Accelerator', about: 'Team & Forschung', partners: 'Partner', research: 'Forschung', portfolio: 'Teilnehmende', events: 'Events',
       cta: 'Netzwerk beitreten', menu: 'Menü', close: 'Schließen', langLabel: 'Sprache', aboutLabel: 'Team & Forschung',
       accLabel: 'Twin City Accelerator', accOverview: 'Twin City Accelerator', readiness: 'Lernen & Bereitschaft zur Skalierung prüfen',
       accDesc: { overview: 'Programm, Zeitplan und Bewerbung', readiness: 'Kostenlose Inhalte und 2-Minuten-Check' },
@@ -339,7 +339,7 @@
   var sk = {
     meta: { locale: 'sk-SK', code: 'sk', langName: 'Slovenčina', skip: 'Preskočiť na obsah', months: 'mesiacov' },
     nav: {
-      programme: 'O nás', accelerator: 'Akcelerátor', about: 'Tím a výskum', partners: 'Partneri', research: 'Výskum', portfolio: 'Účastníci', events: 'Podujatia',
+      programme: 'Domov', accelerator: 'Akcelerátor', about: 'Tím a výskum', partners: 'Partneri', research: 'Výskum', portfolio: 'Účastníci', events: 'Podujatia',
       cta: 'Pridajte sa k sieti', menu: 'Menu', close: 'Zavrieť', langLabel: 'Jazyk', aboutLabel: 'Tím a výskum',
       accLabel: 'Twin City Accelerator', accOverview: 'Twin City Accelerator', readiness: 'Učte sa a overte si pripravenosť na škálovanie',
       accDesc: { overview: 'Program, časový plán a prihlásenie', readiness: 'Bezplatný obsah a 2-minútový test' },
