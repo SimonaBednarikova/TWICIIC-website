@@ -21,7 +21,7 @@
         { n: '03', fmt: 'Guide', video: 'pceF0TIRMx4', title: 'Is the Twin City Accelerator the right fit for you?', topics: [{ text: 'Who should apply — and who should not, yet' }, { text: 'What stage participants should be at' }, { text: 'Eligibility criteria and what makes a strong fit' }, { text: 'How the self-assessment scores and where each result leads' }] },
         { n: '04', fmt: 'Programme', video: '6VuLMHz-fvw', title: 'What you get in the core programme', topics: [{ text: 'The full 11-week structure: six modules, in-person weeks, online content, coaching' }, { text: 'Meeting locations, alternating between Vienna and Bratislava' }, { text: 'Mentoring, cross-border support, ecosystem access, investment readiness' }, { text: 'Timeline and phases at a glance' }] },
         { n: '05', fmt: 'Video · ≤ 10 min', title: 'Expert content: foundations of scaling an impact venture', topics: [{ text: 'Unit economics for founders' }, { text: 'Cross-border market entry basics' }, { text: 'Building partnerships across borders' }, { text: 'Fundraising in Austria and Slovakia' }, { text: 'Impact measurement basics' }] },
-        { n: '06', fmt: 'Team', video: 'kl10SGp922M', title: 'Meet the team', topics: [{ text: 'The people behind the accelerator at CB ESPRI and Relevant Ventures' }, { text: 'Who they are and what they bring' }, { text: 'Why they care about cross-border impact' }] }
+        { n: '06', fmt: 'Team', video: 'kl10SGp922M', title: 'Meet the team', topics: [{ text: 'The people behind the accelerator' }, { text: 'Who they are and what they bring' }, { text: 'Why they care about cross-border impact' }, { text: 'What inspires their work for social impact' }] }
       ]
     },
     check: {
@@ -81,7 +81,7 @@
         { n: '03', fmt: 'Leitfaden', video: 'pceF0TIRMx4', title: 'Ist der Twin City Accelerator das Richtige für Sie?', topics: [{ text: 'Wer sich bewerben sollte – und wer noch nicht' }, { text: 'In welcher Phase Teilnehmende sein sollten' }, { text: 'Förderkriterien und was einen starken Fit ausmacht' }, { text: 'Wie die Selbsteinschätzung bewertet und wohin jedes Ergebnis führt' }] },
         { n: '04', fmt: 'Programm', video: '6VuLMHz-fvw', title: 'Was Sie im Kernprogramm bekommen', topics: [{ text: 'Die gesamte 11-wöchige Struktur: sechs Module, Präsenzwochen, Online-Inhalte, Coaching' }, { text: 'Veranstaltungsorte im Wechsel zwischen Wien und Bratislava' }, { text: 'Mentoring, grenzüberschreitende Unterstützung, Zugang zum Ökosystem, Investment Readiness' }, { text: 'Zeitplan und Phasen auf einen Blick' }] },
         { n: '05', fmt: 'Video · ≤ 10 Min.', title: 'Expert:innen-Inhalte: Grundlagen der Skalierung eines Impact-Ventures', topics: [{ text: 'Unit Economics für Gründer:innen' }, { text: 'Grundlagen des grenzüberschreitenden Markteintritts' }, { text: 'Partnerschaften über Grenzen aufbauen' }, { text: 'Fundraising in Österreich und der Slowakei' }, { text: 'Grundlagen der Wirkungsmessung' }] },
-        { n: '06', fmt: 'Team', video: 'kl10SGp922M', title: 'Das Team kennenlernen', topics: [{ text: 'Die Menschen hinter dem Accelerator bei CB ESPRI und Relevant Ventures' }, { text: 'Wer sie sind und was sie mitbringen' }, { text: 'Warum ihnen grenzüberschreitender Impact wichtig ist' }] }
+        { n: '06', fmt: 'Team', video: 'kl10SGp922M', title: 'Das Team kennenlernen', topics: [{ text: 'Die Menschen hinter dem Accelerator' }, { text: 'Wer sie sind und was sie mitbringen' }, { text: 'Warum ihnen grenzüberschreitender Impact wichtig ist' }, { text: 'Was sie zu ihrem Einsatz für sozialen Impact inspiriert' }] }
       ]
     },
     check: {
@@ -141,7 +141,7 @@
         { n: '03', fmt: 'Sprievodca', video: 'pceF0TIRMx4', title: 'Je Twin City Accelerator pre vás to pravé?', topics: [{ text: 'Kto by sa mal prihlásiť – a kto ešte nie' }, { text: 'V akej fáze by mali účastníci byť' }, { text: 'Kritériá oprávnenosti a kedy vám program naozaj sedí' }, { text: 'Ako sa sebahodnotenie vyhodnocuje a čo znamená každý výsledok' }] },
         { n: '04', fmt: 'Program', video: '6VuLMHz-fvw', title: 'Čo získate v hlavnom programe', topics: [{ text: 'Celá 11-týždňová štruktúra: šesť modulov, prezenčné týždne, online obsah, koučing' }, { text: 'Miesta stretnutí striedavo vo Viedni a v Bratislave' }, { text: 'Mentoring, cezhraničná podpora, prístup k ekosystému, investičná pripravenosť' }, { text: 'Časový plán a fázy v prehľade' }] },
         { n: '05', fmt: 'Video · ≤ 10 min', title: 'Expertný obsah: základy škálovania impaktového podniku', topics: [{ text: 'Unit economics pre zakladateľov' }, { text: 'Základy cezhraničného vstupu na trh' }, { text: 'Budovanie partnerstiev cez hranice' }, { text: 'Získavanie financií v Rakúsku a na Slovensku' }, { text: 'Základy merania impaktu' }] },
-        { n: '06', fmt: 'Tím', video: 'kl10SGp922M', title: 'Zoznámte sa s tímom', topics: [{ text: 'Ľudia za akcelerátorom v CB ESPRI a Relevant Ventures' }, { text: 'Kto sú a čo prinášajú' }, { text: 'Prečo im záleží na cezhraničnom impakte' }] }
+        { n: '06', fmt: 'Tím', video: 'kl10SGp922M', title: 'Zoznámte sa s tímom', topics: [{ text: 'Ľudia za akcelerátorom' }, { text: 'Kto sú a čo prinášajú' }, { text: 'Prečo im záleží na cezhraničnom impakte' }, { text: 'Čo ich inšpiruje k práci so sociálnym impaktom' }] }
       ]
     },
     check: {
