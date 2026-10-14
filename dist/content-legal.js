@@ -37,7 +37,7 @@
         S('Our goal', 'We aim to meet the Web Content Accessibility Guidelines (WCAG) 2.1 at level AA.'),
         S('What we have done', 'The whole site works with a keyboard and has a “skip to content” link and visible focus. Animations stop when your system asks for reduced motion. Colours are chosen for readable contrast, images have text alternatives, and all content is available in English, German and Slovak.'),
         S('Known limitations', 'The site has not yet been fully tested with every screen reader. Embedded third-party content, such as the Tally application form and LinkedIn, is outside our control. Captions will be added to videos as they are published.', 'Based on our own assessment, the website is partially compliant with WCAG 2.1 AA.'),
-        S('Feedback', 'If something doesn’t work for you, please tell us at info@twiciic.sk. We will get back to you within 10 working days.')
+        S('Feedback', 'If something doesn’t work for you, please tell us at info@twiciic.eu. We will get back to you within 10 working days.')
       ]
     }
   };
@@ -75,7 +75,7 @@
         S('Unser Ziel', 'Wir streben die Konformität mit den Web Content Accessibility Guidelines (WCAG) 2.1 auf Stufe AA an.'),
         S('Was wir umgesetzt haben', 'Die gesamte Website ist per Tastatur bedienbar, hat einen „Zum Inhalt springen“-Link und einen sichtbaren Fokus. Animationen stoppen, wenn Ihr System reduzierte Bewegung verlangt. Die Farben sind auf gut lesbaren Kontrast ausgelegt, Bilder haben Textalternativen, und alle Inhalte gibt es auf Englisch, Deutsch und Slowakisch.'),
         S('Bekannte Einschränkungen', 'Die Website wurde noch nicht mit allen Screenreadern vollständig getestet. Eingebettete Inhalte Dritter, etwa das Tally-Bewerbungsformular und LinkedIn, liegen außerhalb unseres Einflusses. Videos erhalten Untertitel, sobald sie veröffentlicht werden.', 'Nach unserer eigenen Bewertung ist die Website teilweise konform mit WCAG 2.1 AA.'),
-        S('Feedback', 'Wenn etwas für Sie nicht funktioniert, schreiben Sie uns bitte an info@twiciic.sk. Wir melden uns innerhalb von 10 Arbeitstagen.')
+        S('Feedback', 'Wenn etwas für Sie nicht funktioniert, schreiben Sie uns bitte an info@twiciic.eu. Wir melden uns innerhalb von 10 Arbeitstagen.')
       ]
     }
   };
@@ -113,7 +113,7 @@
         S('Náš cieľ', 'Snažíme sa splniť pravidlá prístupnosti webového obsahu (WCAG) 2.1 na úrovni AA.'),
         S('Čo sme urobili', 'Celá stránka sa dá ovládať klávesnicou, má odkaz „Preskočiť na obsah“ a viditeľné zameranie prvkov. Animácie sa vypnú, ak váš systém požaduje obmedzený pohyb. Farby sú zvolené s ohľadom na čitateľný kontrast, obrázky majú textové alternatívy a všetok obsah je dostupný po anglicky, nemecky a slovensky.'),
         S('Známe obmedzenia', 'Stránka zatiaľ nebola úplne otestovaná so všetkými čítačkami obrazovky. Vložený obsah tretích strán, napríklad prihlasovací formulár Tally a LinkedIn, nemáme pod kontrolou. Videá dostanú titulky hneď, ako ich zverejníme.', 'Podľa nášho vlastného posúdenia je stránka čiastočne v súlade s WCAG 2.1 AA.'),
-        S('Spätná väzba', 'Ak vám niečo nefunguje, napíšte nám na info@twiciic.sk. Ozveme sa do 10 pracovných dní.')
+        S('Spätná väzba', 'Ak vám niečo nefunguje, napíšte nám na info@twiciic.eu. Ozveme sa do 10 pracovných dní.')
       ]
     }
   };
