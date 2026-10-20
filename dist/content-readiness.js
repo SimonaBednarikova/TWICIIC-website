@@ -175,10 +175,10 @@
         ],
         tips: { stage: 'Získajte prvých zákazníkov alebo používateľov pred štartom kohorty – moduly 01 a 04 ukazujú, čo program očakáva.', impact: 'Definujte dve alebo tri impaktové metriky – modul 05 pokrýva základy merania impaktu.', border: 'Najprv zmapujte druhý trh – modul 01 je to správne miesto na začiatok.', team: 'Rezervujte si termíny workshopov včas; kohorta pracuje v angličtine a stretáva sa v oboch mestách.' },
         applyAnyway: 'Prihlásiť sa aj tak',
-        consult: { label: 'Chcete svoj výsledok prebrať s nami? Bezplatné konzultácie čoskoro spúšťame.', cta: 'Dovtedy nám napíšte' }
+        consult: { label: 'Chcete svoj výsledok prebrať s nami? Bezplatné konzultácie čoskoro spúšťame.', cta: 'Napíšte nám' }
       }
     },
-    cta: { h2: 'Pripravení rásť cez hranicu?', b1: 'Prihlásiť sa', b2: 'Sme pripravení škálovať?' }
+    cta: { h2: 'Pripravení expandovať?', b1: 'Prihlásiť sa', b2: 'Sme pripravení škálovať?' }
   };
 
   window.TWICIIC_READINESS = { en: en, de: de, sk: sk };

@@ -244,6 +244,8 @@
     /* ---- Partners / research / portfolio / events ---- */
     [data-prow] [data-plogo] img, [data-acc-card] [data-plogo] img { transition: opacity 260ms var(--ease-out); }
     [data-acc-card] [data-logo-rest][src="assets/partners/relevant.svg"] { filter: brightness(0); opacity: 1; }
+    [data-footer-contact][data-flash] { animation: contact-flash 2.2s var(--ease-out); }
+    @keyframes contact-flash { 0%, 40% { outline: 2px solid var(--bratislava-blue); outline-offset: 6px; } 100% { outline: 2px solid transparent; outline-offset: 6px; } }
     [data-inline-link] { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
     [data-inline-link]:hover { text-decoration-thickness: 2px; }
     [data-prow] [data-plogo] { grid-template-columns: minmax(0, 1fr); }
@@ -729,7 +731,7 @@
         </div>
         <p data-reveal="" data-consult="" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;transition-delay:270ms;margin:16px 0 0;font-size:15px;color:var(--text-secondary)">
           <span>{{ t.timeline.notSure }}</span>
-          <a href="mailto:info@twiciic.eu" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ t.timeline.consult }}<span aria-hidden="true">→</span></a>
+          <a href="#footer-contact" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ t.timeline.consult }}<span aria-hidden="true">→</span></a>
         </p>
         <p data-reveal="" style="transition-delay:300ms;display:grid;grid-template-columns:auto auto minmax(0,1fr);align-items:center;gap:8px 10px;margin:22px 0 0;font-size:13px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--text-secondary)">
           <span aria-hidden="true" style="grid-row:1 / 3;align-self:stretch;display:inline-flex;flex:none"><span style="width:3.5px;background:var(--vienna-red)"></span><span style="width:3.5px;background:var(--bratislava-blue)"></span></span>
@@ -780,7 +782,7 @@
             <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="lg" on-click="{{ goApply }}" hint-size="110px,50px">{{ t.nav.apply }}</x-import>
             <p data-consult="" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;margin:16px 0 0;font-size:15px;color:var(--text-secondary)">
               <span>{{ t.timeline.notSure }}</span>
-              <a href="mailto:info@twiciic.eu" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ t.timeline.consult }}<span aria-hidden="true">→</span></a>
+              <a href="#footer-contact" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ t.timeline.consult }}<span aria-hidden="true">→</span></a>
             </p>
           </div>
         </div>
@@ -845,7 +847,7 @@
               <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="md" hint-size="90px,42px">{{ t.nav.apply }}</x-import>
               <p data-consult="" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;margin:16px 0 0;font-size:15px;color:var(--text-secondary)">
                 <span>{{ t.timeline.notSure }}</span>
-                <a href="mailto:info@twiciic.eu" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ t.timeline.consult }}<span aria-hidden="true">→</span></a>
+                <a href="#footer-contact" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ t.timeline.consult }}<span aria-hidden="true">→</span></a>
               </p>
             </div>
           </div>
@@ -974,7 +976,7 @@
       </div>
       <p data-reveal="" data-consult="" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:6px 10px;margin:20px 0 0;font-size:15px;color:var(--text-secondary);text-align:center">
         <span>{{ t.timeline.notSure }}</span>
-        <a href="mailto:info@twiciic.eu" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ t.timeline.consult }}<span aria-hidden="true">→</span></a>
+        <a href="#footer-contact" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ t.timeline.consult }}<span aria-hidden="true">→</span></a>
       </p>
     </div>
   </section>
@@ -1022,7 +1024,7 @@
         <p style="margin:0;font-size:clamp(17px,1.5vw,19px);line-height:1.6;color:var(--text-secondary);text-wrap:pretty">{{ t.support.body }}</p>
         <div style="margin-top:36px;padding-top:28px;border-top:1px solid var(--border-default);display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:12px 32px">
           <p style="margin:0;font-size:22px;line-height:1.3;letter-spacing:-0.01em;font-weight:650;color:var(--text-primary)">{{ t.support.ready }}</p>
-          <a href="mailto:info@twiciic.eu" style="font-size:clamp(18px,1.8vw,22px);font-weight:600;letter-spacing:-0.01em;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:3px;transition:border-color 150ms var(--ease-out);overflow-wrap:anywhere" style-hover="border-bottom-color:var(--border-strong)">info@twiciic.eu</a>
+          <span style="font-size:clamp(18px,1.8vw,22px);font-weight:600;letter-spacing:-0.01em;color:var(--text-primary);overflow-wrap:anywhere">{{ contactEmail }}</span>
         </div>
       </div>
     </div>
@@ -1101,7 +1103,7 @@
           </a>
         <p data-consult="" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;margin:0;font-size:15px;color:var(--gray-300)">
           <span>{{ t.timeline.notSure }}</span>
-          <a href="mailto:info@twiciic.eu" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--white);text-decoration:none;border-bottom:2px solid var(--gray-700);padding-bottom:2px" style-hover="border-bottom-color:var(--white)">{{ t.timeline.consult }}<span aria-hidden="true">→</span></a>
+          <a href="#footer-contact" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--white);text-decoration:none;border-bottom:2px solid var(--gray-700);padding-bottom:2px" style-hover="border-bottom-color:var(--white)">{{ t.timeline.consult }}<span aria-hidden="true">→</span></a>
         </p>
       </div>
     </div>
@@ -1277,7 +1279,7 @@
                   </sc-if>
                   <p data-consult="" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;margin:0;font-size:15px;color:var(--text-secondary)">
                     <span>{{ R.check.result.consult.label }}</span>
-                    <a href="mailto:info@twiciic.eu" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ R.check.result.consult.cta }}<span aria-hidden="true">→</span></a>
+                    <a href="#footer-contact" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ R.check.result.consult.cta }}<span aria-hidden="true">→</span></a>
                   </p>
                 </div>
               </sc-if>
@@ -1387,7 +1389,7 @@
           </div>
           <p data-consult="" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;margin:16px 0 0;font-size:15px;color:var(--text-secondary)">
             <span>{{ t.timeline.notSure }}</span>
-            <a href="mailto:info@twiciic.eu" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ t.timeline.consult }}<span aria-hidden="true">→</span></a>
+            <a href="#footer-contact" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ t.timeline.consult }}<span aria-hidden="true">→</span></a>
           </p>
         </div>
       </div>
@@ -1711,7 +1713,7 @@
           <div style="margin-top:24px"><x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="lg" on-click="{{ goApply }}" data-magnet="" hint-size="220px,50px">{{ c.por.cta.b1 }}</x-import></div>
           <p data-consult="" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 10px;margin:16px 0 0;font-size:15px;color:var(--text-secondary)">
             <span>{{ t.timeline.notSure }}</span>
-            <a href="mailto:info@twiciic.eu" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ t.timeline.consult }}<span aria-hidden="true">→</span></a>
+            <a href="#footer-contact" onClick="{{ goConsult }}" style="display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--text-primary);text-decoration:none;border-bottom:2px solid var(--gray-300);padding-bottom:2px" style-hover="border-bottom-color:var(--black)">{{ t.timeline.consult }}<span aria-hidden="true">→</span></a>
           </p>
         </div>
         <form data-nl-form="" novalidate="" onSubmit="{{ nlSubmitPor }}" style="display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start">
@@ -1887,9 +1889,9 @@
             <a href="#portfolio" onClick="{{ navPortfolio }}" style="font-size:14.5px;font-weight:500;color:var(--white);text-decoration:none;padding:4px 0;border-bottom:1px solid var(--gray-800);transition:border-color 150ms var(--ease-out)" style-hover="border-bottom-color:var(--white)">{{ c.nav.portfolio }}</a>
             <a href="#events" onClick="{{ navEvents }}" style="font-size:14.5px;font-weight:500;color:var(--white);text-decoration:none;padding:4px 0;border-bottom:1px solid var(--gray-800);transition:border-color 150ms var(--ease-out)" style-hover="border-bottom-color:var(--white)">{{ c.nav.events }}</a>
           </nav>
-          <p style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin:0;font-size:13px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--gray-400)">
+          <p id="footer-contact" data-footer-contact="" style="display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin:0;font-size:13px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--gray-400)">
             <span>{{ c.ft.contact }}</span>
-            <a href="{{ contactMailto }}" style="font-size:16px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--white);text-decoration:none;padding:2px 0;border-bottom:1px solid var(--gray-700);transition:border-color 150ms var(--ease-out);overflow-wrap:anywhere" style-hover="border-bottom-color:var(--white)">{{ contactEmail }}</a>
+            <span style="font-size:16px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--white);overflow-wrap:anywhere;user-select:all">{{ contactEmail }}</span>
           </p>
         </div>
         <a href="{{ linkedinUrl }}" target="_blank" rel="noopener noreferrer" aria-label="TWICIIC on LinkedIn" style="display:flex;align-items:center;gap:22px;padding:clamp(22px,3vw,30px);border:1px solid var(--gray-700);text-decoration:none;color:var(--white);background:var(--gray-800);transition:border-color 200ms var(--ease-out),background 200ms var(--ease-out)" style-hover="border-color:var(--white);background:var(--black)">
@@ -2003,8 +2005,8 @@ class Component extends DCLogic {
   ];
   // Partner websites / LinkedIn, keyed by logo path so one map serves all three languages.
   static PARTNER_LINKS = {
-    'assets/partners/zsi-c.png': { web: 'https://www.zsi.at/', li: 'https://www.linkedin.com/company/centre-for-social-innovation/', h: 54 },
-    'assets/partners/bratislava-c.png': { web: 'https://bratislava.sk/en', li: 'https://www.linkedin.com/company/bratislava/', h: 50 },
+    'assets/partners/zsi-c.png': { web: 'https://www.zsi.at/', li: 'https://www.linkedin.com/company/centre-for-social-innovation/', h: 54, accH: 36 },
+    'assets/partners/bratislava-c.png': { web: 'https://bratislava.sk/en', li: 'https://www.linkedin.com/company/bratislava/', h: 50, accH: 34 },
     'assets/partners/vienna-business-agency-c.png': { web: 'https://viennabusinessagency.at/', li: 'https://www.linkedin.com/company/wirtschaftsagenturwien/', h: 44 },
     'assets/partners/relevant.svg': { web: 'https://www.relevant.is/', li: 'https://www.linkedin.com/company/relevant-is-impact/', h: 20, hover: 'assets/partners/relevant-red.svg' },
     'assets/partners/cb-espri.svg': { web: 'https://www.cbespri.sk/about_us.html', li: 'https://www.linkedin.com/company/cbespri/', h: 34, hover: 'assets/partners/cb-espri-color.svg' },
@@ -2114,6 +2116,17 @@ class Component extends DCLogic {
     document.body.style.overflow = '';
   }
 
+  // Contact links scroll to the email in the footer (the address itself is plain text) and highlight it briefly.
+  _toContact(e) {
+    if (e && e.preventDefault) e.preventDefault();
+    if (e && e.stopPropagation) e.stopPropagation(); // clickable cards must not handle the click too
+    if (this.state.menuOpen) this.setState({ menuOpen: false });
+    const el = document.getElementById('footer-contact'); if (!el) return;
+    const y = el.getBoundingClientRect().top + window.scrollY - (window.innerHeight - el.offsetHeight) / 2;
+    window.scrollTo({ top: Math.max(0, y), behavior: this._reduced ? 'auto' : 'smooth' });
+    el.removeAttribute('data-flash'); void el.offsetWidth; el.setAttribute('data-flash', '');
+    clearTimeout(this._flashT); this._flashT = setTimeout(() => el.removeAttribute('data-flash'), 2200);
+  }
   _tick(fn) { if (document.hidden) setTimeout(() => fn(performance.now()), 16); else requestAnimationFrame(fn); }
 
   /* ---------------- content ---------------- */
@@ -2516,9 +2529,9 @@ class Component extends DCLogic {
     }));
     const parList = ((c.par && c.par.list) || []).map((x) => { const u = Component.PARTNER_LINKS[x.logo] || {}; return Object.assign({}, x, { hpx: (u.h || 44) + 'px', logoHover: u.hover || x.logo, web: u.web, li: u.li, hasLi: !!u.li }); });
     // Accelerator page partner cards: same logo treatment as About · Partners, at ~60% size.
-    const accPartners = ((t.partners && t.partners.list) || []).map((x) => { const u = Component.PARTNER_LINKS[x.logo] || {}; return Object.assign({}, x, { hpx: (u.h || 44) + 'px', logoHover: u.hover || x.logo, web: u.web || '#partners' }); });
+    const accPartners = ((t.partners && t.partners.list) || []).map((x) => { const u = Component.PARTNER_LINKS[x.logo] || {}; return Object.assign({}, x, { hpx: (u.accH || u.h || 44) + 'px', logoHover: u.hover || x.logo, web: u.web || '#partners' }); });
     // Research report buttons: 01 "get notified" → LinkedIn updates, 02 "take part" → email the team.
-    const resReports = ((c.res && c.res.reports) || []).map((r, i) => Object.assign({}, r, { go: this._act(() => (i === 0 ? Component.LINKEDIN_URL : 'mailto:info@twiciic.eu')) }));
+    const resReports = ((c.res && c.res.reports) || []).map((r, i) => Object.assign({}, r, { go: i === 0 ? this._act(() => Component.LINKEDIN_URL) : (e) => this._toContact(e) }));
     // Interreg/TWICIIC lockup as a plain <img> (the DS LogoLockup forces width:auto, which overflows on phones):
     // it fills the available width and never grows past its design height (88px on Partners, 64px on the Accelerator).
     const lockupRatio = { en: 2242 / 384, de: 1146 / 223, sk: 1162 / 225 }[s.lang] || 5.84;
@@ -2555,7 +2568,7 @@ class Component extends DCLogic {
     let outKey = 'learn'; if (!eligible) outKey = 'no'; else if (score >= 6) outKey = 'apply'; else if (score >= 3) outKey = 'talk';
     const rdyOut = RR[outKey] || {};
     const rdyReasons = outKey === 'no' ? (RR.gates || []).filter((g, i) => gateAns[i] === 1) : [];
-    const goLearnFn = this._act(() => '#rdy-learn'), goContactFn = this._act(() => 'mailto:info@twiciic.eu'), goApplyFn = this._act(() => p.applyUrl || Component.APPLY_URL), goEventsFn = this._link('#events');
+    const goLearnFn = this._act(() => '#rdy-learn'), goContactFn = (e) => this._toContact(e), goApplyFn = this._act(() => p.applyUrl || Component.APPLY_URL), goEventsFn = this._link('#events');
     // Eligible results put Apply first; the consultation is an option below the buttons.
     const rdyPrimary = { apply: goApplyFn, talk: goApplyFn, learn: goApplyFn, no: goLearnFn }[outKey];
     const rdySecondary = { apply: null, talk: null, learn: goLearnFn, no: goEventsFn }[outKey];
@@ -2612,14 +2625,14 @@ class Component extends DCLogic {
       // Accelerator page handlers (unchanged behaviour)
       navProgramme: this._act(() => '#programme'), navTimeline: this._act(() => '#timeline'), navApply: this._act(() => p.applyUrl || Component.APPLY_URL),
       goApply: this._act(() => p.applyUrl || Component.APPLY_URL), goReadiness: this._act(() => p.readinessUrl || '#readiness'),
-      goContact: this._act(() => 'mailto:info@twiciic.eu'), goConsult: (e) => { if (e && e.stopPropagation) e.stopPropagation(); this._act(() => 'mailto:info@twiciic.eu')(e); }, goSkat: this._act(() => 'https://www.sk-at.eu/en/'), goProjects: this._act(() => 'https://www.sk-at.eu/en/projects/'),
+      goContact: (e) => this._toContact(e), goConsult: (e) => this._toContact(e), goSkat: this._act(() => 'https://www.sk-at.eu/en/'), goProjects: this._act(() => 'https://www.sk-at.eu/en/projects/'),
       startDate: p.startDate || t.hero.startDate || t.hero.dateTbc,
       pulseAttr: (p.heroPulse ?? true) ? 'on' : 'off', revealMode: (p.scrollReveal ?? true) ? 'on' : 'off',
       // Home
       heroWords, st0: st[0] || {}, st1: st[1] || {}, st2: st[2] || {}, st3: st[3] || {}, stg0: stages[0] || {}, stg1: stages[1] || {}, stg2: stages[2] || {},
       homeEvents: items.slice(0, 3),
       porPreview: false, howtoSection: Component.HOWTO_SECTION, newsSection: Component.NEWS_SECTION,
-      contactEmail: Component.CONTACT_EMAIL, contactMailto: 'mailto:' + Component.CONTACT_EMAIL,
+      contactEmail: Component.CONTACT_EMAIL,
       nlDoneHome: s.nl.home === 'done', nlDonePor: s.nl.por === 'done', nlDoneEv: s.nl.ev === 'done',
       nlErrHome: s.nl.home === 'error', nlErrPor: s.nl.por === 'error', nlErrEv: s.nl.ev === 'error',
       nlBtnHome: s.nl.home === 'sending' ? c.home.nl.sending : c.home.nl.cta, nlBtnPor: s.nl.por === 'sending' ? c.home.nl.sending : (c.por.empty || {}).cta2, nlBtnEv: s.nl.ev === 'sending' ? c.home.nl.sending : (c.ev.nl || {}).cta,
