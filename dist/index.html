@@ -244,6 +244,8 @@
     /* ---- Partners / research / portfolio / events ---- */
     [data-prow] [data-plogo] img, [data-acc-card] [data-plogo] img { transition: opacity 260ms var(--ease-out); }
     [data-acc-card] [data-logo-rest][src="assets/partners/relevant.svg"] { filter: brightness(0); opacity: 1; }
+    [data-inline-link] { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    [data-inline-link]:hover { text-decoration-thickness: 2px; }
     [data-prow] [data-plogo] { grid-template-columns: minmax(0, 1fr); }
     [data-prow] [data-plogo] img { max-width: min(112px, 100%) !important; object-fit: contain; }
     [data-prow] [data-logo-rest][src="assets/partners/relevant.svg"] { filter: brightness(0); opacity: 1; }
@@ -1039,14 +1041,14 @@
       </header>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:1px;background:var(--border-default);border:1px solid var(--border-default);margin-top:48px">
         <sc-for list="{{ accPartners }}" as="p" hint-placeholder-count="6">
-          <div data-reveal="" data-acc-card="" style="position:relative;background:var(--surface-card);padding:28px 28px 32px;display:flex;flex-direction:column;gap:20px;min-height:150px" style-hover="outline:1px solid var(--border-strong);outline-offset:-1px;z-index:1">
-            <div data-plogo="" aria-hidden="true" style="position:absolute;top:22px;right:24px;display:grid;place-items:center end;width:88px;height:36px">
-              <img data-logo-rest="" sc-camel-src="{{ p.logo }}" alt="" style="grid-area:1/1;display:block;width:auto;height:auto;max-width:88px;max-height:{{ p.hpx }};mix-blend-mode:multiply;filter:grayscale(1);opacity:0.72">
-              <img data-logo-hover="" sc-camel-src="{{ p.logoHover }}" alt="" style="grid-area:1/1;display:block;width:auto;height:auto;max-width:88px;max-height:{{ p.hpx }};mix-blend-mode:multiply;opacity:0">
+          <a data-reveal="" data-acc-card="" href="{{ p.web }}" target="_blank" rel="noopener noreferrer" style="position:relative;background:var(--surface-card);padding:28px 28px 32px;display:flex;flex-direction:column;gap:20px;min-height:170px;color:inherit;text-decoration:none" style-hover="outline:1px solid var(--border-strong);outline-offset:-1px;z-index:1">
+            <div data-plogo="" aria-hidden="true" style="position:absolute;top:22px;right:24px;display:grid;place-items:center end;width:136px;height:56px">
+              <img data-logo-rest="" sc-camel-src="{{ p.logo }}" alt="" style="grid-area:1/1;display:block;width:auto;height:auto;max-width:136px;max-height:{{ p.hpx }};mix-blend-mode:multiply;filter:grayscale(1);opacity:0.72">
+              <img data-logo-hover="" sc-camel-src="{{ p.logoHover }}" alt="" style="grid-area:1/1;display:block;width:auto;height:auto;max-width:136px;max-height:{{ p.hpx }};mix-blend-mode:multiply;opacity:0">
             </div>
             <span><x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Badge" variant="{{ p.variant }}" hint-size="90px,24px">{{ p.city }}</x-import></span>
             <div><p style="margin:0;font-size:18px;line-height:1.3;font-weight:650;letter-spacing:-0.01em;color:var(--text-primary)">{{ p.name }}</p><p style="margin:6px 0 0;font-size:14px;line-height:1.5;color:var(--text-muted)">{{ p.role }}</p></div>
-          </div>
+          </a>
         </sc-for>
       </div>
     </div>
@@ -1975,6 +1977,7 @@ class Component extends DCLogic {
   // "Vienna as a business location" phrase in the VBA description are left as they are.
   static CITY_RE = /(?<!\p{L})(?<!\d )(?<!(?:City of|[Ss]tadt|mesto SR|mesto|Wirtschaftsagentur) )(Vienna|Wiens?|Viede[ňn]|Viedne|Viedni|Viedňou|Bratislav(?:a|y|e|u|ou|as))(?!\p{L})(?! Business| III| as a business location| als Wirtschaftsstandort| ako podnikateľskú lokalitu)/gu;
   // Content keys that are bound to attributes (alt, aria-label, placeholder) must stay plain strings.
+  static LINK_RE = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/;
   static PLAIN_KEYS = { name: 1, media: 1, caption: 1, ph: 1, placeholder: 1, label: 1, meta: 1 };
   // Accelerator application form (Tally). Every Apply button opens it in a new tab.
   static APPLY_URL = 'https://tally.so/r/A76kg0';
@@ -2122,6 +2125,17 @@ class Component extends DCLogic {
   _bold(v, key) {
     if (typeof v === 'string') {
       if (Component.PLAIN_KEYS[key]) return v;
+      if (v.indexOf('](') >= 0) {
+        // Inline links written as [label](https://…) in the content files.
+        const out = []; let last = 0; let m; const re = new RegExp(Component.LINK_RE.source, 'g');
+        while ((m = re.exec(v))) {
+          if (m.index > last) out.push(this._bold(v.slice(last, m.index), key));
+          out.push(React.createElement('a', { key: 'l' + m.index, href: m[2], target: '_blank', rel: 'noopener noreferrer', 'data-inline-link': '' }, m[1]));
+          last = m.index + m[0].length;
+        }
+        if (last < v.length) out.push(this._bold(v.slice(last), key));
+        return out;
+      }
       const parts = v.split(Component.CITY_RE); if (parts.length === 1) return v;
       return parts.map((p, i) => (i % 2 ? React.createElement('strong', { key: i, 'data-city': '' }, p) : p));
     }
@@ -2502,7 +2516,7 @@ class Component extends DCLogic {
     }));
     const parList = ((c.par && c.par.list) || []).map((x) => { const u = Component.PARTNER_LINKS[x.logo] || {}; return Object.assign({}, x, { hpx: (u.h || 44) + 'px', logoHover: u.hover || x.logo, web: u.web, li: u.li, hasLi: !!u.li }); });
     // Accelerator page partner cards: same logo treatment as About · Partners, at ~60% size.
-    const accPartners = ((t.partners && t.partners.list) || []).map((x) => { const u = Component.PARTNER_LINKS[x.logo] || {}; return Object.assign({}, x, { hpx: Math.round((u.h || 44) * 0.6) + 'px', logoHover: u.hover || x.logo }); });
+    const accPartners = ((t.partners && t.partners.list) || []).map((x) => { const u = Component.PARTNER_LINKS[x.logo] || {}; return Object.assign({}, x, { hpx: (u.h || 44) + 'px', logoHover: u.hover || x.logo, web: u.web || '#partners' }); });
     // Research report buttons: 01 "get notified" → LinkedIn updates, 02 "take part" → email the team.
     const resReports = ((c.res && c.res.reports) || []).map((r, i) => Object.assign({}, r, { go: this._act(() => (i === 0 ? Component.LINKEDIN_URL : 'mailto:info@twiciic.eu')) }));
     // Interreg/TWICIIC lockup as a plain <img> (the DS LogoLockup forces width:auto, which overflows on phones):

@@ -10,7 +10,7 @@
       steps: [
         { n: '01', t: 'Learn', d: 'Six short modules on the two ecosystems, the founders who crossed the border and what the programme asks of you.' },
         { n: '02', t: 'Check', d: 'Eight questions, two minutes. Four on eligibility, four on readiness — with an honest recommendation at the end.' },
-        { n: '03', t: 'Decide', d: 'Apply to the core programme, book a ten-minute call with us, or keep learning until the next round.' }
+        { n: '03', t: 'Decide', d: 'Apply to the core programme, keep learning until the next round, or talk to us: free consultations are launching soon.' }
       ]
     },
     learn: {
@@ -26,7 +26,7 @@
     },
     check: {
       eyebrow: 'Self-assessment · 2 minutes', h2: 'Map your journey — should you cross the Danube?',
-      lead: 'Eight quick questions. The first four tell us whether the accelerator is open to you, the next four how ready you are. You get an honest recommendation instantly — nothing is sent anywhere unless you choose to.',
+      lead: 'Eight quick questions. The first four tell us whether the accelerator is open to you, the next four how ready you are. You get an honest recommendation instantly — your answers stay in your browser and are not sent anywhere.',
       part1: 'Part 1 · Eligibility', part2: 'Part 2 · Readiness', back: 'Back', restart: 'Start over', keys: 'Tip: press the key shown to answer',
       map: { eyebrow: 'Your map', question: 'Question', complete: 'Map complete', elig: 'Eligibility', ready: 'Readiness', pending: 'Answer the questions and your map fills in as you go.', done: 'Your recommendation is on the left.' },
       gateLabels: [{ text: 'Organisation' }, { text: 'Impact' }, { text: 'Region' }, { text: 'Cross-border' }],
@@ -55,22 +55,22 @@
         ],
         tips: { stage: 'Get to first customers or users before the cohort starts — modules 01 and 04 show what the programme expects.', impact: 'Define two or three impact metrics — module 05 covers the basics of impact measurement.', border: 'Map the other market first — module 01 is the place to start.', team: 'Block the workshop dates early; the cohort works in English and meets in both cities.' },
         applyAnyway: 'Apply anyway',
-        consult: { label: 'Want to talk your result through?', cta: 'Book a free consultation' }
+        consult: { label: 'Want to talk your result through? Free consultations are launching soon.', cta: 'Until then, write to us' }
       }
     },
     cta: { h2: 'Ready to scale across the border?', b1: 'Apply', b2: 'Am I ready to scale?' }
   };
 
   var de = {
-    title: 'Readiness-Check',
-    hero: { eyebrow: 'Twin City Accelerator · Phase 1 · Kostenlos & online', h1: 'Lernen & Bereitschaft zur Skalierung prüfen.', sub: 'Starten Sie hier, wenn Sie verstehen möchten, ob grenzüberschreitendes Wachstum zwischen der Slowakei und Österreich der richtige nächste Schritt für Ihr Venture ist.', cta1: 'Bin ich bereit zu skalieren?', cta2: 'Inhalte ansehen', facts: '8 Fragen · etwa 2 Minuten · keine Anmeldung' },
+    title: 'Bereit zur Skalierung?',
+    hero: { eyebrow: 'Twin City Accelerator · Phase 1 · Kostenlos & online', h1: 'Bereit zur Skalierung?', sub: 'Starten Sie hier, wenn Sie verstehen möchten, ob grenzüberschreitendes Wachstum zwischen der Slowakei und Österreich der richtige nächste Schritt für Ihr Venture ist.', cta1: 'Bin ich bereit zu skalieren?', cta2: 'Inhalte ansehen', facts: '8 Fragen · etwa 2 Minuten · keine Anmeldung' },
     journey: {
       eyebrow: 'So funktioniert es', h2: 'Starten Sie Ihre Twin City Accelerator Journey.',
       body: 'Das ist der offene Einstieg in den Twin City Accelerator. Sie erhalten Zugang zu kurzen Lerninhalten und einem Tool, das Ihnen zeigt, ob Sie für die nächste Phase des Programms bereit sind.',
       steps: [
         { n: '01', t: 'Lernen', d: 'Sechs kurze Module zu den beiden Ökosystemen, zu Gründer:innen, die die Grenze überschritten haben, und dazu, was das Programm von Ihnen verlangt.' },
-        { n: '02', t: 'Prüfen', d: 'Acht Fragen, zwei Minuten. Vier zur Förderfähigkeit, vier zur Readiness – mit einer ehrlichen Empfehlung am Ende.' },
-        { n: '03', t: 'Entscheiden', d: 'Bewerben Sie sich für das Kernprogramm, buchen Sie ein zehnminütiges Gespräch mit uns oder lernen Sie bis zur nächsten Runde weiter.' }
+        { n: '02', t: 'Prüfen', d: 'Acht Fragen, zwei Minuten. Vier zur Eignung, vier zur Readiness – mit einer ehrlichen Empfehlung am Ende.' },
+        { n: '03', t: 'Entscheiden', d: 'Bewerben Sie sich für das Kernprogramm, lernen Sie bis zur nächsten Runde weiter oder sprechen Sie mit uns – kostenlose Beratungen starten bald.' }
       ]
     },
     learn: {
@@ -78,17 +78,17 @@
       modules: [
         { n: '01', fmt: 'Video', video: 'DZdfz3sBsA0', title: 'Warum Wien–Bratislava? Ihre grenzüberschreitende Wachstumschance', topics: [{ text: 'Was die Region Wien–Bratislava einzigartig macht' }, { text: 'Warum Impact-Ventures früh grenzüberschreitend denken sollten' }, { text: 'Die Chance zweier verbundener Ökosysteme' }, { text: 'Warum jetzt' }] },
         { n: '02', fmt: 'Gründer:innen-Geschichten', title: 'Erfolgsgeschichten: Wie Gründer:innen über die Grenze expandiert sind', topics: [{ text: 'Ein slowakisches Scale-up expandiert nach Österreich' }, { text: 'Ein österreichisches Scale-up expandiert in die Slowakei' }, { text: 'Herausforderungen, Nutzen und Learnings' }, { text: 'Was funktioniert hat, was nicht – und würden sie es wieder tun?' }] },
-        { n: '03', fmt: 'Leitfaden', video: 'pceF0TIRMx4', title: 'Ist der Twin City Accelerator das Richtige für Sie?', topics: [{ text: 'Wer sich bewerben sollte – und wer noch nicht' }, { text: 'In welcher Phase Teilnehmende sein sollten' }, { text: 'Förderkriterien und was einen starken Fit ausmacht' }, { text: 'Wie die Selbsteinschätzung bewertet und wohin jedes Ergebnis führt' }] },
+        { n: '03', fmt: 'Leitfaden', video: 'pceF0TIRMx4', title: 'Ist der Twin City Accelerator das Richtige für Sie?', topics: [{ text: 'Wer sich bewerben sollte – und wer noch nicht' }, { text: 'In welcher Phase Teilnehmende sein sollten' }, { text: 'Eignungskriterien und was einen starken Fit ausmacht' }, { text: 'Wie die Selbsteinschätzung bewertet wird und wohin das Ergebnis führt' }] },
         { n: '04', fmt: 'Programm', video: '6VuLMHz-fvw', title: 'Was Sie im Kernprogramm bekommen', topics: [{ text: 'Die gesamte 11-wöchige Struktur: sechs Module, Präsenzwochen, Online-Inhalte, Coaching' }, { text: 'Veranstaltungsorte im Wechsel zwischen Wien und Bratislava' }, { text: 'Mentoring, grenzüberschreitende Unterstützung, Zugang zum Ökosystem, Investment Readiness' }, { text: 'Zeitplan und Phasen auf einen Blick' }] },
         { n: '05', fmt: 'Video · ≤ 10 Min.', title: 'Expert:innen-Inhalte: Grundlagen der Skalierung eines Impact-Ventures', topics: [{ text: 'Unit Economics für Gründer:innen' }, { text: 'Grundlagen des grenzüberschreitenden Markteintritts' }, { text: 'Partnerschaften über Grenzen aufbauen' }, { text: 'Fundraising in Österreich und der Slowakei' }, { text: 'Grundlagen der Wirkungsmessung' }] },
         { n: '06', fmt: 'Team', video: 'kl10SGp922M', title: 'Das Team kennenlernen', topics: [{ text: 'Die Menschen hinter dem Accelerator' }, { text: 'Wer sie sind und was sie mitbringen' }, { text: 'Warum ihnen grenzüberschreitender Impact wichtig ist' }, { text: 'Was sie zu ihrem Einsatz für sozialen Impact inspiriert' }] }
       ]
     },
     check: {
-      eyebrow: 'Selbsteinschätzung · 2 Minuten', h2: 'Zeichnen Sie Ihre Route – sollten Sie die Donau überqueren?',
-      lead: 'Acht kurze Fragen. Die ersten vier zeigen, ob der Accelerator für Sie offen ist, die nächsten vier, wie bereit Sie sind. Sie erhalten sofort eine ehrliche Empfehlung – nichts wird verschickt, außer Sie möchten es.',
-      part1: 'Teil 1 · Förderfähigkeit', part2: 'Teil 2 · Readiness', back: 'Zurück', restart: 'Neu starten', keys: 'Tipp: Antworten Sie mit der angezeigten Taste',
-      map: { eyebrow: 'Ihre Karte', question: 'Frage', complete: 'Karte vollständig', elig: 'Förderfähigkeit', ready: 'Readiness', pending: 'Beantworten Sie die Fragen – Ihre Karte füllt sich Schritt für Schritt.', done: 'Ihre Empfehlung steht links.' },
+      eyebrow: 'Selbsteinschätzung · 2 Minuten', h2: 'Finden Sie Ihren Weg – sollten Sie die Donau überqueren?',
+      lead: 'Acht kurze Fragen. Die ersten vier zeigen, ob der Accelerator passend für Sie ist, die nächsten vier, wie bereit Sie sind. Sie erhalten sofort eine ehrliche Empfehlung – Ihre Antworten bleiben in Ihrem Browser und werden nirgendwohin gesendet.',
+      part1: 'Teil 1 · Eignung', part2: 'Teil 2 · Readiness', back: 'Zurück', restart: 'Neu starten', keys: 'Tipp: Antworten Sie mit der angezeigten Taste',
+      map: { eyebrow: 'Ihre Karte', question: 'Frage', complete: 'Karte vollständig', elig: 'Eignung', ready: 'Readiness', pending: 'Beantworten Sie die Fragen – Ihre Karte füllt sich Schritt für Schritt.', done: 'Ihre Empfehlung steht links.' },
       gateLabels: [{ text: 'Organisation' }, { text: 'Impact' }, { text: 'Region' }, { text: 'Grenzüberschreitend' }],
       dims: { stage: 'Phase', impact: 'Impact', border: 'Grenzüberschreitende Pläne', team: 'Commitment' },
       questions: [
@@ -104,8 +104,8 @@
       result: {
         eyebrow: 'Ihr Ergebnis', breakdown: 'Ihre Readiness im Detail', why: 'Warum',
         apply: { t: 'Sie sind bereit für die Überquerung. Bewerben Sie sich für den Accelerator.', b: 'Ihre Antworten passen zu dem, wofür das Programm gebaut ist: ein Impact-Venture am Markt, konkrete grenzüberschreitende Ambition und ein Team, das sich einlassen kann.', p: 'Bewerben', s: '' },
-        talk: { t: 'Fast geschafft. Sie können sich jetzt bewerben.', b: 'Sie sind förderfähig, und einige Bereiche würden vor Kohortenstart von einer Schärfung profitieren. Bewerben Sie sich jetzt – im kurzen Intake-Gespräch nach Ihrer Bewerbung gehen wir sie gemeinsam durch.', p: 'Bewerben', s: '' },
-        learn: { t: 'Sie sind förderfähig. Bewerben Sie sich und bereiten Sie sich mit den Inhalten vor.', b: 'Sie sind förderfähig. Der Accelerator wirkt am besten, wenn ein Venture am Markt ist und konkrete grenzüberschreitende Pläne hat – nutzen Sie die kostenlosen Module, um Ihren Case parallel zur Bewerbung zu stärken.', p: 'Bewerben', s: 'Inhalte entdecken' },
+        talk: { t: 'Fast geschafft. Sie können sich jetzt bewerben.', b: 'Sie sind geeignet, und einige Bereiche würden vor Kohortenstart von einer Schärfung profitieren. Bewerben Sie sich jetzt – im kurzen Intake-Gespräch nach Ihrer Bewerbung gehen wir sie gemeinsam durch.', p: 'Bewerben', s: '' },
+        learn: { t: 'Sie sind geeignet. Bewerben Sie sich und bereiten Sie sich mit den Inhalten vor.', b: 'Sie sind geeignet. Der Accelerator wirkt am besten, wenn ein Venture am Markt ist und konkrete grenzüberschreitende Pläne hat – nutzen Sie die kostenlosen Module, um Ihren Case parallel zur Bewerbung zu stärken.', p: 'Bewerben', s: 'Inhalte entdecken' },
         no: { t: 'Der Accelerator ist noch nicht das Richtige.', b: 'Die kostenlosen Inhalte stehen allen offen, und unsere Events sind der einfachste Weg, beide Ökosysteme kennenzulernen.', p: 'Inhalte entdecken', s: 'Events ansehen' },
         gates: [
           { text: 'Das Programm richtet sich an Organisationen, die eine skalierbare Lösung entwickeln.' },
@@ -115,7 +115,7 @@
         ],
         tips: { stage: 'Gewinnen Sie erste Kund:innen oder Nutzer:innen vor Kohortenstart – Module 01 und 04 zeigen, was das Programm erwartet.', impact: 'Definieren Sie zwei oder drei Wirkungskennzahlen – Modul 05 behandelt die Grundlagen der Wirkungsmessung.', border: 'Kartieren Sie zuerst den anderen Markt – Modul 01 ist der richtige Einstieg.', team: 'Blocken Sie die Workshop-Termine früh; die Kohorte arbeitet auf Englisch und trifft sich in beiden Städten.' },
         applyAnyway: 'Trotzdem bewerben',
-        consult: { label: 'Möchten Sie Ihr Ergebnis besprechen?', cta: 'Kostenlose Beratung buchen' }
+        consult: { label: 'Möchten Sie Ihr Ergebnis besprechen? Kostenlose Beratungen starten bald.', cta: 'Bis dahin schreiben Sie uns' }
       }
     },
     cta: { h2: 'Bereit, über die Grenze zu skalieren?', b1: 'Bewerben', b2: 'Bin ich bereit zu skalieren?' }
@@ -130,7 +130,7 @@
       steps: [
         { n: '01', t: 'Učte sa', d: 'Šesť krátkych modulov o oboch ekosystémoch, o zakladateľoch, ktorí prekročili hranicu, a o tom, čo od vás program vyžaduje.' },
         { n: '02', t: 'Overte si', d: 'Osem otázok, dve minúty. Štyri o oprávnenosti, štyri o pripravenosti – s úprimným odporúčaním na konci.' },
-        { n: '03', t: 'Rozhodnite sa', d: 'Prihláste sa do hlavného programu, dohodnite si s nami desaťminútový hovor alebo pokračujte vo vzdelávaní až do ďalšieho kola.' }
+        { n: '03', t: 'Rozhodnite sa', d: 'Prihláste sa do hlavného programu, pokračujte vo vzdelávaní až do ďalšieho kola alebo sa s nami porozprávajte – bezplatné konzultácie čoskoro spúšťame.' }
       ]
     },
     learn: {
@@ -146,7 +146,7 @@
     },
     check: {
       eyebrow: 'Sebahodnotenie · 2 minúty', h2: 'Zmapujte svoju cestu – mali by ste prekročiť Dunaj?',
-      lead: 'Osem rýchlych otázok. Prvé štyri ukážu, či je akcelerátor pre vás otvorený, ďalšie štyri, ako ste pripravení. Úprimné odporúčanie dostanete okamžite – nič sa nikam neposiela, pokiaľ sa tak nerozhodnete.',
+      lead: 'Osem rýchlych otázok. Prvé štyri ukážu, či je akcelerátor pre vás otvorený, ďalšie štyri, ako ste pripravení. Úprimné odporúčanie dostanete okamžite – vaše odpovede zostávajú vo vašom prehliadači a nikam sa neposielajú.',
       part1: 'Časť 1 · Oprávnenosť', part2: 'Časť 2 · Pripravenosť', back: 'Späť', restart: 'Začať odznova', keys: 'Tip: odpovedať môžete aj stlačením zobrazenej klávesy',
       map: { eyebrow: 'Vaša mapa', question: 'Otázka', complete: 'Mapa je kompletná', elig: 'Oprávnenosť', ready: 'Pripravenosť', pending: 'Odpovedajte na otázky – mapa sa vypĺňa priebežne.', done: 'Vaše odporúčanie je vľavo.' },
       gateLabels: [{ text: 'Organizácia' }, { text: 'Impakt' }, { text: 'Región' }, { text: 'Cezhraničnosť' }],
@@ -175,7 +175,7 @@
         ],
         tips: { stage: 'Získajte prvých zákazníkov alebo používateľov pred štartom kohorty – moduly 01 a 04 ukazujú, čo program očakáva.', impact: 'Definujte dve alebo tri impaktové metriky – modul 05 pokrýva základy merania impaktu.', border: 'Najprv zmapujte druhý trh – modul 01 je to správne miesto na začiatok.', team: 'Rezervujte si termíny workshopov včas; kohorta pracuje v angličtine a stretáva sa v oboch mestách.' },
         applyAnyway: 'Prihlásiť sa aj tak',
-        consult: { label: 'Chcete svoj výsledok prebrať s nami?', cta: 'Rezervujte si bezplatnú konzultáciu' }
+        consult: { label: 'Chcete svoj výsledok prebrať s nami? Bezplatné konzultácie čoskoro spúšťame.', cta: 'Dovtedy nám napíšte' }
       }
     },
     cta: { h2: 'Pripravení rásť cez hranicu?', b1: 'Prihlásiť sa', b2: 'Sme pripravení škálovať?' }
