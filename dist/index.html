@@ -90,7 +90,21 @@
     @media (max-width: 600px) { [data-hide-mobile] { display: none !important; } }
     /* ---- Site nav ---- */
     [data-nav] { background: transparent; border-bottom: 1px solid transparent; transition: background 320ms var(--ease-out), border-color 320ms var(--ease-out), backdrop-filter 320ms var(--ease-out); }
-    [data-nav][data-scrolled="on"] { background: rgba(244, 244, 242, 0.85); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-bottom-color: var(--border-default); }
+    /* One translucent rectangular surface fully contains either identity. */
+    [data-nav]::before { content:""; position:absolute; z-index:-1; pointer-events:none; inset:0 0 auto; height:68px; background:rgba(244,244,242,.72); border-bottom:1px solid rgba(0,0,0,.08); box-sizing:border-box; -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px); opacity:0; transition:opacity 180ms ease-out,height 340ms cubic-bezier(.22,1,.36,1); }
+    [data-nav][data-funding-brand="true"]::before { height:108px; }
+    [data-nav][data-scrolled="on"]::before { opacity:1; }
+    @media (prefers-reduced-motion:reduce) { [data-nav]::before { transition:none; } }
+    /* Funding identity above the fold; the TWICIIC wordmark below it. */
+    [data-logo] { position: relative; }
+    [data-nav-funding] { position:absolute; left:0; top:0; width:272px; height:auto; object-fit:contain; object-position:left top; clip-path:inset(0 100% 0 0); transform:translateX(-6px); pointer-events:none; transition:clip-path 130ms cubic-bezier(.4,0,1,1),transform 130ms ease-in; }
+    [data-logo] > svg { clip-path:inset(0); transform:translateX(0); transition:clip-path 230ms cubic-bezier(.16,1,.3,1) 110ms,transform 230ms cubic-bezier(.16,1,.3,1) 110ms; }
+    [data-funding-brand="true"] [data-nav-funding] { clip-path:inset(0); transform:translateX(0); transition:clip-path 230ms cubic-bezier(.16,1,.3,1) 110ms,transform 230ms cubic-bezier(.16,1,.3,1) 110ms; }
+    [data-funding-brand="true"] [data-logo] > svg { clip-path:inset(0 100% 0 0); transform:translateX(-6px); transition:clip-path 130ms cubic-bezier(.4,0,1,1),transform 130ms ease-in; }
+    [data-funding-brand="true"] [data-logo] [data-brand-name] { opacity:0; visibility:hidden; }
+    @media (max-width:1199px) { [data-logo] { width:240px; } }
+    @media (max-width:600px) { [data-logo] { width:180px; } [data-nav-funding] { width:200px; height:auto; } }
+    @media (prefers-reduced-motion:reduce) { [data-nav-funding], [data-logo] > svg { transition:none; transform:none !important; } }
     [data-logo] [data-logo-a], [data-logo] [data-logo-b] { transform-box: fill-box; transform-origin: bottom; }
     [data-logo]:hover [data-logo-a] { animation: twin-pulse-a var(--duration-pulse) var(--ease-in-out) 1; }
     [data-logo]:hover [data-logo-b] { animation: twin-pulse-b var(--duration-pulse) var(--ease-in-out) 1; }
@@ -377,9 +391,10 @@
 
 
   <!-- ============ NAV ============ -->
-  <header data-nav="" data-screen-label="Navigation" data-scrolled="{{ scrolledAttr }}" data-brand-expanded="{{ heroBrand }}" style="position:sticky;top:0;z-index:50;height:68px;margin-bottom:-68px">
+  <header data-funding-brand="{{ fundingBrand }}" data-nav="" data-screen-label="Navigation" data-scrolled="{{ scrolledAttr }}" data-brand-expanded="{{ heroBrand }}" style="position:sticky;top:0;z-index:50;height:68px;margin-bottom:-68px">
     <div style="max-width:1200px;margin:0 auto;padding:0 clamp(20px,4vw,24px);height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px">
-      <a data-logo="" href="#home" onClick="{{ navHomeTop }}" aria-label="TWICIIC — Twin City Impact Innovation Champion — home" style="display:flex;align-items:center;text-decoration:none;flex:none;height:44px">
+      <a data-logo="" href="#home" onClick="{{ navHomeTop }}" aria-label="{{ navBrandLabel }}" style="display:flex;align-items:center;text-decoration:none;flex:none;height:44px">
+        <img data-nav-funding="" sc-camel-src="{{ heroFundingLogo }}" alt="" aria-hidden="true">
         <svg width="108" height="22" viewBox="0 0 427 87" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:block;height:22px;width:auto;overflow:visible">
           <path d="M391.003 87C369.701 87 355.177 73.9284 355.177 50.8109V36.2868C355.177 13.1693 369.701 0.0976562 391.003 0.0976562C411.942 0.0976562 426.224 11.959 426.829 32.5348H410.49C410.005 21.7627 403.349 15.8321 391.003 15.8321C378.294 15.8321 371.517 22.852 371.517 36.2868V50.8109C371.517 64.2457 378.294 71.8708 391.003 71.8708C402.985 71.8708 409.763 65.8191 410.49 55.5312H426.829C425.861 75.6228 411.579 87 391.003 87Z" fill="currentColor"></path>
           <path d="M255.2 87C233.898 87 219.374 73.9284 219.374 50.8109V36.2868C219.374 13.1693 233.898 0.0976562 255.2 0.0976562C276.139 0.0976562 290.421 11.959 291.026 32.5348H274.687C274.203 21.7627 267.546 15.8321 255.2 15.8321C242.492 15.8321 235.714 22.852 235.714 36.2868V50.8109C235.714 64.2457 242.492 71.8708 255.2 71.8708C267.183 71.8708 273.961 65.8191 274.687 55.5312H291.026C290.058 75.6228 275.776 87 255.2 87Z" fill="currentColor"></path>
@@ -498,9 +513,6 @@
           <x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="lg" on-click="{{ navAccelerator }}" data-magnet="" hint-size="220px,50px">{{ c.home.hero.cta1 }}</x-import>
           <span data-join-secondary=""><x-import component-from-global-scope="TWICIICDesignSystem_5c2c27.Button" size="lg" variant="ghost" on-click="{{ goJoin }}" data-magnet="" hint-size="210px,50px">{{ c.home.hero.cta2 }}</x-import></span>
         </div>
-        </div>
-        <div data-reveal="" style="transition-delay:240ms;min-width:0">
-          <img data-hero-funding="" sc-camel-src="{{ heroFundingLogo }}" alt="{{ heroFundingAlt }}">
         </div>
         </div>
       </div>
@@ -707,9 +719,9 @@
 
   <!-- ================================================================ ACCELERATOR (existing page body, unchanged) ================================================================ -->
   <sc-if value="{{ isAccelerator }}" hint-placeholder-val="{{ false }}">
-  <div data-screen-label="Twin City Accelerator" style="padding-top:68px">
+  <div data-screen-label="Twin City Accelerator">
   <!-- ============ HERO ============ -->
-  <section data-hero-mesh="" id="top" data-screen-label="Hero" style="position:relative;overflow:hidden;scroll-margin-top:72px">
+  <section data-hero-mesh="" id="top" data-screen-label="Hero" style="position:relative;overflow:hidden;scroll-margin-top:72px;padding-top:68px">
     <!-- Same red-to-blue mesh as the home hero -->
     <div data-mesh="" aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;overflow:hidden">
     <span style="position:absolute;left:-18%;top:-22%;width:78vw;height:78vw;max-width:980px;max-height:980px;background:radial-gradient(closest-side,rgba(219,31,64,0.26),rgba(219,31,64,0));animation:mesh-a 26s var(--ease-in-out) infinite alternate;will-change:transform"></span>
@@ -2027,7 +2039,7 @@ class Component extends DCLogic {
 
   state = {
     route: Component._routeFromHash().route, lang: Component._storedLang(), menuOpen: false, dd: null,
-    heroBrand: Component._routeFromHash().route === 'home', scrolled: false, transit: null, accSection: 'fit', evTime: 'up', evLoc: [], evFmt: [],
+    fundingBrand: true, heroBrand: Component._routeFromHash().route === 'home', scrolled: false, transit: null, accSection: 'fit', evTime: 'up', evLoc: [], evFmt: [],
     nl: {}, contentReady: !!window.TWICIIC_CONTENT,
     rdyStep: Component._storedRdy().step, rdyAns: Component._storedRdy().ans, rdyAnim: 'in', rdyVideo: null,
     consentOpen: Component._storedConsent() === null
@@ -2208,7 +2220,7 @@ class Component extends DCLogic {
   // Page transition: content exits through the twin bars, the new page enters through them. 400ms total.
   _transitionTo(route, anchor) {
     const swap = () => {
-      this.setState({ route, accSection: 'fit' }, () => {
+      this.setState({ route, fundingBrand: true, accSection: 'fit' }, () => {
         this._title();
         window.scrollTo({ top: 0, behavior: 'auto' });
         if (anchor) setTimeout(() => this._scrollTo('#' + anchor, 'auto'), 60);
@@ -2289,7 +2301,11 @@ class Component extends DCLogic {
     const sc = window.scrollY > 80 || this.state.menuOpen;
     const hero = document.getElementById('home-hero');
     const heroBrand = this.state.route === 'home' && !!hero && hero.getBoundingClientRect().bottom > 112;
-    if (sc !== this.state.scrolled || heroBrand !== this.state.heroBrand) this.setState({ scrolled: sc, heroBrand });
+    // Switch from the funding logo to the TWICIIC wordmark once the first screen has passed beneath the header.
+    const fold = Math.max(1, window.innerHeight - 68);
+    // A small deadband prevents repeated wipes when scrolling around the fold.
+    const fundingBrand = this.state.fundingBrand ? window.scrollY < fold + 8 : window.scrollY < fold - 8;
+    if (sc !== this.state.scrolled || heroBrand !== this.state.heroBrand || fundingBrand !== this.state.fundingBrand) this.setState({ scrolled: sc, heroBrand, fundingBrand });
   }
   // Accelerator timeline (preserved): the twin-bar spine fills with scroll; each step lights up as the front passes it.
   _timeline() {
@@ -2600,7 +2616,7 @@ class Component extends DCLogic {
       setEn: () => this._setLang('en'), setDe: () => this._setLang('de'), setSk: () => this._setLang('sk'), setLang: (l) => this._setLang(l),
       isHome: route === 'home', isAccelerator: route === 'accelerator', isPartners: route === 'partners', isResearch: route === 'research', isPortfolio: route === 'portfolio', isEvents: route === 'events',
       isLegal: Component.LEGAL.indexOf(route) >= 0, lg: (c.legal && c.legal[route]) || { sections: [] }, linkedinUrl: Component.LINKEDIN_URL,
-      act, cur, heroBrand: s.route === 'home' && s.heroBrand, scrolledAttr: (s.scrolled || s.menuOpen || s.dd) ? 'on' : 'off',
+      act, cur, fundingBrand: s.fundingBrand, heroBrand: false, navBrandLabel: s.fundingBrand ? 'Interreg Slovakia–Austria — TWICIIC home' : 'TWICIIC — Twin City Impact Innovation Champion — home', scrolledAttr: (s.scrolled || s.menuOpen || s.dd) ? 'on' : 'off',
       menuOpen: s.menuOpen, menuLabel: s.menuOpen ? c.nav.close : c.nav.menu, toggleMenu: () => this.setState((st2) => ({ menuOpen: !st2.menuOpen })),
       aboutOpen: s.dd === 'about', ddTab: s.dd === 'about' ? 0 : -1, ddChevron: s.dd === 'about' ? 'rotate(180deg)' : 'none',
       accOpen: s.dd === 'acc', accDdTab: s.dd === 'acc' ? 0 : -1, accDdChevron: s.dd === 'acc' ? 'rotate(180deg)' : 'none',
