@@ -211,8 +211,6 @@
       [data-nav] [data-brand-name] { display: none; }
       [data-nav][data-brand-expanded="true"] { height: 68px !important; margin-bottom: -68px !important; }
       [data-hero-title], [data-hero-description] { text-align: left; }
-      /* Lift only the copy and CTAs; preserve the funding logo and desktop geometry. */
-      [data-hero-title], [data-hero-details] > div:first-child { position: relative; top: calc(clamp(-48px, -5svh, -24px) - 55px); }
       [data-hero-details] > div:first-child { min-width: 0; }
       [data-hero-actions] { justify-content: flex-start; align-items: center; }
     }
@@ -262,9 +260,9 @@
     @keyframes contact-flash { 0%, 40% { outline: 2px solid var(--bratislava-blue); outline-offset: 6px; } 100% { outline: 2px solid transparent; outline-offset: 6px; } }
     /* TWICIIC lockup at the top of each page hero */
     [data-hero-brand] { display:flex; align-items:center; gap:16px; width:470px; max-width:100%; margin:0 0 30px; color:var(--text-primary); }
-    [data-hero-brand] svg { display:block; width:66% !important; height:auto !important; flex:none; }
+    [data-hero-brand] svg { display:block; width:66% !important; height:auto !important; flex:0 1 auto; min-width:0; }
     [data-hero-brand] > span { white-space:nowrap; font-size:17px; line-height:1.03; letter-spacing:-0.025em; font-weight:750; }
-    @media (max-width:600px) { [data-hero-brand] { width:350px; gap:10px; margin-bottom:24px; } [data-hero-brand] > span { font-size:clamp(11px,3vw,14px); } }
+    @media (max-width:600px) { [data-hero-brand] { width:350px; gap:10px; margin-bottom:20px; } [data-hero-brand] svg { width:62% !important; } [data-hero-brand] > span { font-size:clamp(10px,2.9vw,14px); } }
     [data-inline-link] { color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
     [data-inline-link]:hover { text-decoration-thickness: 2px; }
     [data-prow] [data-plogo] { grid-template-columns: minmax(0, 1fr); }
